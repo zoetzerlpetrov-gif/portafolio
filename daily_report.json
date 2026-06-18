@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-06-18T00:54:01.925224+00:00",
+  "report": {
+    "comprar": [
+      {
+        "ticker": "AAPL",
+        "price": 295.95001220703125,
+        "trend": "alcista",
+        "support": 287.3800048828125,
+        "resistance": 303.20001220703125,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.9%)",
+          "Precio cerca de la resistencia (2.45%)",
+          "Doble piso detectado"
+        ]
+      }
+    ],
+    "vender": [
+      {
+        "ticker": "WALMEX.MX",
+        "price": 51.790000915527344,
+        "trend": "bajista",
+        "support": 49.220001220703125,
+        "resistance": 56.099998474121094,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo detectado"
+        ]
+      }
+    ],
+    "esperar": [
+      {
+        "ticker": "FUNO11.MX",
+        "price": 29.1200008392334,
+        "trend": "bajista",
+        "support": 28.799999237060547,
+        "resistance": 30.3799991607666,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (1.1%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "NAFTRACISHRS.MX",
+        "price": 68.37999725341797,
+        "trend": "lateral",
+        "support": 68.30000305175781,
+        "resistance": 70.0,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.12%)",
+          "Precio cerca de la resistencia (2.37%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GFNORTEO.MX",
+        "price": 191.11000061035156,
+        "trend": "lateral",
+        "support": 188.38999938964844,
+        "resistance": 196.9199981689453,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.42%)",
+          "Doble techo detectado"
+        ]
+      }
+    ],
+    "error": []
+  }
+}
