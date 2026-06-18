@@ -35,11 +35,49 @@ import yfinance as yf
 # Configuración: edita aquí tu lista (hasta 50 instrumentos).
 # --------------------------------------------------------------------------- #
 WATCHLIST = [
-    "FUNO11.MX",   # FIBRA Uno
-    "WALMEX.MX",   # Walmart de México
-    "NAFTRACISHRS.MX",  # ETF que replica el IPC
-    "GFNORTEO.MX", # Banorte
-    "AAPL",        # Apple (ejemplo de instrumento de EE.UU.)
+    # --- ETFs núcleo ---
+    "VOO",            # S&P 500
+    "QQQ",            # Nasdaq-100
+
+    # --- FIBRAs mexicanas ---
+    "FUNO11.MX",      # Fibra Uno (diversificada)
+    "FIBRAPL14.MX",   # Fibra Prologis (industrial, la más grande)
+    "DANHOS13.MX",    # Fibra Danhos (comercial/mixto)
+    "FMTY14.MX",      # Fibra Mty (diversificada)
+    "FIBRAMQ12.MX",   # Fibra Macquarie (industrial)
+
+    # --- Criptomonedas ---
+    "BTC-USD", "XRP-USD", "XLM-USD", "HBAR-USD",
+
+    # --- Tecnología ---
+    "AAPL", "MSFT", "GOOGL", "AMZN", "META",
+
+    # --- Semiconductores ---
+    "NVDA", "TSM", "AVGO", "ASML", "AMD",
+
+    # --- Energía ---
+    "XOM", "CVX", "SHEL", "TTE", "NEE",
+
+    # --- Automotriz ---
+    "TSLA", "TM", "VWAGY", "GM", "BYDDY",
+
+    # --- Aviación y aeroespacial ---
+    "BA", "EADSY", "GE", "DAL", "VLRS",
+
+    # --- Salud ---
+    "UNH", "ABT", "MDT", "TMO", "ISRG",
+
+    # --- Farmacéuticas ---
+    "LLY", "NVO", "JNJ", "MRK", "ABBV",
+
+    # --- Defensa / militar ---
+    "LMT", "RTX", "NOC", "GD", "LHX",
+
+    # --- Consumo / retail ---
+    "WMT", "KO", "WALMEX.MX", "KOF", "COST",
+
+    # --- Finanzas / bancos ---
+    "JPM", "V", "MA", "BRK-B", "GFNORTEO.MX",
 ]
 
 # Umbrales (ajústalos a tu gusto).
