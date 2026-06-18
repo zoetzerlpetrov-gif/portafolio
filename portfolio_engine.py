@@ -32,7 +32,7 @@ import yfinance as yf
 
 
 # --------------------------------------------------------------------------- #
-# Configuración: edita aquí tu lista (hasta 50 instrumentos).
+# Configuración: edita aquí tu lista (hasta 100 instrumentos).
 # --------------------------------------------------------------------------- #
 WATCHLIST = [
     # --- ETFs núcleo ---
