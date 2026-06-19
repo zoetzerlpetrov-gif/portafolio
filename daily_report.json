@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-18T16:37:23.627234+00:00",
+  "generated_at": "2026-06-19T16:08:32.344680+00:00",
   "report": {
     "comprar": [
       {
         "ticker": "XLM-USD",
-        "price": 0.2409069985151291,
+        "price": 0.2226630002260208,
         "trend": "alcista",
         "support": 0.18509000539779663,
         "resistance": 0.2965930104255676,
@@ -16,96 +16,83 @@
       },
       {
         "ticker": "GOOGL",
-        "price": 365.8800048828125,
+        "price": 368.0299987792969,
         "trend": "lateral",
         "support": 358.0799865722656,
         "resistance": 393.8800048828125,
         "score": 2,
         "reasons": [
-          "Precio cerca del soporte (2.13%)",
+          "Precio cerca del soporte (2.7%)",
           "Doble piso detectado"
         ]
       },
       {
-        "ticker": "GM",
-        "price": 79.93000030517578,
+        "ticker": "RTX",
+        "price": 185.60000610351562,
         "trend": "alcista",
-        "support": 79.0,
-        "resistance": 82.66999816894531,
+        "support": 185.57000732421875,
+        "resistance": 205.36000061035156,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.16%)",
+          "Precio cerca del soporte (0.02%)",
           "Doble piso detectado",
           "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "LMT",
-        "price": 508.4898986816406,
-        "trend": "lateral",
-        "support": 501.95001220703125,
-        "resistance": 524.5,
-        "score": 2,
-        "reasons": [
-          "Precio cerca del soporte (1.29%)",
-          "Doble piso detectado"
         ]
       }
     ],
     "vender": [
       {
-        "ticker": "WALMEX.MX",
-        "price": 51.560001373291016,
-        "trend": "bajista",
-        "support": 49.220001220703125,
-        "resistance": 52.900001525878906,
-        "score": -3,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.6%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "BTC-USD",
-        "price": 62547.19140625,
+        "price": 63098.0,
         "trend": "bajista",
         "support": 59108.91796875,
         "resistance": 64185.765625,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.62%)",
+          "Precio cerca de la resistencia (1.72%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "MSFT",
-        "price": 378.8800048828125,
+        "price": 379.3999938964844,
         "trend": "bajista",
         "support": 356.2799987792969,
         "resistance": 385.0,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (1.62%)",
+          "Precio cerca de la resistencia (1.48%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "META",
-        "price": 576.7000732421875,
+        "price": 577.219970703125,
         "trend": "bajista",
         "support": 557.010009765625,
         "resistance": 592.5499877929688,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.75%)",
+          "Precio cerca de la resistencia (2.66%)",
           "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "WALMEX.MX",
+        "price": 50.84000015258789,
+        "trend": "bajista",
+        "support": 49.220001220703125,
+        "resistance": 52.900001525878906,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
           "Doble techo detectado"
         ]
       }
@@ -113,10 +100,90 @@
     "esperar": [
       {
         "ticker": "AAPL",
-        "price": 297.3299865722656,
+        "price": 298.010009765625,
         "trend": "alcista",
         "support": 287.3800048828125,
         "resistance": 303.20001220703125,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.74%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "NVDA",
+        "price": 210.69000244140625,
+        "trend": "lateral",
+        "support": 208.77999877929688,
+        "resistance": 212.7100067138672,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.91%)",
+          "Precio cerca de la resistencia (0.96%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "ASML",
+        "price": 1929.6800537109375,
+        "trend": "alcista",
+        "support": 1638.3800048828125,
+        "resistance": 1942.8699951171875,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.68%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "CVX",
+        "price": 173.6300048828125,
+        "trend": "lateral",
+        "support": 172.22999572753906,
+        "resistance": 189.4199981689453,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.81%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "VWAGY",
+        "price": 9.90999984741211,
+        "trend": "lateral",
+        "support": 9.899999618530273,
+        "resistance": 10.489999771118164,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.1%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GM",
+        "price": 79.29000091552734,
+        "trend": "alcista",
+        "support": 79.0,
+        "resistance": 79.4000015258789,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (0.37%)",
+          "Precio cerca de la resistencia (0.14%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GE",
+        "price": 357.6400146484375,
+        "trend": "alcista",
+        "support": 318.25,
+        "resistance": 364.70001220703125,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
@@ -125,60 +192,8 @@
         ]
       },
       {
-        "ticker": "NVDA",
-        "price": 210.38999938964844,
-        "trend": "lateral",
-        "support": 208.77999877929688,
-        "resistance": 212.7100067138672,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (0.77%)",
-          "Precio cerca de la resistencia (1.1%)",
-          "Doble piso detectado"
-        ]
-      },
-      {
-        "ticker": "ASML",
-        "price": 1923.1700439453125,
-        "trend": "alcista",
-        "support": 1638.3800048828125,
-        "resistance": 1941.52001953125,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.95%)",
-          "Doble piso detectado"
-        ]
-      },
-      {
-        "ticker": "VWAGY",
-        "price": 9.899999618530273,
-        "trend": "lateral",
-        "support": 9.789999961853027,
-        "resistance": 10.489999771118164,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (1.11%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "GE",
-        "price": 358.56500244140625,
-        "trend": "alcista",
-        "support": 318.25,
-        "resistance": 364.6400146484375,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.69%)",
-          "Doble piso detectado"
-        ]
-      },
-      {
         "ticker": "DAL",
-        "price": 84.19999694824219,
+        "price": 84.18000030517578,
         "trend": "alcista",
         "support": 76.4000015258789,
         "resistance": 87.38999938964844,
@@ -191,7 +206,7 @@
       },
       {
         "ticker": "VLRS",
-        "price": 8.979999542236328,
+        "price": 8.970000267028809,
         "trend": "alcista",
         "support": 7.260000228881836,
         "resistance": 9.25,
@@ -204,7 +219,7 @@
       },
       {
         "ticker": "LLY",
-        "price": 1098.625,
+        "price": 1098.5699462890625,
         "trend": "alcista",
         "support": 1052.1500244140625,
         "resistance": 1149.0999755859375,
@@ -217,25 +232,51 @@
       },
       {
         "ticker": "MRK",
-        "price": 113.26499938964844,
+        "price": 113.87000274658203,
         "trend": "alcista",
         "support": 111.01000213623047,
         "resistance": 114.06999969482422,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.99%)",
-          "Precio cerca de la resistencia (0.71%)",
+          "Precio cerca del soporte (2.51%)",
+          "Precio cerca de la resistencia (0.18%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "RTX",
-        "price": 185.5500030517578,
+        "ticker": "LMT",
+        "price": 510.95001220703125,
+        "trend": "lateral",
+        "support": 510.1000061035156,
+        "resistance": 524.5,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.17%)",
+          "Precio cerca de la resistencia (2.65%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "LHX",
+        "price": 294.82000732421875,
+        "trend": "lateral",
+        "support": 291.6600036621094,
+        "resistance": 311.4599914550781,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (1.07%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "JPM",
+        "price": 325.2200012207031,
         "trend": "alcista",
-        "support": 176.92999267578125,
-        "resistance": 205.36000061035156,
+        "support": 308.8800048828125,
+        "resistance": 338.0899963378906,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
@@ -244,344 +285,333 @@
         ]
       },
       {
-        "ticker": "LHX",
-        "price": 294.4649963378906,
-        "trend": "lateral",
-        "support": 293.75,
-        "resistance": 311.4599914550781,
+        "ticker": "BRK-B",
+        "price": 489.4599914550781,
+        "trend": "alcista",
+        "support": 481.05999755859375,
+        "resistance": 491.0,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.24%)",
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (1.72%)",
+          "Precio cerca de la resistencia (0.31%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "VOO",
-        "price": 688.030029296875,
+        "price": 688.1099853515625,
         "trend": "lateral",
         "support": 672.5499877929688,
         "resistance": 689.0999755859375,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.25%)",
-          "Precio cerca de la resistencia (0.16%)",
+          "Precio cerca del soporte (2.26%)",
+          "Precio cerca de la resistencia (0.14%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "QQQ",
-        "price": 738.8701171875,
+        "price": 740.6199951171875,
         "trend": "alcista",
         "support": 695.25,
         "resistance": 744.760009765625,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.8%)",
+          "Precio cerca de la resistencia (0.56%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "FUNO11.MX",
-        "price": 29.200000762939453,
+        "price": 29.079999923706055,
         "trend": "bajista",
         "support": 28.799999237060547,
         "resistance": 30.079999923706055,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.37%)",
+          "Precio cerca del soporte (0.96%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "FIBRAPL14.MX",
-        "price": 78.30000305175781,
+        "price": 78.56999969482422,
         "trend": "lateral",
         "support": 77.3499984741211,
         "resistance": 79.44999694824219,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.21%)",
-          "Precio cerca de la resistencia (1.47%)",
+          "Precio cerca del soporte (1.55%)",
+          "Precio cerca de la resistencia (1.12%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "DANHOS13.MX",
-        "price": 28.170000076293945,
+        "price": 28.31999969482422,
         "trend": "lateral",
         "support": 27.700000762939453,
         "resistance": 28.5,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.67%)",
-          "Precio cerca de la resistencia (1.17%)",
+          "Precio cerca del soporte (2.19%)",
+          "Precio cerca de la resistencia (0.64%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "FIBRAMQ12.MX",
-        "price": 43.369998931884766,
+        "price": 43.79999923706055,
         "trend": "lateral",
         "support": 42.59000015258789,
         "resistance": 43.970001220703125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.8%)",
-          "Precio cerca de la resistencia (1.38%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "HBAR-USD",
-        "price": 0.0789399966597557,
-        "trend": "bajista",
-        "support": 0.07690200209617615,
-        "resistance": 0.0908460021018982,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.58%)",
+          "Precio cerca del soporte (2.76%)",
+          "Precio cerca de la resistencia (0.39%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "TSM",
-        "price": 455.2799072265625,
+        "price": 462.1199951171875,
         "trend": "alcista",
         "support": 405.510009765625,
-        "resistance": 455.5899963378906,
+        "resistance": 465.2200012207031,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.07%)",
+          "Precio cerca de la resistencia (0.67%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "AVGO",
-        "price": 408.0199890136719,
+        "price": 411.3500061035156,
         "trend": "bajista",
         "support": 406.29998779296875,
         "resistance": 429.30999755859375,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.42%)",
+          "Precio cerca del soporte (1.23%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "AMD",
-        "price": 533.5999755859375,
+        "price": 537.3699951171875,
         "trend": "alcista",
         "support": 437.2300109863281,
         "resistance": 546.4400024414062,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.41%)"
+          "Precio cerca de la resistencia (1.69%)"
         ]
       },
       {
         "ticker": "XOM",
-        "price": 136.74000549316406,
+        "price": 137.80999755859375,
         "trend": "bajista",
         "support": 135.85000610351562,
         "resistance": 154.91000366210938,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.65%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "CVX",
-        "price": 172.82000732421875,
-        "trend": "bajista",
-        "support": 172.80999755859375,
-        "resistance": 189.4199981689453,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.01%)",
+          "Precio cerca del soporte (1.42%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "SHEL",
-        "price": 78.22000122070312,
+        "price": 78.80999755859375,
         "trend": "bajista",
         "support": 77.93499755859375,
         "resistance": 88.0,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.36%)",
+          "Precio cerca del soporte (1.11%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "TTE",
-        "price": 80.4000015258789,
+        "price": 80.43000030517578,
         "trend": "bajista",
-        "support": 80.3301010131836,
+        "support": 80.19000244140625,
         "resistance": 90.4000015258789,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.09%)",
+          "Precio cerca del soporte (0.3%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "NEE",
-        "price": 86.97000122070312,
+        "price": 86.75,
         "trend": "bajista",
         "support": 86.62999725341797,
         "resistance": 96.20999908447266,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.39%)",
+          "Precio cerca del soporte (0.14%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "TSLA",
-        "price": 392.6400146484375,
+        "price": 400.489990234375,
         "trend": "lateral",
-        "support": 380.1499938964844,
+        "support": 393.6300048828125,
         "resistance": 409.2799987792969,
         "score": 0,
-        "reasons": []
+        "reasons": [
+          "Precio cerca del soporte (1.71%)",
+          "Precio cerca de la resistencia (2.19%)"
+        ]
       },
       {
         "ticker": "TM",
-        "price": 174.43499755859375,
+        "price": 173.94000244140625,
         "trend": "bajista",
         "support": 171.1699981689453,
         "resistance": 181.14999389648438,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.87%)",
+          "Precio cerca del soporte (1.59%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "BYDDY",
-        "price": 10.25,
+        "price": 10.289999961853027,
         "trend": "bajista",
-        "support": 10.199999809265137,
+        "support": 10.210000038146973,
         "resistance": 11.949999809265137,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.49%)",
+          "Precio cerca del soporte (0.78%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "BA",
-        "price": 222.27499389648438,
+        "price": 222.72000122070312,
         "trend": "bajista",
         "support": 221.0399932861328,
         "resistance": 231.33999633789062,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.56%)",
+          "Precio cerca del soporte (0.75%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "EADSY",
-        "price": 55.20000076293945,
+        "price": 55.0,
         "trend": "alcista",
         "support": 50.11000061035156,
         "resistance": 55.970001220703125,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.39%)",
+          "Precio cerca de la resistencia (1.76%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "UNH",
-        "price": 402.30999755859375,
+        "price": 400.9599914550781,
         "trend": "alcista",
         "support": 374.7200012207031,
         "resistance": 404.1499938964844,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.46%)"
+          "Precio cerca de la resistencia (0.8%)"
         ]
       },
       {
         "ticker": "ABT",
-        "price": 88.8499984741211,
+        "price": 88.41000366210938,
         "trend": "lateral",
         "support": 87.06999969482422,
         "resistance": 89.33999633789062,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.0%)",
-          "Precio cerca de la resistencia (0.55%)"
+          "Precio cerca del soporte (1.52%)",
+          "Precio cerca de la resistencia (1.05%)"
+        ]
+      },
+      {
+        "ticker": "MDT",
+        "price": 79.33999633789062,
+        "trend": "lateral",
+        "support": 74.4000015258789,
+        "resistance": 82.83000183105469,
+        "score": 0,
+        "reasons": [
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "TMO",
-        "price": 463.6000061035156,
+        "price": 464.6099853515625,
         "trend": "lateral",
         "support": 455.6000061035156,
         "resistance": 480.29998779296875,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.73%)",
+          "Precio cerca del soporte (1.94%)",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "ISRG",
-        "price": 404.4100036621094,
+        "price": 406.7799987792969,
         "trend": "bajista",
         "support": 396.67999267578125,
         "resistance": 430.8500061035156,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.91%)",
+          "Precio cerca del soporte (2.48%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "NVO",
-        "price": 42.97200012207031,
+        "price": 43.189998626708984,
         "trend": "lateral",
         "support": 41.0,
         "resistance": 46.04999923706055,
@@ -590,21 +620,21 @@
       },
       {
         "ticker": "JNJ",
-        "price": 228.22999572753906,
+        "price": 228.38999938964844,
         "trend": "lateral",
         "support": 223.77999877929688,
         "resistance": 231.16000366210938,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.95%)",
-          "Precio cerca de la resistencia (1.28%)",
+          "Precio cerca del soporte (2.02%)",
+          "Precio cerca de la resistencia (1.21%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "ABBV",
-        "price": 216.47999572753906,
+        "price": 216.49000549316406,
         "trend": "alcista",
         "support": 208.99000549316406,
         "resistance": 219.60000610351562,
@@ -618,134 +648,106 @@
       },
       {
         "ticker": "NOC",
-        "price": 518.2650146484375,
+        "price": 521.5,
         "trend": "bajista",
-        "support": 517.6500244140625,
+        "support": 515.3800048828125,
         "resistance": 559.7000122070312,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.12%)",
+          "Precio cerca del soporte (1.17%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "GD",
-        "price": 350.8800964355469,
+        "price": 350.010009765625,
         "trend": "alcista",
         "support": 337.80999755859375,
         "resistance": 351.3599853515625,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.14%)",
+          "Precio cerca de la resistencia (0.39%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "KO",
-        "price": 78.91999816894531,
+        "price": 79.38999938964844,
         "trend": "lateral",
         "support": 77.83999633789062,
         "resistance": 80.31999969482422,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.37%)",
-          "Precio cerca de la resistencia (1.77%)",
+          "Precio cerca del soporte (1.95%)",
+          "Precio cerca de la resistencia (1.17%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "KOF",
-        "price": 109.62999725341797,
+        "price": 109.55000305175781,
         "trend": "alcista",
         "support": 105.36000061035156,
         "resistance": 110.19000244140625,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.51%)",
+          "Precio cerca de la resistencia (0.58%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "COST",
-        "price": 952.5999755859375,
+        "price": 951.4500122070312,
         "trend": "bajista",
         "support": 936.510009765625,
         "resistance": 997.4099731445312,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.69%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "JPM",
-        "price": 329.3999938964844,
-        "trend": "alcista",
-        "support": 308.8800048828125,
-        "resistance": 338.0899963378906,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.64%)",
+          "Precio cerca del soporte (1.57%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "MA",
-        "price": 489.8659973144531,
+        "price": 489.7900085449219,
         "trend": "lateral",
         "support": 489.7300109863281,
         "resistance": 498.79998779296875,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.03%)",
-          "Precio cerca de la resistencia (1.82%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "BRK-B",
-        "price": 487.54998779296875,
-        "trend": "lateral",
-        "support": 481.05999755859375,
-        "resistance": 487.7799987792969,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (1.33%)",
-          "Precio cerca de la resistencia (0.05%)",
+          "Precio cerca del soporte (0.01%)",
+          "Precio cerca de la resistencia (1.84%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "FMTY14.MX",
-        "price": 14.029999732971191,
+        "price": 14.100000381469727,
         "trend": "bajista",
         "support": 13.949999809265137,
         "resistance": 14.40999984741211,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.57%)",
-          "Precio cerca de la resistencia (2.71%)",
+          "Precio cerca del soporte (1.06%)",
+          "Precio cerca de la resistencia (2.2%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "XRP-USD",
-        "price": 1.1406999826431274,
+        "price": 1.13510000705719,
         "trend": "bajista",
         "support": 1.054656982421875,
         "resistance": 1.184805989265442,
@@ -755,8 +757,21 @@
         ]
       },
       {
+        "ticker": "HBAR-USD",
+        "price": 0.08088000118732452,
+        "trend": "bajista",
+        "support": 0.07690200209617615,
+        "resistance": 0.0908460021018982,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "AMZN",
-        "price": 243.52000427246094,
+        "price": 244.38999938964844,
         "trend": "bajista",
         "support": 233.58999633789062,
         "resistance": 256.17999267578125,
@@ -768,21 +783,8 @@
         ]
       },
       {
-        "ticker": "MDT",
-        "price": 79.0199966430664,
-        "trend": "lateral",
-        "support": 74.4000015258789,
-        "resistance": 79.25,
-        "score": -1,
-        "reasons": [
-          "Precio cerca de la resistencia (0.29%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "WMT",
-        "price": 117.30000305175781,
+        "price": 117.18000030517578,
         "trend": "bajista",
         "support": 112.7300033569336,
         "resistance": 120.88999938964844,
@@ -795,27 +797,27 @@
       },
       {
         "ticker": "V",
-        "price": 329.06500244140625,
+        "price": 327.239990234375,
         "trend": "lateral",
         "support": 316.1600036621094,
         "resistance": 331.6700134277344,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (0.79%)",
+          "Precio cerca de la resistencia (1.35%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "GFNORTEO.MX",
-        "price": 191.42999267578125,
-        "trend": "lateral",
+        "price": 188.6999969482422,
+        "trend": "bajista",
         "support": 188.38999938964844,
         "resistance": 196.9199981689453,
         "score": -1,
         "reasons": [
-          "Precio cerca del soporte (1.59%)",
-          "Precio cerca de la resistencia (2.87%)",
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.16%)",
           "Doble techo detectado"
         ]
       }
