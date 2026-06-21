@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-21T15:13:31.956273+00:00",
+  "generated_at": "2026-06-21T19:14:16.955201+00:00",
   "report": {
     "comprar": [
       {
         "ticker": "XLM-USD",
-        "price": 0.21550099551677704,
+        "price": 0.2149689942598343,
         "trend": "alcista",
         "support": 0.18509000539779663,
         "resistance": 0.2505199909210205,
@@ -42,6 +42,20 @@
       }
     ],
     "vender": [
+      {
+        "ticker": "BTC-USD",
+        "price": 64152.80078125,
+        "trend": "bajista",
+        "support": 62201.14453125,
+        "resistance": 64185.765625,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca de la resistencia (0.05%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
       {
         "ticker": "MSFT",
         "price": 379.3999938964844,
@@ -281,6 +295,19 @@
           "Tendencia semanal alcista",
           "Precio cerca del soporte (1.72%)",
           "Precio cerca de la resistencia (0.31%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "4GE.SG",
+        "price": 10.449999809265137,
+        "trend": "alcista",
+        "support": 9.645000457763672,
+        "resistance": 10.880000114440918,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -675,6 +702,34 @@
         ]
       },
       {
+        "ticker": "ALSEA.MX",
+        "price": 46.86000061035156,
+        "trend": "bajista",
+        "support": 46.34000015258789,
+        "resistance": 48.66999816894531,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (1.11%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GRBMF",
+        "price": 3.3399999141693115,
+        "trend": "lateral",
+        "support": 3.309999942779541,
+        "resistance": 3.369999885559082,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.9%)",
+          "Precio cerca de la resistencia (0.9%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "MA",
         "price": 489.7900085449219,
         "trend": "lateral",
@@ -684,6 +739,20 @@
         "reasons": [
           "Precio cerca del soporte (0.01%)",
           "Precio cerca de la resistencia (1.84%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "CEMEXCPO.MX",
+        "price": 21.520000457763672,
+        "trend": "lateral",
+        "support": 21.239999771118164,
+        "resistance": 22.1299991607666,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.3%)",
+          "Precio cerca de la resistencia (2.83%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -730,23 +799,8 @@
         ]
       },
       {
-        "ticker": "BTC-USD",
-        "price": 64106.9609375,
-        "trend": "bajista",
-        "support": 62201.14453125,
-        "resistance": 64185.765625,
-        "score": -1,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.97%)",
-          "Precio cerca de la resistencia (0.12%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "XRP-USD",
-        "price": 1.1478999853134155,
+        "price": 1.144700050354004,
         "trend": "bajista",
         "support": 1.054656982421875,
         "resistance": 1.184805989265442,
@@ -757,7 +811,7 @@
       },
       {
         "ticker": "HBAR-USD",
-        "price": 0.07997000217437744,
+        "price": 0.0798100009560585,
         "trend": "bajista",
         "support": 0.07690200209617615,
         "resistance": 0.08469600230455399,
@@ -790,6 +844,36 @@
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "PEP.MX",
+        "price": 2461.419921875,
+        "trend": "bajista",
+        "support": 2440.0,
+        "resistance": 2522.0,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.87%)",
+          "Precio cerca de la resistencia (2.46%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "PEP",
+        "price": 142.02000427246094,
+        "trend": "bajista",
+        "support": 140.80999755859375,
+        "resistance": 145.6999969482422,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.85%)",
+          "Precio cerca de la resistencia (2.59%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
