@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-06-21T20:45:56.672524+00:00",
+  "generated_at": "2026-06-21T21:13:55.873189+00:00",
   "report": {
     "comprar": [
       {
         "ticker": "XLM-USD",
-        "price": 0.2139980047941208,
+        "name": "Stellar Lumens",
+        "sector": "Criptomonedas",
+        "price": 0.21229200065135956,
         "trend": "alcista",
         "support": 0.18509000539779663,
         "resistance": 0.2505199909210205,
@@ -16,6 +18,8 @@
       },
       {
         "ticker": "GOOGL",
+        "name": "Alphabet (Google)",
+        "sector": "Tecnología / Software",
         "price": 368.0299987792969,
         "trend": "lateral",
         "support": 358.0799865722656,
@@ -28,6 +32,8 @@
       },
       {
         "ticker": "QCOM",
+        "name": "Qualcomm",
+        "sector": "Semiconductores",
         "price": 226.11000061035156,
         "trend": "alcista",
         "support": 191.02000427246094,
@@ -40,6 +46,8 @@
       },
       {
         "ticker": "FSLR",
+        "name": "First Solar",
+        "sector": "Energía renovable / Utilities",
         "price": 257.70001220703125,
         "trend": "alcista",
         "support": 248.66000366210938,
@@ -52,6 +60,8 @@
       },
       {
         "ticker": "F",
+        "name": "Ford",
+        "sector": "Automotriz",
         "price": 14.0600004196167,
         "trend": "alcista",
         "support": 12.720000267028809,
@@ -64,6 +74,8 @@
       },
       {
         "ticker": "RTX",
+        "name": "RTX / Raytheon",
+        "sector": "Aeroespacial y Defensa",
         "price": 185.60000610351562,
         "trend": "alcista",
         "support": 185.57000732421875,
@@ -78,6 +90,8 @@
       },
       {
         "ticker": "DHR",
+        "name": "Danaher",
+        "sector": "Salud / Dispositivos médicos",
         "price": 177.1699981689453,
         "trend": "alcista",
         "support": 175.0,
@@ -92,6 +106,8 @@
       },
       {
         "ticker": "MRNA",
+        "name": "Moderna",
+        "sector": "Biotecnología",
         "price": 63.959999084472656,
         "trend": "alcista",
         "support": 47.39699935913086,
@@ -104,6 +120,8 @@
       },
       {
         "ticker": "ILMN",
+        "name": "Illumina",
+        "sector": "Biotecnología",
         "price": 161.92999267578125,
         "trend": "alcista",
         "support": 155.5500030517578,
@@ -116,6 +134,8 @@
       },
       {
         "ticker": "KHC",
+        "name": "Kraft Heinz",
+        "sector": "Alimentos",
         "price": 22.81999969482422,
         "trend": "alcista",
         "support": 22.149999618530273,
@@ -130,6 +150,8 @@
       },
       {
         "ticker": "HRL",
+        "name": "Hormel",
+        "sector": "Alimentos",
         "price": 24.15999984741211,
         "trend": "alcista",
         "support": 22.899999618530273,
@@ -142,6 +164,8 @@
       },
       {
         "ticker": "CL",
+        "name": "Colgate-Palmolive",
+        "sector": "Consumo básico / Hogar",
         "price": 89.4800033569336,
         "trend": "alcista",
         "support": 88.37000274658203,
@@ -156,6 +180,8 @@
       },
       {
         "ticker": "EBAY",
+        "name": "eBay",
+        "sector": "E-commerce / Internet",
         "price": 108.23999786376953,
         "trend": "alcista",
         "support": 107.52999877929688,
@@ -170,6 +196,8 @@
       },
       {
         "ticker": "HON",
+        "name": "Honeywell",
+        "sector": "Industrial / Maquinaria",
         "price": 229.00999450683594,
         "trend": "alcista",
         "support": 228.92999267578125,
@@ -184,6 +212,8 @@
       },
       {
         "ticker": "PH",
+        "name": "Parker Hannifin",
+        "sector": "Industrial / Maquinaria",
         "price": 953.27001953125,
         "trend": "lateral",
         "support": 951.1199951171875,
@@ -197,33 +227,9 @@
     ],
     "vender": [
       {
-        "ticker": "ETH-USD",
-        "price": 1725.5999755859375,
-        "trend": "bajista",
-        "support": 1670.1038818359375,
-        "resistance": 1847.769775390625,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "SOL-USD",
-        "price": 73.86000061035156,
-        "trend": "bajista",
-        "support": 60.41471862792969,
-        "resistance": 75.93878936767578,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.81%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "MSFT",
+        "name": "Microsoft",
+        "sector": "Tecnología / Software",
         "price": 379.3999938964844,
         "trend": "bajista",
         "support": 356.2799987792969,
@@ -238,6 +244,8 @@
       },
       {
         "ticker": "META",
+        "name": "Meta (Facebook)",
+        "sector": "Tecnología / Software",
         "price": 577.219970703125,
         "trend": "bajista",
         "support": 557.010009765625,
@@ -252,6 +260,8 @@
       },
       {
         "ticker": "QSR",
+        "name": "Restaurant Brands",
+        "sector": "Restaurantes / Comida rápida",
         "price": 73.44000244140625,
         "trend": "bajista",
         "support": 70.98999786376953,
@@ -264,6 +274,8 @@
       },
       {
         "ticker": "LOW",
+        "name": "Lowe's",
+        "sector": "Retail / Comercio",
         "price": 222.1999969482422,
         "trend": "bajista",
         "support": 208.0,
@@ -276,6 +288,8 @@
       },
       {
         "ticker": "WALMEX.MX",
+        "name": "Walmart de México",
+        "sector": "Retail / Comercio",
         "price": 50.959999084472656,
         "trend": "bajista",
         "support": 49.220001220703125,
@@ -288,6 +302,8 @@
       },
       {
         "ticker": "NU",
+        "name": "Nu Holdings (Nubank)",
+        "sector": "Pagos / Fintech",
         "price": 12.710000038146973,
         "trend": "bajista",
         "support": 11.779999732971191,
@@ -300,6 +316,8 @@
       },
       {
         "ticker": "MELI",
+        "name": "MercadoLibre",
+        "sector": "E-commerce / Internet",
         "price": 1635.1500244140625,
         "trend": "bajista",
         "support": 1546.0,
@@ -314,6 +332,8 @@
     "esperar": [
       {
         "ticker": "DIA",
+        "name": "Dow Jones 30",
+        "sector": "ETFs / Índices",
         "price": 515.52001953125,
         "trend": "alcista",
         "support": 503.6400146484375,
@@ -329,6 +349,8 @@
       },
       {
         "ticker": "NAFTRACISHRS.MX",
+        "name": "IPC México",
+        "sector": "ETFs / Índices",
         "price": 67.5999984741211,
         "trend": "lateral",
         "support": 66.62000274658203,
@@ -342,6 +364,8 @@
       },
       {
         "ticker": "FNOVA17.MX",
+        "name": "Fibra Nova",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 28.149999618530273,
         "trend": "alcista",
         "support": 28.149999618530273,
@@ -357,6 +381,8 @@
       },
       {
         "ticker": "AAPL",
+        "name": "Apple",
+        "sector": "Tecnología / Software",
         "price": 298.010009765625,
         "trend": "alcista",
         "support": 287.3800048828125,
@@ -370,6 +396,8 @@
       },
       {
         "ticker": "ORCL",
+        "name": "Oracle",
+        "sector": "Tecnología / Software",
         "price": 184.2899932861328,
         "trend": "alcista",
         "support": 180.8699951171875,
@@ -385,6 +413,8 @@
       },
       {
         "ticker": "IBM",
+        "name": "IBM",
+        "sector": "Tecnología / Software",
         "price": 249.10000610351562,
         "trend": "alcista",
         "support": 230.50999450683594,
@@ -398,6 +428,8 @@
       },
       {
         "ticker": "NVDA",
+        "name": "Nvidia",
+        "sector": "Semiconductores",
         "price": 210.69000244140625,
         "trend": "lateral",
         "support": 208.77999877929688,
@@ -411,6 +443,8 @@
       },
       {
         "ticker": "ASML",
+        "name": "ASML",
+        "sector": "Semiconductores",
         "price": 1929.6800537109375,
         "trend": "alcista",
         "support": 1638.3800048828125,
@@ -424,6 +458,8 @@
       },
       {
         "ticker": "TXN",
+        "name": "Texas Instruments",
+        "sector": "Semiconductores",
         "price": 322.8599853515625,
         "trend": "alcista",
         "support": 291.95001220703125,
@@ -437,6 +473,8 @@
       },
       {
         "ticker": "AMAT",
+        "name": "Applied Materials",
+        "sector": "Semiconductores",
         "price": 617.1099853515625,
         "trend": "alcista",
         "support": 452.9100036621094,
@@ -450,6 +488,8 @@
       },
       {
         "ticker": "CVX",
+        "name": "Chevron",
+        "sector": "Energía (petróleo y gas)",
         "price": 173.6300048828125,
         "trend": "lateral",
         "support": 172.22999572753906,
@@ -463,6 +503,8 @@
       },
       {
         "ticker": "EOG",
+        "name": "EOG Resources",
+        "sector": "Energía (petróleo y gas)",
         "price": 129.97999572753906,
         "trend": "lateral",
         "support": 128.8300018310547,
@@ -476,6 +518,8 @@
       },
       {
         "ticker": "ENPH",
+        "name": "Enphase Energy",
+        "sector": "Energía renovable / Utilities",
         "price": 52.279998779296875,
         "trend": "alcista",
         "support": 48.459999084472656,
@@ -487,6 +531,8 @@
       },
       {
         "ticker": "VWAGY",
+        "name": "Volkswagen",
+        "sector": "Automotriz",
         "price": 9.90999984741211,
         "trend": "lateral",
         "support": 9.899999618530273,
@@ -500,6 +546,8 @@
       },
       {
         "ticker": "GM",
+        "name": "General Motors",
+        "sector": "Automotriz",
         "price": 79.29000091552734,
         "trend": "alcista",
         "support": 79.0,
@@ -515,6 +563,8 @@
       },
       {
         "ticker": "STLA",
+        "name": "Stellantis",
+        "sector": "Automotriz",
         "price": 6.340000152587891,
         "trend": "bajista",
         "support": 6.300000190734863,
@@ -528,6 +578,8 @@
       },
       {
         "ticker": "HMC",
+        "name": "Honda",
+        "sector": "Automotriz",
         "price": 26.260000228881836,
         "trend": "alcista",
         "support": 26.110000610351562,
@@ -543,6 +595,8 @@
       },
       {
         "ticker": "DAL",
+        "name": "Delta Air Lines",
+        "sector": "Aviación / Aerolíneas",
         "price": 84.18000030517578,
         "trend": "alcista",
         "support": 76.4000015258789,
@@ -556,6 +610,8 @@
       },
       {
         "ticker": "UAL",
+        "name": "United Airlines",
+        "sector": "Aviación / Aerolíneas",
         "price": 118.31999969482422,
         "trend": "alcista",
         "support": 101.7699966430664,
@@ -569,6 +625,8 @@
       },
       {
         "ticker": "VLRS",
+        "name": "Volaris (México)",
+        "sector": "Aviación / Aerolíneas",
         "price": 8.970000267028809,
         "trend": "alcista",
         "support": 7.260000228881836,
@@ -582,6 +640,8 @@
       },
       {
         "ticker": "CPA",
+        "name": "Copa Airlines",
+        "sector": "Aviación / Aerolíneas",
         "price": 151.0399932861328,
         "trend": "alcista",
         "support": 128.0800018310547,
@@ -595,6 +655,8 @@
       },
       {
         "ticker": "JBLU",
+        "name": "JetBlue",
+        "sector": "Aviación / Aerolíneas",
         "price": 5.679999828338623,
         "trend": "alcista",
         "support": 4.659999847412109,
@@ -608,6 +670,8 @@
       },
       {
         "ticker": "ALK",
+        "name": "Alaska Air",
+        "sector": "Aviación / Aerolíneas",
         "price": 49.2599983215332,
         "trend": "alcista",
         "support": 41.65999984741211,
@@ -621,6 +685,8 @@
       },
       {
         "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "sector": "Aeroespacial y Defensa",
         "price": 510.95001220703125,
         "trend": "lateral",
         "support": 510.1000061035156,
@@ -634,6 +700,8 @@
       },
       {
         "ticker": "LHX",
+        "name": "L3Harris",
+        "sector": "Aeroespacial y Defensa",
         "price": 294.82000732421875,
         "trend": "lateral",
         "support": 291.6600036621094,
@@ -647,6 +715,8 @@
       },
       {
         "ticker": "GE",
+        "name": "GE Aerospace",
+        "sector": "Aeroespacial y Defensa",
         "price": 357.6400146484375,
         "trend": "alcista",
         "support": 318.25,
@@ -660,6 +730,8 @@
       },
       {
         "ticker": "BDX",
+        "name": "Becton Dickinson",
+        "sector": "Salud / Dispositivos médicos",
         "price": 143.97999572753906,
         "trend": "lateral",
         "support": 143.1300048828125,
@@ -673,6 +745,8 @@
       },
       {
         "ticker": "LLY",
+        "name": "Eli Lilly",
+        "sector": "Farmacéuticas",
         "price": 1098.5699462890625,
         "trend": "alcista",
         "support": 1052.1500244140625,
@@ -686,6 +760,8 @@
       },
       {
         "ticker": "MRK",
+        "name": "Merck",
+        "sector": "Farmacéuticas",
         "price": 113.87000274658203,
         "trend": "alcista",
         "support": 111.01000213623047,
@@ -701,6 +777,8 @@
       },
       {
         "ticker": "PFE",
+        "name": "Pfizer",
+        "sector": "Farmacéuticas",
         "price": 25.209999084472656,
         "trend": "lateral",
         "support": 25.190000534057617,
@@ -714,6 +792,8 @@
       },
       {
         "ticker": "NBIX",
+        "name": "Neurocrine",
+        "sector": "Biotecnología",
         "price": 158.2899932861328,
         "trend": "alcista",
         "support": 154.05999755859375,
@@ -729,6 +809,8 @@
       },
       {
         "ticker": "MDLZ",
+        "name": "Mondelez",
+        "sector": "Alimentos",
         "price": 60.119998931884766,
         "trend": "lateral",
         "support": 59.95000076293945,
@@ -742,6 +824,8 @@
       },
       {
         "ticker": "FMX",
+        "name": "FEMSA",
+        "sector": "Bebidas",
         "price": 126.47000122070312,
         "trend": "alcista",
         "support": 120.37999725341797,
@@ -755,6 +839,8 @@
       },
       {
         "ticker": "BUD",
+        "name": "AB InBev",
+        "sector": "Bebidas",
         "price": 80.73999786376953,
         "trend": "alcista",
         "support": 79.0199966430664,
@@ -768,6 +854,8 @@
       },
       {
         "ticker": "TXRH",
+        "name": "Texas Roadhouse",
+        "sector": "Restaurantes / Comida rápida",
         "price": 177.75,
         "trend": "alcista",
         "support": 170.41000366210938,
@@ -781,6 +869,8 @@
       },
       {
         "ticker": "EL",
+        "name": "Estée Lauder",
+        "sector": "Consumo básico / Hogar",
         "price": 84.80999755859375,
         "trend": "alcista",
         "support": 81.31999969482422,
@@ -794,6 +884,8 @@
       },
       {
         "ticker": "HD",
+        "name": "Home Depot",
+        "sector": "Retail / Comercio",
         "price": 334.2799987792969,
         "trend": "lateral",
         "support": 315.30999755859375,
@@ -805,6 +897,8 @@
       },
       {
         "ticker": "JPM",
+        "name": "JPMorgan Chase",
+        "sector": "Finanzas / Bancos",
         "price": 325.2200012207031,
         "trend": "alcista",
         "support": 308.8800048828125,
@@ -818,6 +912,8 @@
       },
       {
         "ticker": "BAC",
+        "name": "Bank of America",
+        "sector": "Finanzas / Bancos",
         "price": 56.20000076293945,
         "trend": "alcista",
         "support": 51.83000183105469,
@@ -831,6 +927,8 @@
       },
       {
         "ticker": "WFC",
+        "name": "Wells Fargo",
+        "sector": "Finanzas / Bancos",
         "price": 82.19999694824219,
         "trend": "alcista",
         "support": 80.83000183105469,
@@ -846,6 +944,8 @@
       },
       {
         "ticker": "C",
+        "name": "Citigroup",
+        "sector": "Finanzas / Bancos",
         "price": 143.05999755859375,
         "trend": "alcista",
         "support": 126.83999633789062,
@@ -859,6 +959,8 @@
       },
       {
         "ticker": "MS",
+        "name": "Morgan Stanley",
+        "sector": "Finanzas / Bancos",
         "price": 223.1699981689453,
         "trend": "alcista",
         "support": 205.8300018310547,
@@ -872,6 +974,8 @@
       },
       {
         "ticker": "SAN",
+        "name": "Banco Santander",
+        "sector": "Finanzas / Bancos",
         "price": 13.5,
         "trend": "alcista",
         "support": 11.90999984741211,
@@ -885,6 +989,8 @@
       },
       {
         "ticker": "GPN",
+        "name": "Global Payments",
+        "sector": "Pagos / Fintech",
         "price": 66.87999725341797,
         "trend": "lateral",
         "support": 66.76000213623047,
@@ -898,6 +1004,8 @@
       },
       {
         "ticker": "SOFI",
+        "name": "SoFi",
+        "sector": "Pagos / Fintech",
         "price": 17.90999984741211,
         "trend": "lateral",
         "support": 15.651000022888184,
@@ -909,6 +1017,8 @@
       },
       {
         "ticker": "VZ",
+        "name": "Verizon",
+        "sector": "Telecomunicaciones",
         "price": 45.369998931884766,
         "trend": "lateral",
         "support": 45.16999816894531,
@@ -922,6 +1032,8 @@
       },
       {
         "ticker": "CMCSA",
+        "name": "Comcast",
+        "sector": "Telecomunicaciones",
         "price": 22.43000030517578,
         "trend": "bajista",
         "support": 22.3799991607666,
@@ -935,6 +1047,8 @@
       },
       {
         "ticker": "WBD",
+        "name": "Warner Bros. Discovery",
+        "sector": "Medios / Entretenimiento",
         "price": 26.200000762939453,
         "trend": "lateral",
         "support": 25.90999984741211,
@@ -948,6 +1062,8 @@
       },
       {
         "ticker": "SPOT",
+        "name": "Spotify",
+        "sector": "Medios / Entretenimiento",
         "price": 468.0799865722656,
         "trend": "lateral",
         "support": 462.2200012207031,
@@ -961,6 +1077,8 @@
       },
       {
         "ticker": "CAT",
+        "name": "Caterpillar",
+        "sector": "Industrial / Maquinaria",
         "price": 985.8200073242188,
         "trend": "alcista",
         "support": 854.72998046875,
@@ -974,6 +1092,8 @@
       },
       {
         "ticker": "ITW",
+        "name": "Illinois Tool Works",
+        "sector": "Industrial / Maquinaria",
         "price": 264.0899963378906,
         "trend": "lateral",
         "support": 262.1099853515625,
@@ -987,6 +1107,8 @@
       },
       {
         "ticker": "DHI",
+        "name": "D.R. Horton",
+        "sector": "Construcción / Materiales",
         "price": 157.80999755859375,
         "trend": "lateral",
         "support": 143.6300048828125,
@@ -998,6 +1120,8 @@
       },
       {
         "ticker": "ORBIA.MX",
+        "name": "Orbia",
+        "sector": "Construcción / Materiales",
         "price": 21.200000762939453,
         "trend": "lateral",
         "support": 21.040000915527344,
@@ -1011,6 +1135,8 @@
       },
       {
         "ticker": "BHP",
+        "name": "BHP",
+        "sector": "Minería / Metales",
         "price": 87.87000274658203,
         "trend": "alcista",
         "support": 82.48999786376953,
@@ -1024,6 +1150,8 @@
       },
       {
         "ticker": "GMEXICOB.MX",
+        "name": "Grupo México",
+        "sector": "Minería / Metales",
         "price": 207.5,
         "trend": "alcista",
         "support": 203.07000732421875,
@@ -1039,6 +1167,8 @@
       },
       {
         "ticker": "VOO",
+        "name": "Vanguard S&P 500",
+        "sector": "ETFs / Índices",
         "price": 688.1099853515625,
         "trend": "lateral",
         "support": 672.5499877929688,
@@ -1053,6 +1183,8 @@
       },
       {
         "ticker": "QQQ",
+        "name": "Invesco Nasdaq-100",
+        "sector": "ETFs / Índices",
         "price": 740.6199951171875,
         "trend": "alcista",
         "support": 695.25,
@@ -1066,7 +1198,25 @@
         ]
       },
       {
+        "ticker": "VTI",
+        "name": "Vanguard Total US Market",
+        "sector": "ETFs / Índices",
+        "price": 369.989990234375,
+        "trend": "alcista",
+        "support": 358.79998779296875,
+        "resistance": 373.6400146484375,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.99%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "IWM",
+        "name": "Russell 2000 (small caps)",
+        "sector": "ETFs / Índices",
         "price": 295.5899963378906,
         "trend": "alcista",
         "support": 286.2699890136719,
@@ -1080,21 +1230,57 @@
         ]
       },
       {
-        "ticker": "SPY",
-        "price": 746.739990234375,
-        "trend": "lateral",
-        "support": 731.530029296875,
-        "resistance": 749.530029296875,
+        "ticker": "VEA",
+        "name": "Desarrollados ex-EE.UU.",
+        "sector": "ETFs / Índices",
+        "price": 72.30999755859375,
+        "trend": "alcista",
+        "support": 68.66000366210938,
+        "resistance": 72.31999969482422,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.04%)",
-          "Precio cerca de la resistencia (0.37%)",
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.01%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "VT",
+        "name": "Acciones mundiales",
+        "sector": "ETFs / Índices",
+        "price": 157.66000366210938,
+        "trend": "lateral",
+        "support": 152.97999572753906,
+        "resistance": 159.1999969482422,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (2.97%)",
+          "Precio cerca de la resistencia (0.98%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "SCHD",
+        "name": "Dividendos EE.UU.",
+        "sector": "ETFs / Índices",
+        "price": 31.860000610351562,
+        "trend": "lateral",
+        "support": 31.270000457763672,
+        "resistance": 31.969999313354492,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.85%)",
+          "Precio cerca de la resistencia (0.35%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
         "ticker": "FUNO11.MX",
+        "name": "Fibra Uno",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 29.030000686645508,
         "trend": "bajista",
         "support": 28.799999237060547,
@@ -1109,6 +1295,8 @@
       },
       {
         "ticker": "FIBRAPL14.MX",
+        "name": "Fibra Prologis",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 79.91000366210938,
         "trend": "lateral",
         "support": 79.22000122070312,
@@ -1123,6 +1311,8 @@
       },
       {
         "ticker": "FSHOP13.MX",
+        "name": "Fibra Shop",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 11.579999923706055,
         "trend": "lateral",
         "support": 11.5,
@@ -1138,6 +1328,8 @@
       },
       {
         "ticker": "FINN13.MX",
+        "name": "Fibra Inn",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 4.679999828338623,
         "trend": "bajista",
         "support": 4.650000095367432,
@@ -1153,6 +1345,8 @@
       },
       {
         "ticker": "STORAGE18.MX",
+        "name": "Fibra Storage",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 26.0,
         "trend": "lateral",
         "support": 25.5,
@@ -1168,7 +1362,9 @@
       },
       {
         "ticker": "BNB-USD",
-        "price": 589.3900146484375,
+        "name": "BNB (Binance)",
+        "sector": "Criptomonedas",
+        "price": 587.4299926757812,
         "trend": "bajista",
         "support": 558.3897705078125,
         "resistance": 609.70458984375,
@@ -1180,6 +1376,8 @@
       },
       {
         "ticker": "CRM",
+        "name": "Salesforce",
+        "sector": "Tecnología / Software",
         "price": 151.77999877929688,
         "trend": "bajista",
         "support": 149.8000030517578,
@@ -1194,6 +1392,8 @@
       },
       {
         "ticker": "ADBE",
+        "name": "Adobe",
+        "sector": "Tecnología / Software",
         "price": 195.16000366210938,
         "trend": "bajista",
         "support": 190.1199951171875,
@@ -1208,6 +1408,8 @@
       },
       {
         "ticker": "SAP",
+        "name": "SAP",
+        "sector": "Tecnología / Software",
         "price": 155.22000122070312,
         "trend": "bajista",
         "support": 154.1300048828125,
@@ -1222,6 +1424,8 @@
       },
       {
         "ticker": "TSM",
+        "name": "TSMC",
+        "sector": "Semiconductores",
         "price": 462.1199951171875,
         "trend": "alcista",
         "support": 405.510009765625,
@@ -1236,6 +1440,8 @@
       },
       {
         "ticker": "AVGO",
+        "name": "Broadcom",
+        "sector": "Semiconductores",
         "price": 411.3500061035156,
         "trend": "bajista",
         "support": 406.29998779296875,
@@ -1250,6 +1456,8 @@
       },
       {
         "ticker": "AMD",
+        "name": "AMD",
+        "sector": "Semiconductores",
         "price": 537.3699951171875,
         "trend": "alcista",
         "support": 437.2300109863281,
@@ -1262,6 +1470,8 @@
       },
       {
         "ticker": "INTC",
+        "name": "Intel",
+        "sector": "Semiconductores",
         "price": 133.99000549316406,
         "trend": "alcista",
         "support": 102.4000015258789,
@@ -1274,6 +1484,8 @@
       },
       {
         "ticker": "MU",
+        "name": "Micron",
+        "sector": "Semiconductores",
         "price": 1133.989990234375,
         "trend": "alcista",
         "support": 854.3499755859375,
@@ -1286,6 +1498,8 @@
       },
       {
         "ticker": "XOM",
+        "name": "ExxonMobil",
+        "sector": "Energía (petróleo y gas)",
         "price": 137.80999755859375,
         "trend": "bajista",
         "support": 135.85000610351562,
@@ -1300,6 +1514,8 @@
       },
       {
         "ticker": "SHEL",
+        "name": "Shell",
+        "sector": "Energía (petróleo y gas)",
         "price": 78.80999755859375,
         "trend": "bajista",
         "support": 77.93499755859375,
@@ -1314,6 +1530,8 @@
       },
       {
         "ticker": "TTE",
+        "name": "TotalEnergies",
+        "sector": "Energía (petróleo y gas)",
         "price": 80.43000030517578,
         "trend": "bajista",
         "support": 80.19000244140625,
@@ -1328,6 +1546,8 @@
       },
       {
         "ticker": "BP",
+        "name": "BP",
+        "sector": "Energía (petróleo y gas)",
         "price": 39.099998474121094,
         "trend": "bajista",
         "support": 38.72999954223633,
@@ -1342,6 +1562,8 @@
       },
       {
         "ticker": "COP",
+        "name": "ConocoPhillips",
+        "sector": "Energía (petróleo y gas)",
         "price": 107.73999786376953,
         "trend": "bajista",
         "support": 106.98999786376953,
@@ -1356,6 +1578,8 @@
       },
       {
         "ticker": "ENB",
+        "name": "Enbridge",
+        "sector": "Energía (petróleo y gas)",
         "price": 54.54999923706055,
         "trend": "lateral",
         "support": 53.33000183105469,
@@ -1370,6 +1594,8 @@
       },
       {
         "ticker": "SLB",
+        "name": "Schlumberger",
+        "sector": "Energía (petróleo y gas)",
         "price": 48.09000015258789,
         "trend": "bajista",
         "support": 47.61000061035156,
@@ -1384,6 +1610,8 @@
       },
       {
         "ticker": "NEE",
+        "name": "NextEra Energy",
+        "sector": "Energía renovable / Utilities",
         "price": 86.75,
         "trend": "bajista",
         "support": 86.62999725341797,
@@ -1398,6 +1626,8 @@
       },
       {
         "ticker": "BEP",
+        "name": "Brookfield Renewable",
+        "sector": "Energía renovable / Utilities",
         "price": 35.2400016784668,
         "trend": "alcista",
         "support": 34.08000183105469,
@@ -1412,6 +1642,8 @@
       },
       {
         "ticker": "DUK",
+        "name": "Duke Energy",
+        "sector": "Energía renovable / Utilities",
         "price": 123.86000061035156,
         "trend": "lateral",
         "support": 120.9000015258789,
@@ -1426,6 +1658,8 @@
       },
       {
         "ticker": "SO",
+        "name": "Southern Company",
+        "sector": "Energía renovable / Utilities",
         "price": 93.08999633789062,
         "trend": "lateral",
         "support": 91.61000061035156,
@@ -1440,6 +1674,8 @@
       },
       {
         "ticker": "D",
+        "name": "Dominion Energy",
+        "sector": "Energía renovable / Utilities",
         "price": 68.41000366210938,
         "trend": "alcista",
         "support": 65.47000122070312,
@@ -1454,6 +1690,8 @@
       },
       {
         "ticker": "EXC",
+        "name": "Exelon",
+        "sector": "Energía renovable / Utilities",
         "price": 45.810001373291016,
         "trend": "lateral",
         "support": 45.68000030517578,
@@ -1468,6 +1706,8 @@
       },
       {
         "ticker": "IBDRY",
+        "name": "Iberdrola",
+        "sector": "Energía renovable / Utilities",
         "price": 95.27999877929688,
         "trend": "lateral",
         "support": 92.83000183105469,
@@ -1482,6 +1722,8 @@
       },
       {
         "ticker": "TSLA",
+        "name": "Tesla",
+        "sector": "Automotriz",
         "price": 400.489990234375,
         "trend": "lateral",
         "support": 393.6300048828125,
@@ -1494,6 +1736,8 @@
       },
       {
         "ticker": "TM",
+        "name": "Toyota",
+        "sector": "Automotriz",
         "price": 173.94000244140625,
         "trend": "bajista",
         "support": 171.1699981689453,
@@ -1508,6 +1752,8 @@
       },
       {
         "ticker": "BYDDY",
+        "name": "BYD",
+        "sector": "Automotriz",
         "price": 10.289999961853027,
         "trend": "bajista",
         "support": 10.210000038146973,
@@ -1522,6 +1768,8 @@
       },
       {
         "ticker": "RACE",
+        "name": "Ferrari",
+        "sector": "Automotriz",
         "price": 362.1300048828125,
         "trend": "alcista",
         "support": 345.82598876953125,
@@ -1536,6 +1784,8 @@
       },
       {
         "ticker": "AAL",
+        "name": "American Airlines",
+        "sector": "Aviación / Aerolíneas",
         "price": 15.989999771118164,
         "trend": "alcista",
         "support": 13.3100004196167,
@@ -1550,6 +1800,8 @@
       },
       {
         "ticker": "LUV",
+        "name": "Southwest Airlines",
+        "sector": "Aviación / Aerolíneas",
         "price": 47.970001220703125,
         "trend": "alcista",
         "support": 40.83000183105469,
@@ -1564,6 +1816,8 @@
       },
       {
         "ticker": "RYAAY",
+        "name": "Ryanair",
+        "sector": "Aviación / Aerolíneas",
         "price": 61.2400016784668,
         "trend": "alcista",
         "support": 57.34000015258789,
@@ -1578,6 +1832,8 @@
       },
       {
         "ticker": "DLAKY",
+        "name": "Lufthansa",
+        "sector": "Aviación / Aerolíneas",
         "price": 10.4399995803833,
         "trend": "alcista",
         "support": 9.239999771118164,
@@ -1592,6 +1848,8 @@
       },
       {
         "ticker": "BA",
+        "name": "Boeing",
+        "sector": "Aeroespacial y Defensa",
         "price": 222.72000122070312,
         "trend": "bajista",
         "support": 221.0399932861328,
@@ -1606,6 +1864,8 @@
       },
       {
         "ticker": "NOC",
+        "name": "Northrop Grumman",
+        "sector": "Aeroespacial y Defensa",
         "price": 521.5,
         "trend": "bajista",
         "support": 515.3800048828125,
@@ -1620,6 +1880,8 @@
       },
       {
         "ticker": "GD",
+        "name": "General Dynamics",
+        "sector": "Aeroespacial y Defensa",
         "price": 350.010009765625,
         "trend": "alcista",
         "support": 337.80999755859375,
@@ -1634,6 +1896,8 @@
       },
       {
         "ticker": "EADSY",
+        "name": "Airbus",
+        "sector": "Aeroespacial y Defensa",
         "price": 55.0,
         "trend": "alcista",
         "support": 50.11000061035156,
@@ -1648,6 +1912,8 @@
       },
       {
         "ticker": "HWM",
+        "name": "Howmet Aerospace",
+        "sector": "Aeroespacial y Defensa",
         "price": 277.6600036621094,
         "trend": "alcista",
         "support": 250.85000610351562,
@@ -1662,6 +1928,8 @@
       },
       {
         "ticker": "TDG",
+        "name": "TransDigm",
+        "sector": "Aeroespacial y Defensa",
         "price": 1328.31005859375,
         "trend": "alcista",
         "support": 1201.8599853515625,
@@ -1676,6 +1944,8 @@
       },
       {
         "ticker": "UNH",
+        "name": "UnitedHealth",
+        "sector": "Salud / Dispositivos médicos",
         "price": 400.9599914550781,
         "trend": "alcista",
         "support": 374.7200012207031,
@@ -1688,6 +1958,8 @@
       },
       {
         "ticker": "ABT",
+        "name": "Abbott Laboratories",
+        "sector": "Salud / Dispositivos médicos",
         "price": 88.41000366210938,
         "trend": "lateral",
         "support": 87.06999969482422,
@@ -1700,6 +1972,8 @@
       },
       {
         "ticker": "MDT",
+        "name": "Medtronic",
+        "sector": "Salud / Dispositivos médicos",
         "price": 79.33999633789062,
         "trend": "lateral",
         "support": 74.4000015258789,
@@ -1712,6 +1986,8 @@
       },
       {
         "ticker": "TMO",
+        "name": "Thermo Fisher",
+        "sector": "Salud / Dispositivos médicos",
         "price": 464.6099853515625,
         "trend": "lateral",
         "support": 455.6000061035156,
@@ -1724,6 +2000,8 @@
       },
       {
         "ticker": "ISRG",
+        "name": "Intuitive Surgical",
+        "sector": "Salud / Dispositivos médicos",
         "price": 406.7799987792969,
         "trend": "bajista",
         "support": 396.67999267578125,
@@ -1738,6 +2016,8 @@
       },
       {
         "ticker": "BSX",
+        "name": "Boston Scientific",
+        "sector": "Salud / Dispositivos médicos",
         "price": 45.290000915527344,
         "trend": "bajista",
         "support": 44.439998626708984,
@@ -1752,6 +2032,8 @@
       },
       {
         "ticker": "EW",
+        "name": "Edwards Lifesciences",
+        "sector": "Salud / Dispositivos médicos",
         "price": 87.36000061035156,
         "trend": "alcista",
         "support": 84.69999694824219,
@@ -1766,6 +2048,8 @@
       },
       {
         "ticker": "NVO",
+        "name": "Novo Nordisk",
+        "sector": "Farmacéuticas",
         "price": 43.189998626708984,
         "trend": "lateral",
         "support": 41.0,
@@ -1775,6 +2059,8 @@
       },
       {
         "ticker": "JNJ",
+        "name": "Johnson & Johnson",
+        "sector": "Farmacéuticas",
         "price": 228.38999938964844,
         "trend": "lateral",
         "support": 223.77999877929688,
@@ -1789,6 +2075,8 @@
       },
       {
         "ticker": "ABBV",
+        "name": "AbbVie",
+        "sector": "Farmacéuticas",
         "price": 216.49000549316406,
         "trend": "alcista",
         "support": 208.99000549316406,
@@ -1803,6 +2091,8 @@
       },
       {
         "ticker": "RHHBY",
+        "name": "Roche",
+        "sector": "Farmacéuticas",
         "price": 49.7400016784668,
         "trend": "lateral",
         "support": 49.470001220703125,
@@ -1817,6 +2107,8 @@
       },
       {
         "ticker": "NVS",
+        "name": "Novartis",
+        "sector": "Farmacéuticas",
         "price": 147.0800018310547,
         "trend": "lateral",
         "support": 144.75,
@@ -1831,6 +2123,8 @@
       },
       {
         "ticker": "AZN",
+        "name": "AstraZeneca",
+        "sector": "Farmacéuticas",
         "price": 174.92999267578125,
         "trend": "bajista",
         "support": 174.60000610351562,
@@ -1845,6 +2139,8 @@
       },
       {
         "ticker": "AMGN",
+        "name": "Amgen",
+        "sector": "Farmacéuticas",
         "price": 337.6000061035156,
         "trend": "lateral",
         "support": 337.489990234375,
@@ -1859,6 +2155,8 @@
       },
       {
         "ticker": "REGN",
+        "name": "Regeneron",
+        "sector": "Biotecnología",
         "price": 609.9400024414062,
         "trend": "bajista",
         "support": 601.219970703125,
@@ -1873,6 +2171,8 @@
       },
       {
         "ticker": "VRTX",
+        "name": "Vertex Pharmaceuticals",
+        "sector": "Biotecnología",
         "price": 451.6300048828125,
         "trend": "alcista",
         "support": 433.79998779296875,
@@ -1887,6 +2187,8 @@
       },
       {
         "ticker": "GILD",
+        "name": "Gilead Sciences",
+        "sector": "Biotecnología",
         "price": 123.76000213623047,
         "trend": "bajista",
         "support": 121.38999938964844,
@@ -1901,6 +2203,8 @@
       },
       {
         "ticker": "BIIB",
+        "name": "Biogen",
+        "sector": "Biotecnología",
         "price": 196.5800018310547,
         "trend": "alcista",
         "support": 185.85000610351562,
@@ -1915,6 +2219,8 @@
       },
       {
         "ticker": "BNTX",
+        "name": "BioNTech",
+        "sector": "Biotecnología",
         "price": 90.88999938964844,
         "trend": "bajista",
         "support": 90.79000091552734,
@@ -1929,6 +2235,8 @@
       },
       {
         "ticker": "ALNY",
+        "name": "Alnylam",
+        "sector": "Biotecnología",
         "price": 278.0899963378906,
         "trend": "bajista",
         "support": 273.1099853515625,
@@ -1943,6 +2251,8 @@
       },
       {
         "ticker": "INCY",
+        "name": "Incyte",
+        "sector": "Biotecnología",
         "price": 98.22000122070312,
         "trend": "alcista",
         "support": 94.0999984741211,
@@ -1957,6 +2267,8 @@
       },
       {
         "ticker": "NSRGY",
+        "name": "Nestlé",
+        "sector": "Alimentos",
         "price": 98.0999984741211,
         "trend": "lateral",
         "support": 97.2300033569336,
@@ -1971,6 +2283,8 @@
       },
       {
         "ticker": "GIS",
+        "name": "General Mills",
+        "sector": "Alimentos",
         "price": 33.41999816894531,
         "trend": "lateral",
         "support": 32.63999938964844,
@@ -1985,6 +2299,8 @@
       },
       {
         "ticker": "CAG",
+        "name": "Conagra",
+        "sector": "Alimentos",
         "price": 13.199999809265137,
         "trend": "bajista",
         "support": 13.140000343322754,
@@ -1999,6 +2315,8 @@
       },
       {
         "ticker": "GRUMAB.MX",
+        "name": "Gruma (Maseca)",
+        "sector": "Alimentos",
         "price": 287.07000732421875,
         "trend": "bajista",
         "support": 284.2900085449219,
@@ -2013,6 +2331,8 @@
       },
       {
         "ticker": "BIMBOA.MX",
+        "name": "Grupo Bimbo",
+        "sector": "Alimentos",
         "price": 58.91999816894531,
         "trend": "lateral",
         "support": 57.66999816894531,
@@ -2027,6 +2347,8 @@
       },
       {
         "ticker": "KO",
+        "name": "Coca-Cola",
+        "sector": "Bebidas",
         "price": 79.38999938964844,
         "trend": "lateral",
         "support": 77.83999633789062,
@@ -2041,6 +2363,8 @@
       },
       {
         "ticker": "KOF",
+        "name": "Coca-Cola FEMSA",
+        "sector": "Bebidas",
         "price": 109.55000305175781,
         "trend": "alcista",
         "support": 105.36000061035156,
@@ -2055,6 +2379,8 @@
       },
       {
         "ticker": "MNST",
+        "name": "Monster Beverage",
+        "sector": "Bebidas",
         "price": 91.33999633789062,
         "trend": "alcista",
         "support": 87.91000366210938,
@@ -2069,6 +2395,8 @@
       },
       {
         "ticker": "KDP",
+        "name": "Keurig Dr Pepper",
+        "sector": "Bebidas",
         "price": 30.760000228881836,
         "trend": "alcista",
         "support": 28.280000686645508,
@@ -2083,6 +2411,8 @@
       },
       {
         "ticker": "STZ",
+        "name": "Constellation Brands",
+        "sector": "Bebidas",
         "price": 141.17999267578125,
         "trend": "bajista",
         "support": 139.10000610351562,
@@ -2097,6 +2427,8 @@
       },
       {
         "ticker": "DEO",
+        "name": "Diageo",
+        "sector": "Bebidas",
         "price": 80.44999694824219,
         "trend": "lateral",
         "support": 79.9800033569336,
@@ -2111,6 +2443,8 @@
       },
       {
         "ticker": "MCD",
+        "name": "McDonald's",
+        "sector": "Restaurantes / Comida rápida",
         "price": 278.6099853515625,
         "trend": "lateral",
         "support": 271.9800109863281,
@@ -2125,6 +2459,8 @@
       },
       {
         "ticker": "DRI",
+        "name": "Darden",
+        "sector": "Restaurantes / Comida rápida",
         "price": 213.4499969482422,
         "trend": "alcista",
         "support": 191.72999572753906,
@@ -2139,6 +2475,8 @@
       },
       {
         "ticker": "WEN",
+        "name": "Wendy's",
+        "sector": "Restaurantes / Comida rápida",
         "price": 6.800000190734863,
         "trend": "bajista",
         "support": 6.670000076293945,
@@ -2153,6 +2491,8 @@
       },
       {
         "ticker": "ALSEA.MX",
+        "name": "Alsea (México)",
+        "sector": "Restaurantes / Comida rápida",
         "price": 46.86000061035156,
         "trend": "bajista",
         "support": 46.34000015258789,
@@ -2167,6 +2507,8 @@
       },
       {
         "ticker": "UL",
+        "name": "Unilever",
+        "sector": "Consumo básico / Hogar",
         "price": 58.400001525878906,
         "trend": "lateral",
         "support": 57.790000915527344,
@@ -2181,6 +2523,8 @@
       },
       {
         "ticker": "KMB",
+        "name": "Kimberly-Clark",
+        "sector": "Consumo básico / Hogar",
         "price": 102.55999755859375,
         "trend": "alcista",
         "support": 96.01000213623047,
@@ -2195,6 +2539,8 @@
       },
       {
         "ticker": "CHD",
+        "name": "Church & Dwight",
+        "sector": "Consumo básico / Hogar",
         "price": 95.62999725341797,
         "trend": "lateral",
         "support": 94.19000244140625,
@@ -2209,6 +2555,8 @@
       },
       {
         "ticker": "COST",
+        "name": "Costco",
+        "sector": "Retail / Comercio",
         "price": 951.4500122070312,
         "trend": "bajista",
         "support": 936.510009765625,
@@ -2223,6 +2571,8 @@
       },
       {
         "ticker": "ORLY",
+        "name": "O'Reilly Automotive",
+        "sector": "Retail / Comercio",
         "price": 86.83999633789062,
         "trend": "bajista",
         "support": 85.3499984741211,
@@ -2237,6 +2587,8 @@
       },
       {
         "ticker": "CHDRAUIB.MX",
+        "name": "Chedraui",
+        "sector": "Retail / Comercio",
         "price": 90.36000061035156,
         "trend": "bajista",
         "support": 89.73999786376953,
@@ -2251,6 +2603,8 @@
       },
       {
         "ticker": "GS",
+        "name": "Goldman Sachs",
+        "sector": "Finanzas / Bancos",
         "price": 1096.56005859375,
         "trend": "alcista",
         "support": 1000.0399780273438,
@@ -2265,6 +2619,8 @@
       },
       {
         "ticker": "BBAJIOO.MX",
+        "name": "Banco del Bajío",
+        "sector": "Finanzas / Bancos",
         "price": 54.880001068115234,
         "trend": "lateral",
         "support": 54.130001068115234,
@@ -2279,6 +2635,8 @@
       },
       {
         "ticker": "GENTERA.MX",
+        "name": "Gentera",
+        "sector": "Finanzas / Bancos",
         "price": 38.349998474121094,
         "trend": "bajista",
         "support": 35.54999923706055,
@@ -2291,6 +2649,8 @@
       },
       {
         "ticker": "MA",
+        "name": "Mastercard",
+        "sector": "Pagos / Fintech",
         "price": 489.7900085449219,
         "trend": "lateral",
         "support": 489.7300109863281,
@@ -2305,6 +2665,8 @@
       },
       {
         "ticker": "AXP",
+        "name": "American Express",
+        "sector": "Pagos / Fintech",
         "price": 338.0,
         "trend": "alcista",
         "support": 312.5,
@@ -2319,6 +2681,8 @@
       },
       {
         "ticker": "COIN",
+        "name": "Coinbase",
+        "sector": "Pagos / Fintech",
         "price": 163.25999450683594,
         "trend": "bajista",
         "support": 163.1300048828125,
@@ -2333,6 +2697,8 @@
       },
       {
         "ticker": "T",
+        "name": "AT&T",
+        "sector": "Telecomunicaciones",
         "price": 22.010000228881836,
         "trend": "bajista",
         "support": 21.989999771118164,
@@ -2347,6 +2713,8 @@
       },
       {
         "ticker": "CHTR",
+        "name": "Charter Communications",
+        "sector": "Telecomunicaciones",
         "price": 126.2300033569336,
         "trend": "bajista",
         "support": 126.0,
@@ -2359,6 +2727,8 @@
       },
       {
         "ticker": "AMXB.MX",
+        "name": "América Móvil",
+        "sector": "Telecomunicaciones",
         "price": 23.610000610351562,
         "trend": "lateral",
         "support": 22.93000030517578,
@@ -2373,6 +2743,8 @@
       },
       {
         "ticker": "VOD",
+        "name": "Vodafone",
+        "sector": "Telecomunicaciones",
         "price": 14.300000190734863,
         "trend": "bajista",
         "support": 14.300000190734863,
@@ -2387,6 +2759,8 @@
       },
       {
         "ticker": "TU",
+        "name": "Telus",
+        "sector": "Telecomunicaciones",
         "price": 11.539999961853027,
         "trend": "bajista",
         "support": 11.430000305175781,
@@ -2401,6 +2775,8 @@
       },
       {
         "ticker": "NFLX",
+        "name": "Netflix",
+        "sector": "Medios / Entretenimiento",
         "price": 77.37999725341797,
         "trend": "bajista",
         "support": 76.12000274658203,
@@ -2413,6 +2789,8 @@
       },
       {
         "ticker": "DIS",
+        "name": "Walt Disney",
+        "sector": "Medios / Entretenimiento",
         "price": 103.88999938964844,
         "trend": "lateral",
         "support": 101.5999984741211,
@@ -2425,6 +2803,8 @@
       },
       {
         "ticker": "RBLX",
+        "name": "Roblox",
+        "sector": "Medios / Entretenimiento",
         "price": 51.529998779296875,
         "trend": "bajista",
         "support": 51.22999954223633,
@@ -2439,6 +2819,8 @@
       },
       {
         "ticker": "EA",
+        "name": "Electronic Arts",
+        "sector": "Medios / Entretenimiento",
         "price": 202.14999389648438,
         "trend": "lateral",
         "support": 202.0500030517578,
@@ -2453,6 +2835,8 @@
       },
       {
         "ticker": "TTWO",
+        "name": "Take-Two Interactive",
+        "sector": "Medios / Entretenimiento",
         "price": 239.27999877929688,
         "trend": "alcista",
         "support": 216.30999755859375,
@@ -2467,6 +2851,8 @@
       },
       {
         "ticker": "LYV",
+        "name": "Live Nation",
+        "sector": "Medios / Entretenimiento",
         "price": 171.24000549316406,
         "trend": "alcista",
         "support": 159.7100067138672,
@@ -2481,6 +2867,8 @@
       },
       {
         "ticker": "FOXA",
+        "name": "Fox Corporation",
+        "sector": "Medios / Entretenimiento",
         "price": 52.22999954223633,
         "trend": "bajista",
         "support": 50.68000030517578,
@@ -2495,6 +2883,8 @@
       },
       {
         "ticker": "BABA",
+        "name": "Alibaba",
+        "sector": "E-commerce / Internet",
         "price": 107.0999984741211,
         "trend": "bajista",
         "support": 105.51000213623047,
@@ -2509,6 +2899,8 @@
       },
       {
         "ticker": "PDD",
+        "name": "PDD / Temu",
+        "sector": "E-commerce / Internet",
         "price": 79.55999755859375,
         "trend": "bajista",
         "support": 78.87000274658203,
@@ -2523,6 +2915,8 @@
       },
       {
         "ticker": "ETSY",
+        "name": "Etsy",
+        "sector": "E-commerce / Internet",
         "price": 73.94999694824219,
         "trend": "alcista",
         "support": 65.9000015258789,
@@ -2537,6 +2931,8 @@
       },
       {
         "ticker": "JD",
+        "name": "JD.com",
+        "sector": "E-commerce / Internet",
         "price": 27.56999969482422,
         "trend": "bajista",
         "support": 27.475000381469727,
@@ -2551,6 +2947,8 @@
       },
       {
         "ticker": "DE",
+        "name": "John Deere",
+        "sector": "Industrial / Maquinaria",
         "price": 589.239990234375,
         "trend": "lateral",
         "support": 572.2999877929688,
@@ -2565,6 +2963,8 @@
       },
       {
         "ticker": "MMM",
+        "name": "3M",
+        "sector": "Industrial / Maquinaria",
         "price": 160.60000610351562,
         "trend": "alcista",
         "support": 151.72000122070312,
@@ -2579,6 +2979,8 @@
       },
       {
         "ticker": "EMR",
+        "name": "Emerson Electric",
+        "sector": "Industrial / Maquinaria",
         "price": 150.66000366210938,
         "trend": "alcista",
         "support": 139.36000061035156,
@@ -2593,6 +2995,8 @@
       },
       {
         "ticker": "ROK",
+        "name": "Rockwell Automation",
+        "sector": "Industrial / Maquinaria",
         "price": 473.7900085449219,
         "trend": "alcista",
         "support": 446.0,
@@ -2607,6 +3011,8 @@
       },
       {
         "ticker": "CEMEXCPO.MX",
+        "name": "Cemex",
+        "sector": "Construcción / Materiales",
         "price": 21.520000457763672,
         "trend": "lateral",
         "support": 21.239999771118164,
@@ -2621,6 +3027,8 @@
       },
       {
         "ticker": "MLM",
+        "name": "Martin Marietta",
+        "sector": "Construcción / Materiales",
         "price": 609.1199951171875,
         "trend": "lateral",
         "support": 606.22998046875,
@@ -2635,6 +3043,8 @@
       },
       {
         "ticker": "NUE",
+        "name": "Nucor (acero)",
+        "sector": "Construcción / Materiales",
         "price": 243.8300018310547,
         "trend": "alcista",
         "support": 219.49000549316406,
@@ -2647,6 +3057,8 @@
       },
       {
         "ticker": "LEN",
+        "name": "Lennar",
+        "sector": "Construcción / Materiales",
         "price": 89.7300033569336,
         "trend": "lateral",
         "support": 88.81999969482422,
@@ -2661,6 +3073,8 @@
       },
       {
         "ticker": "GCARSOA1.MX",
+        "name": "Grupo Carso",
+        "sector": "Construcción / Materiales",
         "price": 143.02999877929688,
         "trend": "lateral",
         "support": 139.08999633789062,
@@ -2675,6 +3089,8 @@
       },
       {
         "ticker": "NEM",
+        "name": "Newmont (oro)",
+        "sector": "Minería / Metales",
         "price": 103.79000091552734,
         "trend": "bajista",
         "support": 103.62000274658203,
@@ -2689,6 +3105,8 @@
       },
       {
         "ticker": "GOLD",
+        "name": "Barrick Gold",
+        "sector": "Minería / Metales",
         "price": 42.25,
         "trend": "bajista",
         "support": 41.810001373291016,
@@ -2703,6 +3121,8 @@
       },
       {
         "ticker": "FCX",
+        "name": "Freeport-McMoRan",
+        "sector": "Minería / Metales",
         "price": 68.68000030517578,
         "trend": "alcista",
         "support": 61.72999954223633,
@@ -2715,6 +3135,8 @@
       },
       {
         "ticker": "SCCO",
+        "name": "Southern Copper",
+        "sector": "Minería / Metales",
         "price": 192.92999267578125,
         "trend": "alcista",
         "support": 165.5,
@@ -2729,6 +3151,8 @@
       },
       {
         "ticker": "RIO",
+        "name": "Rio Tinto",
+        "sector": "Minería / Metales",
         "price": 100.08000183105469,
         "trend": "lateral",
         "support": 99.72000122070312,
@@ -2743,6 +3167,8 @@
       },
       {
         "ticker": "WPM",
+        "name": "Wheaton Precious Metals",
+        "sector": "Minería / Metales",
         "price": 122.56999969482422,
         "trend": "bajista",
         "support": 106.81999969482422,
@@ -2754,7 +3180,24 @@
         ]
       },
       {
+        "ticker": "VWO",
+        "name": "Mercados emergentes",
+        "sector": "ETFs / Índices",
+        "price": 60.77000045776367,
+        "trend": "lateral",
+        "support": 57.869998931884766,
+        "resistance": 60.9900016784668,
+        "score": -1,
+        "reasons": [
+          "Precio cerca de la resistencia (0.36%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "DANHOS13.MX",
+        "name": "Fibra Danhos",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 28.649999618530273,
         "trend": "lateral",
         "support": 27.700000762939453,
@@ -2769,6 +3212,8 @@
       },
       {
         "ticker": "FMTY14.MX",
+        "name": "Fibra Mty",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 14.050000190734863,
         "trend": "bajista",
         "support": 13.949999809265137,
@@ -2784,6 +3229,8 @@
       },
       {
         "ticker": "FIBRAMQ12.MX",
+        "name": "Fibra Macquarie",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 44.29999923706055,
         "trend": "lateral",
         "support": 42.59000015258789,
@@ -2797,6 +3244,8 @@
       },
       {
         "ticker": "FIHO12.MX",
+        "name": "Fibra Hotel",
+        "sector": "FIBRAs (bienes raíces)",
         "price": 7.239999771118164,
         "trend": "bajista",
         "support": 7.0,
@@ -2811,22 +3260,41 @@
       },
       {
         "ticker": "BTC-USD",
-        "price": 63945.109375,
+        "name": "Bitcoin",
+        "sector": "Criptomonedas",
+        "price": 63693.26171875,
         "trend": "bajista",
         "support": 62201.14453125,
         "resistance": 64185.765625,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.73%)",
-          "Precio cerca de la resistencia (0.38%)",
+          "Precio cerca del soporte (2.34%)",
+          "Precio cerca de la resistencia (0.77%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
+        "ticker": "ETH-USD",
+        "name": "Ethereum",
+        "sector": "Criptomonedas",
+        "price": 1717.1700439453125,
+        "trend": "bajista",
+        "support": 1670.1038818359375,
+        "resistance": 1847.769775390625,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.74%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "XRP-USD",
-        "price": 1.1404000520706177,
+        "name": "XRP (Ripple)",
+        "sector": "Criptomonedas",
+        "price": 1.1368999481201172,
         "trend": "bajista",
         "support": 1.054656982421875,
         "resistance": 1.184805989265442,
@@ -2837,7 +3305,9 @@
       },
       {
         "ticker": "HBAR-USD",
-        "price": 0.07963000237941742,
+        "name": "Hedera",
+        "sector": "Criptomonedas",
+        "price": 0.07930999994277954,
         "trend": "bajista",
         "support": 0.07690200209617615,
         "resistance": 0.08469600230455399,
@@ -2849,7 +3319,69 @@
         ]
       },
       {
+        "ticker": "SOL-USD",
+        "name": "Solana",
+        "sector": "Criptomonedas",
+        "price": 73.18000030517578,
+        "trend": "bajista",
+        "support": 60.41471862792969,
+        "resistance": 75.93878936767578,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "ADA-USD",
+        "name": "Cardano",
+        "sector": "Criptomonedas",
+        "price": 0.16009999811649323,
+        "trend": "bajista",
+        "support": 0.14922699332237244,
+        "resistance": 0.18926399946212769,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "DOGE-USD",
+        "name": "Dogecoin",
+        "sector": "Criptomonedas",
+        "price": 0.08291999995708466,
+        "trend": "bajista",
+        "support": 0.07809499651193619,
+        "resistance": 0.09169399738311768,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "AVAX-USD",
+        "name": "Avalanche",
+        "sector": "Criptomonedas",
+        "price": 6.190000057220459,
+        "trend": "bajista",
+        "support": 5.693565845489502,
+        "resistance": 7.060857772827148,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "AMZN",
+        "name": "Amazon",
+        "sector": "Tecnología / Software",
         "price": 244.38999938964844,
         "trend": "bajista",
         "support": 233.58999633789062,
@@ -2863,6 +3395,8 @@
       },
       {
         "ticker": "PBR",
+        "name": "Petrobras",
+        "sector": "Energía (petróleo y gas)",
         "price": 16.75,
         "trend": "bajista",
         "support": 16.219999313354492,
@@ -2876,6 +3410,8 @@
       },
       {
         "ticker": "AEP",
+        "name": "American Electric Power",
+        "sector": "Energía renovable / Utilities",
         "price": 127.69000244140625,
         "trend": "bajista",
         "support": 124.68000030517578,
@@ -2891,6 +3427,8 @@
       },
       {
         "ticker": "MBGYY",
+        "name": "Mercedes-Benz",
+        "sector": "Automotriz",
         "price": 12.710000038146973,
         "trend": "bajista",
         "support": 12.59000015258789,
@@ -2904,6 +3442,8 @@
       },
       {
         "ticker": "SYK",
+        "name": "Stryker",
+        "sector": "Salud / Dispositivos médicos",
         "price": 307.79998779296875,
         "trend": "lateral",
         "support": 290.9599914550781,
@@ -2915,6 +3455,8 @@
       },
       {
         "ticker": "HSY",
+        "name": "Hershey",
+        "sector": "Alimentos",
         "price": 172.6300048828125,
         "trend": "bajista",
         "support": 171.10000610351562,
@@ -2928,6 +3470,8 @@
       },
       {
         "ticker": "PEP",
+        "name": "PepsiCo",
+        "sector": "Bebidas",
         "price": 142.02000427246094,
         "trend": "bajista",
         "support": 140.80999755859375,
@@ -2943,6 +3487,8 @@
       },
       {
         "ticker": "TAP",
+        "name": "Molson Coors",
+        "sector": "Bebidas",
         "price": 39.400001525878906,
         "trend": "bajista",
         "support": 38.040000915527344,
@@ -2956,6 +3502,8 @@
       },
       {
         "ticker": "SBUX",
+        "name": "Starbucks",
+        "sector": "Restaurantes / Comida rápida",
         "price": 100.6500015258789,
         "trend": "lateral",
         "support": 96.8499984741211,
@@ -2969,6 +3517,8 @@
       },
       {
         "ticker": "CMG",
+        "name": "Chipotle",
+        "sector": "Restaurantes / Comida rápida",
         "price": 32.4900016784668,
         "trend": "bajista",
         "support": 31.969999313354492,
@@ -2984,6 +3534,8 @@
       },
       {
         "ticker": "YUM",
+        "name": "Yum! Brands",
+        "sector": "Restaurantes / Comida rápida",
         "price": 151.99000549316406,
         "trend": "bajista",
         "support": 151.91000366210938,
@@ -2999,6 +3551,8 @@
       },
       {
         "ticker": "DPZ",
+        "name": "Domino's Pizza",
+        "sector": "Restaurantes / Comida rápida",
         "price": 312.4700012207031,
         "trend": "bajista",
         "support": 306.7200012207031,
@@ -3014,6 +3568,8 @@
       },
       {
         "ticker": "PG",
+        "name": "Procter & Gamble",
+        "sector": "Consumo básico / Hogar",
         "price": 150.3800048828125,
         "trend": "lateral",
         "support": 142.25999450683594,
@@ -3027,6 +3583,8 @@
       },
       {
         "ticker": "CLX",
+        "name": "Clorox",
+        "sector": "Consumo básico / Hogar",
         "price": 95.80000305175781,
         "trend": "lateral",
         "support": 88.4800033569336,
@@ -3040,6 +3598,8 @@
       },
       {
         "ticker": "KVUE",
+        "name": "Kenvue",
+        "sector": "Consumo básico / Hogar",
         "price": 18.1200008392334,
         "trend": "lateral",
         "support": 17.209999084472656,
@@ -3053,6 +3613,8 @@
       },
       {
         "ticker": "KIMBERA.MX",
+        "name": "Kimberly-Clark México",
+        "sector": "Consumo básico / Hogar",
         "price": 38.369998931884766,
         "trend": "bajista",
         "support": 37.54999923706055,
@@ -3068,6 +3630,8 @@
       },
       {
         "ticker": "COTY",
+        "name": "Coty",
+        "sector": "Consumo básico / Hogar",
         "price": 1.9500000476837158,
         "trend": "bajista",
         "support": 1.8899999856948853,
@@ -3079,6 +3643,8 @@
       },
       {
         "ticker": "WMT",
+        "name": "Walmart",
+        "sector": "Retail / Comercio",
         "price": 117.18000030517578,
         "trend": "bajista",
         "support": 112.7300033569336,
@@ -3092,6 +3658,8 @@
       },
       {
         "ticker": "TGT",
+        "name": "Target",
+        "sector": "Retail / Comercio",
         "price": 130.74000549316406,
         "trend": "lateral",
         "support": 125.33000183105469,
@@ -3105,6 +3673,8 @@
       },
       {
         "ticker": "DG",
+        "name": "Dollar General",
+        "sector": "Retail / Comercio",
         "price": 113.44999694824219,
         "trend": "bajista",
         "support": 112.76000213623047,
@@ -3120,6 +3690,8 @@
       },
       {
         "ticker": "LIVEPOLC-1.MX",
+        "name": "El Puerto de Liverpool",
+        "sector": "Retail / Comercio",
         "price": 101.5199966430664,
         "trend": "bajista",
         "support": 101.4000015258789,
@@ -3135,6 +3707,8 @@
       },
       {
         "ticker": "GFNORTEO.MX",
+        "name": "Banorte",
+        "sector": "Finanzas / Bancos",
         "price": 189.47999572753906,
         "trend": "bajista",
         "support": 188.38999938964844,
@@ -3148,6 +3722,8 @@
       },
       {
         "ticker": "V",
+        "name": "Visa",
+        "sector": "Pagos / Fintech",
         "price": 327.239990234375,
         "trend": "lateral",
         "support": 316.1600036621094,
@@ -3161,6 +3737,8 @@
       },
       {
         "ticker": "PYPL",
+        "name": "PayPal",
+        "sector": "Pagos / Fintech",
         "price": 42.5099983215332,
         "trend": "bajista",
         "support": 40.20000076293945,
@@ -3174,6 +3752,8 @@
       },
       {
         "ticker": "XYZ",
+        "name": "Block (antes SQ)",
+        "sector": "Pagos / Fintech",
         "price": 74.77999877929688,
         "trend": "lateral",
         "support": 69.81999969482422,
@@ -3187,6 +3767,8 @@
       },
       {
         "ticker": "TMUS",
+        "name": "T-Mobile US",
+        "sector": "Telecomunicaciones",
         "price": 181.6699981689453,
         "trend": "bajista",
         "support": 174.02000427246094,
@@ -3200,6 +3782,8 @@
       },
       {
         "ticker": "SE",
+        "name": "Sea Limited",
+        "sector": "E-commerce / Internet",
         "price": 91.27999877929688,
         "trend": "lateral",
         "support": 84.62999725341797,
@@ -3213,6 +3797,8 @@
       },
       {
         "ticker": "SHOP",
+        "name": "Shopify",
+        "sector": "E-commerce / Internet",
         "price": 108.8499984741211,
         "trend": "bajista",
         "support": 104.11000061035156,
@@ -3224,6 +3810,8 @@
       },
       {
         "ticker": "CPNG",
+        "name": "Coupang",
+        "sector": "E-commerce / Internet",
         "price": 18.0,
         "trend": "bajista",
         "support": 15.029999732971191,
@@ -3237,6 +3825,8 @@
       },
       {
         "ticker": "ABNB",
+        "name": "Airbnb",
+        "sector": "E-commerce / Internet",
         "price": 142.41000366210938,
         "trend": "bajista",
         "support": 135.9499969482422,
@@ -3250,6 +3840,8 @@
       },
       {
         "ticker": "ETN",
+        "name": "Eaton",
+        "sector": "Industrial / Maquinaria",
         "price": 421.7699890136719,
         "trend": "lateral",
         "support": 401.6499938964844,
@@ -3263,6 +3855,8 @@
       },
       {
         "ticker": "CMI",
+        "name": "Cummins",
+        "sector": "Industrial / Maquinaria",
         "price": 716.8599853515625,
         "trend": "lateral",
         "support": 636.6599731445312,
@@ -3276,6 +3870,8 @@
       },
       {
         "ticker": "VMC",
+        "name": "Vulcan Materials",
+        "sector": "Construcción / Materiales",
         "price": 302.8399963378906,
         "trend": "lateral",
         "support": 287.05999755859375,
@@ -3289,6 +3885,8 @@
       },
       {
         "ticker": "MAS",
+        "name": "Masco",
+        "sector": "Construcción / Materiales",
         "price": 74.37999725341797,
         "trend": "lateral",
         "support": 68.41999816894531,
@@ -3302,6 +3900,8 @@
       },
       {
         "ticker": "BLDR",
+        "name": "Builders FirstSource",
+        "sector": "Construcción / Materiales",
         "price": 80.58999633789062,
         "trend": "bajista",
         "support": 76.5,
@@ -3313,6 +3913,8 @@
       },
       {
         "ticker": "AEM",
+        "name": "Agnico Eagle",
+        "sector": "Minería / Metales",
         "price": 166.66000366210938,
         "trend": "bajista",
         "support": 150.6999969482422,
@@ -3326,6 +3928,8 @@
       },
       {
         "ticker": "VALE",
+        "name": "Vale",
+        "sector": "Minería / Metales",
         "price": 15.420000076293945,
         "trend": "bajista",
         "support": 14.760000228881836,
@@ -3341,22 +3945,32 @@
     "error": [
       {
         "ticker": "K",
+        "name": "Kellanova",
+        "sector": "Alimentos",
         "error": "Sin datos (ticker inválido o Yahoo lo limitó)"
       },
       {
         "ticker": "FI",
+        "name": "Fiserv",
+        "sector": "Pagos / Fintech",
         "error": "Sin datos (ticker inválido o Yahoo lo limitó)"
       },
       {
         "ticker": "TEF",
+        "name": "Telefónica",
+        "sector": "Telecomunicaciones",
         "error": "Sin datos (ticker inválido o Yahoo lo limitó)"
       },
       {
         "ticker": "ORAN",
+        "name": "Orange",
+        "sector": "Telecomunicaciones",
         "error": "Sin datos (ticker inválido o Yahoo lo limitó)"
       },
       {
         "ticker": "PARA",
+        "name": "Paramount",
+        "sector": "Medios / Entretenimiento",
         "error": "Sin datos (ticker inválido o Yahoo lo limitó)"
       }
     ]
