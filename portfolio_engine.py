@@ -74,10 +74,16 @@ WATCHLIST = [
     "LMT", "RTX", "NOC", "GD", "LHX",
 
     # --- Consumo / retail ---
-    "WMT", "KO", "WALMEX.MX", "KOF", "COST",
+    "WMT", "KO", "WALMEX.MX", "KOF", "COST", "ALSEA.MX", "GRBMF", "PEP.MX", "PEP", 
 
     # --- Finanzas / bancos ---
     "JPM", "V", "MA", "BRK-B", "GFNORTEO.MX",
+
+    # --- Transporte ---
+    "4GE.SG", 
+
+    # --- Construcción
+    "CEMEXCPO.MX",
 ]
 
 # Umbrales (ajústalos a tu gusto).
