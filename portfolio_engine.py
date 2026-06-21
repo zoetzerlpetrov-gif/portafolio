@@ -38,6 +38,7 @@ WATCHLIST = [
     # --- ETFs núcleo ---
     "VOO",            # S&P 500
     "QQQ",            # Nasdaq-100
+    "SPY",            # S&P 500
 
     # --- FIBRAs mexicanas ---
     "FUNO11.MX",      # Fibra Uno (diversificada)
