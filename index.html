@@ -107,9 +107,10 @@ const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();
 
 const fmtPrice = (v, cur) => {
   if(v==null) return '—';
-  try{ return new Intl.NumberFormat('es-MX',{style:'currency',currency:cur||'MXN',
-       maximumFractionDigits:2}).format(v); }
-  catch{ return v.toFixed(2); }
+  if(!cur) return v.toLocaleString('es-MX',{maximumFractionDigits:2});
+  try{ return new Intl.NumberFormat('es-MX',{style:'currency',currency:cur,
+       currencyDisplay:'code',maximumFractionDigits:2}).format(v); }
+  catch{ return `${v.toFixed(2)} ${cur}`; }
 };
 const fmtDate = (iso) => {
   if(!iso) return null;
