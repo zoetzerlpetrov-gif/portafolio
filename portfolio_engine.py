@@ -1,28 +1,21 @@
 """
 Motor de análisis de portafolio de inversión.
 
-Recibe una lista de tickers (formato Yahoo Finance, p.ej. "FUNO11.MX",
-"WALMEX.MX", "AAPL", "VOO") y para cada uno calcula:
+Para cada ticker (formato Yahoo Finance) calcula: máx/mín de 10/5/1 años y
+precio actual, serie diaria de 12 meses (sparkline), tendencia semanal,
+soporte/resistencia, dividendos y doble toque. `build_report()` lo clasifica
+en comprar/vender/esperar. TODO es decisión de apoyo, no asesoría.
 
-  - Precios máximo y mínimo de 10 años, 5 años, 1 año, y precio actual.
-  - Serie diaria de los últimos 12 meses (para el gráfico miniatura / sparkline).
-  - Tendencia (alcista / bajista / lateral) según regresión sobre las
-    últimas 9 velas semanales.
-  - Próximo soporte y resistencia según los pivotes de los últimos 60 días.
-  - Información de dividendos: si reparte, último pagado y próxima fecha
-    ex-dividendo si Yahoo la tiene disponible.
-  - Detección de doble piso / doble techo (doble toque).
-
-Luego `build_report()` puntúa cada instrumento y lo clasifica en
-"comprar", "vender" o "esperar". TODO es decisión de apoyo, no asesoría.
+Moneda: cada instrumento trae su divisa (USD, MXN, EUR…). Los .MX cotizan en
+MXN; los de EE.UU. y la mayoría de los ADRs en USD.
 
 Dependencias: yfinance, pandas, numpy
-Uso:           python3 portfolio_engine.py
 """
 
 from __future__ import annotations
 
 import json
+import time
 from dataclasses import dataclass, asdict, field
 from datetime import datetime, timezone
 
@@ -32,59 +25,314 @@ import yfinance as yf
 
 
 # --------------------------------------------------------------------------- #
-# Configuración: edita aquí tu lista (hasta 100 instrumentos).
+# Lista de instrumentos a monitorear. Comentario: nombre — moneda típica.
+# El encabezado de cada bloque indica el sector / giro.
 # --------------------------------------------------------------------------- #
 WATCHLIST = [
-    # --- ETFs núcleo ---
-    "VOO",            # S&P 500
-    "QQQ",            # Nasdaq-100
-    "SPY",            # S&P 500
+    # ===== ETFs / ÍNDICES (núcleo) =====
+    "VOO",            # Vanguard S&P 500 — USD
+    "QQQ",            # Invesco Nasdaq-100 — USD
+    "DIA",            # Dow Jones 30 — USD
+    "IWM",            # Russell 2000 (small caps) — USD
+    "SPY",            # S&P 500 — USD 
+    "NAFTRACISHRS.MX",# IPC México (BMV) — MXN
 
-    # --- FIBRAs mexicanas ---
-    "FUNO11.MX",      # Fibra Uno (diversificada)
-    "FIBRAPL14.MX",   # Fibra Prologis (industrial, la más grande)
-    "DANHOS13.MX",    # Fibra Danhos (comercial/mixto)
-    "FMTY14.MX",      # Fibra Mty (diversificada)
-    "FIBRAMQ12.MX",   # Fibra Macquarie (industrial)
+    # ===== FIBRAS (bienes raíces México) =====
+    "FUNO11.MX",      # Fibra Uno (diversificada) — MXN
+    "FIBRAPL14.MX",   # Fibra Prologis (industrial) — MXN
+    "DANHOS13.MX",    # Fibra Danhos (comercial/mixto) — MXN
+    "FMTY14.MX",      # Fibra Mty (diversificada) — MXN
+    "FIBRAMQ12.MX",   # Fibra Macquarie (industrial) — MXN
+    "FNOVA17.MX",     # Fibra Nova (industrial norte/bajío) — MXN
+    "FIHO12.MX",      # Fibra Hotel (hotelera) — MXN
+    "FSHOP13.MX",     # Fibra Shop (centros comerciales) — MXN
+    "FINN13.MX",      # Fibra Inn (hotelera) — MXN
+    "STORAGE18.MX",   # Fibra Storage (autoalmacenamiento) — MXN
 
-    # --- Criptomonedas ---
-    "BTC-USD", "XRP-USD", "XLM-USD", "HBAR-USD",
+    # ===== CRIPTOMONEDAS =====
+    "BTC-USD",        # Bitcoin — USD
+    "ETH-USD",        # Ethereum — USD
+    "XRP-USD",        # XRP (Ripple) — USD
+    "XLM-USD",        # Stellar Lumens — USD
+    "HBAR-USD",       # Hedera — USD
+    "SOL-USD",        # Solana — USD
+    "BNB-USD",        # BNB (Binance) — USD
 
-    # --- Tecnología ---
-    "AAPL", "MSFT", "GOOGL", "AMZN", "META",
+    # ===== TECNOLOGÍA / SOFTWARE =====
+    "AAPL",           # Apple — USD
+    "MSFT",           # Microsoft — USD
+    "GOOGL",          # Alphabet (Google) — USD
+    "AMZN",           # Amazon — USD
+    "META",           # Meta (Facebook) — USD
+    "ORCL",           # Oracle — USD
+    "CRM",            # Salesforce — USD
+    "ADBE",           # Adobe — USD
+    "SAP",            # SAP (ADR) — USD
+    "IBM",            # IBM — USD
 
-    # --- Semiconductores ---
-    "NVDA", "TSM", "AVGO", "ASML", "AMD",
+    # ===== SEMICONDUCTORES =====
+    "NVDA",           # Nvidia — USD
+    "TSM",            # TSMC (ADR) — USD
+    "AVGO",           # Broadcom — USD
+    "ASML",           # ASML (ADR) — USD
+    "AMD",            # AMD — USD
+    "QCOM",           # Qualcomm — USD
+    "INTC",           # Intel — USD
+    "TXN",            # Texas Instruments — USD
+    "MU",             # Micron — USD
+    "AMAT",           # Applied Materials — USD
 
-    # --- Energía ---
-    "XOM", "CVX", "SHEL", "TTE", "NEE",
+    # ===== ENERGÍA (petróleo y gas) =====
+    "XOM",            # ExxonMobil — USD
+    "CVX",            # Chevron — USD
+    "SHEL",           # Shell (ADR) — USD
+    "TTE",            # TotalEnergies (ADR) — USD
+    "BP",             # BP (ADR) — USD
+    "COP",            # ConocoPhillips — USD
+    "PBR",            # Petrobras (ADR) — USD
+    "ENB",            # Enbridge — USD
+    "SLB",            # Schlumberger — USD
+    "EOG",            # EOG Resources — USD
 
-    # --- Automotriz ---
-    "TSLA", "TM", "VWAGY", "GM", "BYDDY",
+    # ===== ENERGÍA RENOVABLE / UTILITIES =====
+    "NEE",            # NextEra Energy — USD
+    "FSLR",           # First Solar — USD
+    "ENPH",           # Enphase Energy — USD
+    "BEP",            # Brookfield Renewable — USD
+    "DUK",            # Duke Energy — USD
+    "SO",             # Southern Company — USD
+    "AEP",            # American Electric Power — USD
+    "D",              # Dominion Energy — USD
+    "EXC",            # Exelon — USD
+    "IBDRY",          # Iberdrola (ADR) — USD
 
-    # --- Aviación y aeroespacial ---
-    "BA", "EADSY", "GE", "DAL", "VLRS",
+    # ===== AUTOMOTRIZ =====
+    "TSLA",           # Tesla — USD
+    "TM",             # Toyota (ADR) — USD
+    "VWAGY",          # Volkswagen (ADR) — USD
+    "GM",             # General Motors — USD
+    "F",              # Ford — USD
+    "STLA",           # Stellantis — USD
+    "HMC",            # Honda (ADR) — USD
+    "BYDDY",          # BYD (ADR) — USD
+    "MBGYY",          # Mercedes-Benz (ADR) — USD
+    "RACE",           # Ferrari — USD
 
-    # --- Salud ---
-    "UNH", "ABT", "MDT", "TMO", "ISRG",
+    # ===== AVIACIÓN / AEROLÍNEAS =====
+    "DAL",            # Delta Air Lines — USD
+    "UAL",            # United Airlines — USD
+    "AAL",            # American Airlines — USD
+    "LUV",            # Southwest Airlines — USD
+    "RYAAY",          # Ryanair (ADR) — USD
+    "VLRS",           # Volaris (México, ADR) — USD
+    "CPA",            # Copa Airlines (Panamá) — USD
+    "JBLU",           # JetBlue — USD
+    "ALK",            # Alaska Air — USD
+    "DLAKY",          # Lufthansa (ADR) — USD
 
-    # --- Farmacéuticas ---
-    "LLY", "NVO", "JNJ", "MRK", "ABBV",
+    # ===== AEROESPACIAL Y DEFENSA / MILITAR =====
+    "BA",             # Boeing — USD
+    "LMT",            # Lockheed Martin — USD
+    "RTX",            # RTX / Raytheon — USD
+    "NOC",            # Northrop Grumman — USD
+    "GD",             # General Dynamics — USD
+    "LHX",            # L3Harris — USD
+    "GE",             # GE Aerospace — USD
+    "EADSY",          # Airbus (ADR) — USD
+    "HWM",            # Howmet Aerospace — USD
+    "TDG",            # TransDigm — USD
 
-    # --- Defensa / militar ---
-    "LMT", "RTX", "NOC", "GD", "LHX",
+    # ===== SALUD / DISPOSITIVOS MÉDICOS =====
+    "UNH",            # UnitedHealth — USD
+    "ABT",            # Abbott Laboratories — USD
+    "MDT",            # Medtronic — USD
+    "TMO",            # Thermo Fisher — USD
+    "DHR",            # Danaher — USD
+    "ISRG",           # Intuitive Surgical — USD
+    "SYK",            # Stryker — USD
+    "BSX",            # Boston Scientific — USD
+    "BDX",            # Becton Dickinson — USD
+    "EW",             # Edwards Lifesciences — USD
 
-    # --- Consumo / retail ---
-    "WMT", "KO", "WALMEX.MX", "KOF", "COST", "ALSEA.MX", "GRBMF", "PEP.MX", "PEP", 
+    # ===== FARMACÉUTICAS =====
+    "LLY",            # Eli Lilly — USD
+    "NVO",            # Novo Nordisk (ADR) — USD
+    "JNJ",            # Johnson & Johnson — USD
+    "MRK",            # Merck — USD
+    "ABBV",           # AbbVie — USD
+    "PFE",            # Pfizer — USD
+    "RHHBY",          # Roche (ADR) — USD
+    "NVS",            # Novartis (ADR) — USD
+    "AZN",            # AstraZeneca (ADR) — USD
+    "AMGN",           # Amgen — USD
 
-    # --- Finanzas / bancos ---
-    "JPM", "V", "MA", "BRK-B", "GFNORTEO.MX",
+    # ===== BIOTECNOLOGÍA =====
+    "REGN",           # Regeneron — USD
+    "VRTX",           # Vertex Pharmaceuticals — USD
+    "GILD",           # Gilead Sciences — USD
+    "BIIB",           # Biogen — USD
+    "MRNA",           # Moderna — USD
+    "BNTX",           # BioNTech (ADR) — USD
+    "ALNY",           # Alnylam — USD
+    "INCY",           # Incyte — USD
+    "NBIX",           # Neurocrine — USD
+    "ILMN",           # Illumina — USD
 
-    # --- Transporte ---
-    "4GE.SG", 
+    # ===== ALIMENTOS =====
+    "NSRGY",          # Nestlé (ADR) — USD
+    "MDLZ",           # Mondelez — USD
+    "GIS",            # General Mills — USD
+    "KHC",            # Kraft Heinz — USD
+    "HSY",            # Hershey — USD
+    "K",              # Kellanova — USD
+    "CAG",            # Conagra — USD
+    "HRL",            # Hormel — USD
+    "GRUMAB.MX",      # Gruma (Maseca) — MXN
+    "BIMBOA.MX",      # Grupo Bimbo — MXN
 
-    # --- Construcción
-    "CEMEXCPO.MX",
+    # ===== BEBIDAS =====
+    "KO",             # Coca-Cola — USD
+    "PEP",            # PepsiCo — USD
+    "KOF",            # Coca-Cola FEMSA (ADR) — USD
+    "FMX",            # FEMSA (ADR) — USD
+    "MNST",           # Monster Beverage — USD
+    "KDP",            # Keurig Dr Pepper — USD
+    "STZ",            # Constellation Brands — USD
+    "BUD",            # AB InBev (ADR) — USD
+    "DEO",            # Diageo (ADR) — USD
+    "TAP",            # Molson Coors — USD
+
+    # ===== RESTAURANTES / COMIDA RÁPIDA =====
+    "MCD",            # McDonald's — USD
+    "SBUX",           # Starbucks — USD
+    "CMG",            # Chipotle — USD
+    "YUM",            # Yum! Brands (KFC, Pizza Hut) — USD
+    "QSR",            # Restaurant Brands (Burger King) — USD
+    "DRI",            # Darden (Olive Garden) — USD
+    "DPZ",            # Domino's Pizza — USD
+    "WEN",            # Wendy's — USD
+    "TXRH",           # Texas Roadhouse — USD
+    "ALSEA.MX",       # Alsea (Starbucks/Domino's México) — MXN
+
+    # ===== CONSUMO BÁSICO / HOGAR =====
+    "PG",             # Procter & Gamble — USD
+    "UL",             # Unilever (ADR) — USD
+    "CL",             # Colgate-Palmolive — USD
+    "KMB",            # Kimberly-Clark — USD
+    "CHD",            # Church & Dwight — USD
+    "CLX",            # Clorox — USD
+    "EL",             # Estée Lauder — USD
+    "KVUE",           # Kenvue — USD
+    "KIMBERA.MX",     # Kimberly-Clark de México — MXN
+    "COTY",           # Coty — USD
+
+    # ===== RETAIL / COMERCIO =====
+    "WMT",            # Walmart — USD
+    "COST",           # Costco — USD
+    "HD",             # Home Depot — USD
+    "LOW",            # Lowe's — USD
+    "TGT",            # Target — USD
+    "DG",             # Dollar General — USD
+    "ORLY",           # O'Reilly Automotive — USD
+    "WALMEX.MX",      # Walmart de México — MXN
+    "CHDRAUIB.MX",    # Chedraui — MXN
+    "LIVEPOLC-1.MX",  # El Puerto de Liverpool — MXN
+
+    # ===== FINANZAS / BANCOS =====
+    "JPM",            # JPMorgan Chase — USD
+    "BAC",            # Bank of America — USD
+    "WFC",            # Wells Fargo — USD
+    "C",              # Citigroup — USD
+    "GS",             # Goldman Sachs — USD
+    "MS",             # Morgan Stanley — USD
+    "SAN",            # Banco Santander (ADR) — USD
+    "GFNORTEO.MX",    # Grupo Financiero Banorte — MXN
+    "BBAJIOO.MX",     # Banco del Bajío — MXN
+    "GENTERA.MX",     # Gentera (microfinanzas) — MXN
+
+    # ===== PAGOS / FINTECH =====
+    "V",              # Visa — USD
+    "MA",             # Mastercard — USD
+    "PYPL",           # PayPal — USD
+    "AXP",            # American Express — USD
+    "COIN",           # Coinbase — USD
+    "FI",             # Fiserv — USD
+    "GPN",            # Global Payments — USD
+    "SOFI",           # SoFi — USD
+    "NU",             # Nu Holdings (Nubank) — USD
+    "XYZ",            # Block (antes SQ) — USD
+
+    # ===== TELECOMUNICACIONES =====
+    "T",              # AT&T — USD
+    "VZ",             # Verizon — USD
+    "TMUS",           # T-Mobile US — USD
+    "CMCSA",          # Comcast — USD
+    "CHTR",           # Charter Communications — USD
+    "AMXB.MX",        # América Móvil — MXN
+    "TEF",            # Telefónica (ADR) — USD
+    "VOD",            # Vodafone (ADR) — USD
+    "ORAN",           # Orange (ADR) — USD
+    "TU",             # Telus — USD
+
+    # ===== MEDIOS / ENTRETENIMIENTO =====
+    "NFLX",           # Netflix — USD
+    "DIS",            # Walt Disney — USD
+    "WBD",            # Warner Bros. Discovery — USD
+    "PARA",           # Paramount — USD
+    "SPOT",           # Spotify — USD
+    "RBLX",           # Roblox — USD
+    "EA",             # Electronic Arts — USD
+    "TTWO",           # Take-Two Interactive — USD
+    "LYV",            # Live Nation — USD
+    "FOXA",           # Fox Corporation — USD
+
+    # ===== E-COMMERCE / INTERNET =====
+    "MELI",           # MercadoLibre — USD
+    "BABA",           # Alibaba (ADR) — USD
+    "PDD",            # PDD / Temu (ADR) — USD
+    "SE",             # Sea Limited (ADR) — USD
+    "SHOP",           # Shopify — USD
+    "EBAY",           # eBay — USD
+    "ETSY",           # Etsy — USD
+    "JD",             # JD.com (ADR) — USD
+    "CPNG",           # Coupang — USD
+    "ABNB",           # Airbnb — USD
+
+    # ===== INDUSTRIAL / MAQUINARIA =====
+    "CAT",            # Caterpillar — USD
+    "DE",             # John Deere — USD
+    "HON",            # Honeywell — USD
+    "MMM",            # 3M — USD
+    "EMR",            # Emerson Electric — USD
+    "ETN",            # Eaton — USD
+    "ITW",            # Illinois Tool Works — USD
+    "PH",             # Parker Hannifin — USD
+    "ROK",            # Rockwell Automation — USD
+    "CMI",            # Cummins — USD
+
+    # ===== CONSTRUCCIÓN / MATERIALES =====
+    "CEMEXCPO.MX",    # Cemex (cemento) — MXN
+    "MLM",            # Martin Marietta — USD
+    "VMC",            # Vulcan Materials — USD
+    "NUE",            # Nucor (acero) — USD
+    "DHI",            # D.R. Horton (vivienda) — USD
+    "LEN",            # Lennar (vivienda) — USD
+    "ORBIA.MX",       # Orbia (químicos/infra) — MXN
+    "GCARSOA1.MX",    # Grupo Carso — MXN
+    "MAS",            # Masco — USD
+    "BLDR",           # Builders FirstSource — USD
+
+    # ===== MINERÍA / METALES / ORO =====
+    "NEM",            # Newmont (oro) — USD
+    "GOLD",           # Barrick Gold — USD
+    "FCX",            # Freeport-McMoRan (cobre) — USD
+    "SCCO",           # Southern Copper — USD
+    "AEM",            # Agnico Eagle (oro) — USD
+    "RIO",            # Rio Tinto (ADR) — USD
+    "BHP",            # BHP (ADR) — USD
+    "VALE",           # Vale (ADR) — USD
+    "GMEXICOB.MX",    # Grupo México (minería) — MXN
+    "WPM",            # Wheaton Precious Metals — USD
 ]
 
 # Umbrales (ajústalos a tu gusto).
@@ -92,52 +340,49 @@ TREND_PCT_PER_WEEK = 0.5   # % por semana para considerar tendencia, no lateral
 NEAR_LEVEL_PCT = 3.0       # qué tan cerca (%) de soporte/resistencia cuenta
 PIVOT_ORDER = 3            # velas a cada lado para confirmar un pivote
 DOUBLE_TOUCH_TOL = 1.5     # tolerancia (%) para considerar dos toques "iguales"
+SLEEP_BETWEEN = 0.5        # pausa (seg) entre tickers para no saturar a Yahoo
+MAX_RETRIES = 3            # reintentos por ticker si Yahoo falla/limita
+LIQ_HIGH_USD = 10_000_000  # valor operado/día (USD) para liquidez "alta"
+LIQ_MED_USD = 1_000_000    # umbral para liquidez "media" (abajo = "baja")
 
 
-# --------------------------------------------------------------------------- #
-# Estructura del resultado por instrumento.
 # --------------------------------------------------------------------------- #
 @dataclass
 class Analysis:
     ticker: str
     ok: bool = True
     error: str | None = None
-
     current_price: float | None = None
     currency: str | None = None
-
     high_10y: float | None = None
     low_10y: float | None = None
     high_5y: float | None = None
     low_5y: float | None = None
     high_1y: float | None = None
     low_1y: float | None = None
-
-    trend: str | None = None              # "alcista" | "bajista" | "lateral"
+    trend: str | None = None
     trend_pct_per_week: float | None = None
-
     support: float | None = None
     resistance: float | None = None
     dist_to_support_pct: float | None = None
     dist_to_resistance_pct: float | None = None
-
     double_bottom: bool = False
     double_top: bool = False
-
     pays_dividend: bool = False
     last_dividend: float | None = None
     last_dividend_date: str | None = None
     dividend_yield_pct: float | None = None
     next_ex_dividend_date: str | None = None
-
-    sparkline_12m: list[float] = field(default_factory=list)  # cierres diarios
+    avg_volume_30d: float | None = None
+    avg_value_30d_usd: float | None = None   # valor operado/día normalizado a USD
+    liquidity: str | None = None             # "alta" | "media" | "baja" | "sin dato"
+    sparkline_12m: list[float] = field(default_factory=list)
 
 
 # --------------------------------------------------------------------------- #
-# Cálculos puros (no tocan la red — fáciles de probar con datos sintéticos).
+# Cálculos puros.
 # --------------------------------------------------------------------------- #
 def price_extremes(daily: pd.DataFrame, years: int) -> tuple[float, float]:
-    """Máximo (de High) y mínimo (de Low) en la ventana de `years` años."""
     cutoff = daily.index[-1] - pd.DateOffset(years=years)
     window = daily[daily.index >= cutoff]
     return float(window["High"].max()), float(window["Low"].min())
@@ -145,13 +390,12 @@ def price_extremes(daily: pd.DataFrame, years: int) -> tuple[float, float]:
 
 def weekly_trend(weekly_close: pd.Series,
                  threshold: float = TREND_PCT_PER_WEEK) -> tuple[str, float]:
-    """Tendencia con regresión lineal sobre las últimas 9 velas semanales."""
     closes = weekly_close.dropna().values[-9:]
     if len(closes) < 3:
         return "indeterminada", 0.0
     x = np.arange(len(closes))
-    slope = np.polyfit(x, closes, 1)[0]          # pendiente (precio por semana)
-    pct = slope / closes.mean() * 100.0          # normalizada a %
+    slope = np.polyfit(x, closes, 1)[0]
+    pct = slope / closes.mean() * 100.0
     if pct > threshold:
         return "alcista", float(pct)
     if pct < -threshold:
@@ -161,7 +405,6 @@ def weekly_trend(weekly_close: pd.Series,
 
 def find_pivots(values: np.ndarray, order: int = PIVOT_ORDER
                 ) -> tuple[list[int], list[int]]:
-    """Índices de máximos y mínimos locales (pivotes) confirmados."""
     highs, lows = [], []
     n = len(values)
     for i in range(order, n - order):
@@ -175,17 +418,13 @@ def find_pivots(values: np.ndarray, order: int = PIVOT_ORDER
 
 def support_resistance(daily: pd.DataFrame, current: float,
                        lookback: int = 60) -> tuple[float, float]:
-    """Soporte y resistencia más cercanos según pivotes de los últimos N días."""
     recent = daily.tail(lookback)
     high_pivots, _ = find_pivots(recent["High"].values)
     _, low_pivots = find_pivots(recent["Low"].values)
-
     res_levels = [recent["High"].values[i] for i in high_pivots
                   if recent["High"].values[i] > current]
     sup_levels = [recent["Low"].values[i] for i in low_pivots
                   if recent["Low"].values[i] < current]
-
-    # Si no hay pivote por encima/debajo, usamos el extremo de la ventana.
     resistance = float(min(res_levels)) if res_levels else float(recent["High"].max())
     support = float(max(sup_levels)) if sup_levels else float(recent["Low"].min())
     return support, resistance
@@ -193,7 +432,6 @@ def support_resistance(daily: pd.DataFrame, current: float,
 
 def detect_double_touch(daily: pd.DataFrame, lookback: int = 60,
                         tol: float = DOUBLE_TOUCH_TOL) -> tuple[bool, bool]:
-    """Doble piso (dos mínimos a la par) y doble techo (dos máximos a la par)."""
     recent = daily.tail(lookback)
     high_pivots, _ = find_pivots(recent["High"].values)
     _, low_pivots = find_pivots(recent["Low"].values)
@@ -205,56 +443,114 @@ def detect_double_touch(daily: pd.DataFrame, lookback: int = 60,
                 return True
         return False
 
-    double_top = has_pair(high_pivots, recent["High"].values)
-    double_bottom = has_pair(low_pivots, recent["Low"].values)
-    return double_bottom, double_top
+    return (has_pair(low_pivots, recent["Low"].values),
+            has_pair(high_pivots, recent["High"].values))
 
 
 # --------------------------------------------------------------------------- #
-# Acceso a datos (sí toca la red — usa yfinance).
+# Acceso a datos con reintentos.
 # --------------------------------------------------------------------------- #
+def _history(tk: yf.Ticker, **kwargs) -> pd.DataFrame:
+    """history() con reintentos y espera progresiva si Yahoo falla o limita."""
+    last = pd.DataFrame()
+    for attempt in range(MAX_RETRIES):
+        try:
+            df = tk.history(**kwargs)
+            if not df.empty:
+                return df
+            last = df
+        except Exception:
+            pass
+        time.sleep(1.5 * (attempt + 1))
+    return last
+
+
+def _currency(tk: yf.Ticker) -> str | None:
+    try:
+        c = tk.fast_info.get("currency")
+        if c:
+            return c
+    except Exception:
+        pass
+    return _safe_info(tk, "currency")
+
+
+# Tipos de cambio a USD (se llenan una vez en main para normalizar la liquidez).
+_FX = {"USD": 1.0}
+
+
+def get_fx_rates() -> dict:
+    """Devuelve cuántos USD vale 1 unidad de cada divisa (USD=1)."""
+    rates = {"USD": 1.0}
+    try:
+        m = yf.Ticker("MXN=X").history(period="5d")["Close"].dropna()
+        if len(m):
+            rates["MXN"] = 1.0 / float(m.iloc[-1])   # MXN=X es MXN por USD
+    except Exception:
+        pass
+    try:
+        e = yf.Ticker("EURUSD=X").history(period="5d")["Close"].dropna()
+        if len(e):
+            rates["EUR"] = float(e.iloc[-1])         # USD por EUR
+    except Exception:
+        pass
+    return rates
+
+
+def classify_liquidity(value_usd: float | None) -> str:
+    """Clasifica según el valor promedio operado por día (en USD)."""
+    if value_usd is None or value_usd != value_usd or value_usd <= 0:
+        return "sin dato"
+    if value_usd >= LIQ_HIGH_USD:
+        return "alta"
+    if value_usd >= LIQ_MED_USD:
+        return "media"
+    return "baja"
+
+
 def analyze_ticker(ticker: str) -> Analysis:
     res = Analysis(ticker=ticker)
     try:
         tk = yf.Ticker(ticker)
-
-        daily = tk.history(period="10y", interval="1d", auto_adjust=False)
+        daily = _history(tk, period="10y", interval="1d", auto_adjust=False)
         if daily.empty:
             res.ok = False
-            res.error = "Sin datos diarios (¿ticker inválido?)"
+            res.error = "Sin datos (ticker inválido o Yahoo lo limitó)"
             return res
         daily = daily.dropna(subset=["High", "Low", "Close"])
 
         current = float(daily["Close"].iloc[-1])
         res.current_price = current
-
         res.high_10y, res.low_10y = price_extremes(daily, 10)
         res.high_5y, res.low_5y = price_extremes(daily, 5)
         res.high_1y, res.low_1y = price_extremes(daily, 1)
 
-        # Sparkline: cierres diarios de los últimos 12 meses.
         cutoff = daily.index[-1] - pd.DateOffset(years=1)
         res.sparkline_12m = [round(v, 4) for v in
                              daily[daily.index >= cutoff]["Close"].tolist()]
 
-        # Tendencia semanal (9 velas).
-        weekly = tk.history(period="6mo", interval="1wk", auto_adjust=False)
-        res.trend, res.trend_pct_per_week = weekly_trend(weekly["Close"])
+        weekly = _history(tk, period="6mo", interval="1wk", auto_adjust=False)
+        if not weekly.empty:
+            res.trend, res.trend_pct_per_week = weekly_trend(weekly["Close"])
 
-        # Soporte / resistencia (60 días).
         res.support, res.resistance = support_resistance(daily, current)
         res.dist_to_support_pct = round((current - res.support) / current * 100, 2)
         res.dist_to_resistance_pct = round((res.resistance - current) / current * 100, 2)
-
-        # Doble toque.
         res.double_bottom, res.double_top = detect_double_touch(daily)
 
-        # Dividendos.
         _fill_dividends(tk, res)
+        res.currency = _currency(tk)
 
-        res.currency = _safe_info(tk, "currency")
+        # Liquidez: valor promedio operado por día (30d), normalizado a USD.
+        try:
+            res.avg_volume_30d = float(daily["Volume"].tail(30).mean())
+            val_local = float((daily["Close"] * daily["Volume"]).tail(30).mean())
+            rate = _FX.get(res.currency or "USD", 1.0)
+            res.avg_value_30d_usd = round(val_local * rate, 2)
+            res.liquidity = classify_liquidity(res.avg_value_30d_usd)
+        except Exception:
+            res.liquidity = "sin dato"
         return res
-
     except Exception as exc:  # noqa: BLE001
         res.ok = False
         res.error = f"{type(exc).__name__}: {exc}"
@@ -262,7 +558,6 @@ def analyze_ticker(ticker: str) -> Analysis:
 
 
 def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
-    """Rellena la info de dividendos de forma defensiva (Yahoo es inconsistente)."""
     try:
         divs = tk.dividends
         if divs is not None and len(divs) > 0:
@@ -271,13 +566,9 @@ def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
             res.last_dividend_date = divs.index[-1].date().isoformat()
     except Exception:
         pass
-
-    # Rendimiento y próxima fecha ex-dividendo (no siempre disponible en FIBRAs).
     y = _safe_info(tk, "dividendYield")
     if y is not None:
-        # yfinance a veces lo da como fracción (0.04) y a veces como % (4.0).
         res.dividend_yield_pct = round(y * 100, 2) if y < 1 else round(y, 2)
-
     ex = _safe_info(tk, "exDividendDate")
     if ex:
         try:
@@ -295,7 +586,7 @@ def _safe_info(tk: yf.Ticker, key: str):
 
 
 # --------------------------------------------------------------------------- #
-# Reporte: puntúa y clasifica. Señales de apoyo, NO asesoría financiera.
+# Reporte.
 # --------------------------------------------------------------------------- #
 def classify(a: Analysis) -> dict:
     reasons: list[str] = []
@@ -303,13 +594,11 @@ def classify(a: Analysis) -> dict:
                     and a.dist_to_support_pct <= NEAR_LEVEL_PCT)
     near_resistance = (a.dist_to_resistance_pct is not None
                        and a.dist_to_resistance_pct <= NEAR_LEVEL_PCT)
-
     score = 0
     if a.trend == "alcista":
         score += 1; reasons.append("Tendencia semanal alcista")
     elif a.trend == "bajista":
         score -= 1; reasons.append("Tendencia semanal bajista")
-
     if near_support:
         score += 1; reasons.append(f"Precio cerca del soporte ({a.dist_to_support_pct}%)")
     if near_resistance:
@@ -318,14 +607,14 @@ def classify(a: Analysis) -> dict:
         score += 1; reasons.append("Doble piso detectado")
     if a.double_top:
         score -= 1; reasons.append("Doble techo detectado")
-
+    if a.liquidity == "baja":
+        reasons.append("Liquidez baja — puede ser difícil comprar/vender")
     if score >= 2:
         category = "comprar"
     elif score <= -2:
         category = "vender"
     else:
         category = "esperar"
-
     return {"category": category, "score": score, "reasons": reasons}
 
 
@@ -337,42 +626,40 @@ def build_report(results: list[Analysis]) -> dict:
             continue
         c = classify(a)
         buckets[c["category"]].append({
-            "ticker": a.ticker,
-            "price": a.current_price,
-            "trend": a.trend,
-            "support": a.support,
-            "resistance": a.resistance,
-            "score": c["score"],
-            "reasons": c["reasons"],
+            "ticker": a.ticker, "price": a.current_price, "trend": a.trend,
+            "support": a.support, "resistance": a.resistance,
+            "score": c["score"], "reasons": c["reasons"],
         })
     for k in ("comprar", "vender", "esperar"):
         buckets[k].sort(key=lambda x: x["score"], reverse=(k != "vender"))
-    return {"generated_at": datetime.now(timezone.utc).isoformat(),
-            "report": buckets}
+    return {"generated_at": datetime.now(timezone.utc).isoformat(), "report": buckets}
 
 
-# --------------------------------------------------------------------------- #
 def main() -> None:
-    results = [analyze_ticker(t) for t in WATCHLIST]
+    global _FX
+    _FX = get_fx_rates()
+    print(f"FX a USD: {_FX}", flush=True)
+    results = []
+    total = len(WATCHLIST)
+    for i, t in enumerate(WATCHLIST, 1):
+        print(f"[{i}/{total}] {t}", flush=True)
+        results.append(analyze_ticker(t))
+        time.sleep(SLEEP_BETWEEN)
 
-    # Guarda el detalle completo (lo que tu base de datos / frontend consumiría).
     with open("portfolio_data.json", "w", encoding="utf-8") as fh:
         json.dump([asdict(a) for a in results], fh, ensure_ascii=False, indent=2)
-
     report = build_report(results)
     with open("daily_report.json", "w", encoding="utf-8") as fh:
         json.dump(report, fh, ensure_ascii=False, indent=2)
 
-    # Resumen legible en consola.
-    print(f"Reporte {report['generated_at']}\n")
+    ok = sum(1 for a in results if a.ok)
+    print(f"\nReporte {report['generated_at']} — {ok}/{total} con datos\n")
     for cat in ("comprar", "vender", "esperar"):
-        print(f"== {cat.upper()} ==")
+        print(f"== {cat.upper()} ({len(report['report'][cat])}) ==")
         for item in report["report"][cat]:
-            print(f"  {item['ticker']:<16} ${item['price']:<10} "
-                  f"score={item['score']:+d}  {', '.join(item['reasons'])}")
-        print()
+            print(f"  {item['ticker']:<16} {item['price']:<12} score={item['score']:+d}")
     if report["report"]["error"]:
-        print("== ERRORES ==")
+        print(f"\n== ERRORES ({len(report['report']['error'])}) ==")
         for e in report["report"]["error"]:
             print(f"  {e['ticker']}: {e['error']}")
 
