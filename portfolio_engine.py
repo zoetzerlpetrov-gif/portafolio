@@ -32,9 +32,13 @@ WATCHLIST = [
     # ===== ETFs / ÍNDICES (núcleo) =====
     "VOO",            # Vanguard S&P 500 — USD
     "QQQ",            # Invesco Nasdaq-100 — USD
+    "VTI",            # Vanguard Total US Market — USD
     "DIA",            # Dow Jones 30 — USD
     "IWM",            # Russell 2000 (small caps) — USD
-    "SPY",            # S&P 500 — USD 
+    "VEA",            # Mercados desarrollados ex-EE.UU. — USD
+    "VWO",            # Mercados emergentes — USD
+    "VT",             # Acciones de todo el mundo — USD
+    "SCHD",           # Dividendos EE.UU. (calidad) — USD
     "NAFTRACISHRS.MX",# IPC México (BMV) — MXN
 
     # ===== FIBRAS (bienes raíces México) =====
@@ -56,7 +60,10 @@ WATCHLIST = [
     "XLM-USD",        # Stellar Lumens — USD
     "HBAR-USD",       # Hedera — USD
     "SOL-USD",        # Solana — USD
+    "ADA-USD",        # Cardano — USD
     "BNB-USD",        # BNB (Binance) — USD
+    "DOGE-USD",       # Dogecoin — USD
+    "AVAX-USD",       # Avalanche — USD
 
     # ===== TECNOLOGÍA / SOFTWARE =====
     "AAPL",           # Apple — USD
@@ -335,6 +342,296 @@ WATCHLIST = [
     "WPM",            # Wheaton Precious Metals — USD
 ]
 
+# Tabla de nombre y sector por ticker (para mostrarlos en el dashboard).
+META = {
+    # ETFs / Índices
+    "VOO": ("Vanguard S&P 500", "ETFs / Índices"),
+    "QQQ": ("Invesco Nasdaq-100", "ETFs / Índices"),
+    "VTI": ("Vanguard Total US Market", "ETFs / Índices"),
+    "DIA": ("Dow Jones 30", "ETFs / Índices"),
+    "IWM": ("Russell 2000 (small caps)", "ETFs / Índices"),
+    "VEA": ("Desarrollados ex-EE.UU.", "ETFs / Índices"),
+    "VWO": ("Mercados emergentes", "ETFs / Índices"),
+    "VT": ("Acciones mundiales", "ETFs / Índices"),
+    "SCHD": ("Dividendos EE.UU.", "ETFs / Índices"),
+    "NAFTRACISHRS.MX": ("IPC México", "ETFs / Índices"),
+    # FIBRAs
+    "FUNO11.MX": ("Fibra Uno", "FIBRAs (bienes raíces)"),
+    "FIBRAPL14.MX": ("Fibra Prologis", "FIBRAs (bienes raíces)"),
+    "DANHOS13.MX": ("Fibra Danhos", "FIBRAs (bienes raíces)"),
+    "FMTY14.MX": ("Fibra Mty", "FIBRAs (bienes raíces)"),
+    "FIBRAMQ12.MX": ("Fibra Macquarie", "FIBRAs (bienes raíces)"),
+    "FNOVA17.MX": ("Fibra Nova", "FIBRAs (bienes raíces)"),
+    "FIHO12.MX": ("Fibra Hotel", "FIBRAs (bienes raíces)"),
+    "FSHOP13.MX": ("Fibra Shop", "FIBRAs (bienes raíces)"),
+    "FINN13.MX": ("Fibra Inn", "FIBRAs (bienes raíces)"),
+    "STORAGE18.MX": ("Fibra Storage", "FIBRAs (bienes raíces)"),
+    # Criptomonedas
+    "BTC-USD": ("Bitcoin", "Criptomonedas"),
+    "ETH-USD": ("Ethereum", "Criptomonedas"),
+    "XRP-USD": ("XRP (Ripple)", "Criptomonedas"),
+    "XLM-USD": ("Stellar Lumens", "Criptomonedas"),
+    "HBAR-USD": ("Hedera", "Criptomonedas"),
+    "SOL-USD": ("Solana", "Criptomonedas"),
+    "ADA-USD": ("Cardano", "Criptomonedas"),
+    "BNB-USD": ("BNB (Binance)", "Criptomonedas"),
+    "DOGE-USD": ("Dogecoin", "Criptomonedas"),
+    "AVAX-USD": ("Avalanche", "Criptomonedas"),
+    # Tecnología / Software
+    "AAPL": ("Apple", "Tecnología / Software"),
+    "MSFT": ("Microsoft", "Tecnología / Software"),
+    "GOOGL": ("Alphabet (Google)", "Tecnología / Software"),
+    "AMZN": ("Amazon", "Tecnología / Software"),
+    "META": ("Meta (Facebook)", "Tecnología / Software"),
+    "ORCL": ("Oracle", "Tecnología / Software"),
+    "CRM": ("Salesforce", "Tecnología / Software"),
+    "ADBE": ("Adobe", "Tecnología / Software"),
+    "SAP": ("SAP", "Tecnología / Software"),
+    "IBM": ("IBM", "Tecnología / Software"),
+    # Semiconductores
+    "NVDA": ("Nvidia", "Semiconductores"),
+    "TSM": ("TSMC", "Semiconductores"),
+    "AVGO": ("Broadcom", "Semiconductores"),
+    "ASML": ("ASML", "Semiconductores"),
+    "AMD": ("AMD", "Semiconductores"),
+    "QCOM": ("Qualcomm", "Semiconductores"),
+    "INTC": ("Intel", "Semiconductores"),
+    "TXN": ("Texas Instruments", "Semiconductores"),
+    "MU": ("Micron", "Semiconductores"),
+    "AMAT": ("Applied Materials", "Semiconductores"),
+    # Energía (petróleo y gas)
+    "XOM": ("ExxonMobil", "Energía (petróleo y gas)"),
+    "CVX": ("Chevron", "Energía (petróleo y gas)"),
+    "SHEL": ("Shell", "Energía (petróleo y gas)"),
+    "TTE": ("TotalEnergies", "Energía (petróleo y gas)"),
+    "BP": ("BP", "Energía (petróleo y gas)"),
+    "COP": ("ConocoPhillips", "Energía (petróleo y gas)"),
+    "PBR": ("Petrobras", "Energía (petróleo y gas)"),
+    "ENB": ("Enbridge", "Energía (petróleo y gas)"),
+    "SLB": ("Schlumberger", "Energía (petróleo y gas)"),
+    "EOG": ("EOG Resources", "Energía (petróleo y gas)"),
+    # Energía renovable / Utilities
+    "NEE": ("NextEra Energy", "Energía renovable / Utilities"),
+    "FSLR": ("First Solar", "Energía renovable / Utilities"),
+    "ENPH": ("Enphase Energy", "Energía renovable / Utilities"),
+    "BEP": ("Brookfield Renewable", "Energía renovable / Utilities"),
+    "DUK": ("Duke Energy", "Energía renovable / Utilities"),
+    "SO": ("Southern Company", "Energía renovable / Utilities"),
+    "AEP": ("American Electric Power", "Energía renovable / Utilities"),
+    "D": ("Dominion Energy", "Energía renovable / Utilities"),
+    "EXC": ("Exelon", "Energía renovable / Utilities"),
+    "IBDRY": ("Iberdrola", "Energía renovable / Utilities"),
+    # Automotriz
+    "TSLA": ("Tesla", "Automotriz"),
+    "TM": ("Toyota", "Automotriz"),
+    "VWAGY": ("Volkswagen", "Automotriz"),
+    "GM": ("General Motors", "Automotriz"),
+    "F": ("Ford", "Automotriz"),
+    "STLA": ("Stellantis", "Automotriz"),
+    "HMC": ("Honda", "Automotriz"),
+    "BYDDY": ("BYD", "Automotriz"),
+    "MBGYY": ("Mercedes-Benz", "Automotriz"),
+    "RACE": ("Ferrari", "Automotriz"),
+    # Aviación / Aerolíneas
+    "DAL": ("Delta Air Lines", "Aviación / Aerolíneas"),
+    "UAL": ("United Airlines", "Aviación / Aerolíneas"),
+    "AAL": ("American Airlines", "Aviación / Aerolíneas"),
+    "LUV": ("Southwest Airlines", "Aviación / Aerolíneas"),
+    "RYAAY": ("Ryanair", "Aviación / Aerolíneas"),
+    "VLRS": ("Volaris (México)", "Aviación / Aerolíneas"),
+    "CPA": ("Copa Airlines", "Aviación / Aerolíneas"),
+    "JBLU": ("JetBlue", "Aviación / Aerolíneas"),
+    "ALK": ("Alaska Air", "Aviación / Aerolíneas"),
+    "DLAKY": ("Lufthansa", "Aviación / Aerolíneas"),
+    # Aeroespacial y Defensa / Militar
+    "BA": ("Boeing", "Aeroespacial y Defensa"),
+    "LMT": ("Lockheed Martin", "Aeroespacial y Defensa"),
+    "RTX": ("RTX / Raytheon", "Aeroespacial y Defensa"),
+    "NOC": ("Northrop Grumman", "Aeroespacial y Defensa"),
+    "GD": ("General Dynamics", "Aeroespacial y Defensa"),
+    "LHX": ("L3Harris", "Aeroespacial y Defensa"),
+    "GE": ("GE Aerospace", "Aeroespacial y Defensa"),
+    "EADSY": ("Airbus", "Aeroespacial y Defensa"),
+    "HWM": ("Howmet Aerospace", "Aeroespacial y Defensa"),
+    "TDG": ("TransDigm", "Aeroespacial y Defensa"),
+    # Salud / Dispositivos médicos
+    "UNH": ("UnitedHealth", "Salud / Dispositivos médicos"),
+    "ABT": ("Abbott Laboratories", "Salud / Dispositivos médicos"),
+    "MDT": ("Medtronic", "Salud / Dispositivos médicos"),
+    "TMO": ("Thermo Fisher", "Salud / Dispositivos médicos"),
+    "DHR": ("Danaher", "Salud / Dispositivos médicos"),
+    "ISRG": ("Intuitive Surgical", "Salud / Dispositivos médicos"),
+    "SYK": ("Stryker", "Salud / Dispositivos médicos"),
+    "BSX": ("Boston Scientific", "Salud / Dispositivos médicos"),
+    "BDX": ("Becton Dickinson", "Salud / Dispositivos médicos"),
+    "EW": ("Edwards Lifesciences", "Salud / Dispositivos médicos"),
+    # Farmacéuticas
+    "LLY": ("Eli Lilly", "Farmacéuticas"),
+    "NVO": ("Novo Nordisk", "Farmacéuticas"),
+    "JNJ": ("Johnson & Johnson", "Farmacéuticas"),
+    "MRK": ("Merck", "Farmacéuticas"),
+    "ABBV": ("AbbVie", "Farmacéuticas"),
+    "PFE": ("Pfizer", "Farmacéuticas"),
+    "RHHBY": ("Roche", "Farmacéuticas"),
+    "NVS": ("Novartis", "Farmacéuticas"),
+    "AZN": ("AstraZeneca", "Farmacéuticas"),
+    "AMGN": ("Amgen", "Farmacéuticas"),
+    # Biotecnología
+    "REGN": ("Regeneron", "Biotecnología"),
+    "VRTX": ("Vertex Pharmaceuticals", "Biotecnología"),
+    "GILD": ("Gilead Sciences", "Biotecnología"),
+    "BIIB": ("Biogen", "Biotecnología"),
+    "MRNA": ("Moderna", "Biotecnología"),
+    "BNTX": ("BioNTech", "Biotecnología"),
+    "ALNY": ("Alnylam", "Biotecnología"),
+    "INCY": ("Incyte", "Biotecnología"),
+    "NBIX": ("Neurocrine", "Biotecnología"),
+    "ILMN": ("Illumina", "Biotecnología"),
+    # Alimentos
+    "NSRGY": ("Nestlé", "Alimentos"),
+    "MDLZ": ("Mondelez", "Alimentos"),
+    "GIS": ("General Mills", "Alimentos"),
+    "KHC": ("Kraft Heinz", "Alimentos"),
+    "HSY": ("Hershey", "Alimentos"),
+    "K": ("Kellanova", "Alimentos"),
+    "CAG": ("Conagra", "Alimentos"),
+    "HRL": ("Hormel", "Alimentos"),
+    "GRUMAB.MX": ("Gruma (Maseca)", "Alimentos"),
+    "BIMBOA.MX": ("Grupo Bimbo", "Alimentos"),
+    # Bebidas
+    "KO": ("Coca-Cola", "Bebidas"),
+    "PEP": ("PepsiCo", "Bebidas"),
+    "KOF": ("Coca-Cola FEMSA", "Bebidas"),
+    "FMX": ("FEMSA", "Bebidas"),
+    "MNST": ("Monster Beverage", "Bebidas"),
+    "KDP": ("Keurig Dr Pepper", "Bebidas"),
+    "STZ": ("Constellation Brands", "Bebidas"),
+    "BUD": ("AB InBev", "Bebidas"),
+    "DEO": ("Diageo", "Bebidas"),
+    "TAP": ("Molson Coors", "Bebidas"),
+    # Restaurantes / Comida rápida
+    "MCD": ("McDonald's", "Restaurantes / Comida rápida"),
+    "SBUX": ("Starbucks", "Restaurantes / Comida rápida"),
+    "CMG": ("Chipotle", "Restaurantes / Comida rápida"),
+    "YUM": ("Yum! Brands", "Restaurantes / Comida rápida"),
+    "QSR": ("Restaurant Brands", "Restaurantes / Comida rápida"),
+    "DRI": ("Darden", "Restaurantes / Comida rápida"),
+    "DPZ": ("Domino's Pizza", "Restaurantes / Comida rápida"),
+    "WEN": ("Wendy's", "Restaurantes / Comida rápida"),
+    "TXRH": ("Texas Roadhouse", "Restaurantes / Comida rápida"),
+    "ALSEA.MX": ("Alsea (México)", "Restaurantes / Comida rápida"),
+    # Consumo básico / Hogar
+    "PG": ("Procter & Gamble", "Consumo básico / Hogar"),
+    "UL": ("Unilever", "Consumo básico / Hogar"),
+    "CL": ("Colgate-Palmolive", "Consumo básico / Hogar"),
+    "KMB": ("Kimberly-Clark", "Consumo básico / Hogar"),
+    "CHD": ("Church & Dwight", "Consumo básico / Hogar"),
+    "CLX": ("Clorox", "Consumo básico / Hogar"),
+    "EL": ("Estée Lauder", "Consumo básico / Hogar"),
+    "KVUE": ("Kenvue", "Consumo básico / Hogar"),
+    "KIMBERA.MX": ("Kimberly-Clark México", "Consumo básico / Hogar"),
+    "COTY": ("Coty", "Consumo básico / Hogar"),
+    # Retail / Comercio
+    "WMT": ("Walmart", "Retail / Comercio"),
+    "COST": ("Costco", "Retail / Comercio"),
+    "HD": ("Home Depot", "Retail / Comercio"),
+    "LOW": ("Lowe's", "Retail / Comercio"),
+    "TGT": ("Target", "Retail / Comercio"),
+    "DG": ("Dollar General", "Retail / Comercio"),
+    "ORLY": ("O'Reilly Automotive", "Retail / Comercio"),
+    "WALMEX.MX": ("Walmart de México", "Retail / Comercio"),
+    "CHDRAUIB.MX": ("Chedraui", "Retail / Comercio"),
+    "LIVEPOLC-1.MX": ("El Puerto de Liverpool", "Retail / Comercio"),
+    # Finanzas / Bancos
+    "JPM": ("JPMorgan Chase", "Finanzas / Bancos"),
+    "BAC": ("Bank of America", "Finanzas / Bancos"),
+    "WFC": ("Wells Fargo", "Finanzas / Bancos"),
+    "C": ("Citigroup", "Finanzas / Bancos"),
+    "GS": ("Goldman Sachs", "Finanzas / Bancos"),
+    "MS": ("Morgan Stanley", "Finanzas / Bancos"),
+    "SAN": ("Banco Santander", "Finanzas / Bancos"),
+    "GFNORTEO.MX": ("Banorte", "Finanzas / Bancos"),
+    "BBAJIOO.MX": ("Banco del Bajío", "Finanzas / Bancos"),
+    "GENTERA.MX": ("Gentera", "Finanzas / Bancos"),
+    # Pagos / Fintech
+    "V": ("Visa", "Pagos / Fintech"),
+    "MA": ("Mastercard", "Pagos / Fintech"),
+    "PYPL": ("PayPal", "Pagos / Fintech"),
+    "AXP": ("American Express", "Pagos / Fintech"),
+    "COIN": ("Coinbase", "Pagos / Fintech"),
+    "FI": ("Fiserv", "Pagos / Fintech"),
+    "GPN": ("Global Payments", "Pagos / Fintech"),
+    "SOFI": ("SoFi", "Pagos / Fintech"),
+    "NU": ("Nu Holdings (Nubank)", "Pagos / Fintech"),
+    "XYZ": ("Block (antes SQ)", "Pagos / Fintech"),
+    # Telecomunicaciones
+    "T": ("AT&T", "Telecomunicaciones"),
+    "VZ": ("Verizon", "Telecomunicaciones"),
+    "TMUS": ("T-Mobile US", "Telecomunicaciones"),
+    "CMCSA": ("Comcast", "Telecomunicaciones"),
+    "CHTR": ("Charter Communications", "Telecomunicaciones"),
+    "AMXB.MX": ("América Móvil", "Telecomunicaciones"),
+    "TEF": ("Telefónica", "Telecomunicaciones"),
+    "VOD": ("Vodafone", "Telecomunicaciones"),
+    "ORAN": ("Orange", "Telecomunicaciones"),
+    "TU": ("Telus", "Telecomunicaciones"),
+    # Medios / Entretenimiento
+    "NFLX": ("Netflix", "Medios / Entretenimiento"),
+    "DIS": ("Walt Disney", "Medios / Entretenimiento"),
+    "WBD": ("Warner Bros. Discovery", "Medios / Entretenimiento"),
+    "PARA": ("Paramount", "Medios / Entretenimiento"),
+    "SPOT": ("Spotify", "Medios / Entretenimiento"),
+    "RBLX": ("Roblox", "Medios / Entretenimiento"),
+    "EA": ("Electronic Arts", "Medios / Entretenimiento"),
+    "TTWO": ("Take-Two Interactive", "Medios / Entretenimiento"),
+    "LYV": ("Live Nation", "Medios / Entretenimiento"),
+    "FOXA": ("Fox Corporation", "Medios / Entretenimiento"),
+    # E-commerce / Internet
+    "MELI": ("MercadoLibre", "E-commerce / Internet"),
+    "BABA": ("Alibaba", "E-commerce / Internet"),
+    "PDD": ("PDD / Temu", "E-commerce / Internet"),
+    "SE": ("Sea Limited", "E-commerce / Internet"),
+    "SHOP": ("Shopify", "E-commerce / Internet"),
+    "EBAY": ("eBay", "E-commerce / Internet"),
+    "ETSY": ("Etsy", "E-commerce / Internet"),
+    "JD": ("JD.com", "E-commerce / Internet"),
+    "CPNG": ("Coupang", "E-commerce / Internet"),
+    "ABNB": ("Airbnb", "E-commerce / Internet"),
+    # Industrial / Maquinaria
+    "CAT": ("Caterpillar", "Industrial / Maquinaria"),
+    "DE": ("John Deere", "Industrial / Maquinaria"),
+    "HON": ("Honeywell", "Industrial / Maquinaria"),
+    "MMM": ("3M", "Industrial / Maquinaria"),
+    "EMR": ("Emerson Electric", "Industrial / Maquinaria"),
+    "ETN": ("Eaton", "Industrial / Maquinaria"),
+    "ITW": ("Illinois Tool Works", "Industrial / Maquinaria"),
+    "PH": ("Parker Hannifin", "Industrial / Maquinaria"),
+    "ROK": ("Rockwell Automation", "Industrial / Maquinaria"),
+    "CMI": ("Cummins", "Industrial / Maquinaria"),
+    # Construcción / Materiales
+    "CEMEXCPO.MX": ("Cemex", "Construcción / Materiales"),
+    "MLM": ("Martin Marietta", "Construcción / Materiales"),
+    "VMC": ("Vulcan Materials", "Construcción / Materiales"),
+    "NUE": ("Nucor (acero)", "Construcción / Materiales"),
+    "DHI": ("D.R. Horton", "Construcción / Materiales"),
+    "LEN": ("Lennar", "Construcción / Materiales"),
+    "ORBIA.MX": ("Orbia", "Construcción / Materiales"),
+    "GCARSOA1.MX": ("Grupo Carso", "Construcción / Materiales"),
+    "MAS": ("Masco", "Construcción / Materiales"),
+    "BLDR": ("Builders FirstSource", "Construcción / Materiales"),
+    # Minería / Metales / Oro
+    "NEM": ("Newmont (oro)", "Minería / Metales"),
+    "GOLD": ("Barrick Gold", "Minería / Metales"),
+    "FCX": ("Freeport-McMoRan", "Minería / Metales"),
+    "SCCO": ("Southern Copper", "Minería / Metales"),
+    "AEM": ("Agnico Eagle", "Minería / Metales"),
+    "RIO": ("Rio Tinto", "Minería / Metales"),
+    "BHP": ("BHP", "Minería / Metales"),
+    "VALE": ("Vale", "Minería / Metales"),
+    "GMEXICOB.MX": ("Grupo México", "Minería / Metales"),
+    "WPM": ("Wheaton Precious Metals", "Minería / Metales"),
+}
+
 # Umbrales (ajústalos a tu gusto).
 TREND_PCT_PER_WEEK = 0.5   # % por semana para considerar tendencia, no lateral
 NEAR_LEVEL_PCT = 3.0       # qué tan cerca (%) de soporte/resistencia cuenta
@@ -354,6 +651,8 @@ class Analysis:
     error: str | None = None
     current_price: float | None = None
     currency: str | None = None
+    name: str | None = None
+    sector: str | None = None
     high_10y: float | None = None
     low_10y: float | None = None
     high_5y: float | None = None
@@ -510,6 +809,7 @@ def classify_liquidity(value_usd: float | None) -> str:
 
 def analyze_ticker(ticker: str) -> Analysis:
     res = Analysis(ticker=ticker)
+    res.name, res.sector = META.get(ticker, (None, None))
     try:
         tk = yf.Ticker(ticker)
         daily = _history(tk, period="10y", interval="1d", auto_adjust=False)
@@ -622,11 +922,13 @@ def build_report(results: list[Analysis]) -> dict:
     buckets = {"comprar": [], "vender": [], "esperar": [], "error": []}
     for a in results:
         if not a.ok:
-            buckets["error"].append({"ticker": a.ticker, "error": a.error})
+            buckets["error"].append({"ticker": a.ticker, "name": a.name,
+                                      "sector": a.sector, "error": a.error})
             continue
         c = classify(a)
         buckets[c["category"]].append({
-            "ticker": a.ticker, "price": a.current_price, "trend": a.trend,
+            "ticker": a.ticker, "name": a.name, "sector": a.sector,
+            "price": a.current_price, "trend": a.trend,
             "support": a.support, "resistance": a.resistance,
             "score": c["score"], "reasons": c["reasons"],
         })
