@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-21T20:07:18.285751+00:00",
+  "generated_at": "2026-06-21T20:45:56.672524+00:00",
   "report": {
     "comprar": [
       {
         "ticker": "XLM-USD",
-        "price": 0.2149530053138733,
+        "price": 0.2139980047941208,
         "trend": "alcista",
         "support": 0.18509000539779663,
         "resistance": 0.2505199909210205,
@@ -197,22 +197,8 @@
     ],
     "vender": [
       {
-        "ticker": "BTC-USD",
-        "price": 64133.7890625,
-        "trend": "bajista",
-        "support": 62201.14453125,
-        "resistance": 64185.765625,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (0.08%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "ETH-USD",
-        "price": 1732.3800048828125,
+        "price": 1725.5999755859375,
         "trend": "bajista",
         "support": 1670.1038818359375,
         "resistance": 1847.769775390625,
@@ -224,14 +210,14 @@
       },
       {
         "ticker": "SOL-USD",
-        "price": 74.36000061035156,
+        "price": 73.86000061035156,
         "trend": "bajista",
         "support": 60.41471862792969,
         "resistance": 75.93878936767578,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.12%)",
+          "Precio cerca de la resistencia (2.81%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1182,7 +1168,7 @@
       },
       {
         "ticker": "BNB-USD",
-        "price": 591.2899780273438,
+        "price": 589.3900146484375,
         "trend": "bajista",
         "support": 558.3897705078125,
         "resistance": 609.70458984375,
@@ -2824,8 +2810,23 @@
         ]
       },
       {
+        "ticker": "BTC-USD",
+        "price": 63945.109375,
+        "trend": "bajista",
+        "support": 62201.14453125,
+        "resistance": 64185.765625,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.73%)",
+          "Precio cerca de la resistencia (0.38%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "XRP-USD",
-        "price": 1.1447999477386475,
+        "price": 1.1404000520706177,
         "trend": "bajista",
         "support": 1.054656982421875,
         "resistance": 1.184805989265442,
@@ -2836,7 +2837,7 @@
       },
       {
         "ticker": "HBAR-USD",
-        "price": 0.07983999699354172,
+        "price": 0.07963000237941742,
         "trend": "bajista",
         "support": 0.07690200209617615,
         "resistance": 0.08469600230455399,
