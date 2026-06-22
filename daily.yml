@@ -3,7 +3,7 @@ name: Actualización diaria del portafolio
 on:
   schedule:
     # GitHub usa horario UTC. Ciudad de México es UTC-6 (sin horario de verano),
-    # así que 13:00 UTC = 07:00 hora local.
+    # así que 07:00 UTC = 01:00 hora local.
     - cron: "0 07 * * *"
   workflow_dispatch:   # permite ejecutarlo a mano desde la pestaña Actions
 
