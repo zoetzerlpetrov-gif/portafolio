@@ -191,7 +191,7 @@ WATCHLIST = [
     "GIS",            # General Mills — USD
     "KHC",            # Kraft Heinz — USD
     "HSY",            # Hershey — USD
-    "K",              # Kellanova — USD
+    "TSN",            # Tyson Foods — USD
     "CAG",            # Conagra — USD
     "HRL",            # Hormel — USD
     "GRUMAB.MX",      # Gruma (Maseca) — MXN
@@ -285,7 +285,7 @@ WATCHLIST = [
     "NFLX",           # Netflix — USD
     "DIS",            # Walt Disney — USD
     "WBD",            # Warner Bros. Discovery — USD
-    "PARA",           # Paramount — USD
+    "PSKY",           # Paramount — USD
     "SPOT",           # Spotify — USD
     "RBLX",           # Roblox — USD
     "EA",             # Electronic Arts — USD
@@ -493,7 +493,7 @@ META = {
     "GIS": ("General Mills", "Alimentos"),
     "KHC": ("Kraft Heinz", "Alimentos"),
     "HSY": ("Hershey", "Alimentos"),
-    "K": ("Kellanova", "Alimentos"),
+    "TSN": ("Tyson Foods", "Alimentos"),
     "CAG": ("Conagra", "Alimentos"),
     "HRL": ("Hormel", "Alimentos"),
     "GRUMAB.MX": ("Gruma (Maseca)", "Alimentos"),
@@ -579,7 +579,7 @@ META = {
     "NFLX": ("Netflix", "Medios / Entretenimiento"),
     "DIS": ("Walt Disney", "Medios / Entretenimiento"),
     "WBD": ("Warner Bros. Discovery", "Medios / Entretenimiento"),
-    "PARA": ("Paramount", "Medios / Entretenimiento"),
+    "PSKY": ("Paramount Skydance", "Medios / Entretenimiento"),
     "SPOT": ("Spotify", "Medios / Entretenimiento"),
     "RBLX": ("Roblox", "Medios / Entretenimiento"),
     "EA": ("Electronic Arts", "Medios / Entretenimiento"),
