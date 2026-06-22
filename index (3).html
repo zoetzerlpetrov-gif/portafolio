@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio · Panel diario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --surface:#FFFFFF; --border:#E8E4DA; --border-strong:#D8D3C6;
+    --ink:#1C1B19; --muted:#6E6B63; --faint:#9A968C;
+    --up:#157A4E; --up-bg:#E7F2EB; --down:#BF362D; --down-bg:#FBEAE7;
+    --wait:#9A6B12; --wait-bg:#F7EFDD; --accent:#0E5560;
+    --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'Space Grotesk',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px}
+
+  header.top{display:flex;justify-content:space-between;align-items:flex-end;
+             gap:16px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:14px}
+  .brand h1{font-size:25px;font-weight:700;letter-spacing:-.02em;margin:0}
+  .brand p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .stamp{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
+  .stamp b{color:var(--ink);font-weight:600}
+
+  .board{margin:26px 0 34px}
+  .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+            color:var(--faint);margin:0 0 12px}
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .lane{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .lane h3{margin:0 0 10px;font-size:13px;font-weight:600;display:flex;
+           align-items:center;gap:8px;letter-spacing:.01em}
+  .lane h3 .dot{width:9px;height:9px;border-radius:50%}
+  .lane.buy h3 .dot{background:var(--up)} .lane.sell h3 .dot{background:var(--down)}
+  .lane.wait h3 .dot{background:var(--wait)}
+  .lane .count{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--faint)}
+  .chip{display:flex;justify-content:space-between;align-items:center;gap:8px;
+        padding:7px 10px;border-radius:8px;background:var(--bg);margin-bottom:6px}
+  .chip:last-child{margin-bottom:0}
+  .chip .tk{font-family:var(--mono);font-weight:600;font-size:13px}
+  .chip .chl{display:flex;flex-direction:column;gap:1px;min-width:0}
+  .chip .nm{font-size:11px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .chip .sc{font-family:var(--mono);font-size:12px;color:var(--muted);flex-shrink:0}
+  .lane .empty{color:var(--faint);font-size:13px;padding:4px 2px}
+  .lane .subhead{font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+                 color:var(--faint);margin:12px 0 5px} .lane .subhead:first-of-type{margin-top:0}
+
+  .filters{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:flex-end;margin:24px 0 8px}
+  .fgroup label{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;
+                text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+  .seg{display:inline-flex;border:1px solid var(--border-strong);border-radius:9px;overflow:hidden}
+  .seg button{appearance:none;border:0;background:var(--surface);color:var(--muted);
+              font-family:var(--sans);font-size:13px;font-weight:500;padding:7px 14px;cursor:pointer;
+              border-right:1px solid var(--border)}
+  .seg button:last-child{border-right:0}
+  .seg button.on{background:var(--ink);color:#fff}
+  select.sel{font-family:var(--sans);font-size:13px;padding:7px 30px 7px 12px;border-radius:9px;
+             border:1px solid var(--border-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+  .secthead{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px;
+            border-bottom:1px solid var(--border);padding-bottom:7px}
+  .secthead h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+  .secthead .cnt{font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+        padding:16px 16px 14px;display:flex;flex-direction:column;gap:12px}
+  .card .head{display:flex;justify-content:space-between;align-items:flex-start}
+  .card .tk{font-family:var(--mono);font-weight:600;font-size:16px;letter-spacing:-.01em}
+  .card .cname{font-size:13px;font-weight:500;color:var(--ink);margin:2px 0 0}
+  .card .csector{font-size:11px;color:var(--faint);margin:0 0 6px}
+  .card .px{font-family:var(--mono);font-size:21px;font-weight:600;text-align:right;line-height:1.1}
+  .card .px small{display:block;font-size:11px;color:var(--faint);font-weight:400;margin-top:2px}
+
+  .pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
+        padding:3px 9px;border-radius:999px;font-family:var(--mono)}
+  .pill.up{background:var(--up-bg);color:var(--up)}
+  .pill.down{background:var(--down-bg);color:var(--down)}
+  .pill.flat{background:var(--wait-bg);color:var(--wait)}
+
+  .spark{width:100%;height:46px;display:block}
+
+  .range{margin-top:2px}
+  .range .track{position:relative;height:7px;border-radius:4px;background:var(--border);margin:9px 0 6px}
+  .range .fill{position:absolute;top:0;bottom:0;left:0;border-radius:4px;background:var(--border-strong)}
+  .range .mark{position:absolute;top:-3px;width:3px;height:13px;border-radius:2px;background:var(--accent)}
+  .range .ends{display:flex;justify-content:space-between;font-family:var(--mono);
+               font-size:11px;color:var(--faint)}
+
+  .rows{display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .row .k{color:var(--muted)} .row .v{font-family:var(--mono);text-align:right}
+  .row .v.sup{color:var(--up)} .row .v.res{color:var(--down)}
+  .liq{font-weight:600}
+  .liq.alta{color:var(--up)} .liq.media{color:var(--wait)} .liq.baja{color:var(--down)}
+
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11px;font-family:var(--mono);padding:2px 7px;border-radius:6px;
+       border:1px solid var(--border-strong);color:var(--muted)}
+  .tag.dn{border-color:#E3CBA0;color:var(--wait);background:var(--wait-bg)}
+  .tag.div{border-color:#BBD9C6;color:var(--up);background:var(--up-bg)}
+
+  .note{margin-top:34px;font-size:12px;color:var(--faint);text-align:center;line-height:1.6}
+
+  .state{max-width:560px;margin:80px auto;text-align:center}
+  .state h2{font-size:20px;margin:0 0 10px}
+  .state p{color:var(--muted);margin:0 0 16px}
+  .state pre{text-align:left;background:#1C1B19;color:#EDEAE2;font-family:var(--mono);
+             font-size:12.5px;padding:14px 16px;border-radius:10px;overflow:auto}
+
+  @media (max-width:680px){ .lanes{grid-template-columns:1fr} }
+
+  .chip{cursor:pointer;transition:background .12s}
+  .chip:hover{background:var(--border)}
+  .chip .chr{display:flex;flex-direction:column;align-items:flex-end;gap:1px;flex-shrink:0}
+  .chip .cpx{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);white-space:nowrap}
+  .card.flash{animation:flash 1.6s ease}
+  @keyframes flash{0%,30%{box-shadow:0 0 0 2px var(--accent)}100%{box-shadow:0 0 0 2px transparent}}
+
+  #toTop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+         border:1px solid var(--border-strong);background:var(--ink);color:#fff;font-size:20px;
+         cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;
+         display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+  #toTop.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Panel del portafolio</h1>
+      <p>Señales de apoyo a la decisión · no es asesoría financiera</p>
+    </div>
+    <div class="stamp" id="stamp">Cargando…</div>
+  </header>
+  <main id="app"></main>
+</div>
+<button id="toTop" aria-label="Subir al inicio" title="Subir">↑</button>
+
+<script>
+const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
+
+const cardId = (tk)=> 'card-' + tk.replace(/[^A-Za-z0-9]/g,'_');
+function flash(el){ el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+function goToCard(tk){
+  const el = document.getElementById(cardId(tk));
+  if(el){ el.scrollIntoView({behavior:'smooth', block:'center'}); flash(el); }
+}
+
+const fmtPrice = (v, cur) => {
+  if(v==null) return '—';
+  if(!cur) return v.toLocaleString('es-MX',{maximumFractionDigits:2});
+  try{ return new Intl.NumberFormat('es-MX',{style:'currency',currency:cur,
+       currencyDisplay:'code',maximumFractionDigits:2}).format(v); }
+  catch{ return `${v.toFixed(2)} ${cur}`; }
+};
+const fmtDate = (iso) => {
+  if(!iso) return null;
+  const d = new Date(iso);
+  return isNaN(d) ? iso : d.toLocaleDateString('es-MX',{day:'2-digit',month:'short',year:'numeric'});
+};
+const fmtCompact = (v) => {
+  if(v==null) return '';
+  const a=Math.abs(v);
+  if(a>=1e9) return (v/1e9).toFixed(1)+'B';
+  if(a>=1e6) return (v/1e6).toFixed(1)+'M';
+  if(a>=1e3) return (v/1e3).toFixed(0)+'k';
+  return v.toFixed(0);
+};
+
+function sparkline(values){
+  if(!values || values.length<2) return '<svg class="spark"></svg>';
+  const w=300,h=46,p=3, min=Math.min(...values), max=Math.max(...values),
+        span=(max-min)||1, n=values.length;
+  const pts = values.map((v,i)=>{
+    const x = p + i*(w-2*p)/(n-1);
+    const y = h-p - (v-min)/span*(h-2*p);
+    return x.toFixed(1)+','+y.toFixed(1);
+  }).join(' ');
+  const up = values[n-1] >= values[0];
+  const col = up ? 'var(--up)' : 'var(--down)';
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+
+function trendPill(trend, pct){
+  const map = {alcista:['up','↑'], bajista:['down','↓'], lateral:['flat','→']};
+  const [cls,arrow] = map[trend] || ['flat','·'];
+  const p = (pct!=null) ? `${pct>=0?'+':''}${pct.toFixed(2)}%/sem` : '';
+  return `<span class="pill ${cls}">${arrow} ${trend||'—'} ${p}</span>`;
+}
+
+function rangeBar(low, high, cur){
+  if(low==null||high==null||cur==null||high<=low) return '';
+  const pct = Math.max(0,Math.min(100,(cur-low)/(high-low)*100));
+  return `<div class="range">
+    <div class="track"><div class="fill" style="width:${pct.toFixed(1)}%"></div>
+      <div class="mark" style="left:calc(${pct.toFixed(1)}% - 1.5px)"></div></div>
+    <div class="ends"><span>mín 1a ${low.toFixed(2)}</span><span>máx 1a ${high.toFixed(2)}</span></div>
+  </div>`;
+}
+
+function dividendTag(a){
+  if(!a.pays_dividend) return '';
+  let t = 'Reparte';
+  if(a.dividend_yield_pct!=null) t += ` · ${a.dividend_yield_pct}%`;
+  const nd = fmtDate(a.next_ex_dividend_date);
+  if(nd) t += ` · prox. ${nd}`;
+  return `<span class="tag div">${t}</span>`;
+}
+
+function card(a, category){
+  const tags = [];
+  if(a.double_bottom) tags.push('<span class="tag dn">doble piso</span>');
+  if(a.double_top)    tags.push('<span class="tag dn">doble techo</span>');
+  const dt = dividendTag(a);
+  if(dt) tags.push(dt);
+
+  return $(`<div class="card">
+    <div class="head">
+      <div><div class="tk">${a.ticker}</div>
+        ${a.name?`<div class="cname">${a.name}</div>`:''}
+        ${a.sector?`<div class="csector">${a.sector}</div>`:''}
+        ${trendPill(a.trend, a.trend_pct_per_week)}</div>
+      <div class="px">${fmtPrice(a.current_price, a.currency)}<small>precio actual</small></div>
+    </div>
+    ${sparkline(a.sparkline_12m)}
+    ${rangeBar(a.low_1y, a.high_1y, a.current_price)}
+    <div class="rows">
+      <div class="row"><span class="k">Liquidez</span>
+        <span class="v"><span class="liq ${a.liquidity||''}">${a.liquidity||'—'}</span>${a.avg_value_30d_usd?` · USD ${fmtCompact(a.avg_value_30d_usd)}/día`:''}</span></div>
+      <div class="row"><span class="k">Soporte</span>
+        <span class="v sup">${a.support!=null?a.support.toFixed(2):'—'}${a.dist_to_support_pct!=null?` · ${a.dist_to_support_pct}%`:''}</span></div>
+      <div class="row"><span class="k">Resistencia</span>
+        <span class="v res">${a.resistance!=null?a.resistance.toFixed(2):'—'}${a.dist_to_resistance_pct!=null?` · ${a.dist_to_resistance_pct}%`:''}</span></div>
+      <div class="row"><span class="k">Rango 5a</span>
+        <span class="v">${a.low_5y!=null?a.low_5y.toFixed(2):'—'} – ${a.high_5y!=null?a.high_5y.toFixed(2):'—'}</span></div>
+      <div class="row"><span class="k">Rango 10a</span>
+        <span class="v">${a.low_10y!=null?a.low_10y.toFixed(2):'—'} – ${a.high_10y!=null?a.high_10y.toFixed(2):'—'}</span></div>
+    </div>
+    ${tags.length?`<div class="tags">${tags.join('')}</div>`:''}
+  </div>`);
+}
+
+// ---- Estado y datos globales ----
+let PORTFOLIO = [];        // tarjetas (portfolio_data.json)
+let CATOF = {};            // ticker -> comprar/esperar/vender
+let SECTORS = [];          // sectores en orden de aparición
+let fStatus = 'todos';     // filtro de estatus
+let fSector = 'todos';     // filtro de sector
+const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['vender','sell','Vender']];
+
+function chip(a){
+  return `<div class="chip" data-ticker="${a.ticker}">
+    <span class="chl"><span class="tk">${a.ticker}</span>
+      <span class="nm">${a.name||''}</span></span>
+    <span class="chr"><span class="cpx">${fmtPrice(a.current_price, a.currency)}</span>
+      <span class="sc">${a._score>=0?'+':''}${a._score}</span></span></div>`;
+}
+
+// Una columna de estatus, con sus chips agrupados por sector.
+function lane(statusKey, cls, title){
+  let items = PORTFOLIO.filter(a=>CATOF[a.ticker]===statusKey);
+  if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
+  let inner = '';
+  if(!items.length){
+    inner = '<div class="empty">Nada por ahora</div>';
+  } else {
+    for(const s of SECTORS){
+      const grp = items.filter(a=>a.sector===s)
+                       .sort((a,b)=>(b._score)-(a._score));
+      if(!grp.length) continue;
+      inner += `<div class="subhead">${s}</div>` +
+               grp.map(a=>chip(a)).join('');
+    }
+  }
+  return `<div class="lane ${cls}"><h3><span class="dot"></span>${title}
+    <span class="count">${items.length}</span></h3>${inner}</div>`;
+}
+
+// Las tarjetas, agrupadas por sector bajo encabezados.
+function renderCards(){
+  let items = PORTFOLIO.slice();
+  if(fStatus!=='todos') items = items.filter(a=>CATOF[a.ticker]===fStatus);
+  if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
+
+  const wrap = document.createElement('div');
+  if(!items.length){
+    wrap.innerHTML = '<p class="note">No hay instrumentos con esos filtros.</p>';
+    return wrap;
+  }
+  for(const s of SECTORS){
+    const grp = items.filter(a=>a.sector===s);
+    if(!grp.length) continue;
+    const sec = document.createElement('div');
+    sec.innerHTML = `<div class="secthead"><h3>${s}</h3><span class="cnt">${grp.length}</span></div>`;
+    const grid = document.createElement('div'); grid.className='grid';
+    grp.forEach(a=>{ const el = card(a, CATOF[a.ticker]); el.id = cardId(a.ticker); grid.appendChild(el); });
+    sec.appendChild(grid); wrap.appendChild(sec);
+  }
+  return wrap;
+}
+
+function render(){
+  // Barra de filtros
+  const segBtns = [['todos','Todos'],...STATUSES.map(s=>[s[0], s[2]])]
+    .map(([k,l])=>`<button data-st="${k}" class="${fStatus===k?'on':''}">${l}</button>`).join('');
+  const secOpts = ['<option value="todos">Todos los sectores</option>']
+    .concat(SECTORS.map(s=>`<option value="${s}"${fSector===s?' selected':''}>${s}</option>`)).join('');
+  const filters = `<div class="filters">
+    <div class="fgroup"><label>Estatus</label><div class="seg" id="segStatus">${segBtns}</div></div>
+    <div class="fgroup"><label>Sector / área</label>
+      <select class="sel" id="selSector">${secOpts}</select></div>
+  </div>`;
+
+  // Columnas visibles según el filtro de estatus
+  const lanes = (fStatus==='todos' ? STATUSES : STATUSES.filter(s=>s[0]===fStatus))
+    .map(s=>lane(s[0], s[1], s[2])).join('');
+  const board = `<section class="board"><h2>Veredicto de hoy</h2>
+    <div class="lanes">${lanes}</div></section>`;
+
+  const app = document.getElementById('app');
+  app.innerHTML = filters + board + '<div id="cards"></div>' +
+    '<p class="note">Soporte/resistencia: pivotes de 60 días · Tendencia: 9 velas semanales · ' +
+    'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>';
+  app.querySelector('#cards').appendChild(renderCards());
+
+  // Conectar filtros
+  app.querySelector('.lanes').addEventListener('click', e=>{
+    const ch = e.target.closest('.chip'); if(!ch) return;
+    goToCard(ch.dataset.ticker);
+  });
+  app.querySelector('#segStatus').addEventListener('click', e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    fStatus=b.dataset.st; render();
+  });
+  app.querySelector('#selSector').addEventListener('change', e=>{
+    fSector=e.target.value; render();
+  });
+}
+
+function emptyState(){
+  document.getElementById('app').innerHTML = `<div class="state">
+    <h2>Aún no hay datos</h2>
+    <p>El panel lee <code>portfolio_data.json</code> y <code>daily_report.json</code>.
+       Genera esos archivos con el motor y sírvelos por HTTP (abrir el archivo directo
+       no funciona por seguridad del navegador):</p>
+    <pre>python3 portfolio_engine.py
+python3 -m http.server 8000
+# abre http://localhost:8000</pre>
+    <p>O publícalo en GitHub Pages para tener un enlace permanente.</p></div>`;
+  document.getElementById('stamp').textContent = 'Sin datos';
+}
+
+async function load(){
+  try{
+    const bust = '?t=' + Date.now();
+    const [pd, rp] = await Promise.all([
+      fetch('./portfolio_data.json'+bust).then(r=>{if(!r.ok)throw 0;return r.json();}),
+      fetch('./daily_report.json'+bust).then(r=>{if(!r.ok)throw 0;return r.json();}),
+    ]);
+
+    document.getElementById('stamp').innerHTML =
+      `Actualizado<br><b>${fmtDate(rp.generated_at)||'—'}</b> · actualiza diario 7:00`;
+
+    const r = rp.report || {};
+    CATOF = {}; const scoreOf = {};
+    ['comprar','vender','esperar'].forEach(c=>(r[c]||[]).forEach(i=>{
+      CATOF[i.ticker]=c; scoreOf[i.ticker]=i.score;
+    }));
+
+    PORTFOLIO = pd.filter(a=>a.ok!==false);
+    PORTFOLIO.forEach(a=>{ a._score = scoreOf[a.ticker] ?? 0;
+                           if(!CATOF[a.ticker]) CATOF[a.ticker]='esperar'; });
+
+    // Sectores en el orden en que aparecen
+    SECTORS = [];
+    PORTFOLIO.forEach(a=>{ const s=a.sector||'Sin sector';
+      a.sector=s; if(!SECTORS.includes(s)) SECTORS.push(s); });
+
+    render();
+  }catch(e){ emptyState(); }
+}
+const _toTop = document.getElementById('toTop');
+window.addEventListener('scroll', ()=>{ _toTop.classList.toggle('show', window.scrollY > 400); });
+_toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+load();
+</script>
+</body>
+</html>
