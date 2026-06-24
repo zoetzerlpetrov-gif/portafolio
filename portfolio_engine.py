@@ -17,8 +17,11 @@ from __future__ import annotations
 import json
 import time
 from dataclasses import dataclass, asdict, field
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
+# Zona horaria de Ciudad de México (UTC-6, fijo, sin horario de verano).
+# Se usa para sellar 'generated_at' en hora local en lugar de UTC.
+MX_TZ = timezone(timedelta(hours=-6))
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -637,11 +640,10 @@ TREND_PCT_PER_WEEK = 0.5   # % por semana para considerar tendencia, no lateral
 NEAR_LEVEL_PCT = 3.0       # qué tan cerca (%) de soporte/resistencia cuenta
 PIVOT_ORDER = 3            # velas a cada lado para confirmar un pivote
 DOUBLE_TOUCH_TOL = 1.5     # tolerancia (%) para considerar dos toques "iguales"
-SLEEP_BETWEEN = 0.5        # pausa (seg) entre tickers para no saturar a Yahoo
-MAX_RETRIES = 3            # reintentos por ticker si Yahoo falla/limita
-LIQ_HIGH_USD = 10_000_000  # valor operado/día (USD) para liquidez "alta"
-LIQ_MED_USD = 1_000_000    # umbral para liquidez "media" (abajo = "baja")
-
+SLEEP_BETWEEN   = 0.2          # pausa (seg) entre tickers para no saturar a Yahoo
+MAX_RETRIES     = 2            # reintentos por ticker si Yahoo falla/limita
+LIQ_HIGH_USD    = 10_000_000   # valor operado/día (USD) para liquidez "alta"
+LIQ_MED_USD     = 1_000_000    # umbral para liquidez "media" (abajo = "baja")
 
 # --------------------------------------------------------------------------- #
 @dataclass
@@ -934,8 +936,7 @@ def build_report(results: list[Analysis]) -> dict:
         })
     for k in ("comprar", "vender", "esperar"):
         buckets[k].sort(key=lambda x: x["score"], reverse=(k != "vender"))
-    return {"generated_at": datetime.now(timezone.utc).isoformat(), "report": buckets}
-
+    return {"generated_at": datetime.now(MX_TZ).isoformat(), "report": buckets}
 
 def main() -> None:
     global _FX
