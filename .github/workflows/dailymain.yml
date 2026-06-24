@@ -10,6 +10,12 @@ on:
 permissions:
   contents: write  # necesario para que el bot pueda hacer commit de los JSON
 
+# Evita que dos ejecuciones (p. ej. la programada y una manual) se solapen
+# y compitan al hacer push al mismo tiempo.
+concurrency:
+  group: portfolio-daily-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -20,17 +26,36 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Ver hora de ejecución
+        run: |
+          echo "Hora UTC:"
+          date -u
+          echo ""
+          echo "Hora Ciudad de México:"
+          TZ='America/Mexico_City' date
+
       - name: Instalar dependencias
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Calcular indicadores
         run: python3 portfolio_engine.py
+
+      - name: Validar archivos generados
+        run: |
+          test -f portfolio_data.json && echo "portfolio_data.json OK" || (echo "FALTA portfolio_data.json" && exit 1)
+          test -f daily_report.json && echo "daily_report.json OK" || (echo "FALTA daily_report.json" && exit 1)
 
       - name: Guardar resultados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add portfolio_data.json daily_report.json
-          git diff --staged --quiet || git commit -m "Datos $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push
+          if git diff --staged --quiet; then
+            echo "No hay cambios para guardar."
+          else
+            git commit -m "Datos $(TZ='America/Mexico_City' date +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi
