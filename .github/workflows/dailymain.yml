@@ -3,20 +3,20 @@ name: Actualización diaria del portafolio
 on:
   schedule:
     # GitHub usa horario UTC. Ciudad de México es UTC-6 (sin horario de verano),
-    # así que 13:00 UTC = 07:00 hora local.
-    - cron: "0 13 * * *"
-  workflow_dispatch:   # permite ejecutarlo a mano desde la pestaña Actions
+    # así que 09:23 UTC = 03:23 hora local (un horario "raro" de baja congestión).
+    - cron: "23 9 * * *"
+  workflow_dispatch:  # permite ejecutarlo a mano desde la pestaña Actions
 
 permissions:
-  contents: write       # necesario para que el bot pueda hacer commit de los JSON
+  contents: write  # necesario para que el bot pueda hacer commit de los JSON
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -28,8 +28,9 @@ jobs:
 
       - name: Guardar resultados
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add portfolio_data.json daily_report.json
           git diff --staged --quiet || git commit -m "Datos $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
