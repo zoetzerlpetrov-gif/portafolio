@@ -151,6 +151,7 @@ WATCHLIST = [
     "EADSY",          # Airbus (ADR) — USD
     "HWM",            # Howmet Aerospace — USD
     "TDG",            # TransDigm — USD
+    "SPCX",            # SpaceX (Space Exploration Tech) - USD
 
     # ===== SALUD / DISPOSITIVOS MÉDICOS =====
     "UNH",            # UnitedHealth — USD
@@ -457,6 +458,7 @@ META = {
     "EADSY": ("Airbus", "Aeroespacial y Defensa"),
     "HWM": ("Howmet Aerospace", "Aeroespacial y Defensa"),
     "TDG": ("TransDigm", "Aeroespacial y Defensa"),
+    "SPCX": ("SpaceX", "Aeroespacial y Defensa"),
     # Salud / Dispositivos médicos
     "UNH": ("UnitedHealth", "Salud / Dispositivos médicos"),
     "ABT": ("Abbott Laboratories", "Salud / Dispositivos médicos"),
