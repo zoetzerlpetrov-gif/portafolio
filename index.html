@@ -125,6 +125,38 @@
          cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;
          display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,.18)}
   #toTop.show{opacity:1;pointer-events:auto}
+
+  .layout{display:grid;grid-template-columns:1fr 300px;gap:22px;align-items:start;margin-top:18px}
+  .layout .main{min-width:0}
+  .newscol{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+           padding:14px;position:sticky;top:18px;max-height:calc(100vh - 36px);overflow:auto}
+  .nf-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+  .nf-head b{font-size:13px;font-weight:600;letter-spacing:.01em}
+  .newsclear{appearance:none;border:1px solid var(--border-strong);background:var(--surface);
+             color:var(--muted);font-family:var(--sans);font-size:11px;padding:4px 9px;border-radius:7px;cursor:pointer}
+  .newsclear:hover{background:var(--border)}
+  .newsitem{padding:9px 0;border-top:1px solid var(--border)}
+  .newsitem:first-of-type{border-top:0;padding-top:0}
+  .ni-meta{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-bottom:3px}
+  .ni-title{display:block;font-size:13px;color:var(--ink);text-decoration:none;line-height:1.4}
+  .ni-title:hover{text-decoration:underline}
+  .newscol .empty{color:var(--faint);font-size:13px}
+
+  .pricebar{min-width:230px}
+  .pr-wrap{position:relative;height:24px;margin-top:2px}
+  .pr-track{position:absolute;top:9px;left:0;right:0;height:5px;border-radius:3px;background:var(--border)}
+  .pr-fill{position:absolute;top:9px;height:5px;border-radius:3px;background:var(--accent)}
+  .pr-range{position:absolute;top:0;left:0;width:100%;margin:0;appearance:none;background:transparent;
+            pointer-events:none;height:24px}
+  .pr-range::-webkit-slider-thumb{appearance:none;pointer-events:auto;width:16px;height:16px;
+                                  border-radius:50%;background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 1px var(--border-strong);
+                                  cursor:pointer;margin-top:0}
+  .pr-range::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;
+                              background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 1px var(--border-strong);cursor:pointer}
+  .pr-range::-webkit-slider-runnable-track{background:transparent}
+  .pr-range::-moz-range-track{background:transparent}
+
+  @media (max-width:900px){ .layout{grid-template-columns:1fr} .newscol{position:static;max-height:none} }
 </style>
 </head>
 <body>
@@ -252,7 +284,94 @@ let CATOF = {};            // ticker -> comprar/esperar/vender
 let SECTORS = [];          // sectores en orden de aparición
 let fStatus = 'todos';     // filtro de estatus
 let fSector = 'todos';     // filtro de sector
+  let fPriceMin = null, fPriceMax = null; // filtro de precio (MXN) - rango seleccionado
+  let PRICE_BOUNDS = {min:0, max:0};        // límites min/max calculados de los datos
+  let focusedTicker = null;                 // ticker enfocado para noticias (o null)
 const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['vender','sell','Vender']];
+
+  const fmtMXN = (v) => v==null ? '—' : ('$' + Math.round(v).toLocaleString('es-MX') + ' MXN');
+
+  // Calcula el rango [min,max] de precios (en MXN) disponible en el portafolio.
+  function computePriceBounds(){
+    const vals = PORTFOLIO.map(a=>a.price_mxn).filter(v=>v!=null);
+    if(!vals.length) return {min:0, max:0};
+    return {min:Math.floor(Math.min(...vals)), max:Math.ceil(Math.max(...vals))};
+  }
+
+  // true si el instrumento cae dentro del rango de precio seleccionado (o si no aplica).
+  function inPriceRange(a){
+    if(a.price_mxn==null) return true;
+    if(fPriceMin==null || fPriceMax==null) return true;
+    return a.price_mxn >= fPriceMin && a.price_mxn <= fPriceMax;
+  }
+
+  // Junta y ordena (más reciente primero) las noticias a mostrar: de un ticker
+  // enfocado, o de todo el portafolio filtrado por sector.
+  function newsOf(){
+    let items = [];
+    if(focusedTicker){
+      const a = PORTFOLIO.find(x=>x.ticker===focusedTicker);
+      if(a) items = (a.news||[]).map(n=>({...n, ticker:a.ticker, name:a.name}));
+    } else {
+      let pool = PORTFOLIO;
+      if(fSector!=='todos') pool = pool.filter(a=>a.sector===fSector);
+      pool.forEach(a=>(a.news||[]).forEach(n=>items.push({...n, ticker:a.ticker, name:a.name})));
+      items.sort((x,y)=> new Date(y.date||0) - new Date(x.date||0));
+    }
+    return items;
+  }
+
+  function newsCard(n){
+    const d = fmtDate(n.date);
+    return `<div class="newsitem">
+    <div class="ni-meta">${n.ticker||''}${n.publisher?' · '+n.publisher:''}${d?' · '+d:''}</div>
+    <a class="ni-title" href="${n.link||'#'}" target="_blank" rel="noopener">${n.title}</a>
+    </div>`;
+  }
+
+  // Pinta el panel de noticias de la derecha (todas / por sector / por ticker).
+  function renderNews(){
+    const col = document.getElementById('newsCol');
+    if(!col) return;
+    const items = newsOf();
+    let head;
+    if(focusedTicker){
+      const a = PORTFOLIO.find(x=>x.ticker===focusedTicker);
+      head = `<div class="nf-head"><b>Noticias  ${focusedTicker}${a&&a.name?(' — '+a.name):''}</b>
+      <button class="newsclear" id="newsClear">Ver todas</button></div>`;
+    } else {
+      head = `<div class="nf-head"><b>Noticias${fSector!=='todos'?(' · '+fSector):''}</b></div>`;
+    }
+    const body = items.length ? items.map(newsCard).join('') : '<p class="empty">Por el momento no hay noticias disponibles.</p>';
+    col.innerHTML = head + body;
+    const clr = document.getElementById('newsClear');
+    if(clr) clr.addEventListener('click', ()=>{ focusedTicker=null; renderNews(); });
+  }
+
+  // Conecta el slider de precio de doble manija (dos <input type=range> superpuestos).
+  function setupPriceSlider(){
+    const minEl = document.getElementById('prMin');
+    const maxEl = document.getElementById('prMax');
+    const fill = document.getElementById('prFill');
+    const minLbl = document.getElementById('prMinLbl');
+    const maxLbl = document.getElementById('prMaxLbl');
+    if(!minEl || !maxEl) return;
+    const update = ()=>{
+      let lo = Number(minEl.value), hi = Number(maxEl.value);
+      if(lo>hi){ const t=lo; lo=hi; hi=t; }
+      fPriceMin = lo; fPriceMax = hi;
+      const span = (PRICE_BOUNDS.max - PRICE_BOUNDS.min) || 1;
+      const lp = (lo - PRICE_BOUNDS.min)/span*100;
+      const hp = (hi - PRICE_BOUNDS.min)/span*100;
+      fill.style.left = lp.toFixed(1)+'%';
+      fill.style.width = Math.max(0,(hp-lp)).toFixed(1)+'%';
+      minLbl.textContent = fmtMXN(fPriceMin);
+      maxLbl.textContent = fmtMXN(fPriceMax);
+    };
+    minEl.addEventListener('input', ()=>{ update(); refreshContent(); });
+    maxEl.addEventListener('input', ()=>{ update(); refreshContent(); });
+    update();
+  }
 
 function chip(a){
   return `<div class="chip" data-ticker="${a.ticker}">
@@ -266,6 +385,7 @@ function chip(a){
 function lane(statusKey, cls, title){
   let items = PORTFOLIO.filter(a=>CATOF[a.ticker]===statusKey);
   if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
+  items = items.filter(inPriceRange);
   let inner = '';
   if(!items.length){
     inner = '<div class="empty">Nada por ahora</div>';
@@ -287,6 +407,7 @@ function renderCards(){
   let items = PORTFOLIO.slice();
   if(fStatus!=='todos') items = items.filter(a=>CATOF[a.ticker]===fStatus);
   if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
+  items = items.filter(inPriceRange);
 
   const wrap = document.createElement('div');
   if(!items.length){
@@ -299,49 +420,74 @@ function renderCards(){
     const sec = document.createElement('div');
     sec.innerHTML = `<div class="secthead"><h3>${s}</h3><span class="cnt">${grp.length}</span></div>`;
     const grid = document.createElement('div'); grid.className='grid';
-    grp.forEach(a=>{ const el = card(a, CATOF[a.ticker]); el.id = cardId(a.ticker); grid.appendChild(el); });
+    grp.forEach(a=>{ const el = card(a, CATOF[a.ticker]); el.id = cardId(a.ticker); el.dataset.ticker = a.ticker; grid.appendChild(el); });
     sec.appendChild(grid); wrap.appendChild(sec);
   }
   return wrap;
 }
 
 function render(){
-  // Barra de filtros
+  // Barra de filtros (incluye el slider de precio, que se muestra siempre).
   const segBtns = [['todos','Todos'],...STATUSES.map(s=>[s[0], s[2]])]
-    .map(([k,l])=>`<button data-st="${k}" class="${fStatus===k?'on':''}">${l}</button>`).join('');
+  .map(([k,l])=>`<button data-st="${k}" class="${fStatus===k?'on':''}">${l}</button>`).join('');
   const secOpts = ['<option value="todos">Todos los sectores</option>']
-    .concat(SECTORS.map(s=>`<option value="${s}"${fSector===s?' selected':''}>${s}</option>`)).join('');
+  .concat(SECTORS.map(s=>`<option value="${s}"${fSector===s?' selected':''}>${s}</option>`)).join('');
   const filters = `<div class="filters">
-    <div class="fgroup"><label>Estatus</label><div class="seg" id="segStatus">${segBtns}</div></div>
-    <div class="fgroup"><label>Sector / área</label>
-      <select class="sel" id="selSector">${secOpts}</select></div>
+  <div class="fgroup"><label>Estatus</label><div class="seg" id="segStatus">${segBtns}</div></div>
+  <div class="fgroup"><label>Sector / área</label>
+  <select class="sel" id="selSector">${secOpts}</select></div>
+  <div class="fgroup pricebar"><label>Precio (aprox. en MXN)</label>
+  <div class="pr-wrap">
+  <div class="pr-track"><div class="pr-fill" id="prFill"></div></div>
+  <input type="range" id="prMin" class="pr-range" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMin}">
+  <input type="range" id="prMax" class="pr-range" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMax}">
+  </div>
+  <div class="ends"><span id="prMinLbl">${fmtMXN(fPriceMin)}</span><span id="prMaxLbl">${fmtMXN(fPriceMax)}</span></div>
+  </div>
   </div>`;
 
-  // Columnas visibles según el filtro de estatus
-  const lanes = (fStatus==='todos' ? STATUSES : STATUSES.filter(s=>s[0]===fStatus))
-    .map(s=>lane(s[0], s[1], s[2])).join('');
   const board = `<section class="board"><h2>Veredicto de hoy</h2>
-    <div class="lanes">${lanes}</div></section>`;
+  <div class="lanes" id="lanesWrap"></div></section>`;
 
   const app = document.getElementById('app');
-  app.innerHTML = filters + board + '<div id="cards"></div>' +
+  app.innerHTML = filters + board +
+    '<div class="layout"><div class="main"><div id="cards"></div>' +
     '<p class="note">Soporte/resistencia: pivotes de 60 días · Tendencia: 9 velas semanales · ' +
-    'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>';
-  app.querySelector('#cards').appendChild(renderCards());
+    'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>' +
+    '</div><aside class="newscol" id="newsCol"></aside></div>';
 
-  // Conectar filtros
-  app.querySelector('.lanes').addEventListener('click', e=>{
-    const ch = e.target.closest('.chip'); if(!ch) return;
-    goToCard(ch.dataset.ticker);
+  refreshContent();
+  setupPriceSlider();
+
+  // Conectar filtros (los oyentes viven en #app, que no se reemplaza en refreshContent).
+  app.addEventListener('click', e=>{
+    const ch = e.target.closest('.chip');
+    if(ch){ focusedTicker = ch.dataset.ticker; goToCard(ch.dataset.ticker); renderNews(); return; }
+    const cd = e.target.closest('.card');
+    if(cd && cd.dataset.ticker){ focusedTicker = cd.dataset.ticker; renderNews(); }
   });
   app.querySelector('#segStatus').addEventListener('click', e=>{
     const b=e.target.closest('button'); if(!b) return;
-    fStatus=b.dataset.st; render();
+    fStatus=b.dataset.st; refreshContent();
   });
   app.querySelector('#selSector').addEventListener('change', e=>{
-    fSector=e.target.value; render();
+    fSector=e.target.value; focusedTicker=null; refreshContent();
   });
 }
+
+  // Vuelve a pintar solo las columnas, las tarjetas y las noticias (deja intacta
+  // la barra de filtros/slider para que no se interrumpa un arrastre en curso).
+  function refreshContent(){
+    const lanesEl = document.getElementById('lanesWrap');
+    if(lanesEl){
+      const lanes = (fStatus==='todos' ? STATUSES : STATUSES.filter(s=>s[0]===fStatus))
+      .map(s=>lane(s[0], s[1], s[2])).join('');
+      lanesEl.innerHTML = lanes;
+    }
+    const cardsEl = document.getElementById('cards');
+    if(cardsEl){ cardsEl.innerHTML = ''; cardsEl.appendChild(renderCards()); }
+    renderNews();
+  }
 
 function emptyState(){
   document.getElementById('app').innerHTML = `<div class="state">
@@ -381,6 +527,11 @@ async function load(){
     SECTORS = [];
     PORTFOLIO.forEach(a=>{ const s=a.sector||'Sin sector';
       a.sector=s; if(!SECTORS.includes(s)) SECTORS.push(s); });
+    SECTORS.sort((a,b)=>a.localeCompare(b,'es'));
+
+    // Límites de precio (MXN) para el slider; al cargar, se selecciona todo el rango.
+    PRICE_BOUNDS = computePriceBounds();
+    fPriceMin = PRICE_BOUNDS.min; fPriceMax = PRICE_BOUNDS.max;
 
     render();
   }catch(e){ emptyState(); }
