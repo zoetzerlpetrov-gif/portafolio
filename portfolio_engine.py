@@ -139,6 +139,8 @@ WATCHLIST = [
     "JBLU",           # JetBlue — USD
     "ALK",            # Alaska Air — USD
     "DLAKY",          # Lufthansa (ADR) — USD
+    "AERO.MX",        # Grupo Aeroméxico — MXN
+    "AC.TO",          # Air Canada — CAD
 
     # ===== AEROESPACIAL Y DEFENSA / MILITAR =====
     "BA",             # Boeing — USD
@@ -152,6 +154,11 @@ WATCHLIST = [
     "HWM",            # Howmet Aerospace — USD
     "TDG",            # TransDigm — USD
     "SPCX",            # SpaceX (Space Exploration Tech) - USD
+
+    # ===== TURISMO / HOSPITALIDAD =====
+    "MAR",            # Marriott International — USD
+    "HLT",            # Hilton Worldwide — USD
+    "BKNG",           # Booking Holdings — USD
 
     # ===== SALUD / DISPOSITIVOS MÉDICOS =====
     "UNH",            # UnitedHealth — USD
@@ -257,9 +264,14 @@ WATCHLIST = [
     "GS",             # Goldman Sachs — USD
     "MS",             # Morgan Stanley — USD
     "SAN",            # Banco Santander (ADR) — USD
+    "BBVA",           # BBVA (ADR) — USD
     "GFNORTEO.MX",    # Grupo Financiero Banorte — MXN
     "BBAJIOO.MX",     # Banco del Bajío — MXN
     "GENTERA.MX",     # Gentera (microfinanzas) — MXN
+
+    # ===== SEGUROS =====
+    "BRK-B",          # Berkshire Hathaway — USD
+    "CB",             # Chubb Limited — USD
 
     # ===== PAGOS / FINTECH =====
     "V",              # Visa — USD
@@ -332,6 +344,8 @@ WATCHLIST = [
     "GCARSOA1.MX",    # Grupo Carso — MXN
     "MAS",            # Masco — USD
     "BLDR",           # Builders FirstSource — USD
+    "VINTE.MX",       # Vinte Viviendas Integrales — MXN
+    "CADUA.MX",       # Corpovael / Cadu Inmobiliaria — MXN
 
     # ===== MINERÍA / METALES / ORO =====
     "NEM",            # Newmont (oro) — USD
@@ -447,6 +461,8 @@ META = {
     "JBLU": ("JetBlue", "Aviación / Aerolíneas"),
     "ALK": ("Alaska Air", "Aviación / Aerolíneas"),
     "DLAKY": ("Lufthansa", "Aviación / Aerolíneas"),
+    "AERO.MX": ("Grupo Aeroméxico", "Aviación / Aerolíneas"),
+    "AC.TO": ("Air Canada", "Aviación / Aerolíneas"),
     # Aeroespacial y Defensa / Militar
     "BA": ("Boeing", "Aeroespacial y Defensa"),
     "LMT": ("Lockheed Martin", "Aeroespacial y Defensa"),
@@ -459,6 +475,10 @@ META = {
     "HWM": ("Howmet Aerospace", "Aeroespacial y Defensa"),
     "TDG": ("TransDigm", "Aeroespacial y Defensa"),
     "SPCX": ("SpaceX", "Aeroespacial y Defensa"),
+    # Turismo / Hospitalidad
+    "MAR": ("Marriott International", "Turismo / Hospitalidad"),
+    "HLT": ("Hilton Worldwide", "Turismo / Hospitalidad"),
+    "BKNG": ("Booking Holdings", "Turismo / Hospitalidad"),
     # Salud / Dispositivos médicos
     "UNH": ("UnitedHealth", "Salud / Dispositivos médicos"),
     "ABT": ("Abbott Laboratories", "Salud / Dispositivos médicos"),
@@ -555,9 +575,13 @@ META = {
     "GS": ("Goldman Sachs", "Finanzas / Bancos"),
     "MS": ("Morgan Stanley", "Finanzas / Bancos"),
     "SAN": ("Banco Santander", "Finanzas / Bancos"),
+    "BBVA": ("BBVA", "Finanzas / Bancos"),
     "GFNORTEO.MX": ("Banorte", "Finanzas / Bancos"),
     "BBAJIOO.MX": ("Banco del Bajío", "Finanzas / Bancos"),
     "GENTERA.MX": ("Gentera", "Finanzas / Bancos"),
+    # Seguros
+    "BRK-B": ("Berkshire Hathaway", "Seguros"),
+    "CB": ("Chubb Limited", "Seguros"),
     # Pagos / Fintech
     "V": ("Visa", "Pagos / Fintech"),
     "MA": ("Mastercard", "Pagos / Fintech"),
@@ -624,6 +648,8 @@ META = {
     "GCARSOA1.MX": ("Grupo Carso", "Construcción / Materiales"),
     "MAS": ("Masco", "Construcción / Materiales"),
     "BLDR": ("Builders FirstSource", "Construcción / Materiales"),
+    "VINTE.MX": ("Vinte Viviendas Integrales", "Construcción / Materiales"),
+    "CADUA.MX": ("Corpovael (Cadu Inmobiliaria)", "Construcción / Materiales"),
     # Minería / Metales / Oro
     "NEM": ("Newmont (oro)", "Minería / Metales"),
     "GOLD": ("Barrick Gold", "Minería / Metales"),
@@ -655,6 +681,7 @@ class Analysis:
     error: str | None = None
     current_price: float | None = None
     currency: str | None = None
+    price_mxn: float | None = None  # precio actual convertido a MXN (para filtros)
     name: str | None = None
     sector: str | None = None
     high_10y: float | None = None
@@ -680,6 +707,7 @@ class Analysis:
     avg_value_30d_usd: float | None = None   # valor operado/día normalizado a USD
     liquidity: str | None = None             # "alta" | "media" | "baja" | "sin dato"
     sparkline_12m: list[float] = field(default_factory=list)
+    news: list[dict] = field(default_factory=list)  # noticias recientes (título, liga, fuente, fecha)
 
 
 # --------------------------------------------------------------------------- #
@@ -797,6 +825,12 @@ def get_fx_rates() -> dict:
             rates["EUR"] = float(e.iloc[-1])         # USD por EUR
     except Exception:
         pass
+        try:
+            cad = yf.Ticker("CADUSD=X").history(period="5d")["Close"].dropna()
+            if len(cad):
+                rates["CAD"] = float(cad.iloc[-1])       # USD por CAD
+        except Exception:
+            pass
     return rates
 
 
@@ -843,7 +877,16 @@ def analyze_ticker(ticker: str) -> Analysis:
         res.double_bottom, res.double_top = detect_double_touch(daily)
 
         _fill_dividends(tk, res)
+        _fill_news(tk, res)
         res.currency = _currency(tk)
+        # Precio actual convertido a MXN (para el filtro de precio).
+        try:
+            usd_rate = _FX.get(res.currency or "USD", 1.0)
+            mxn_rate = _FX.get("MXN")
+            if res.current_price is not None and mxn_rate:
+                res.price_mxn = round(res.current_price * usd_rate / mxn_rate, 2)
+        except Exception:
+            pass
 
         # Liquidez: valor promedio operado por día (30d), normalizado a USD.
         try:
@@ -882,6 +925,44 @@ def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
             res.next_ex_dividend_date = str(ex)
 
 
+def _fill_news(tk: yf.Ticker, res: Analysis, limit: int = 5) -> None:
+    try:
+        items = list(tk.news or [])
+    except Exception:
+        items = []
+    out = []
+    for it in items[:limit]:
+        c = it.get("content", it) if isinstance(it, dict) else {}
+        title = c.get("title") if isinstance(c, dict) else None
+        if not title:
+            continue
+        out.append({"title": title, "link": _news_link(c), "publisher": _news_publisher(c), "date": _news_date(c)})
+    res.news = out
+def _news_link(c: dict) -> str | None:
+    ct = c.get("clickThroughUrl")
+    if isinstance(ct, dict) and ct.get("url"):
+        return ct["url"]
+    cu = c.get("canonicalUrl")
+    if isinstance(cu, dict) and cu.get("url"):
+        return cu["url"]
+    return c.get("link")
+
+def _news_publisher(c: dict) -> str | None:
+    prov = c.get("provider")
+    if isinstance(prov, dict) and prov.get("displayName"):
+        return prov["displayName"]
+    return c.get("publisher")
+
+def _news_date(c: dict) -> str | None:
+    pub = c.get("pubDate") or c.get("providerPublishTime")
+    if isinstance(pub, str):
+        return pub
+    if isinstance(pub, (int, float)):
+        try:
+            return datetime.fromtimestamp(pub, tz=timezone.utc).isoformat()
+        except (TypeError, ValueError, OSError):
+            return None
+    return None
 def _safe_info(tk: yf.Ticker, key: str):
     try:
         return tk.info.get(key)
