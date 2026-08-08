@@ -154,7 +154,7 @@
   .pr-range::-moz-range-thumb{pointer-events:auto;width:16px;height:16px;border-radius:50%;
                               background:var(--ink);border:2px solid #fff;box-shadow:0 0 0 1px var(--border-strong);cursor:pointer}
   .pr-range::-webkit-slider-runnable-track{background:transparent}
-  .pr-range::-moz-range-track{background:transparent}
+  .pr-range::-moz-range-track{background:transparent} .pr-num-row{display:flex;align-items:center;gap:6px;margin-bottom:6px} .pr-num{width:100%;font-family:var(--mono);font-size:12px;padding:5px 7px;border-radius:7px;border:1px solid var(--border-strong);background:var(--surface);color:var(--ink)} .pr-num-sep{color:var(--faint);font-size:12px}
 
   .empty{color:var(--faint);font-size:13px}
   .newsbtn-wrap{display:flex;justify-content:center;margin-top:2px}
@@ -391,7 +391,7 @@ const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['ven
     const maxEl = document.getElementById('prMax');
     const fill = document.getElementById('prFill');
     const minLbl = document.getElementById('prMinLbl');
-    const maxLbl = document.getElementById('prMaxLbl');
+    const maxLbl = document.getElementById('prMaxLbl'); const minNum = document.getElementById('prMinNum'); const maxNum = document.getElementById('prMaxNum');
     if(!minEl || !maxEl) return;
     const update = ()=>{
       let lo = Number(minEl.value), hi = Number(maxEl.value);
@@ -402,11 +402,11 @@ const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['ven
       const hp = (hi - PRICE_BOUNDS.min)/span*100;
       fill.style.left = lp.toFixed(1)+'%';
       fill.style.width = Math.max(0,(hp-lp)).toFixed(1)+'%';
-      minLbl.textContent = fmtMXN(fPriceMin);
-      maxLbl.textContent = fmtMXN(fPriceMax);
+      minLbl.textContent = fmtMXN(fPriceMin); if(minNum) minNum.value = Math.round(lo);
+      maxLbl.textContent = fmtMXN(fPriceMax); if(maxNum) maxNum.value = Math.round(hi);
     };
     minEl.addEventListener('input', ()=>{ update(); refreshContent(); });
-    maxEl.addEventListener('input', ()=>{ update(); refreshContent(); });
+    maxEl.addEventListener('input', ()=>{ update(); refreshContent(); }); const applyFromNum = ()=>{ let lo = Number(minNum.value), hi = Number(maxNum.value); if(isNaN(lo)) lo = PRICE_BOUNDS.min; if(isNaN(hi)) hi = PRICE_BOUNDS.max; lo = Math.max(PRICE_BOUNDS.min, Math.min(PRICE_BOUNDS.max, lo)); hi = Math.max(PRICE_BOUNDS.min, Math.min(PRICE_BOUNDS.max, hi)); minEl.value = lo; maxEl.value = hi; update(); refreshContent(); }; if(minNum) minNum.addEventListener('change', applyFromNum); if(maxNum) maxNum.addEventListener('change', applyFromNum);
     update();
   }
 
@@ -474,7 +474,7 @@ function render(){
   <div class="fgroup"><label>Sector / área</label>
   <select class="sel" id="selSector">${secOpts}</select></div>
   <div class="fgroup pricebar"><label>Precio (aprox. en MXN)</label>
-  <div class="pr-wrap">
+  <div class="pr-num-row"><input type="number" id="prMinNum" class="pr-num" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMin}"><span class="pr-num-sep">–</span><input type="number" id="prMaxNum" class="pr-num" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMax}"></div><div class="pr-wrap">
   <div class="pr-track"><div class="pr-fill" id="prFill"></div></div>
   <input type="range" id="prMin" class="pr-range" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMin}">
   <input type="range" id="prMax" class="pr-range" min="${PRICE_BOUNDS.min}" max="${PRICE_BOUNDS.max}" value="${fPriceMax}">
@@ -505,7 +505,7 @@ app.addEventListener('click', e=>{
 });
   app.querySelector('#segStatus').addEventListener('click', e=>{
     const b=e.target.closest('button'); if(!b) return;
-    fStatus=b.dataset.st; refreshContent();
+    fStatus=b.dataset.st; app.querySelectorAll('#segStatus button').forEach(btn=>btn.classList.toggle('on', btn.dataset.st===fStatus)); refreshContent();
   });
   app.querySelector('#selSector').addEventListener('change', e=>{
     fSector=e.target.value; focusedTicker=null; refreshContent();
