@@ -15,7 +15,7 @@ Dependencias: yfinance, pandas, numpy
 from __future__ import annotations
 
 import json
-import time
+import re; import time
 from dataclasses import dataclass, asdict, field
 from datetime import datetime, timezone, timedelta
 
@@ -925,21 +925,35 @@ def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
             res.next_ex_dividend_date = str(ex)
 
 
+_PRICE_NOISE_RE = re.compile(
+    r"why\s+[\w\s.,'-]{0,60}(stock|shares?)\s+[\w\s.,'-]{0,40}(is|was|are|were)\s+(up|down)"
+    r"|(stock|shares?)\s+[\w\s.,'-]{0,40}(up|down|rose|fell|gained|lost|jumped|dropped|surged|plunged|climbed|slid)\s+[\w\s.,'-]{0,40}today"
+    r"|today'?s?\s+(stock\s+)?price"
+    r"|(stock|share)\s+price\s+(today|now)"
+    r"|here'?s\s+why"
+    r"|\d+(\.\d+)?%\s+(higher|lower)\b"
+    r"|pre[- ]?market|after[- ]?hours|closing bell|opening bell|market wrap|stocks?\s+to\s+watch",
+    re.IGNORECASE,
+)
+
+def _is_price_noise(title: str) -> bool:
+    return bool(_PRICE_NOISE_RE.search(title))
+
 def _fill_news(tk: yf.Ticker, res: Analysis, limit: int = 5) -> None:
     try:
         items = list(tk.news or [])
     except Exception:
         items = []
     out = []
-    for it in items[:limit]:
+    for it in items:
+        if len(out) >= limit:
+            break
         c = it.get("content", it) if isinstance(it, dict) else {}
         title = c.get("title") if isinstance(c, dict) else None
-        if not title:
+        if not title or _is_price_noise(title):
             continue
         out.append({"title": title, "link": _news_link(c), "publisher": _news_publisher(c), "date": _news_date(c)})
     res.news = out
-def _news_link(c: dict) -> str | None:
-    ct = c.get("clickThroughUrl")
     if isinstance(ct, dict) and ct.get("url"):
         return ct["url"]
     cu = c.get("canonicalUrl")
