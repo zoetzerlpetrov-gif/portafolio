@@ -954,12 +954,7 @@ def _fill_news(tk: yf.Ticker, res: Analysis, limit: int = 5) -> None:
             continue
         out.append({"title": title, "link": _news_link(c), "publisher": _news_publisher(c), "date": _news_date(c)})
     res.news = out
-    if isinstance(ct, dict) and ct.get("url"):
-        return ct["url"]
-    cu = c.get("canonicalUrl")
-    if isinstance(cu, dict) and cu.get("url"):
-        return cu["url"]
-    return c.get("link")
+def _news_link(c: dict) -> str | None: ct = c.get("clickThroughUrl"); cu = c.get("canonicalUrl"); return (ct.get("url") if isinstance(ct, dict) and ct.get("url") else None) or (cu.get("url") if isinstance(cu, dict) and cu.get("url") else None) or c.get("link")
 
 def _news_publisher(c: dict) -> str | None:
     prov = c.get("provider")
