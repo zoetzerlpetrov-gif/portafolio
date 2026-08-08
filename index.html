@@ -156,6 +156,20 @@
   .pr-range::-webkit-slider-runnable-track{background:transparent}
   .pr-range::-moz-range-track{background:transparent}
 
+  .empty{color:var(--faint);font-size:13px}
+  .newsbtn-wrap{display:flex;justify-content:center;margin-top:2px}
+  .news-btn{appearance:none;border:1px solid var(--border-strong);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:12px;font-weight:600;padding:6px 16px;border-radius:999px;cursor:pointer}
+  .news-btn:hover{background:var(--border)}
+
+  .modal-overlay{position:fixed;inset:0;background:rgba(28,27,25,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+  .modal-overlay.show{display:flex}
+  .modal-box{background:var(--surface);border-radius:14px;max-width:420px;width:100%;max-height:75vh;display:flex;flex-direction:column;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+  .modal-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--border)}
+  .modal-head b{font-size:14px;font-weight:600}
+  .modal-close{appearance:none;border:0;background:transparent;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:0 4px;border-radius:6px}
+  .modal-close:hover{background:var(--border);color:var(--ink)}
+  .modal-body{padding:14px 16px;overflow-y:auto}
+
   @media (max-width:900px){ .layout{grid-template-columns:1fr} .newscol{position:static;max-height:none} }
 </style>
 </head>
@@ -171,6 +185,13 @@
   <main id="app"></main>
 </div>
 <button id="toTop" aria-label="Subir al inicio" title="Subir">↑</button>
+  <div class="modal-overlay" id="newsModal">
+    <div class="modal-box">
+      <div class="modal-head"><b id="newsModalTitle">Noticias</b>
+        <button class="modal-close" id="newsModalClose" aria-label="Cerrar">&times;</button></div>
+      <div class="modal-body" id="newsModalBody"></div>
+    </div>
+  </div>
 
 <script>
 const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
@@ -275,6 +296,7 @@ function card(a, category){
         <span class="v">${a.low_10y!=null?a.low_10y.toFixed(2):'—'} – ${a.high_10y!=null?a.high_10y.toFixed(2):'—'}</span></div>
     </div>
     ${tags.length?`<div class="tags">${tags.join('')}</div>`:''}
+    <div class="newsbtn-wrap"><button class="news-btn" data-ticker="${a.ticker}">Noticias</button></div>
   </div>`);
 }
 
@@ -305,20 +327,21 @@ const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['ven
     return a.price_mxn >= fPriceMin && a.price_mxn <= fPriceMax;
   }
 
-  // Junta y ordena (más reciente primero) las noticias a mostrar: de un ticker
-  // enfocado, o de todo el portafolio filtrado por sector.
-  function newsOf(){
+// Junta y ordena (más reciente primero) las noticias de un sector (o todas).
+  function sectorNews(){
+    let pool = PORTFOLIO;
+    if(fSector!=='todos') pool = pool.filter(a=>a.sector===fSector);
     let items = [];
-    if(focusedTicker){
-      const a = PORTFOLIO.find(x=>x.ticker===focusedTicker);
-      if(a) items = (a.news||[]).map(n=>({...n, ticker:a.ticker, name:a.name}));
-    } else {
-      let pool = PORTFOLIO;
-      if(fSector!=='todos') pool = pool.filter(a=>a.sector===fSector);
-      pool.forEach(a=>(a.news||[]).forEach(n=>items.push({...n, ticker:a.ticker, name:a.name})));
-      items.sort((x,y)=> new Date(y.date||0) - new Date(x.date||0));
-    }
+    pool.forEach(a=>(a.news||[]).forEach(n=>items.push({...n, ticker:a.ticker, name:a.name})));
+    items.sort((x,y)=> new Date(y.date||0) - new Date(x.date||0));
     return items;
+  }
+
+  // Noticias de un instrumento específico (para el popup de cada tarjeta).
+  function tickerNews(tk){
+    const a = PORTFOLIO.find(x=>x.ticker===tk);
+    if(!a) return [];
+    return (a.news||[]).map(n=>({...n, ticker:a.ticker, name:a.name}));
   }
 
   function newsCard(n){
@@ -329,23 +352,37 @@ const STATUSES = [['comprar','buy','Comprar'],['esperar','wait','Esperar'],['ven
     </div>`;
   }
 
-  // Pinta el panel de noticias de la derecha (todas / por sector / por ticker).
+// Pinta el panel de noticias de la derecha (todas o por sector).
   function renderNews(){
     const col = document.getElementById('newsCol');
     if(!col) return;
-    const items = newsOf();
-    let head;
-    if(focusedTicker){
-      const a = PORTFOLIO.find(x=>x.ticker===focusedTicker);
-      head = `<div class="nf-head"><b>Noticias  ${focusedTicker}${a&&a.name?(' — '+a.name):''}</b>
-      <button class="newsclear" id="newsClear">Ver todas</button></div>`;
-    } else {
-      head = `<div class="nf-head"><b>Noticias${fSector!=='todos'?(' · '+fSector):''}</b></div>`;
-    }
+    const items = sectorNews();
+    const head = `<div class="nf-head"><b>Noticias${fSector!=='todos'?(' · '+fSector):''}</b><button class="newsclear" id="newsClear">Ver todas las noticias</button></div>`;
     const body = items.length ? items.map(newsCard).join('') : '<p class="empty">Por el momento no hay noticias disponibles.</p>';
     col.innerHTML = head + body;
     const clr = document.getElementById('newsClear');
-    if(clr) clr.addEventListener('click', ()=>{ focusedTicker=null; renderNews(); });
+    if(clr) clr.addEventListener('click', ()=>{
+      fSector = 'todos';
+      const sel = document.getElementById('selSector');
+      if(sel) sel.value = 'todos';
+      refreshContent();
+    });
+  }
+
+  // Popup de noticias de un instrumento (botón "Noticias" de cada tarjeta).
+  function openNewsModal(tk){
+    const a = PORTFOLIO.find(x=>x.ticker===tk);
+    const title = document.getElementById('newsModalTitle');
+    const body = document.getElementById('newsModalBody');
+    if(!title || !body) return;
+    title.textContent = 'Noticias' + (a ? ` · ${a.ticker}${a.name?(' — '+a.name):''}` : '');
+    const items = tickerNews(tk);
+    body.innerHTML = items.length ? items.map(newsCard).join('') : '<p class="empty">Por el momento no hay noticias disponibles.</p>';
+    document.getElementById('newsModal').classList.add('show');
+  }
+  function closeNewsModal(){
+    const m = document.getElementById('newsModal');
+    if(m) m.classList.remove('show');
   }
 
   // Conecta el slider de precio de doble manija (dos <input type=range> superpuestos).
@@ -446,26 +483,26 @@ function render(){
   </div>
   </div>`;
 
-  const board = `<section class="board"><h2>Veredicto de hoy</h2>
-  <div class="lanes" id="lanesWrap"></div></section>`;
+const board = `<section class="board"><h2>Veredicto de hoy</h2>
+<div class="layout"><div class="main"><div class="lanes" id="lanesWrap"></div></div>
+<aside class="newscol" id="newsCol"></aside></div></section>`;
 
   const app = document.getElementById('app');
-  app.innerHTML = filters + board +
-    '<div class="layout"><div class="main"><div id="cards"></div>' +
-    '<p class="note">Soporte/resistencia: pivotes de 60 días · Tendencia: 9 velas semanales · ' +
-    'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>' +
-    '</div><aside class="newscol" id="newsCol"></aside></div>';
+app.innerHTML = filters + board +
+  '<div id="cards"></div>' +
+  '<p class="note">Soporte/resistencia: pivotes de 60 días · Tendencia: 9 velas semanales · ' +
+  'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>';
 
   refreshContent();
   setupPriceSlider();
 
   // Conectar filtros (los oyentes viven en #app, que no se reemplaza en refreshContent).
-  app.addEventListener('click', e=>{
-    const ch = e.target.closest('.chip');
-    if(ch){ focusedTicker = ch.dataset.ticker; goToCard(ch.dataset.ticker); renderNews(); return; }
-    const cd = e.target.closest('.card');
-    if(cd && cd.dataset.ticker){ focusedTicker = cd.dataset.ticker; renderNews(); }
-  });
+app.addEventListener('click', e=>{
+  const nb = e.target.closest('.news-btn');
+  if(nb){ openNewsModal(nb.dataset.ticker); return; }
+  const ch = e.target.closest('.chip');
+  if(ch){ goToCard(ch.dataset.ticker); return; }
+});
   app.querySelector('#segStatus').addEventListener('click', e=>{
     const b=e.target.closest('button'); if(!b) return;
     fStatus=b.dataset.st; refreshContent();
@@ -539,6 +576,12 @@ async function load(){
 const _toTop = document.getElementById('toTop');
 window.addEventListener('scroll', ()=>{ _toTop.classList.toggle('show', window.scrollY > 400); });
 _toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+  const _newsModal = document.getElementById('newsModal');
+  const _newsModalClose = document.getElementById('newsModalClose');
+  if(_newsModalClose) _newsModalClose.addEventListener('click', closeNewsModal);
+  if(_newsModal) _newsModal.addEventListener('click', e=>{ if(e.target===_newsModal) closeNewsModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeNewsModal(); });
 
 load();
 </script>
