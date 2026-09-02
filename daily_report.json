@@ -1,79 +1,50 @@
 {
-  "generated_at": "2026-09-01T08:20:15.845402-06:00",
+  "generated_at": "2026-09-02T07:53:32.792140-06:00",
   "report": {
     "comprar": [
+      {
+        "ticker": "ADA-USD",
+        "name": "Cardano",
+        "sector": "Criptomonedas",
+        "price": 0.19660000503063202,
+        "trend": "alcista",
+        "support": 0.19075599312782288,
+        "resistance": 0.2107349932193756,
+        "score": 3,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.97%)",
+          "Doble piso detectado"
+        ]
+      },
       {
         "ticker": "BTC-USD",
         "name": "Bitcoin",
         "sector": "Criptomonedas",
-        "price": 78242.4921875,
+        "price": 77314.6484375,
         "trend": "alcista",
         "support": 76909.3515625,
         "resistance": 81346.953125,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.7%)",
+          "Precio cerca del soporte (0.52%)",
           "Doble piso detectado",
           "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "XRP-USD",
-        "name": "XRP (Ripple)",
-        "sector": "Criptomonedas",
-        "price": 1.3783999681472778,
-        "trend": "alcista",
-        "support": 1.3631960153579712,
-        "resistance": 1.6837539672851562,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.1%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "HBAR-USD",
-        "name": "Hedera",
-        "sector": "Criptomonedas",
-        "price": 0.07487999647855759,
-        "trend": "alcista",
-        "support": 0.0671359971165657,
-        "resistance": 0.08655799925327301,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Doble piso detectado"
-        ]
-      },
-      {
-        "ticker": "ADA-USD",
-        "name": "Cardano",
-        "sector": "Criptomonedas",
-        "price": 0.19968000054359436,
-        "trend": "alcista",
-        "support": 0.17159700393676758,
-        "resistance": 0.2107349932193756,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Doble piso detectado"
         ]
       },
       {
         "ticker": "AVAX-USD",
         "name": "Avalanche",
         "sector": "Criptomonedas",
-        "price": 7.322000026702881,
+        "price": 7.184000015258789,
         "trend": "alcista",
         "support": 7.170598030090332,
         "resistance": 8.299735069274902,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.07%)",
+          "Precio cerca del soporte (0.19%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -82,14 +53,30 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "sector": "Semiconductores",
-        "price": 217.80599975585938,
+        "price": 219.55999755859375,
         "trend": "alcista",
         "support": 216.1999969482422,
         "resistance": 227.9199981689453,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.74%)",
+          "Precio cerca del soporte (1.53%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GM",
+        "name": "General Motors",
+        "sector": "Automotriz",
+        "price": 85.62999725341797,
+        "trend": "alcista",
+        "support": 84.91999816894531,
+        "resistance": 88.36000061035156,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (0.83%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -98,9 +85,9 @@
         "ticker": "HMC",
         "name": "Honda",
         "sector": "Automotriz",
-        "price": 32.19499969482422,
+        "price": 32.119998931884766,
         "trend": "alcista",
-        "support": 31.040000915527344,
+        "support": 31.09000015258789,
         "resistance": 33.45000076293945,
         "score": 2,
         "reasons": [
@@ -109,33 +96,17 @@
         ]
       },
       {
-        "ticker": "LMT",
-        "name": "Lockheed Martin",
-        "sector": "Aeroespacial y Defensa",
-        "price": 555.9351196289062,
+        "ticker": "MBGYY",
+        "name": "Mercedes-Benz",
+        "sector": "Automotriz",
+        "price": 13.489999771118164,
         "trend": "alcista",
-        "support": 555.27001953125,
-        "resistance": 593.77001953125,
+        "support": 13.399999618530273,
+        "resistance": 13.899999618530273,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.12%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "RTX",
-        "name": "RTX / Raytheon",
-        "sector": "Aeroespacial y Defensa",
-        "price": 208.86500549316406,
-        "trend": "alcista",
-        "support": 207.44000244140625,
-        "resistance": 221.33999633789062,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.68%)",
+          "Precio cerca del soporte (0.67%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -144,14 +115,14 @@
         "ticker": "EADSY",
         "name": "Airbus",
         "sector": "Aeroespacial y Defensa",
-        "price": 56.650001525878906,
+        "price": 56.38999938964844,
         "trend": "alcista",
         "support": 55.130001068115234,
         "resistance": 60.02000045776367,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.68%)",
+          "Precio cerca del soporte (2.23%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -160,7 +131,7 @@
         "ticker": "ABT",
         "name": "Abbott Laboratories",
         "sector": "Salud / Dispositivos médicos",
-        "price": 110.48999786376953,
+        "price": 110.68000030517578,
         "trend": "alcista",
         "support": 102.88999938964844,
         "resistance": 117.33999633789062,
@@ -171,26 +142,12 @@
         ]
       },
       {
-        "ticker": "REGN",
-        "name": "Regeneron",
-        "sector": "Biotecnología",
-        "price": 814.4849853515625,
-        "trend": "alcista",
-        "support": 648.6599731445312,
-        "resistance": 847.0,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Doble piso detectado"
-        ]
-      },
-      {
         "ticker": "MRNA",
         "name": "Moderna",
         "sector": "Biotecnología",
-        "price": 146.03500366210938,
+        "price": 150.96499633789062,
         "trend": "alcista",
-        "support": 53.345001220703125,
+        "support": 133.3300018310547,
         "resistance": 161.3699951171875,
         "score": 2,
         "reasons": [
@@ -199,33 +156,49 @@
         ]
       },
       {
+        "ticker": "CAG",
+        "name": "Conagra",
+        "sector": "Alimentos",
+        "price": 16.20789909362793,
+        "trend": "alcista",
+        "support": 15.739999771118164,
+        "resistance": 16.739999771118164,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.89%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola",
+        "sector": "Bebidas",
+        "price": 88.0,
+        "trend": "alcista",
+        "support": 85.66000366210938,
+        "resistance": 90.91999816894531,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.66%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "DEO",
         "name": "Diageo",
         "sector": "Bebidas",
-        "price": 90.97000122070312,
+        "price": 90.69000244140625,
         "trend": "alcista",
         "support": 90.36000061035156,
         "resistance": 95.83000183105469,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.67%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "QSR",
-        "name": "Restaurant Brands",
-        "sector": "Restaurantes / Comida rápida",
-        "price": 78.0999984741211,
-        "trend": "alcista",
-        "support": 76.08000183105469,
-        "resistance": 81.87999725341797,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.59%)",
+          "Precio cerca del soporte (0.36%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -234,14 +207,30 @@
         "ticker": "WEN",
         "name": "Wendy's",
         "sector": "Restaurantes / Comida rápida",
-        "price": 8.390000343322754,
+        "price": 8.369999885559082,
         "trend": "alcista",
         "support": 8.34000015258789,
         "resistance": 8.800000190734863,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.6%)",
+          "Precio cerca del soporte (0.36%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "CLX",
+        "name": "Clorox",
+        "sector": "Consumo básico / Hogar",
+        "price": 96.15499877929688,
+        "trend": "alcista",
+        "support": 94.19999694824219,
+        "resistance": 99.4800033569336,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.03%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -250,42 +239,72 @@
         "ticker": "BBVA",
         "name": "BBVA",
         "sector": "Finanzas / Bancos",
-        "price": 29.024999618530273,
+        "price": 28.989700317382812,
         "trend": "alcista",
         "support": 28.469999313354492,
         "resistance": 29.31999969482422,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.91%)",
-          "Precio cerca de la resistencia (1.02%)",
+          "Precio cerca del soporte (1.79%)",
+          "Precio cerca de la resistencia (1.14%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "XYZ",
+        "name": "Block (antes SQ)",
+        "sector": "Pagos / Fintech",
+        "price": 78.63999938964844,
+        "trend": "alcista",
+        "support": 77.2300033569336,
+        "resistance": 81.04000091552734,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (1.79%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "VZ",
         "name": "Verizon",
         "sector": "Telecomunicaciones",
-        "price": 50.54499816894531,
+        "price": 50.48500061035156,
         "trend": "alcista",
         "support": 49.119998931884766,
-        "resistance": 50.779998779296875,
+        "resistance": 50.93000030517578,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.82%)",
-          "Precio cerca de la resistencia (0.46%)",
+          "Precio cerca del soporte (2.7%)",
+          "Precio cerca de la resistencia (0.88%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications",
+        "sector": "Telecomunicaciones",
+        "price": 151.3000030517578,
+        "trend": "alcista",
+        "support": 148.00999450683594,
+        "resistance": 156.13999938964844,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.17%)"
         ]
       },
       {
         "ticker": "SHOP",
         "name": "Shopify",
         "sector": "E-commerce / Internet",
-        "price": 142.41000366210938,
+        "price": 140.19000244140625,
         "trend": "alcista",
         "support": 115.2699966430664,
-        "resistance": 158.8699951171875,
+        "resistance": 156.49000549316406,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
@@ -293,26 +312,10 @@
         ]
       },
       {
-        "ticker": "NUE",
-        "name": "Nucor (acero)",
-        "sector": "Construcción / Materiales",
-        "price": 251.4550018310547,
-        "trend": "alcista",
-        "support": 251.25,
-        "resistance": 270.0199890136719,
-        "score": 2,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.08%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "AEM",
         "name": "Agnico Eagle",
         "sector": "Minería / Metales",
-        "price": 200.20350646972656,
+        "price": 198.00999450683594,
         "trend": "alcista",
         "support": 151.61000061035156,
         "resistance": 224.42999267578125,
@@ -326,7 +329,7 @@
         "ticker": "WPM",
         "name": "Wheaton Precious Metals",
         "sector": "Minería / Metales",
-        "price": 149.19000244140625,
+        "price": 150.64999389648438,
         "trend": "alcista",
         "support": 109.0999984741211,
         "resistance": 163.89999389648438,
@@ -339,107 +342,33 @@
     ],
     "vender": [
       {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "sector": "Automotriz",
-        "price": 359.0,
+        "ticker": "INTC",
+        "name": "Intel",
+        "sector": "Semiconductores",
+        "price": 88.88999938964844,
         "trend": "bajista",
-        "support": 342.5299987792969,
-        "resistance": 366.5,
-        "score": -3,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.09%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "RBLX",
-        "name": "Roblox",
-        "sector": "Medios / Entretenimiento",
-        "price": 39.792999267578125,
-        "trend": "bajista",
-        "support": 37.20000076293945,
-        "resistance": 40.189998626708984,
-        "score": -3,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (1.0%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "FIBRAMQ12.MX",
-        "name": "Fibra Macquarie",
-        "sector": "FIBRAs (bienes raíces)",
-        "price": 44.18000030517578,
-        "trend": "bajista",
-        "support": 42.75,
-        "resistance": 44.2599983215332,
+        "support": 85.13999938964844,
+        "resistance": 93.69999694824219,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (0.18%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "NVO",
+        "name": "Novo Nordisk",
+        "sector": "Farmacéuticas",
+        "price": 46.755001068115234,
+        "trend": "bajista",
+        "support": 44.68000030517578,
+        "resistance": 47.7400016784668,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca de la resistencia (2.11%)",
           "Doble piso detectado",
           "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "NOC",
-        "name": "Northrop Grumman",
-        "sector": "Aeroespacial y Defensa",
-        "price": 539.989990234375,
-        "trend": "lateral",
-        "support": 519.77001953125,
-        "resistance": 552.6300048828125,
-        "score": -2,
-        "reasons": [
-          "Precio cerca de la resistencia (2.34%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "UNH",
-        "name": "UnitedHealth",
-        "sector": "Salud / Dispositivos médicos",
-        "price": 397.4549865722656,
-        "trend": "bajista",
-        "support": 383.8299865722656,
-        "resistance": 406.25,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (2.21%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ISRG",
-        "name": "Intuitive Surgical",
-        "sector": "Salud / Dispositivos médicos",
-        "price": 370.3299865722656,
-        "trend": "lateral",
-        "support": 328.57000732421875,
-        "resistance": 374.70001220703125,
-        "score": -2,
-        "reasons": [
-          "Precio cerca de la resistencia (1.18%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ALNY",
-        "name": "Alnylam",
-        "sector": "Biotecnología",
-        "price": 241.48500061035156,
-        "trend": "bajista",
-        "support": 210.49000549316406,
-        "resistance": 244.02999877929688,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca de la resistencia (1.05%)"
         ]
       }
     ],
@@ -448,15 +377,15 @@
         "ticker": "VEA",
         "name": "Desarrollados ex-EE.UU.",
         "sector": "ETFs / Índices",
-        "price": 72.6050033569336,
+        "price": 72.38500213623047,
         "trend": "alcista",
         "support": 72.37999725341797,
         "resistance": 73.2300033569336,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.31%)",
-          "Precio cerca de la resistencia (0.86%)",
+          "Precio cerca del soporte (0.01%)",
+          "Precio cerca de la resistencia (1.17%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -465,15 +394,15 @@
         "ticker": "VWO",
         "name": "Mercados emergentes",
         "sector": "ETFs / Índices",
-        "price": 61.03499984741211,
+        "price": 60.63999938964844,
         "trend": "alcista",
         "support": 59.560001373291016,
-        "resistance": 61.52000045776367,
+        "resistance": 60.650001525878906,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.42%)",
-          "Precio cerca de la resistencia (0.79%)",
+          "Precio cerca del soporte (1.78%)",
+          "Precio cerca de la resistencia (0.02%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -482,15 +411,45 @@
         "ticker": "SCHD",
         "name": "Dividendos EE.UU.",
         "sector": "ETFs / Índices",
-        "price": 34.92499923706055,
+        "price": 34.85240173339844,
         "trend": "alcista",
         "support": 34.70000076293945,
         "resistance": 35.310001373291016,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.64%)",
-          "Precio cerca de la resistencia (1.1%)",
+          "Precio cerca del soporte (0.44%)",
+          "Precio cerca de la resistencia (1.31%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "NAFTRACISHRS.MX",
+        "name": "IPC México",
+        "sector": "ETFs / Índices",
+        "price": 64.1500015258789,
+        "trend": "lateral",
+        "support": 63.5099983215332,
+        "resistance": 66.72000122070312,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (1.0%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "FIBRAPL14.MX",
+        "name": "Fibra Prologis",
+        "sector": "FIBRAs (bienes raíces)",
+        "price": 76.08999633789062,
+        "trend": "lateral",
+        "support": 75.94000244140625,
+        "resistance": 78.58000183105469,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.2%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -516,7 +475,7 @@
         "ticker": "ETH-USD",
         "name": "Ethereum",
         "sector": "Criptomonedas",
-        "price": 2450.60009765625,
+        "price": 2414.320068359375,
         "trend": "alcista",
         "support": 1852.84033203125,
         "resistance": 2545.881103515625,
@@ -528,17 +487,32 @@
         ]
       },
       {
-        "ticker": "XLM-USD",
-        "name": "Stellar Lumens",
+        "ticker": "XRP-USD",
+        "name": "XRP (Ripple)",
         "sector": "Criptomonedas",
-        "price": 0.17833900451660156,
-        "trend": "bajista",
-        "support": 0.1778150051832199,
-        "resistance": 0.1924169957637787,
+        "price": 1.3437000513076782,
+        "trend": "alcista",
+        "support": 1.0700570344924927,
+        "resistance": 1.6837539672851562,
         "score": 1,
         "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.29%)",
+          "Tendencia semanal alcista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "HBAR-USD",
+        "name": "Hedera",
+        "sector": "Criptomonedas",
+        "price": 0.07407999783754349,
+        "trend": "alcista",
+        "support": 0.0671359971165657,
+        "resistance": 0.07439900189638138,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.43%)",
           "Doble piso detectado"
         ]
       },
@@ -546,7 +520,7 @@
         "ticker": "SOL-USD",
         "name": "Solana",
         "sector": "Criptomonedas",
-        "price": 102.30999755859375,
+        "price": 99.5199966430664,
         "trend": "alcista",
         "support": 76.25662994384766,
         "resistance": 110.03900146484375,
@@ -561,7 +535,7 @@
         "ticker": "BNB-USD",
         "name": "BNB (Binance)",
         "sector": "Criptomonedas",
-        "price": 687.6599731445312,
+        "price": 688.5,
         "trend": "alcista",
         "support": 599.52783203125,
         "resistance": 725.3282470703125,
@@ -576,7 +550,7 @@
         "ticker": "DOGE-USD",
         "name": "Dogecoin",
         "sector": "Criptomonedas",
-        "price": 0.08291999995708466,
+        "price": 0.08190999925136566,
         "trend": "alcista",
         "support": 0.0710730031132698,
         "resistance": 0.09997899830341339,
@@ -588,46 +562,31 @@
         ]
       },
       {
-        "ticker": "AAPL",
-        "name": "Apple",
-        "sector": "Tecnología / Software",
-        "price": 323.1700134277344,
-        "trend": "lateral",
-        "support": 319.3500061035156,
-        "resistance": 334.989990234375,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (1.18%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "MSFT",
         "name": "Microsoft",
         "sector": "Tecnología / Software",
-        "price": 503.7900085449219,
+        "price": 496.9800109863281,
         "trend": "alcista",
         "support": 477.1499938964844,
         "resistance": 513.72998046875,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.97%)",
-          "Doble piso detectado"
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "GOOGL",
         "name": "Alphabet (Google)",
         "sector": "Tecnología / Software",
-        "price": 336.5849914550781,
+        "price": 334.6400146484375,
         "trend": "lateral",
         "support": 330.20001220703125,
         "resistance": 351.6000061035156,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (1.9%)",
+          "Precio cerca del soporte (1.33%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -636,7 +595,7 @@
         "ticker": "ORCL",
         "name": "Oracle",
         "sector": "Tecnología / Software",
-        "price": 143.58999633789062,
+        "price": 143.5399932861328,
         "trend": "alcista",
         "support": 137.5500030517578,
         "resistance": 148.6999969482422,
@@ -651,37 +610,50 @@
         "ticker": "CRM",
         "name": "Salesforce",
         "sector": "Tecnología / Software",
-        "price": 259.03961181640625,
+        "price": 261.2200012207031,
         "trend": "alcista",
         "support": 198.9499969482422,
-        "resistance": 263.5299987792969,
+        "resistance": 264.5,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.73%)",
+          "Precio cerca de la resistencia (1.26%)",
           "Doble piso detectado"
         ]
       },
       {
-        "ticker": "AVGO",
-        "name": "Broadcom",
-        "sector": "Semiconductores",
-        "price": 364.7550048828125,
-        "trend": "bajista",
-        "support": 357.79998779296875,
-        "resistance": 398.5899963378906,
+        "ticker": "ADBE",
+        "name": "Adobe",
+        "sector": "Tecnología / Software",
+        "price": 283.8301086425781,
+        "trend": "alcista",
+        "support": 265.0400085449219,
+        "resistance": 294.5299987792969,
         "score": 1,
         "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.91%)",
-          "Doble piso detectado"
+          "Tendencia semanal alcista"
+        ]
+      },
+      {
+        "ticker": "SAP",
+        "name": "SAP",
+        "sector": "Tecnología / Software",
+        "price": 212.27000427246094,
+        "trend": "alcista",
+        "support": 208.57000732421875,
+        "resistance": 220.27000427246094,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (1.74%)",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "ASML",
         "name": "ASML",
         "sector": "Semiconductores",
-        "price": 1655.6300048828125,
+        "price": 1661.6400146484375,
         "trend": "lateral",
         "support": 1530.6400146484375,
         "resistance": 1853.449951171875,
@@ -694,14 +666,14 @@
         "ticker": "TXN",
         "name": "Texas Instruments",
         "sector": "Semiconductores",
-        "price": 251.97999572753906,
+        "price": 252.22000122070312,
         "trend": "bajista",
-        "support": 251.77000427246094,
+        "support": 250.42999267578125,
         "resistance": 267.4800109863281,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.08%)",
+          "Precio cerca del soporte (0.71%)",
           "Doble piso detectado"
         ]
       },
@@ -709,10 +681,10 @@
         "ticker": "MU",
         "name": "Micron",
         "sector": "Semiconductores",
-        "price": 936.6400146484375,
+        "price": 955.6699829101562,
         "trend": "alcista",
         "support": 891.6599731445312,
-        "resistance": 968.7100219726562,
+        "resistance": 989.9600219726562,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
@@ -724,9 +696,9 @@
         "ticker": "XOM",
         "name": "ExxonMobil",
         "sector": "Energía (petróleo y gas)",
-        "price": 162.7899932861328,
+        "price": 163.1300048828125,
         "trend": "alcista",
-        "support": 151.8800048828125,
+        "support": 156.13999938964844,
         "resistance": 168.63999938964844,
         "score": 1,
         "reasons": [
@@ -734,31 +706,48 @@
         ]
       },
       {
-        "ticker": "SHEL",
-        "name": "Shell",
+        "ticker": "SLB",
+        "name": "Schlumberger",
         "sector": "Energía (petróleo y gas)",
-        "price": 92.7300033569336,
+        "price": 57.16999816894531,
         "trend": "alcista",
-        "support": 90.05000305175781,
-        "resistance": 94.69999694824219,
+        "support": 51.97999954223633,
+        "resistance": 60.459999084472656,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.89%)",
-          "Precio cerca de la resistencia (2.12%)"
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "BEP",
         "name": "Brookfield Renewable",
         "sector": "Energía renovable / Utilities",
-        "price": 31.209999084472656,
+        "price": 31.149999618530273,
         "trend": "lateral",
-        "support": 31.059999465942383,
+        "support": 30.729999542236328,
         "resistance": 34.02000045776367,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.48%)",
+          "Precio cerca del soporte (1.35%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "TM",
+        "name": "Toyota",
+        "sector": "Automotriz",
+        "price": 196.6999969482422,
+        "trend": "alcista",
+        "support": 191.5,
+        "resistance": 198.0,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.64%)",
+          "Precio cerca de la resistencia (0.66%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -767,77 +756,15 @@
         "ticker": "VWAGY",
         "name": "Volkswagen",
         "sector": "Automotriz",
-        "price": 9.0600004196167,
+        "price": 8.699999809265137,
         "trend": "alcista",
-        "support": 8.420000076293945,
-        "resistance": 10.640000343322754,
+        "support": 8.489999771118164,
+        "resistance": 8.729999542236328,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "GM",
-        "name": "General Motors",
-        "sector": "Automotriz",
-        "price": 86.37999725341797,
-        "trend": "alcista",
-        "support": 86.02999877929688,
-        "resistance": 88.36000061035156,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.41%)",
-          "Precio cerca de la resistencia (2.29%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "F",
-        "name": "Ford",
-        "sector": "Automotriz",
-        "price": 14.0,
-        "trend": "lateral",
-        "support": 13.760000228881836,
-        "resistance": 14.479999542236328,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (1.71%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "BYDDY",
-        "name": "BYD",
-        "sector": "Automotriz",
-        "price": 11.170000076293945,
-        "trend": "lateral",
-        "support": 11.109999656677246,
-        "resistance": 11.539999961853027,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (0.54%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "MBGYY",
-        "name": "Mercedes-Benz",
-        "sector": "Automotriz",
-        "price": 13.5600004196167,
-        "trend": "alcista",
-        "support": 13.399999618530273,
-        "resistance": 13.899999618530273,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.18%)",
-          "Precio cerca de la resistencia (2.51%)",
+          "Precio cerca del soporte (2.41%)",
+          "Precio cerca de la resistencia (0.34%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -846,29 +773,44 @@
         "ticker": "RACE",
         "name": "Ferrari",
         "sector": "Automotriz",
-        "price": 413.9599914550781,
+        "price": 413.30999755859375,
         "trend": "alcista",
-        "support": 411.30999755859375,
+        "support": 404.510009765625,
         "resistance": 414.5199890136719,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.64%)",
-          "Precio cerca de la resistencia (0.14%)"
+          "Precio cerca del soporte (2.13%)",
+          "Precio cerca de la resistencia (0.29%)"
         ]
       },
       {
         "ticker": "AAL",
         "name": "American Airlines",
         "sector": "Aviación / Aerolíneas",
-        "price": 13.274999618530273,
+        "price": 13.125,
         "trend": "bajista",
-        "support": 13.180000305175781,
+        "support": 12.9399995803833,
         "resistance": 14.15999984741211,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.72%)",
+          "Precio cerca del soporte (1.41%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "VLRS",
+        "name": "Volaris (México)",
+        "sector": "Aviación / Aerolíneas",
+        "price": 6.519999980926514,
+        "trend": "bajista",
+        "support": 6.380000114440918,
+        "resistance": 7.260000228881836,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.15%)",
           "Doble piso detectado"
         ]
       },
@@ -876,14 +818,14 @@
         "ticker": "CPA",
         "name": "Copa Airlines",
         "sector": "Aviación / Aerolíneas",
-        "price": 126.53500366210938,
+        "price": 127.3499984741211,
         "trend": "bajista",
-        "support": 124.73999786376953,
+        "support": 127.27999877929688,
         "resistance": 135.9600067138672,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.42%)",
+          "Precio cerca del soporte (0.05%)",
           "Doble piso detectado"
         ]
       },
@@ -891,14 +833,14 @@
         "ticker": "DLAKY",
         "name": "Lufthansa",
         "sector": "Aviación / Aerolíneas",
-        "price": 8.899999618530273,
+        "price": 8.75,
         "trend": "bajista",
-        "support": 8.84000015258789,
+        "support": 8.75,
         "resistance": 9.470000267028809,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.67%)",
+          "Precio cerca del soporte (0.0%)",
           "Doble piso detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
         ]
@@ -907,7 +849,7 @@
         "ticker": "AC.TO",
         "name": "Air Canada",
         "sector": "Aviación / Aerolíneas",
-        "price": 27.260000228881836,
+        "price": 27.979999542236328,
         "trend": "alcista",
         "support": 25.200000762939453,
         "resistance": 29.56999969482422,
@@ -917,25 +859,10 @@
         ]
       },
       {
-        "ticker": "BA",
-        "name": "Boeing",
-        "sector": "Aeroespacial y Defensa",
-        "price": 207.4199981689453,
-        "trend": "lateral",
-        "support": 203.89999389648438,
-        "resistance": 223.77000427246094,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (1.7%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "SPCX",
         "name": "SpaceX",
         "sector": "Aeroespacial y Defensa",
-        "price": 144.14500427246094,
+        "price": 140.3699951171875,
         "trend": "alcista",
         "support": 130.38999938964844,
         "resistance": 149.8000030517578,
@@ -948,25 +875,25 @@
         "ticker": "HLT",
         "name": "Hilton Worldwide",
         "sector": "Turismo / Hospitalidad",
-        "price": 313.8699951171875,
+        "price": 313.6449890136719,
         "trend": "lateral",
         "support": 311.6700134277344,
         "resistance": 326.5,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.7%)",
+          "Precio cerca del soporte (0.63%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "MDT",
-        "name": "Medtronic",
-        "sector": "Salud / Dispositivos médicos",
-        "price": 91.7300033569336,
+        "ticker": "BKNG",
+        "name": "Booking Holdings",
+        "sector": "Turismo / Hospitalidad",
+        "price": 198.0399932861328,
         "trend": "alcista",
-        "support": 83.83999633789062,
-        "resistance": 94.72000122070312,
+        "support": 171.02000427246094,
+        "resistance": 204.61000061035156,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
@@ -975,10 +902,27 @@
         ]
       },
       {
+        "ticker": "MDT",
+        "name": "Medtronic",
+        "sector": "Salud / Dispositivos médicos",
+        "price": 92.58000183105469,
+        "trend": "alcista",
+        "support": 89.95999908447266,
+        "resistance": 94.72000122070312,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.83%)",
+          "Precio cerca de la resistencia (2.31%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "TMO",
         "name": "Thermo Fisher",
         "sector": "Salud / Dispositivos médicos",
-        "price": 610.9099731445312,
+        "price": 611.7949829101562,
         "trend": "alcista",
         "support": 580.0,
         "resistance": 647.0,
@@ -988,25 +932,10 @@
         ]
       },
       {
-        "ticker": "SYK",
-        "name": "Stryker",
-        "sector": "Salud / Dispositivos médicos",
-        "price": 323.52978515625,
-        "trend": "lateral",
-        "support": 321.6000061035156,
-        "resistance": 333.989990234375,
-        "score": 1,
-        "reasons": [
-          "Precio cerca del soporte (0.6%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "BSX",
         "name": "Boston Scientific",
         "sector": "Salud / Dispositivos médicos",
-        "price": 47.611000061035156,
+        "price": 48.86000061035156,
         "trend": "alcista",
         "support": 42.54999923706055,
         "resistance": 52.9900016784668,
@@ -1021,30 +950,13 @@
         "ticker": "LLY",
         "name": "Eli Lilly",
         "sector": "Farmacéuticas",
-        "price": 1172.5872802734375,
+        "price": 1183.8199462890625,
         "trend": "lateral",
         "support": 1163.5,
         "resistance": 1232.0,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.77%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "JNJ",
-        "name": "Johnson & Johnson",
-        "sector": "Farmacéuticas",
-        "price": 268.25,
-        "trend": "alcista",
-        "support": 263.8299865722656,
-        "resistance": 269.42999267578125,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.65%)",
-          "Precio cerca de la resistencia (0.44%)",
+          "Precio cerca del soporte (1.72%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1053,7 +965,7 @@
         "ticker": "MRK",
         "name": "Merck",
         "sector": "Farmacéuticas",
-        "price": 149.99000549316406,
+        "price": 151.73500061035156,
         "trend": "alcista",
         "support": 126.22000122070312,
         "resistance": 156.9199981689453,
@@ -1065,18 +977,33 @@
         ]
       },
       {
-        "ticker": "BIIB",
-        "name": "Biogen",
-        "sector": "Biotecnología",
-        "price": 217.72500610351562,
+        "ticker": "RHHBY",
+        "name": "Roche",
+        "sector": "Farmacéuticas",
+        "price": 54.029998779296875,
         "trend": "alcista",
-        "support": 213.9600067138672,
-        "resistance": 218.58999633789062,
+        "support": 50.310001373291016,
+        "resistance": 57.0,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.73%)",
-          "Precio cerca de la resistencia (0.4%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "BIIB",
+        "name": "Biogen",
+        "sector": "Biotecnología",
+        "price": 219.35000610351562,
+        "trend": "alcista",
+        "support": 213.9600067138672,
+        "resistance": 219.72000122070312,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.46%)",
+          "Precio cerca de la resistencia (0.17%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1085,9 +1012,9 @@
         "ticker": "BNTX",
         "name": "BioNTech",
         "sector": "Biotecnología",
-        "price": 101.86000061035156,
+        "price": 105.20999908447266,
         "trend": "alcista",
-        "support": 90.5199966430664,
+        "support": 98.80000305175781,
         "resistance": 120.33000183105469,
         "score": 1,
         "reasons": [
@@ -1100,7 +1027,7 @@
         "ticker": "ILMN",
         "name": "Illumina",
         "sector": "Biotecnología",
-        "price": 212.3074951171875,
+        "price": 213.15499877929688,
         "trend": "alcista",
         "support": 187.6699981689453,
         "resistance": 231.80999755859375,
@@ -1115,15 +1042,15 @@
         "ticker": "MDLZ",
         "name": "Mondelez",
         "sector": "Alimentos",
-        "price": 62.56999969482422,
+        "price": 61.540000915527344,
         "trend": "alcista",
         "support": 60.849998474121094,
         "resistance": 63.0,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.75%)",
-          "Precio cerca de la resistencia (0.69%)",
+          "Precio cerca del soporte (1.12%)",
+          "Precio cerca de la resistencia (2.37%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1132,15 +1059,15 @@
         "ticker": "HSY",
         "name": "Hershey",
         "sector": "Alimentos",
-        "price": 178.375,
+        "price": 175.125,
         "trend": "alcista",
         "support": 174.91000366210938,
-        "resistance": 183.3800048828125,
+        "resistance": 177.63999938964844,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.94%)",
-          "Precio cerca de la resistencia (2.81%)",
+          "Precio cerca del soporte (0.12%)",
+          "Precio cerca de la resistencia (1.44%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1149,13 +1076,13 @@
         "ticker": "TSN",
         "name": "Tyson Foods",
         "sector": "Alimentos",
-        "price": 54.86000061035156,
+        "price": 55.279998779296875,
         "trend": "lateral",
         "support": 54.630001068115234,
         "resistance": 57.939998626708984,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.42%)",
+          "Precio cerca del soporte (1.18%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1164,7 +1091,7 @@
         "ticker": "KOF",
         "name": "Coca-Cola FEMSA",
         "sector": "Bebidas",
-        "price": 111.83999633789062,
+        "price": 111.69999694824219,
         "trend": "alcista",
         "support": 107.8499984741211,
         "resistance": 117.08999633789062,
@@ -1179,13 +1106,13 @@
         "ticker": "STZ",
         "name": "Constellation Brands",
         "sector": "Bebidas",
-        "price": 131.11000061035156,
+        "price": 131.00999450683594,
         "trend": "lateral",
         "support": 129.44000244140625,
         "resistance": 135.08999633789062,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (1.27%)",
+          "Precio cerca del soporte (1.2%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1194,13 +1121,13 @@
         "ticker": "MCD",
         "name": "McDonald's",
         "sector": "Restaurantes / Comida rápida",
-        "price": 262.05999755859375,
+        "price": 261.55499267578125,
         "trend": "lateral",
         "support": 260.9599914550781,
         "resistance": 273.4200134277344,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.42%)",
+          "Precio cerca del soporte (0.23%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1209,22 +1136,71 @@
         "ticker": "CMG",
         "name": "Chipotle",
         "sector": "Restaurantes / Comida rápida",
-        "price": 37.67499923706055,
+        "price": 38.4900016784668,
         "trend": "alcista",
         "support": 33.0,
-        "resistance": 38.2400016784668,
+        "resistance": 39.09000015258789,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.5%)",
+          "Precio cerca de la resistencia (1.56%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "DPZ",
+        "name": "Domino's Pizza",
+        "sector": "Restaurantes / Comida rápida",
+        "price": 341.7749938964844,
+        "trend": "alcista",
+        "support": 341.0199890136719,
+        "resistance": 350.0,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (0.22%)",
+          "Precio cerca de la resistencia (2.41%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "UL",
+        "name": "Unilever",
+        "sector": "Consumo básico / Hogar",
+        "price": 64.3499984741211,
+        "trend": "alcista",
+        "support": 63.9900016784668,
+        "resistance": 64.68000030517578,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (0.56%)",
+          "Precio cerca de la resistencia (0.51%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "KMB",
+        "name": "Kimberly-Clark",
+        "sector": "Consumo básico / Hogar",
+        "price": 107.6427993774414,
+        "trend": "lateral",
+        "support": 107.38999938964844,
+        "resistance": 111.18000030517578,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.23%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "EL",
         "name": "Estée Lauder",
         "sector": "Consumo básico / Hogar",
-        "price": 101.0999984741211,
+        "price": 100.3550033569336,
         "trend": "alcista",
         "support": 83.8499984741211,
         "resistance": 108.37999725341797,
@@ -1236,16 +1212,16 @@
         ]
       },
       {
-        "ticker": "HD",
-        "name": "Home Depot",
+        "ticker": "COST",
+        "name": "Costco",
         "sector": "Retail / Comercio",
-        "price": 323.7900085449219,
+        "price": 933.3150024414062,
         "trend": "lateral",
-        "support": 323.04998779296875,
-        "resistance": 341.1499938964844,
+        "support": 925.77001953125,
+        "resistance": 964.3300170898438,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.23%)",
+          "Precio cerca del soporte (0.81%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1254,13 +1230,13 @@
         "ticker": "LOW",
         "name": "Lowe's",
         "sector": "Retail / Comercio",
-        "price": 203.0699005126953,
+        "price": 200.1999969482422,
         "trend": "lateral",
         "support": 199.39999389648438,
         "resistance": 220.2899932861328,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (1.81%)",
+          "Precio cerca del soporte (0.4%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1269,7 +1245,7 @@
         "ticker": "TGT",
         "name": "Target",
         "sector": "Retail / Comercio",
-        "price": 163.36000061035156,
+        "price": 164.0,
         "trend": "alcista",
         "support": 146.2100067138672,
         "resistance": 170.75,
@@ -1284,15 +1260,15 @@
         "ticker": "JPM",
         "name": "JPMorgan Chase",
         "sector": "Finanzas / Bancos",
-        "price": 358.55499267578125,
+        "price": 357.3550109863281,
         "trend": "alcista",
         "support": 353.3299865722656,
         "resistance": 359.29998779296875,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.46%)",
-          "Precio cerca de la resistencia (0.21%)",
+          "Precio cerca del soporte (1.13%)",
+          "Precio cerca de la resistencia (0.54%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1301,30 +1277,13 @@
         "ticker": "GS",
         "name": "Goldman Sachs",
         "sector": "Finanzas / Bancos",
-        "price": 1023.8400268554688,
+        "price": 1006.9199829101562,
         "trend": "lateral",
         "support": 1003.0,
         "resistance": 1059.0699462890625,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (2.04%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "SAN",
-        "name": "Banco Santander",
-        "sector": "Finanzas / Bancos",
-        "price": 14.625,
-        "trend": "alcista",
-        "support": 14.510000228881836,
-        "resistance": 14.819999694824219,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.79%)",
-          "Precio cerca de la resistencia (1.33%)",
+          "Precio cerca del soporte (0.39%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1333,7 +1292,7 @@
         "ticker": "PYPL",
         "name": "PayPal",
         "sector": "Pagos / Fintech",
-        "price": 52.59000015258789,
+        "price": 53.14500045776367,
         "trend": "alcista",
         "support": 43.72999954223633,
         "resistance": 57.66999816894531,
@@ -1345,55 +1304,57 @@
         ]
       },
       {
-        "ticker": "GPN",
-        "name": "Global Payments",
-        "sector": "Pagos / Fintech",
-        "price": 90.88999938964844,
-        "trend": "alcista",
-        "support": 84.19999694824219,
-        "resistance": 95.58000183105469,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "SOFI",
         "name": "SoFi",
         "sector": "Pagos / Fintech",
-        "price": 17.489999771118164,
+        "price": 17.325000762939453,
         "trend": "lateral",
         "support": 17.079999923706055,
         "resistance": 18.43000030517578,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (2.34%)",
+          "Precio cerca del soporte (1.41%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "CHTR",
-        "name": "Charter Communications",
-        "sector": "Telecomunicaciones",
-        "price": 146.63499450683594,
+        "ticker": "NU",
+        "name": "Nu Holdings (Nubank)",
+        "sector": "Pagos / Fintech",
+        "price": 14.90999984741211,
         "trend": "alcista",
-        "support": 143.97000122070312,
-        "resistance": 147.85000610351562,
+        "support": 14.140000343322754,
+        "resistance": 15.420000076293945,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.82%)",
-          "Precio cerca de la resistencia (0.83%)"
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "VOD",
+        "name": "Vodafone",
+        "sector": "Telecomunicaciones",
+        "price": 15.930000305175781,
+        "trend": "alcista",
+        "support": 15.670000076293945,
+        "resistance": 16.049999237060547,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (1.63%)",
+          "Precio cerca de la resistencia (0.75%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "DIS",
         "name": "Walt Disney",
         "sector": "Medios / Entretenimiento",
-        "price": 108.58000183105469,
+        "price": 107.93000030517578,
         "trend": "alcista",
         "support": 102.02999877929688,
         "resistance": 111.87000274658203,
@@ -1408,13 +1369,13 @@
         "ticker": "LYV",
         "name": "Live Nation",
         "sector": "Medios / Entretenimiento",
-        "price": 179.57000732421875,
+        "price": 179.36000061035156,
         "trend": "lateral",
-        "support": 179.52999877929688,
+        "support": 175.2899932861328,
         "resistance": 187.1999969482422,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.02%)",
+          "Precio cerca del soporte (2.27%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1423,73 +1384,118 @@
         "ticker": "SE",
         "name": "Sea Limited",
         "sector": "E-commerce / Internet",
-        "price": 112.6500015258789,
+        "price": 112.5199966430664,
         "trend": "alcista",
         "support": 101.0199966430664,
         "resistance": 115.72000122070312,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.73%)",
+          "Precio cerca de la resistencia (2.84%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "ETSY",
+        "name": "Etsy",
+        "sector": "E-commerce / Internet",
+        "price": 82.27999877929688,
+        "trend": "lateral",
+        "support": 81.61000061035156,
+        "resistance": 87.13999938964844,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.81%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "CAT",
         "name": "Caterpillar",
         "sector": "Industrial / Maquinaria",
-        "price": 778.4263916015625,
+        "price": 773.9600219726562,
         "trend": "bajista",
-        "support": 776.0,
+        "support": 772.77001953125,
         "resistance": 834.4500122070312,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.31%)",
+          "Precio cerca del soporte (0.15%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "EMR",
+        "name": "Emerson Electric",
+        "sector": "Industrial / Maquinaria",
+        "price": 147.51499938964844,
+        "trend": "alcista",
+        "support": 140.89999389648438,
+        "resistance": 152.08999633789062,
+        "score": 1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "PH",
+        "name": "Parker Hannifin",
+        "sector": "Industrial / Maquinaria",
+        "price": 948.1799926757812,
+        "trend": "lateral",
+        "support": 942.3200073242188,
+        "resistance": 977.4000244140625,
+        "score": 1,
+        "reasons": [
+          "Precio cerca del soporte (0.62%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "ROK",
         "name": "Rockwell Automation",
         "sector": "Industrial / Maquinaria",
-        "price": 421.80499267578125,
+        "price": 417.44500732421875,
         "trend": "bajista",
-        "support": 420.8500061035156,
+        "support": 415.635009765625,
         "resistance": 454.69000244140625,
         "score": 1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.23%)",
+          "Precio cerca del soporte (0.43%)",
           "Doble piso detectado"
         ]
       },
       {
-        "ticker": "CMI",
-        "name": "Cummins",
-        "sector": "Industrial / Maquinaria",
-        "price": 553.8200073242188,
-        "trend": "bajista",
-        "support": 550.02001953125,
-        "resistance": 661.010009765625,
+        "ticker": "NUE",
+        "name": "Nucor (acero)",
+        "sector": "Construcción / Materiales",
+        "price": 259.260009765625,
+        "trend": "alcista",
+        "support": 251.25,
+        "resistance": 270.0199890136719,
         "score": 1,
         "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.69%)",
-          "Doble piso detectado"
+          "Tendencia semanal alcista",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
         "ticker": "DHI",
         "name": "D.R. Horton",
         "sector": "Construcción / Materiales",
-        "price": 143.38059997558594,
+        "price": 142.25999450683594,
         "trend": "lateral",
-        "support": 142.75999450683594,
+        "support": 138.8300018310547,
         "resistance": 151.5399932861328,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (0.43%)",
+          "Precio cerca del soporte (2.41%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1498,13 +1504,13 @@
         "ticker": "LEN",
         "name": "Lennar",
         "sector": "Construcción / Materiales",
-        "price": 83.5999984741211,
+        "price": 83.4000015258789,
         "trend": "lateral",
         "support": 82.37999725341797,
         "resistance": 88.16999816894531,
         "score": 1,
         "reasons": [
-          "Precio cerca del soporte (1.46%)",
+          "Precio cerca del soporte (1.22%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1531,7 +1537,7 @@
         "ticker": "NEM",
         "name": "Newmont (oro)",
         "sector": "Minería / Metales",
-        "price": 125.54100036621094,
+        "price": 126.1050033569336,
         "trend": "alcista",
         "support": 92.87999725341797,
         "resistance": 135.2899932861328,
@@ -1543,25 +1549,10 @@
         ]
       },
       {
-        "ticker": "GOLD",
-        "name": "Barrick Gold",
-        "sector": "Minería / Metales",
-        "price": 42.79990005493164,
-        "trend": "alcista",
-        "support": 41.779998779296875,
-        "resistance": 44.9640007019043,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.38%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "FCX",
         "name": "Freeport-McMoRan",
         "sector": "Minería / Metales",
-        "price": 75.12999725341797,
+        "price": 74.58499908447266,
         "trend": "alcista",
         "support": 65.56999969482422,
         "resistance": 80.23999786376953,
@@ -1576,7 +1567,7 @@
         "ticker": "SCCO",
         "name": "Southern Copper",
         "sector": "Minería / Metales",
-        "price": 208.3699951171875,
+        "price": 207.0688934326172,
         "trend": "alcista",
         "support": 184.0800018310547,
         "resistance": 220.77999877929688,
@@ -1591,7 +1582,7 @@
         "ticker": "BHP",
         "name": "BHP",
         "sector": "Minería / Metales",
-        "price": 94.05000305175781,
+        "price": 93.9800033569336,
         "trend": "alcista",
         "support": 86.4800033569336,
         "resistance": 98.70999908447266,
@@ -1603,13 +1594,13 @@
         ]
       },
       {
-        "ticker": "GMEXICOB.MX",
-        "name": "Grupo México",
+        "ticker": "VALE",
+        "name": "Vale",
         "sector": "Minería / Metales",
-        "price": 229.94000244140625,
+        "price": 15.704999923706055,
         "trend": "alcista",
-        "support": 215.02000427246094,
-        "resistance": 240.97000122070312,
+        "support": 14.890000343322754,
+        "resistance": 16.360000610351562,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
@@ -1621,14 +1612,14 @@
         "ticker": "VOO",
         "name": "Vanguard S&P 500",
         "sector": "ETFs / Índices",
-        "price": 701.0549926757812,
+        "price": 701.0150146484375,
         "trend": "lateral",
         "support": 700.469970703125,
-        "resistance": 714.1599731445312,
+        "resistance": 712.6699829101562,
         "score": 0,
         "reasons": [
           "Precio cerca del soporte (0.08%)",
-          "Precio cerca de la resistencia (1.87%)",
+          "Precio cerca de la resistencia (1.66%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1637,14 +1628,14 @@
         "ticker": "QQQ",
         "name": "Invesco Nasdaq-100",
         "sector": "ETFs / Índices",
-        "price": 707.77001953125,
+        "price": 707.010009765625,
         "trend": "lateral",
         "support": 702.8099975585938,
-        "resistance": 726.3900146484375,
+        "resistance": 724.1300048828125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.7%)",
-          "Precio cerca de la resistencia (2.63%)",
+          "Precio cerca del soporte (0.59%)",
+          "Precio cerca de la resistencia (2.42%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1653,14 +1644,14 @@
         "ticker": "VTI",
         "name": "Vanguard Total US Market",
         "sector": "ETFs / Índices",
-        "price": 375.8299865722656,
+        "price": 375.760009765625,
         "trend": "lateral",
         "support": 365.7200012207031,
-        "resistance": 383.2900085449219,
+        "resistance": 381.20001220703125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.69%)",
-          "Precio cerca de la resistencia (1.98%)",
+          "Precio cerca del soporte (2.67%)",
+          "Precio cerca de la resistencia (1.45%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1669,14 +1660,14 @@
         "ticker": "DIA",
         "name": "Dow Jones 30",
         "sector": "ETFs / Índices",
-        "price": 529.89501953125,
+        "price": 529.8300170898438,
         "trend": "lateral",
         "support": 527.2000122070312,
         "resistance": 532.5399780273438,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.51%)",
-          "Precio cerca de la resistencia (0.5%)",
+          "Precio cerca del soporte (0.5%)",
+          "Precio cerca de la resistencia (0.51%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1685,14 +1676,14 @@
         "ticker": "IWM",
         "name": "Russell 2000 (small caps)",
         "sector": "ETFs / Índices",
-        "price": 291.6000061035156,
+        "price": 292.5400085449219,
         "trend": "lateral",
-        "support": 290.67999267578125,
+        "support": 291.6400146484375,
         "resistance": 297.80999755859375,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.32%)",
-          "Precio cerca de la resistencia (2.13%)",
+          "Precio cerca del soporte (0.31%)",
+          "Precio cerca de la resistencia (1.8%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1701,46 +1692,14 @@
         "ticker": "VT",
         "name": "Acciones mundiales",
         "sector": "ETFs / Índices",
-        "price": 159.86000061035156,
-        "trend": "lateral",
-        "support": 159.77999877929688,
-        "resistance": 162.0,
+        "price": 159.64999389648438,
+        "trend": "alcista",
+        "support": 154.25999450683594,
+        "resistance": 161.75999450683594,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.05%)",
-          "Precio cerca de la resistencia (1.34%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "NAFTRACISHRS.MX",
-        "name": "IPC México",
-        "sector": "ETFs / Índices",
-        "price": 64.91999816894531,
-        "trend": "lateral",
-        "support": 63.5099983215332,
-        "resistance": 66.72000122070312,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (2.17%)",
-          "Precio cerca de la resistencia (2.77%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "FIBRAPL14.MX",
-        "name": "Fibra Prologis",
-        "sector": "FIBRAs (bienes raíces)",
-        "price": 76.69999694824219,
-        "trend": "lateral",
-        "support": 75.94000244140625,
-        "resistance": 78.58000183105469,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (0.99%)",
-          "Precio cerca de la resistencia (2.45%)",
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.32%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1749,14 +1708,14 @@
         "ticker": "DANHOS13.MX",
         "name": "Fibra Danhos",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 29.1299991607666,
+        "price": 29.239999771118164,
         "trend": "lateral",
         "support": 28.459999084472656,
-        "resistance": 29.200000762939453,
+        "resistance": 29.5,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.3%)",
-          "Precio cerca de la resistencia (0.24%)",
+          "Precio cerca del soporte (2.67%)",
+          "Precio cerca de la resistencia (0.89%)",
           "Doble piso detectado",
           "Doble techo detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
@@ -1766,14 +1725,14 @@
         "ticker": "FIHO12.MX",
         "name": "Fibra Hotel",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 7.559999942779541,
+        "price": 7.619999885559082,
         "trend": "lateral",
         "support": 7.5,
-        "resistance": 7.599999904632568,
+        "resistance": 7.659999847412109,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.79%)",
-          "Precio cerca de la resistencia (0.53%)",
+          "Precio cerca del soporte (1.57%)",
+          "Precio cerca de la resistencia (0.52%)",
           "Doble piso detectado",
           "Doble techo detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
@@ -1783,14 +1742,14 @@
         "ticker": "FSHOP13.MX",
         "name": "Fibra Shop",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 11.960000038146973,
+        "price": 11.880000114440918,
         "trend": "lateral",
         "support": 11.8100004196167,
         "resistance": 12.0,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.25%)",
-          "Precio cerca de la resistencia (0.33%)",
+          "Precio cerca del soporte (0.59%)",
+          "Precio cerca de la resistencia (1.01%)",
           "Doble piso detectado",
           "Doble techo detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
@@ -1800,14 +1759,14 @@
         "ticker": "FINN13.MX",
         "name": "Fibra Inn",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 4.730000019073486,
+        "price": 4.800000190734863,
         "trend": "lateral",
-        "support": 4.699999809265137,
-        "resistance": 4.760000228881836,
+        "support": 4.75,
+        "resistance": 4.820000171661377,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.63%)",
-          "Precio cerca de la resistencia (0.63%)",
+          "Precio cerca del soporte (1.04%)",
+          "Precio cerca de la resistencia (0.42%)",
           "Doble piso detectado",
           "Doble techo detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
@@ -1817,77 +1776,47 @@
         "ticker": "STORAGE18.MX",
         "name": "Fibra Storage",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 25.989999771118164,
+        "price": 26.200000762939453,
         "trend": "lateral",
         "support": 25.5,
-        "resistance": 26.010000228881836,
+        "resistance": 26.200000762939453,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.89%)",
-          "Precio cerca de la resistencia (0.08%)",
+          "Precio cerca del soporte (2.67%)",
+          "Precio cerca de la resistencia (0.0%)",
           "Doble piso detectado",
           "Doble techo detectado",
           "Liquidez baja — puede ser difícil comprar/vender"
         ]
       },
       {
+        "ticker": "AAPL",
+        "name": "Apple",
+        "sector": "Tecnología / Software",
+        "price": 325.2550048828125,
+        "trend": "lateral",
+        "support": 319.3500061035156,
+        "resistance": 334.989990234375,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.82%)",
+          "Precio cerca de la resistencia (2.99%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "AMZN",
         "name": "Amazon",
         "sector": "Tecnología / Software",
-        "price": 253.82000732421875,
+        "price": 254.25999450683594,
         "trend": "alcista",
         "support": 238.25,
         "resistance": 258.0799865722656,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.68%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "META",
-        "name": "Meta (Facebook)",
-        "sector": "Tecnología / Software",
-        "price": 567.1799926757812,
-        "trend": "bajista",
-        "support": 557.010009765625,
-        "resistance": 593.3400268554688,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.79%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ADBE",
-        "name": "Adobe",
-        "sector": "Tecnología / Software",
-        "price": 291.5950012207031,
-        "trend": "alcista",
-        "support": 265.0400085449219,
-        "resistance": 294.29998779296875,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.93%)"
-        ]
-      },
-      {
-        "ticker": "IBM",
-        "name": "IBM",
-        "sector": "Tecnología / Software",
-        "price": 231.7100067138672,
-        "trend": "bajista",
-        "support": 228.9600067138672,
-        "resistance": 238.72000122070312,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.19%)",
+          "Precio cerca de la resistencia (1.5%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1896,14 +1825,14 @@
         "ticker": "AMD",
         "name": "AMD",
         "sector": "Semiconductores",
-        "price": 455.3299865722656,
+        "price": 460.0,
         "trend": "bajista",
         "support": 451.0,
         "resistance": 491.1199951171875,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.95%)",
+          "Precio cerca del soporte (1.96%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1912,44 +1841,58 @@
         "ticker": "AMAT",
         "name": "Applied Materials",
         "sector": "Semiconductores",
-        "price": 442.0350036621094,
+        "price": 437.2799987792969,
         "trend": "bajista",
         "support": 436.3299865722656,
         "resistance": 563.760009765625,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.29%)"
+          "Precio cerca del soporte (0.22%)"
         ]
       },
       {
         "ticker": "CVX",
         "name": "Chevron",
         "sector": "Energía (petróleo y gas)",
-        "price": 208.60989379882812,
+        "price": 211.17999267578125,
         "trend": "alcista",
         "support": 197.82000732421875,
-        "resistance": 208.97999572753906,
+        "resistance": 212.72000122070312,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.18%)",
+          "Precio cerca de la resistencia (0.73%)",
           "Doble piso detectado",
           "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "SHEL",
+        "name": "Shell",
+        "sector": "Energía (petróleo y gas)",
+        "price": 92.87000274658203,
+        "trend": "alcista",
+        "support": 90.05000305175781,
+        "resistance": 94.69999694824219,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.97%)"
         ]
       },
       {
         "ticker": "TTE",
         "name": "TotalEnergies",
         "sector": "Energía (petróleo y gas)",
-        "price": 89.7699966430664,
+        "price": 89.79019927978516,
         "trend": "alcista",
-        "support": 85.79000091552734,
+        "support": 86.0,
         "resistance": 90.73999786376953,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.08%)",
+          "Precio cerca de la resistencia (1.06%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1958,14 +1901,14 @@
         "ticker": "BP",
         "name": "BP",
         "sector": "Energía (petróleo y gas)",
-        "price": 43.82500076293945,
+        "price": 43.64500045776367,
         "trend": "alcista",
-        "support": 41.619998931884766,
+        "support": 41.869998931884766,
         "resistance": 44.15999984741211,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.76%)",
+          "Precio cerca de la resistencia (1.18%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1974,14 +1917,14 @@
         "ticker": "COP",
         "name": "ConocoPhillips",
         "sector": "Energía (petróleo y gas)",
-        "price": 134.0500030517578,
+        "price": 135.05999755859375,
         "trend": "alcista",
-        "support": 114.70999908447266,
+        "support": 128.0,
         "resistance": 135.8800048828125,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.37%)",
+          "Precio cerca de la resistencia (0.61%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1990,46 +1933,14 @@
         "ticker": "PBR",
         "name": "Petrobras",
         "sector": "Energía (petróleo y gas)",
-        "price": 19.915000915527344,
+        "price": 20.229000091552734,
         "trend": "alcista",
         "support": 17.959999084472656,
-        "resistance": 19.979999542236328,
+        "resistance": 20.389999389648438,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.33%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ENB",
-        "name": "Enbridge",
-        "sector": "Energía (petróleo y gas)",
-        "price": 50.290000915527344,
-        "trend": "bajista",
-        "support": 49.560001373291016,
-        "resistance": 51.90999984741211,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.45%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "SLB",
-        "name": "Schlumberger",
-        "sector": "Energía (petróleo y gas)",
-        "price": 58.915000915527344,
-        "trend": "alcista",
-        "support": 51.97999954223633,
-        "resistance": 60.459999084472656,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.62%)",
+          "Precio cerca de la resistencia (0.8%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2038,14 +1949,14 @@
         "ticker": "EOG",
         "name": "EOG Resources",
         "sector": "Energía (petróleo y gas)",
-        "price": 146.38999938964844,
+        "price": 147.1999969482422,
         "trend": "alcista",
-        "support": 138.91000366210938,
+        "support": 142.75999450683594,
         "resistance": 148.22000122070312,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.25%)",
+          "Precio cerca de la resistencia (0.69%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2054,14 +1965,14 @@
         "ticker": "NEE",
         "name": "NextEra Energy",
         "sector": "Energía renovable / Utilities",
-        "price": 82.70999908447266,
+        "price": 82.3949966430664,
         "trend": "bajista",
         "support": 80.75,
         "resistance": 87.5199966430664,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.37%)",
+          "Precio cerca del soporte (2.0%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2070,23 +1981,23 @@
         "ticker": "FSLR",
         "name": "First Solar",
         "sector": "Energía renovable / Utilities",
-        "price": 199.8300018310547,
+        "price": 200.11500549316406,
         "trend": "bajista",
         "support": 195.83999633789062,
-        "resistance": 269.70001220703125,
+        "resistance": 213.1999969482422,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.0%)"
+          "Precio cerca del soporte (2.14%)"
         ]
       },
       {
         "ticker": "DUK",
         "name": "Duke Energy",
         "sector": "Energía renovable / Utilities",
-        "price": 120.22000122070312,
+        "price": 119.51499938964844,
         "trend": "bajista",
-        "support": 119.73999786376953,
+        "support": 119.04000091552734,
         "resistance": 125.4000015258789,
         "score": 0,
         "reasons": [
@@ -2100,14 +2011,14 @@
         "ticker": "SO",
         "name": "Southern Company",
         "sector": "Energía renovable / Utilities",
-        "price": 88.16000366210938,
+        "price": 87.37000274658203,
         "trend": "bajista",
         "support": 87.19999694824219,
         "resistance": 93.4800033569336,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.09%)",
+          "Precio cerca del soporte (0.19%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2116,14 +2027,14 @@
         "ticker": "AEP",
         "name": "American Electric Power",
         "sector": "Energía renovable / Utilities",
-        "price": 122.62999725341797,
+        "price": 121.83059692382812,
         "trend": "bajista",
-        "support": 122.25,
+        "support": 120.05999755859375,
         "resistance": 128.6199951171875,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.31%)",
+          "Precio cerca del soporte (1.45%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2132,14 +2043,14 @@
         "ticker": "D",
         "name": "Dominion Energy",
         "sector": "Energía renovable / Utilities",
-        "price": 66.20999908447266,
+        "price": 65.80999755859375,
         "trend": "bajista",
-        "support": 66.0,
+        "support": 64.69999694824219,
         "resistance": 69.75,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.32%)",
+          "Precio cerca del soporte (1.69%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2148,14 +2059,14 @@
         "ticker": "EXC",
         "name": "Exelon",
         "sector": "Energía renovable / Utilities",
-        "price": 43.880001068115234,
+        "price": 43.439998626708984,
         "trend": "bajista",
-        "support": 43.75,
+        "support": 43.040000915527344,
         "resistance": 46.27000045776367,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.3%)",
+          "Precio cerca del soporte (0.92%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2164,30 +2075,60 @@
         "ticker": "IBDRY",
         "name": "Iberdrola",
         "sector": "Energía renovable / Utilities",
-        "price": 92.36000061035156,
+        "price": 91.55999755859375,
         "trend": "bajista",
         "support": 91.0,
         "resistance": 94.30999755859375,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.47%)",
-          "Precio cerca de la resistencia (2.11%)",
+          "Precio cerca del soporte (0.61%)",
+          "Precio cerca de la resistencia (3.0%)",
           "Doble piso detectado"
         ]
       },
       {
-        "ticker": "TM",
-        "name": "Toyota",
+        "ticker": "F",
+        "name": "Ford",
         "sector": "Automotriz",
-        "price": 199.52000427246094,
-        "trend": "alcista",
-        "support": 191.5,
-        "resistance": 200.5,
+        "price": 13.880000114440918,
+        "trend": "lateral",
+        "support": 13.760000228881836,
+        "resistance": 14.260000228881836,
         "score": 0,
         "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.49%)",
+          "Precio cerca del soporte (0.86%)",
+          "Precio cerca de la resistencia (2.74%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "STLA",
+        "name": "Stellantis",
+        "sector": "Automotriz",
+        "price": 5.255000114440918,
+        "trend": "bajista",
+        "support": 5.25,
+        "resistance": 5.46999979019165,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.1%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "BYDDY",
+        "name": "BYD",
+        "sector": "Automotriz",
+        "price": 10.9399995803833,
+        "trend": "lateral",
+        "support": 10.5,
+        "resistance": 11.539999961853027,
+        "score": 0,
+        "reasons": [
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2196,14 +2137,14 @@
         "ticker": "DAL",
         "name": "Delta Air Lines",
         "sector": "Aviación / Aerolíneas",
-        "price": 77.30999755859375,
+        "price": 77.33499908447266,
         "trend": "bajista",
         "support": 76.4000015258789,
         "resistance": 84.98999786376953,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.18%)",
+          "Precio cerca del soporte (1.21%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2212,10 +2153,134 @@
         "ticker": "LUV",
         "name": "Southwest Airlines",
         "sector": "Aviación / Aerolíneas",
-        "price": 38.310001373291016,
+        "price": 38.380001068115234,
         "trend": "bajista",
-        "support": 37.959999084472656,
+        "support": 37.58000183105469,
         "resistance": 41.84000015258789,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.08%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "RYAAY",
+        "name": "Ryanair",
+        "sector": "Aviación / Aerolíneas",
+        "price": 54.9900016784668,
+        "trend": "bajista",
+        "support": 54.060001373291016,
+        "resistance": 58.63999938964844,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (1.69%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "JBLU",
+        "name": "JetBlue",
+        "sector": "Aviación / Aerolíneas",
+        "price": 4.586699962615967,
+        "trend": "bajista",
+        "support": 4.449999809265137,
+        "resistance": 5.230000019073486,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.98%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "BA",
+        "name": "Boeing",
+        "sector": "Aeroespacial y Defensa",
+        "price": 208.85000610351562,
+        "trend": "lateral",
+        "support": 208.6999969482422,
+        "resistance": 223.77000427246094,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.07%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "sector": "Aeroespacial y Defensa",
+        "price": 538.2249755859375,
+        "trend": "alcista",
+        "support": 490.04998779296875,
+        "resistance": 547.469970703125,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.72%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "RTX",
+        "name": "RTX / Raytheon",
+        "sector": "Aeroespacial y Defensa",
+        "price": 202.86000061035156,
+        "trend": "alcista",
+        "support": 192.58999633789062,
+        "resistance": 203.94000244140625,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.53%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "NOC",
+        "name": "Northrop Grumman",
+        "sector": "Aeroespacial y Defensa",
+        "price": 526.9749755859375,
+        "trend": "lateral",
+        "support": 519.77001953125,
+        "resistance": 552.6300048828125,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.37%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "TDG",
+        "name": "TransDigm",
+        "sector": "Aeroespacial y Defensa",
+        "price": 1156.52001953125,
+        "trend": "bajista",
+        "support": 1153.4300537109375,
+        "resistance": 1225.969970703125,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.27%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International",
+        "sector": "Turismo / Hospitalidad",
+        "price": 336.7950134277344,
+        "trend": "bajista",
+        "support": 333.739990234375,
+        "resistance": 365.1099853515625,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
@@ -2225,143 +2290,30 @@
         ]
       },
       {
-        "ticker": "RYAAY",
-        "name": "Ryanair",
-        "sector": "Aviación / Aerolíneas",
-        "price": 54.86000061035156,
-        "trend": "bajista",
-        "support": 54.060001373291016,
-        "resistance": 58.63999938964844,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.46%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "VLRS",
-        "name": "Volaris (México)",
-        "sector": "Aviación / Aerolíneas",
-        "price": 6.639999866485596,
-        "trend": "bajista",
-        "support": 6.420000076293945,
-        "resistance": 7.260000228881836,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble piso detectado"
-        ]
-      },
-      {
-        "ticker": "JBLU",
-        "name": "JetBlue",
-        "sector": "Aviación / Aerolíneas",
-        "price": 4.55019998550415,
-        "trend": "bajista",
-        "support": 4.5,
-        "resistance": 5.230000019073486,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.1%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ALK",
-        "name": "Alaska Air",
-        "sector": "Aviación / Aerolíneas",
-        "price": 40.90010070800781,
-        "trend": "bajista",
-        "support": 39.869998931884766,
-        "resistance": 44.380001068115234,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.52%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "AERO.MX",
-        "name": "Grupo Aeroméxico",
-        "sector": "Aviación / Aerolíneas",
-        "price": 24.600000381469727,
-        "trend": "bajista",
-        "support": 24.579999923706055,
-        "resistance": 167.0,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.08%)",
-          "Doble piso detectado",
-          "Doble techo detectado",
-          "Liquidez baja — puede ser difícil comprar/vender"
-        ]
-      },
-      {
-        "ticker": "TDG",
-        "name": "TransDigm",
-        "sector": "Aeroespacial y Defensa",
-        "price": 1163.699951171875,
-        "trend": "bajista",
-        "support": 1161.25,
-        "resistance": 1225.969970703125,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.21%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "MAR",
-        "name": "Marriott International",
-        "sector": "Turismo / Hospitalidad",
-        "price": 339.6000061035156,
-        "trend": "bajista",
-        "support": 337.75,
-        "resistance": 365.1099853515625,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.54%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "BKNG",
-        "name": "Booking Holdings",
-        "sector": "Turismo / Hospitalidad",
-        "price": 199.6199951171875,
-        "trend": "alcista",
-        "support": 171.02000427246094,
-        "resistance": 204.61000061035156,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.5%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "DHR",
         "name": "Danaher",
         "sector": "Salud / Dispositivos médicos",
-        "price": 212.35000610351562,
+        "price": 210.5,
         "trend": "alcista",
         "support": 199.49000549316406,
-        "resistance": 220.6699981689453,
+        "resistance": 218.57000732421875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "SYK",
+        "name": "Stryker",
+        "sector": "Salud / Dispositivos médicos",
+        "price": 317.1575012207031,
+        "trend": "lateral",
+        "support": 307.489990234375,
+        "resistance": 333.989990234375,
+        "score": 0,
+        "reasons": [
+          "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
@@ -2369,44 +2321,28 @@
         "ticker": "BDX",
         "name": "Becton Dickinson",
         "sector": "Salud / Dispositivos médicos",
-        "price": 190.2100067138672,
+        "price": 190.0449981689453,
         "trend": "alcista",
         "support": 180.72000122070312,
         "resistance": 193.07000732421875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.5%)"
+          "Precio cerca de la resistencia (1.59%)"
         ]
       },
       {
-        "ticker": "EW",
-        "name": "Edwards Lifesciences",
-        "sector": "Salud / Dispositivos médicos",
-        "price": 90.87000274658203,
+        "ticker": "JNJ",
+        "name": "Johnson & Johnson",
+        "sector": "Farmacéuticas",
+        "price": 277.9119873046875,
         "trend": "alcista",
-        "support": 88.79000091552734,
-        "resistance": 93.25,
+        "support": 263.8299865722656,
+        "resistance": 281.07000732421875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.29%)",
-          "Precio cerca de la resistencia (2.62%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "NVO",
-        "name": "Novo Nordisk",
-        "sector": "Farmacéuticas",
-        "price": 45.720001220703125,
-        "trend": "bajista",
-        "support": 44.68000030517578,
-        "resistance": 47.7400016784668,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.27%)",
+          "Precio cerca de la resistencia (1.14%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2415,30 +2351,14 @@
         "ticker": "PFE",
         "name": "Pfizer",
         "sector": "Farmacéuticas",
-        "price": 28.809999465942383,
+        "price": 28.895000457763672,
         "trend": "alcista",
         "support": 24.440000534057617,
         "resistance": 29.09000015258789,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.97%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "RHHBY",
-        "name": "Roche",
-        "sector": "Farmacéuticas",
-        "price": 53.40999984741211,
-        "trend": "alcista",
-        "support": 50.310001373291016,
-        "resistance": 53.5,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.17%)",
+          "Precio cerca de la resistencia (0.67%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2447,7 +2367,7 @@
         "ticker": "AZN",
         "name": "AstraZeneca",
         "sector": "Farmacéuticas",
-        "price": 163.08999633789062,
+        "price": 163.61000061035156,
         "trend": "bajista",
         "support": 154.52999877929688,
         "resistance": 170.17999267578125,
@@ -2461,26 +2381,10 @@
         "ticker": "AMGN",
         "name": "Amgen",
         "sector": "Farmacéuticas",
-        "price": 434.7300109863281,
+        "price": 442.69000244140625,
         "trend": "alcista",
         "support": 375.9599914550781,
         "resistance": 447.0299987792969,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.83%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "VRTX",
-        "name": "Vertex Pharmaceuticals",
-        "sector": "Biotecnología",
-        "price": 550.3099975585938,
-        "trend": "alcista",
-        "support": 502.2900085449219,
-        "resistance": 555.6900024414062,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
@@ -2490,17 +2394,47 @@
         ]
       },
       {
-        "ticker": "GILD",
-        "name": "Gilead Sciences",
+        "ticker": "REGN",
+        "name": "Regeneron",
         "sector": "Biotecnología",
-        "price": 148.10499572753906,
+        "price": 841.2100219726562,
         "trend": "alcista",
-        "support": 129.02000427246094,
-        "resistance": 148.97000122070312,
+        "support": 648.6599731445312,
+        "resistance": 847.0,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.58%)",
+          "Precio cerca de la resistencia (0.69%)"
+        ]
+      },
+      {
+        "ticker": "VRTX",
+        "name": "Vertex Pharmaceuticals",
+        "sector": "Biotecnología",
+        "price": 553.3900146484375,
+        "trend": "alcista",
+        "support": 502.2900085449219,
+        "resistance": 555.6900024414062,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.42%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GILD",
+        "name": "Gilead Sciences",
+        "sector": "Biotecnología",
+        "price": 151.37350463867188,
+        "trend": "alcista",
+        "support": 129.02000427246094,
+        "resistance": 152.5399932861328,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.77%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2509,14 +2443,14 @@
         "ticker": "INCY",
         "name": "Incyte",
         "sector": "Biotecnología",
-        "price": 123.70999908447266,
+        "price": 127.94499969482422,
         "trend": "alcista",
         "support": 117.55999755859375,
-        "resistance": 124.56999969482422,
+        "resistance": 130.8000030517578,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.7%)",
+          "Precio cerca de la resistencia (2.23%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2525,14 +2459,14 @@
         "ticker": "NSRGY",
         "name": "Nestlé",
         "sector": "Alimentos",
-        "price": 96.86000061035156,
+        "price": 95.69999694824219,
         "trend": "bajista",
-        "support": 96.66999816894531,
+        "support": 95.55999755859375,
         "resistance": 100.30000305175781,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.2%)",
+          "Precio cerca del soporte (0.15%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2541,14 +2475,14 @@
         "ticker": "GIS",
         "name": "General Mills",
         "sector": "Alimentos",
-        "price": 41.81999969482422,
+        "price": 40.9900016784668,
         "trend": "alcista",
-        "support": 37.68000030517578,
-        "resistance": 42.20000076293945,
+        "support": 39.27000045776367,
+        "resistance": 41.06999969482422,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.91%)",
+          "Precio cerca de la resistencia (0.2%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2557,44 +2491,14 @@
         "ticker": "KHC",
         "name": "Kraft Heinz",
         "sector": "Alimentos",
-        "price": 26.125,
+        "price": 25.93000030517578,
         "trend": "lateral",
         "support": 25.170000076293945,
-        "resistance": 27.049999237060547,
+        "resistance": 26.010000228881836,
         "score": 0,
         "reasons": [
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "CAG",
-        "name": "Conagra",
-        "sector": "Alimentos",
-        "price": 16.2549991607666,
-        "trend": "alcista",
-        "support": 14.569999694824219,
-        "resistance": 16.739999771118164,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.98%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "HRL",
-        "name": "Hormel",
-        "sector": "Alimentos",
-        "price": 21.924999237060547,
-        "trend": "bajista",
-        "support": 21.270000457763672,
-        "resistance": 24.84000015258789,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.99%)",
+          "Precio cerca del soporte (2.93%)",
+          "Precio cerca de la resistencia (0.31%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2603,26 +2507,202 @@
         "ticker": "BIMBOA.MX",
         "name": "Grupo Bimbo",
         "sector": "Alimentos",
-        "price": 59.220001220703125,
+        "price": 58.16999816894531,
         "trend": "lateral",
-        "support": 58.209999084472656,
-        "resistance": 59.63999938964844,
+        "support": 58.0,
+        "resistance": 58.9900016784668,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.71%)",
-          "Precio cerca de la resistencia (0.71%)",
+          "Precio cerca del soporte (0.29%)",
+          "Precio cerca de la resistencia (1.41%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "KO",
-        "name": "Coca-Cola",
+        "ticker": "PEP",
+        "name": "PepsiCo",
         "sector": "Bebidas",
-        "price": 89.0790023803711,
+        "price": 139.99000549316406,
+        "trend": "lateral",
+        "support": 137.1300048828125,
+        "resistance": 141.9600067138672,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (2.04%)",
+          "Precio cerca de la resistencia (1.41%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "KDP",
+        "name": "Keurig Dr Pepper",
+        "sector": "Bebidas",
+        "price": 32.04999923706055,
         "trend": "alcista",
-        "support": 85.66000366210938,
-        "resistance": 90.91999816894531,
+        "support": 29.979999542236328,
+        "resistance": 32.11000061035156,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.19%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "BUD",
+        "name": "AB InBev",
+        "sector": "Bebidas",
+        "price": 78.82499694824219,
+        "trend": "lateral",
+        "support": 78.44000244140625,
+        "resistance": 80.08999633789062,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.49%)",
+          "Precio cerca de la resistencia (1.6%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "TAP",
+        "name": "Molson Coors",
+        "sector": "Bebidas",
+        "price": 40.060001373291016,
+        "trend": "lateral",
+        "support": 39.66999816894531,
+        "resistance": 40.959999084472656,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.97%)",
+          "Precio cerca de la resistencia (2.25%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "YUM",
+        "name": "Yum! Brands",
+        "sector": "Restaurantes / Comida rápida",
+        "price": 152.38999938964844,
+        "trend": "lateral",
+        "support": 150.05999755859375,
+        "resistance": 154.77999877929688,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.53%)",
+          "Precio cerca de la resistencia (1.57%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "QSR",
+        "name": "Restaurant Brands",
+        "sector": "Restaurantes / Comida rápida",
+        "price": 79.98999786376953,
+        "trend": "alcista",
+        "support": 76.08000183105469,
+        "resistance": 81.87999725341797,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (2.36%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "TXRH",
+        "name": "Texas Roadhouse",
+        "sector": "Restaurantes / Comida rápida",
+        "price": 192.7158966064453,
+        "trend": "lateral",
+        "support": 189.0,
+        "resistance": 196.86000061035156,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.93%)",
+          "Precio cerca de la resistencia (2.15%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "PG",
+        "name": "Procter & Gamble",
+        "sector": "Consumo básico / Hogar",
+        "price": 146.4199981689453,
+        "trend": "lateral",
+        "support": 144.66000366210938,
+        "resistance": 146.8000030517578,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.2%)",
+          "Precio cerca de la resistencia (0.26%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "CL",
+        "name": "Colgate-Palmolive",
+        "sector": "Consumo básico / Hogar",
+        "price": 89.79000091552734,
+        "trend": "lateral",
+        "support": 89.58999633789062,
+        "resistance": 92.0999984741211,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.22%)",
+          "Precio cerca de la resistencia (2.57%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "KVUE",
+        "name": "Kenvue",
+        "sector": "Consumo básico / Hogar",
+        "price": 18.88010025024414,
+        "trend": "lateral",
+        "support": 18.770000457763672,
+        "resistance": 19.309999465942383,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (0.58%)",
+          "Precio cerca de la resistencia (2.28%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "KIMBERA.MX",
+        "name": "Kimberly-Clark México",
+        "sector": "Consumo básico / Hogar",
+        "price": 39.27000045776367,
+        "trend": "lateral",
+        "support": 38.5,
+        "resistance": 39.66999816894531,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.96%)",
+          "Precio cerca de la resistencia (1.02%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "COTY",
+        "name": "Coty",
+        "sector": "Consumo básico / Hogar",
+        "price": 2.9000000953674316,
+        "trend": "alcista",
+        "support": 2.690000057220459,
+        "resistance": 2.9600000381469727,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
@@ -2632,273 +2712,17 @@
         ]
       },
       {
-        "ticker": "PEP",
-        "name": "PepsiCo",
-        "sector": "Bebidas",
-        "price": 140.76499938964844,
-        "trend": "lateral",
-        "support": 137.1300048828125,
-        "resistance": 141.9600067138672,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (2.58%)",
-          "Precio cerca de la resistencia (0.85%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "KDP",
-        "name": "Keurig Dr Pepper",
-        "sector": "Bebidas",
-        "price": 32.11000061035156,
-        "trend": "alcista",
-        "support": 29.979999542236328,
-        "resistance": 32.279998779296875,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.53%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "BUD",
-        "name": "AB InBev",
-        "sector": "Bebidas",
-        "price": 79.66999816894531,
-        "trend": "lateral",
-        "support": 78.94000244140625,
-        "resistance": 80.08999633789062,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (0.92%)",
-          "Precio cerca de la resistencia (0.53%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "TAP",
-        "name": "Molson Coors",
-        "sector": "Bebidas",
-        "price": 39.939998626708984,
-        "trend": "lateral",
-        "support": 39.66999816894531,
-        "resistance": 40.959999084472656,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (0.68%)",
-          "Precio cerca de la resistencia (2.55%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "YUM",
-        "name": "Yum! Brands",
-        "sector": "Restaurantes / Comida rápida",
-        "price": 152.7100067138672,
-        "trend": "lateral",
-        "support": 149.50999450683594,
-        "resistance": 154.77999877929688,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (2.1%)",
-          "Precio cerca de la resistencia (1.36%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "DPZ",
-        "name": "Domino's Pizza",
-        "sector": "Restaurantes / Comida rápida",
-        "price": 346.4700012207031,
-        "trend": "alcista",
-        "support": 341.0199890136719,
-        "resistance": 350.0,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (1.57%)",
-          "Precio cerca de la resistencia (1.02%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "TXRH",
-        "name": "Texas Roadhouse",
-        "sector": "Restaurantes / Comida rápida",
-        "price": 193.09500122070312,
-        "trend": "lateral",
-        "support": 189.0,
-        "resistance": 196.86000061035156,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (2.12%)",
-          "Precio cerca de la resistencia (1.95%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "PG",
-        "name": "Procter & Gamble",
-        "sector": "Consumo básico / Hogar",
-        "price": 147.94000244140625,
-        "trend": "lateral",
-        "support": 147.57000732421875,
-        "resistance": 148.5,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (0.25%)",
-          "Precio cerca de la resistencia (0.38%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "UL",
-        "name": "Unilever",
-        "sector": "Consumo básico / Hogar",
-        "price": 65.44999694824219,
-        "trend": "alcista",
-        "support": 63.38999938964844,
-        "resistance": 65.62999725341797,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.28%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "CL",
-        "name": "Colgate-Palmolive",
-        "sector": "Consumo básico / Hogar",
-        "price": 91.09750366210938,
-        "trend": "lateral",
-        "support": 90.7300033569336,
-        "resistance": 92.0999984741211,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (0.4%)",
-          "Precio cerca de la resistencia (1.1%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "KMB",
-        "name": "Kimberly-Clark",
-        "sector": "Consumo básico / Hogar",
-        "price": 108.55999755859375,
-        "trend": "lateral",
-        "support": 107.38999938964844,
-        "resistance": 111.18000030517578,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (1.08%)",
-          "Precio cerca de la resistencia (2.41%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "CHD",
-        "name": "Church & Dwight",
-        "sector": "Consumo básico / Hogar",
-        "price": 100.80500030517578,
-        "trend": "alcista",
-        "support": 96.2699966430664,
-        "resistance": 100.93000030517578,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.12%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "CLX",
-        "name": "Clorox",
-        "sector": "Consumo básico / Hogar",
-        "price": 97.87000274658203,
-        "trend": "alcista",
-        "support": 94.19999694824219,
-        "resistance": 99.4800033569336,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.65%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "KVUE",
-        "name": "Kenvue",
-        "sector": "Consumo básico / Hogar",
-        "price": 18.985000610351562,
-        "trend": "lateral",
-        "support": 18.770000457763672,
-        "resistance": 19.309999465942383,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (1.13%)",
-          "Precio cerca de la resistencia (1.71%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "COTY",
-        "name": "Coty",
-        "sector": "Consumo básico / Hogar",
-        "price": 2.869999885559082,
-        "trend": "alcista",
-        "support": 2.690000057220459,
-        "resistance": 2.880000114440918,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.35%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "COST",
-        "name": "Costco",
-        "sector": "Retail / Comercio",
-        "price": 947.97998046875,
-        "trend": "lateral",
-        "support": 935.219970703125,
-        "resistance": 964.3300170898438,
-        "score": 0,
-        "reasons": [
-          "Precio cerca del soporte (1.35%)",
-          "Precio cerca de la resistencia (1.72%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "DG",
         "name": "Dollar General",
         "sector": "Retail / Comercio",
-        "price": 130.25,
+        "price": 131.94000244140625,
         "trend": "alcista",
         "support": 124.5,
-        "resistance": 130.61000061035156,
+        "resistance": 132.5,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.28%)",
+          "Precio cerca de la resistencia (0.42%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2907,14 +2731,14 @@
         "ticker": "ORLY",
         "name": "O'Reilly Automotive",
         "sector": "Retail / Comercio",
-        "price": 87.76000213623047,
+        "price": 87.5,
         "trend": "lateral",
         "support": 87.19000244140625,
         "resistance": 88.0199966430664,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.65%)",
-          "Precio cerca de la resistencia (0.3%)",
+          "Precio cerca del soporte (0.35%)",
+          "Precio cerca de la resistencia (0.59%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2923,14 +2747,14 @@
         "ticker": "CHDRAUIB.MX",
         "name": "Chedraui",
         "sector": "Retail / Comercio",
-        "price": 89.73999786376953,
+        "price": 88.62999725341797,
         "trend": "lateral",
-        "support": 89.19999694824219,
+        "support": 88.5999984741211,
         "resistance": 91.0999984741211,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.6%)",
-          "Precio cerca de la resistencia (1.52%)",
+          "Precio cerca del soporte (0.03%)",
+          "Precio cerca de la resistencia (2.79%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2939,14 +2763,14 @@
         "ticker": "LIVEPOLC-1.MX",
         "name": "El Puerto de Liverpool",
         "sector": "Retail / Comercio",
-        "price": 100.12000274658203,
+        "price": 100.0999984741211,
         "trend": "lateral",
         "support": 99.55999755859375,
         "resistance": 101.98999786376953,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.56%)",
-          "Precio cerca de la resistencia (1.87%)",
+          "Precio cerca del soporte (0.54%)",
+          "Precio cerca de la resistencia (1.89%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2955,14 +2779,14 @@
         "ticker": "BAC",
         "name": "Bank of America",
         "sector": "Finanzas / Bancos",
-        "price": 62.650001525878906,
+        "price": 62.30500030517578,
         "trend": "lateral",
         "support": 61.52000045776367,
         "resistance": 62.9900016784668,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.8%)",
-          "Precio cerca de la resistencia (0.54%)",
+          "Precio cerca del soporte (1.26%)",
+          "Precio cerca de la resistencia (1.1%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2971,14 +2795,14 @@
         "ticker": "WFC",
         "name": "Wells Fargo",
         "sector": "Finanzas / Bancos",
-        "price": 87.61499786376953,
+        "price": 88.33999633789062,
         "trend": "lateral",
         "support": 86.04000091552734,
-        "resistance": 88.22000122070312,
+        "resistance": 88.56999969482422,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.8%)",
-          "Precio cerca de la resistencia (0.69%)",
+          "Precio cerca del soporte (2.6%)",
+          "Precio cerca de la resistencia (0.26%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -2987,14 +2811,46 @@
         "ticker": "C",
         "name": "Citigroup",
         "sector": "Finanzas / Bancos",
-        "price": 133.72999572753906,
+        "price": 133.10000610351562,
         "trend": "lateral",
         "support": 132.52000427246094,
         "resistance": 135.35000610351562,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (0.9%)",
-          "Precio cerca de la resistencia (1.21%)",
+          "Precio cerca del soporte (0.44%)",
+          "Precio cerca de la resistencia (1.69%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "MS",
+        "name": "Morgan Stanley",
+        "sector": "Finanzas / Bancos",
+        "price": 212.25,
+        "trend": "lateral",
+        "support": 207.39999389648438,
+        "resistance": 217.33999633789062,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (2.29%)",
+          "Precio cerca de la resistencia (2.4%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "SAN",
+        "name": "Banco Santander",
+        "sector": "Finanzas / Bancos",
+        "price": 14.675000190734863,
+        "trend": "alcista",
+        "support": 14.09000015258789,
+        "resistance": 14.819999694824219,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (0.99%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3003,14 +2859,30 @@
         "ticker": "BBAJIOO.MX",
         "name": "Banco del Bajío",
         "sector": "Finanzas / Bancos",
-        "price": 57.619998931884766,
+        "price": 56.880001068115234,
         "trend": "lateral",
         "support": 56.380001068115234,
         "resistance": 58.189998626708984,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.15%)",
-          "Precio cerca de la resistencia (0.99%)",
+          "Precio cerca del soporte (0.88%)",
+          "Precio cerca de la resistencia (2.3%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "GENTERA.MX",
+        "name": "Gentera",
+        "sector": "Finanzas / Bancos",
+        "price": 40.0,
+        "trend": "lateral",
+        "support": 39.54999923706055,
+        "resistance": 40.150001525878906,
+        "score": 0,
+        "reasons": [
+          "Precio cerca del soporte (1.13%)",
+          "Precio cerca de la resistencia (0.38%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3019,14 +2891,14 @@
         "ticker": "BRK-B",
         "name": "Berkshire Hathaway",
         "sector": "Seguros",
-        "price": 505.6400146484375,
+        "price": 503.5249938964844,
         "trend": "lateral",
         "support": 495.67999267578125,
-        "resistance": 512.5800170898438,
+        "resistance": 506.70001220703125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.97%)",
-          "Precio cerca de la resistencia (1.37%)",
+          "Precio cerca del soporte (1.56%)",
+          "Precio cerca de la resistencia (0.63%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3035,14 +2907,14 @@
         "ticker": "V",
         "name": "Visa",
         "sector": "Pagos / Fintech",
-        "price": 379.9849853515625,
+        "price": 376.80499267578125,
         "trend": "alcista",
         "support": 360.0899963378906,
         "resistance": 385.57000732421875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.47%)",
+          "Precio cerca de la resistencia (2.33%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3051,46 +2923,30 @@
         "ticker": "COIN",
         "name": "Coinbase",
         "sector": "Pagos / Fintech",
-        "price": 181.35499572753906,
+        "price": 177.0,
         "trend": "alcista",
         "support": 154.00999450683594,
         "resistance": 181.49000549316406,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.07%)",
+          "Precio cerca de la resistencia (2.54%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "NU",
-        "name": "Nu Holdings (Nubank)",
+        "ticker": "GPN",
+        "name": "Global Payments",
         "sector": "Pagos / Fintech",
-        "price": 14.824999809265137,
+        "price": 92.8550033569336,
         "trend": "alcista",
-        "support": 14.140000343322754,
-        "resistance": 14.845000267028809,
+        "support": 84.19999694824219,
+        "resistance": 95.58000183105469,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.13%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "XYZ",
-        "name": "Block (antes SQ)",
-        "sector": "Pagos / Fintech",
-        "price": 79.99500274658203,
-        "trend": "alcista",
-        "support": 77.2300033569336,
-        "resistance": 81.04000091552734,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.31%)",
+          "Precio cerca de la resistencia (2.93%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3099,28 +2955,28 @@
         "ticker": "T",
         "name": "AT&T",
         "sector": "Telecomunicaciones",
-        "price": 26.155000686645508,
+        "price": 26.25,
         "trend": "alcista",
         "support": 22.549999237060547,
-        "resistance": 26.31999969482422,
+        "resistance": 26.350000381469727,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.63%)"
+          "Precio cerca de la resistencia (0.38%)"
         ]
       },
       {
         "ticker": "CMCSA",
         "name": "Comcast",
         "sector": "Telecomunicaciones",
-        "price": 26.614999771118164,
+        "price": 26.849899291992188,
         "trend": "alcista",
         "support": 23.079999923706055,
         "resistance": 27.100000381469727,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.82%)",
+          "Precio cerca de la resistencia (0.93%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3129,30 +2985,14 @@
         "ticker": "AMXB.MX",
         "name": "América Móvil",
         "sector": "Telecomunicaciones",
-        "price": 19.6299991607666,
+        "price": 19.56999969482422,
         "trend": "bajista",
         "support": 19.510000228881836,
         "resistance": 20.309999465942383,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.61%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "VOD",
-        "name": "Vodafone",
-        "sector": "Telecomunicaciones",
-        "price": 16.110000610351562,
-        "trend": "alcista",
-        "support": 15.270000457763672,
-        "resistance": 16.229999542236328,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.74%)",
+          "Precio cerca del soporte (0.31%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3161,28 +3001,28 @@
         "ticker": "NFLX",
         "name": "Netflix",
         "sector": "Medios / Entretenimiento",
-        "price": 81.54000091552734,
+        "price": 82.41999816894531,
         "trend": "alcista",
         "support": 70.86000061035156,
         "resistance": 82.45999908447266,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.13%)"
+          "Precio cerca de la resistencia (0.05%)"
         ]
       },
       {
         "ticker": "WBD",
         "name": "Warner Bros. Discovery",
         "sector": "Medios / Entretenimiento",
-        "price": 28.55500030517578,
+        "price": 28.5,
         "trend": "alcista",
         "support": 26.139999389648438,
         "resistance": 28.989999771118164,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.52%)",
+          "Precio cerca de la resistencia (1.72%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3191,28 +3031,28 @@
         "ticker": "PSKY",
         "name": "Paramount Skydance",
         "sector": "Medios / Entretenimiento",
-        "price": 10.744999885559082,
+        "price": 10.875,
         "trend": "alcista",
         "support": 10.130000114440918,
         "resistance": 10.970000267028809,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.09%)"
+          "Precio cerca de la resistencia (0.87%)"
         ]
       },
       {
         "ticker": "SPOT",
         "name": "Spotify",
         "sector": "Medios / Entretenimiento",
-        "price": 548.75,
+        "price": 563.7000122070312,
         "trend": "alcista",
         "support": 523.22998046875,
-        "resistance": 554.969970703125,
+        "resistance": 563.7000122070312,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.13%)",
+          "Precio cerca de la resistencia (0.0%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3232,17 +3072,31 @@
         ]
       },
       {
+        "ticker": "FOXA",
+        "name": "Fox Corporation",
+        "sector": "Medios / Entretenimiento",
+        "price": 68.02999877929688,
+        "trend": "alcista",
+        "support": 61.36000061035156,
+        "resistance": 70.42500305175781,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "MELI",
         "name": "MercadoLibre",
         "sector": "E-commerce / Internet",
-        "price": 1953.0799560546875,
+        "price": 1969.1600341796875,
         "trend": "alcista",
         "support": 1771.1700439453125,
         "resistance": 2011.199951171875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.98%)",
+          "Precio cerca de la resistencia (2.13%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3251,13 +3105,13 @@
         "ticker": "BABA",
         "name": "Alibaba",
         "sector": "E-commerce / Internet",
-        "price": 113.54000091552734,
+        "price": 112.55000305175781,
         "trend": "lateral",
         "support": 111.66400146484375,
         "resistance": 121.8550033569336,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.65%)",
+          "Precio cerca del soporte (0.79%)",
           "Doble techo detectado"
         ]
       },
@@ -3265,28 +3119,14 @@
         "ticker": "PDD",
         "name": "PDD / Temu",
         "sector": "E-commerce / Internet",
-        "price": 83.45999908447266,
+        "price": 82.86000061035156,
         "trend": "lateral",
         "support": 82.05999755859375,
         "resistance": 84.44000244140625,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.68%)",
-          "Precio cerca de la resistencia (1.17%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "ETSY",
-        "name": "Etsy",
-        "sector": "E-commerce / Internet",
-        "price": 81.2300033569336,
-        "trend": "lateral",
-        "support": 77.9020004272461,
-        "resistance": 87.13999938964844,
-        "score": 0,
-        "reasons": [
+          "Precio cerca del soporte (0.97%)",
+          "Precio cerca de la resistencia (1.91%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3295,14 +3135,14 @@
         "ticker": "CPNG",
         "name": "Coupang",
         "sector": "E-commerce / Internet",
-        "price": 15.895000457763672,
+        "price": 15.904999732971191,
         "trend": "bajista",
         "support": 15.739999771118164,
         "resistance": 16.71500015258789,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.98%)",
+          "Precio cerca del soporte (1.04%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3311,15 +3151,15 @@
         "ticker": "ABNB",
         "name": "Airbnb",
         "sector": "E-commerce / Internet",
-        "price": 183.27999877929688,
+        "price": 182.50999450683594,
         "trend": "alcista",
         "support": 178.83999633789062,
         "resistance": 187.1199951171875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.42%)",
-          "Precio cerca de la resistencia (2.1%)",
+          "Precio cerca del soporte (2.01%)",
+          "Precio cerca de la resistencia (2.53%)",
           "Doble techo detectado"
         ]
       },
@@ -3327,14 +3167,14 @@
         "ticker": "DE",
         "name": "John Deere",
         "sector": "Industrial / Maquinaria",
-        "price": 670.010009765625,
+        "price": 684.3099975585938,
         "trend": "alcista",
-        "support": 603.1099853515625,
-        "resistance": 672.3900146484375,
+        "support": 617.2100219726562,
+        "resistance": 684.9998779296875,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.36%)",
+          "Precio cerca de la resistencia (0.1%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3343,14 +3183,14 @@
         "ticker": "HON",
         "name": "Honeywell",
         "sector": "Industrial / Maquinaria",
-        "price": 211.14500427246094,
+        "price": 208.9499969482422,
         "trend": "bajista",
-        "support": 210.6488037109375,
+        "support": 208.4199981689453,
         "resistance": 221.27000427246094,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.24%)",
+          "Precio cerca del soporte (0.25%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3359,7 +3199,7 @@
         "ticker": "MMM",
         "name": "3M",
         "sector": "Industrial / Maquinaria",
-        "price": 170.75999450683594,
+        "price": 170.27000427246094,
         "trend": "alcista",
         "support": 153.55999755859375,
         "resistance": 176.16000366210938,
@@ -3370,32 +3210,16 @@
         ]
       },
       {
-        "ticker": "EMR",
-        "name": "Emerson Electric",
-        "sector": "Industrial / Maquinaria",
-        "price": 150.41000366210938,
-        "trend": "alcista",
-        "support": 140.89999389648438,
-        "resistance": 152.08999633789062,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.12%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "ETN",
         "name": "Eaton",
         "sector": "Industrial / Maquinaria",
-        "price": 387.8500061035156,
+        "price": 387.70001220703125,
         "trend": "lateral",
         "support": 382.0,
         "resistance": 417.42999267578125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.51%)",
+          "Precio cerca del soporte (1.47%)",
           "Doble techo detectado"
         ]
       },
@@ -3403,46 +3227,44 @@
         "ticker": "ITW",
         "name": "Illinois Tool Works",
         "sector": "Industrial / Maquinaria",
-        "price": 273.085205078125,
+        "price": 267.4649963378906,
         "trend": "lateral",
-        "support": 270.0,
-        "resistance": 273.25,
+        "support": 263.8500061035156,
+        "resistance": 269.510009765625,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (1.13%)",
-          "Precio cerca de la resistencia (0.06%)",
+          "Precio cerca del soporte (1.35%)",
+          "Precio cerca de la resistencia (0.76%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "PH",
-        "name": "Parker Hannifin",
+        "ticker": "CMI",
+        "name": "Cummins",
         "sector": "Industrial / Maquinaria",
-        "price": 964.4000244140625,
-        "trend": "lateral",
-        "support": 942.3200073242188,
-        "resistance": 977.4000244140625,
+        "price": 551.467529296875,
+        "trend": "bajista",
+        "support": 542.7000122070312,
+        "resistance": 661.010009765625,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.29%)",
-          "Precio cerca de la resistencia (1.35%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (1.59%)"
         ]
       },
       {
         "ticker": "CEMEXCPO.MX",
         "name": "Cemex",
         "sector": "Construcción / Materiales",
-        "price": 18.170000076293945,
+        "price": 17.829999923706055,
         "trend": "bajista",
-        "support": 17.8799991607666,
+        "support": 17.760000228881836,
         "resistance": 19.040000915527344,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.6%)",
+          "Precio cerca del soporte (0.39%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3451,14 +3273,14 @@
         "ticker": "MLM",
         "name": "Martin Marietta",
         "sector": "Construcción / Materiales",
-        "price": 507.8299865722656,
+        "price": 510.4949951171875,
         "trend": "bajista",
-        "support": 504.45050048828125,
+        "support": 502.55999755859375,
         "resistance": 542.1799926757812,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.67%)",
+          "Precio cerca del soporte (1.55%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3467,14 +3289,14 @@
         "ticker": "VMC",
         "name": "Vulcan Materials",
         "sector": "Construcción / Materiales",
-        "price": 262.4800109863281,
+        "price": 261.2099914550781,
         "trend": "bajista",
-        "support": 260.5799865722656,
+        "support": 257.1700134277344,
         "resistance": 281.19000244140625,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.72%)",
+          "Precio cerca del soporte (1.55%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3483,14 +3305,14 @@
         "ticker": "ORBIA.MX",
         "name": "Orbia",
         "sector": "Construcción / Materiales",
-        "price": 21.43000030517578,
+        "price": 20.690000534057617,
         "trend": "bajista",
-        "support": 21.31999969482422,
+        "support": 20.479999542236328,
         "resistance": 23.25,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.51%)",
+          "Precio cerca del soporte (1.01%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3499,14 +3321,14 @@
         "ticker": "GCARSOA1.MX",
         "name": "Grupo Carso",
         "sector": "Construcción / Materiales",
-        "price": 139.64999389648438,
+        "price": 139.77999877929688,
         "trend": "alcista",
         "support": 134.33999633789062,
         "resistance": 142.14999389648438,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.79%)",
+          "Precio cerca de la resistencia (1.7%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3515,14 +3337,14 @@
         "ticker": "MAS",
         "name": "Masco",
         "sector": "Construcción / Materiales",
-        "price": 71.1500015258789,
+        "price": 70.81999969482422,
         "trend": "bajista",
-        "support": 70.93000030517578,
+        "support": 68.73999786376953,
         "resistance": 76.31999969482422,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.31%)",
+          "Precio cerca del soporte (2.94%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3545,10 +3367,24 @@
         ]
       },
       {
+        "ticker": "GOLD",
+        "name": "Barrick Gold",
+        "sector": "Minería / Metales",
+        "price": 43.18000030517578,
+        "trend": "alcista",
+        "support": 41.779998779296875,
+        "resistance": 44.9640007019043,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "RIO",
         "name": "Rio Tinto",
         "sector": "Minería / Metales",
-        "price": 103.41999816894531,
+        "price": 103.02400207519531,
         "trend": "alcista",
         "support": 95.38999938964844,
         "resistance": 106.83999633789062,
@@ -3559,17 +3395,17 @@
         ]
       },
       {
-        "ticker": "VALE",
-        "name": "Vale",
+        "ticker": "GMEXICOB.MX",
+        "name": "Grupo México",
         "sector": "Minería / Metales",
-        "price": 15.239999771118164,
-        "trend": "lateral",
-        "support": 14.789999961853027,
-        "resistance": 15.279999732971191,
+        "price": 223.5,
+        "trend": "alcista",
+        "support": 215.02000427246094,
+        "resistance": 227.8800048828125,
         "score": 0,
         "reasons": [
-          "Precio cerca del soporte (2.95%)",
-          "Precio cerca de la resistencia (0.26%)",
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.96%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3578,15 +3414,15 @@
         "ticker": "FUNO11.MX",
         "name": "Fibra Uno",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 29.31999969482422,
+        "price": 29.229999542236328,
         "trend": "bajista",
         "support": 28.8700008392334,
         "resistance": 30.079999923706055,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.53%)",
-          "Precio cerca de la resistencia (2.59%)",
+          "Precio cerca del soporte (1.23%)",
+          "Precio cerca de la resistencia (2.91%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3595,31 +3431,82 @@
         "ticker": "FMTY14.MX",
         "name": "Fibra Mty",
         "sector": "FIBRAs (bienes raíces)",
-        "price": 14.449999809265137,
+        "price": 14.3100004196167,
         "trend": "bajista",
-        "support": 14.380000114440918,
-        "resistance": 14.5,
+        "support": 14.100000381469727,
+        "resistance": 14.40999984741211,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.48%)",
-          "Precio cerca de la resistencia (0.35%)",
+          "Precio cerca del soporte (1.47%)",
+          "Precio cerca de la resistencia (0.7%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "SAP",
-        "name": "SAP",
-        "sector": "Tecnología / Software",
-        "price": 216.80999755859375,
-        "trend": "alcista",
-        "support": 208.57000732421875,
-        "resistance": 220.27000427246094,
+        "ticker": "FIBRAMQ12.MX",
+        "name": "Fibra Macquarie",
+        "sector": "FIBRAs (bienes raíces)",
+        "price": 44.0,
+        "trend": "bajista",
+        "support": 42.75,
+        "resistance": 44.2599983215332,
         "score": -1,
         "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.6%)",
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.84%)",
+          "Precio cerca de la resistencia (0.59%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "XLM-USD",
+        "name": "Stellar Lumens",
+        "sector": "Criptomonedas",
+        "price": 0.17425799369812012,
+        "trend": "bajista",
+        "support": 0.16840800642967224,
+        "resistance": 0.1772090047597885,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca de la resistencia (1.69%)",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "META",
+        "name": "Meta (Facebook)",
+        "sector": "Tecnología / Software",
+        "price": 589.2689819335938,
+        "trend": "bajista",
+        "support": 577.0700073242188,
+        "resistance": 593.3400268554688,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (2.07%)",
+          "Precio cerca de la resistencia (0.69%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "IBM",
+        "name": "IBM",
+        "sector": "Tecnología / Software",
+        "price": 230.1999969482422,
+        "trend": "bajista",
+        "support": 228.9600067138672,
+        "resistance": 230.97000122070312,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.54%)",
+          "Precio cerca de la resistencia (0.33%)",
+          "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
@@ -3627,46 +3514,63 @@
         "ticker": "TSM",
         "name": "TSMC",
         "sector": "Semiconductores",
-        "price": 414.5,
+        "price": 413.75,
         "trend": "lateral",
         "support": 405.1499938964844,
         "resistance": 425.3999938964844,
         "score": -1,
         "reasons": [
-          "Precio cerca del soporte (2.26%)",
-          "Precio cerca de la resistencia (2.63%)",
+          "Precio cerca del soporte (2.08%)",
+          "Precio cerca de la resistencia (2.82%)",
           "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom",
+        "sector": "Semiconductores",
+        "price": 369.3909912109375,
+        "trend": "bajista",
+        "support": 357.79998779296875,
+        "resistance": 376.5899963378906,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca de la resistencia (1.95%)",
+          "Doble piso detectado"
         ]
       },
       {
         "ticker": "QCOM",
         "name": "Qualcomm",
         "sector": "Semiconductores",
-        "price": 162.2899932861328,
+        "price": 166.32000732421875,
         "trend": "bajista",
-        "support": 161.07000732421875,
+        "support": 164.77000427246094,
         "resistance": 166.97000122070312,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.75%)",
-          "Precio cerca de la resistencia (2.88%)",
+          "Precio cerca del soporte (0.93%)",
+          "Precio cerca de la resistencia (0.39%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "INTC",
-        "name": "Intel",
-        "sector": "Semiconductores",
-        "price": 86.22589874267578,
+        "ticker": "ENB",
+        "name": "Enbridge",
+        "sector": "Energía (petróleo y gas)",
+        "price": 50.58000183105469,
         "trend": "bajista",
-        "support": 85.13999938964844,
-        "resistance": 103.66000366210938,
+        "support": 49.560001373291016,
+        "resistance": 51.90999984741211,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.26%)",
+          "Precio cerca del soporte (2.02%)",
+          "Precio cerca de la resistencia (2.63%)",
+          "Doble piso detectado",
           "Doble techo detectado"
         ]
       },
@@ -3674,31 +3578,29 @@
         "ticker": "ENPH",
         "name": "Enphase Energy",
         "sector": "Energía renovable / Utilities",
-        "price": 35.68000030517578,
+        "price": 35.09000015258789,
         "trend": "bajista",
         "support": 34.959999084472656,
-        "resistance": 39.599998474121094,
+        "resistance": 39.38999938964844,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.02%)",
+          "Precio cerca del soporte (0.37%)",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "STLA",
-        "name": "Stellantis",
+        "ticker": "TSLA",
+        "name": "Tesla",
         "sector": "Automotriz",
-        "price": 5.385000228881836,
+        "price": 350.55499267578125,
         "trend": "bajista",
-        "support": 5.25,
-        "resistance": 5.46999979019165,
+        "support": 342.5299987792969,
+        "resistance": 366.5,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.51%)",
-          "Precio cerca de la resistencia (1.58%)",
-          "Doble piso detectado",
+          "Precio cerca del soporte (2.29%)",
           "Doble techo detectado"
         ]
       },
@@ -3706,7 +3608,7 @@
         "ticker": "UAL",
         "name": "United Airlines",
         "sector": "Aviación / Aerolíneas",
-        "price": 106.65010070800781,
+        "price": 107.30500030517578,
         "trend": "bajista",
         "support": 101.7699966430664,
         "resistance": 119.7300033569336,
@@ -3718,17 +3620,49 @@
         ]
       },
       {
+        "ticker": "ALK",
+        "name": "Alaska Air",
+        "sector": "Aviación / Aerolíneas",
+        "price": 41.619998931884766,
+        "trend": "bajista",
+        "support": 41.45000076293945,
+        "resistance": 44.380001068115234,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.41%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "AERO.MX",
+        "name": "Grupo Aeroméxico",
+        "sector": "Aviación / Aerolíneas",
+        "price": 167.0,
+        "trend": "bajista",
+        "support": 167.0,
+        "resistance": 167.0,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.0%)",
+          "Precio cerca de la resistencia (0.0%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "GD",
         "name": "General Dynamics",
         "sector": "Aeroespacial y Defensa",
-        "price": 371.4750061035156,
+        "price": 363.7200012207031,
         "trend": "lateral",
         "support": 361.239990234375,
-        "resistance": 377.5299987792969,
+        "resistance": 367.0,
         "score": -1,
         "reasons": [
-          "Precio cerca del soporte (2.76%)",
-          "Precio cerca de la resistencia (1.63%)",
+          "Precio cerca del soporte (0.68%)",
+          "Precio cerca de la resistencia (0.9%)",
           "Doble techo detectado"
         ]
       },
@@ -3736,14 +3670,14 @@
         "ticker": "LHX",
         "name": "L3Harris",
         "sector": "Aeroespacial y Defensa",
-        "price": 264.3450012207031,
+        "price": 260.70001220703125,
         "trend": "bajista",
-        "support": 262.67999267578125,
+        "support": 258.5400085449219,
         "resistance": 293.0,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.63%)",
+          "Precio cerca del soporte (0.83%)",
           "Doble techo detectado"
         ]
       },
@@ -3751,7 +3685,7 @@
         "ticker": "GE",
         "name": "GE Aerospace",
         "sector": "Aeroespacial y Defensa",
-        "price": 333.1189880371094,
+        "price": 330.6000061035156,
         "trend": "bajista",
         "support": 318.25,
         "resistance": 356.3900146484375,
@@ -3766,7 +3700,7 @@
         "ticker": "HWM",
         "name": "Howmet Aerospace",
         "sector": "Aeroespacial y Defensa",
-        "price": 253.66000366210938,
+        "price": 251.33999633789062,
         "trend": "bajista",
         "support": 240.3800048828125,
         "resistance": 279.9800109863281,
@@ -3778,16 +3712,61 @@
         ]
       },
       {
+        "ticker": "UNH",
+        "name": "UnitedHealth",
+        "sector": "Salud / Dispositivos médicos",
+        "price": 398.135009765625,
+        "trend": "bajista",
+        "support": 397.79998779296875,
+        "resistance": 406.25,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio cerca del soporte (0.08%)",
+          "Precio cerca de la resistencia (2.04%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "ISRG",
+        "name": "Intuitive Surgical",
+        "sector": "Salud / Dispositivos médicos",
+        "price": 375.3999938964844,
+        "trend": "lateral",
+        "support": 328.57000732421875,
+        "resistance": 404.9800109863281,
+        "score": -1,
+        "reasons": [
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "EW",
+        "name": "Edwards Lifesciences",
+        "sector": "Salud / Dispositivos médicos",
+        "price": 91.55999755859375,
+        "trend": "alcista",
+        "support": 88.79000091552734,
+        "resistance": 93.25,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca de la resistencia (1.85%)",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "ABBV",
         "name": "AbbVie",
         "sector": "Farmacéuticas",
-        "price": 260.1300048828125,
+        "price": 260.7300109863281,
         "trend": "lateral",
         "support": 252.25,
         "resistance": 260.9599914550781,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (0.32%)",
+          "Precio cerca de la resistencia (0.09%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3796,30 +3775,58 @@
         "ticker": "NVS",
         "name": "Novartis",
         "sector": "Farmacéuticas",
-        "price": 161.92999267578125,
+        "price": 162.2899932861328,
         "trend": "lateral",
         "support": 153.22000122070312,
         "resistance": 163.57000732421875,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (1.01%)",
+          "Precio cerca de la resistencia (0.79%)",
           "Doble piso detectado",
           "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "ALNY",
+        "name": "Alnylam",
+        "sector": "Biotecnología",
+        "price": 256.2764892578125,
+        "trend": "bajista",
+        "support": 210.49000549316406,
+        "resistance": 290.6000061035156,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista"
         ]
       },
       {
         "ticker": "NBIX",
         "name": "Neurocrine",
         "sector": "Biotecnología",
-        "price": 155.28500366210938,
+        "price": 158.17999267578125,
         "trend": "bajista",
-        "support": 151.77000427246094,
-        "resistance": 156.55999755859375,
+        "support": 155.3000030517578,
+        "resistance": 159.39999389648438,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (2.26%)",
-          "Precio cerca de la resistencia (0.82%)",
+          "Precio cerca del soporte (1.82%)",
+          "Precio cerca de la resistencia (0.77%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "HRL",
+        "name": "Hormel",
+        "sector": "Alimentos",
+        "price": 22.100000381469727,
+        "trend": "bajista",
+        "support": 21.270000457763672,
+        "resistance": 24.84000015258789,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3828,15 +3835,15 @@
         "ticker": "GRUMAB.MX",
         "name": "Gruma (Maseca)",
         "sector": "Alimentos",
-        "price": 250.07000732421875,
+        "price": 252.05999755859375,
         "trend": "bajista",
-        "support": 247.0500030517578,
+        "support": 250.36000061035156,
         "resistance": 256.8999938964844,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.21%)",
-          "Precio cerca de la resistencia (2.73%)",
+          "Precio cerca del soporte (0.67%)",
+          "Precio cerca de la resistencia (1.92%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3845,15 +3852,13 @@
         "ticker": "FMX",
         "name": "FEMSA",
         "sector": "Bebidas",
-        "price": 122.56999969482422,
+        "price": 120.06999969482422,
         "trend": "bajista",
-        "support": 122.54000091552734,
+        "support": 115.33999633789062,
         "resistance": 125.0,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.02%)",
-          "Precio cerca de la resistencia (1.98%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3862,14 +3867,14 @@
         "ticker": "MNST",
         "name": "Monster Beverage",
         "sector": "Bebidas",
-        "price": 45.86000061035156,
+        "price": 44.52000045776367,
         "trend": "bajista",
-        "support": 45.04999923706055,
+        "support": 44.314998626708984,
         "resistance": 49.2400016784668,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.77%)",
+          "Precio cerca del soporte (0.46%)",
           "Doble techo detectado"
         ]
       },
@@ -3877,13 +3882,13 @@
         "ticker": "SBUX",
         "name": "Starbucks",
         "sector": "Restaurantes / Comida rápida",
-        "price": 106.23999786376953,
+        "price": 106.30500030517578,
         "trend": "lateral",
         "support": 102.97000122070312,
         "resistance": 108.45999908447266,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (2.09%)",
+          "Precio cerca de la resistencia (2.03%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3892,14 +3897,14 @@
         "ticker": "DRI",
         "name": "Darden",
         "sector": "Restaurantes / Comida rápida",
-        "price": 215.375,
+        "price": 217.74000549316406,
         "trend": "alcista",
-        "support": 202.0500030517578,
+        "support": 210.86000061035156,
         "resistance": 219.3800048828125,
         "score": -1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.86%)",
+          "Precio cerca de la resistencia (0.75%)",
           "Doble techo detectado"
         ]
       },
@@ -3907,28 +3912,28 @@
         "ticker": "ALSEA.MX",
         "name": "Alsea (México)",
         "sector": "Restaurantes / Comida rápida",
-        "price": 41.470001220703125,
+        "price": 41.5,
         "trend": "bajista",
         "support": 40.81999969482422,
         "resistance": 43.0,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.57%)",
+          "Precio cerca del soporte (1.64%)",
           "Doble techo detectado"
         ]
       },
       {
-        "ticker": "KIMBERA.MX",
-        "name": "Kimberly-Clark México",
+        "ticker": "CHD",
+        "name": "Church & Dwight",
         "sector": "Consumo básico / Hogar",
-        "price": 39.86000061035156,
+        "price": 99.33499908447266,
         "trend": "lateral",
-        "support": 38.5,
-        "resistance": 39.9900016784668,
+        "support": 96.2699966430664,
+        "resistance": 100.0,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (0.33%)",
+          "Precio cerca de la resistencia (0.67%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3937,7 +3942,7 @@
         "ticker": "WMT",
         "name": "Walmart",
         "sector": "Retail / Comercio",
-        "price": 106.16999816894531,
+        "price": 105.6500015258789,
         "trend": "bajista",
         "support": 102.2699966430664,
         "resistance": 114.55999755859375,
@@ -3949,33 +3954,33 @@
         ]
       },
       {
+        "ticker": "HD",
+        "name": "Home Depot",
+        "sector": "Retail / Comercio",
+        "price": 318.9566955566406,
+        "trend": "bajista",
+        "support": 307.07000732421875,
+        "resistance": 341.1499938964844,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "WALMEX.MX",
         "name": "Walmart de México",
         "sector": "Retail / Comercio",
-        "price": 47.16999816894531,
+        "price": 46.88999938964844,
         "trend": "bajista",
         "support": 46.61000061035156,
         "resistance": 48.189998626708984,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.19%)",
-          "Precio cerca de la resistencia (2.16%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "MS",
-        "name": "Morgan Stanley",
-        "sector": "Finanzas / Bancos",
-        "price": 214.38999938964844,
-        "trend": "lateral",
-        "support": 207.39999389648438,
-        "resistance": 217.33999633789062,
-        "score": -1,
-        "reasons": [
-          "Precio cerca de la resistencia (1.38%)",
+          "Precio cerca del soporte (0.6%)",
+          "Precio cerca de la resistencia (2.77%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -3984,28 +3989,13 @@
         "ticker": "GFNORTEO.MX",
         "name": "Banorte",
         "sector": "Finanzas / Bancos",
-        "price": 192.82000732421875,
+        "price": 192.2100067138672,
         "trend": "lateral",
         "support": 182.0,
         "resistance": 193.0,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (0.09%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "GENTERA.MX",
-        "name": "Gentera",
-        "sector": "Finanzas / Bancos",
-        "price": 40.97999954223633,
-        "trend": "lateral",
-        "support": 39.54999923706055,
-        "resistance": 41.220001220703125,
-        "score": -1,
-        "reasons": [
-          "Precio cerca de la resistencia (0.59%)",
+          "Precio cerca de la resistencia (0.41%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -4014,15 +4004,15 @@
         "ticker": "CB",
         "name": "Chubb Limited",
         "sector": "Seguros",
-        "price": 340.04998779296875,
+        "price": 339.5,
         "trend": "bajista",
         "support": 338.04998779296875,
         "resistance": 347.0400085449219,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.59%)",
-          "Precio cerca de la resistencia (2.06%)",
+          "Precio cerca del soporte (0.43%)",
+          "Precio cerca de la resistencia (2.22%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -4031,14 +4021,14 @@
         "ticker": "MA",
         "name": "Mastercard",
         "sector": "Pagos / Fintech",
-        "price": 590.9473266601562,
+        "price": 587.2750244140625,
         "trend": "alcista",
         "support": 556.0599975585938,
         "resistance": 601.22998046875,
         "score": -1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.74%)",
+          "Precio cerca de la resistencia (2.38%)",
           "Doble techo detectado"
         ]
       },
@@ -4046,7 +4036,7 @@
         "ticker": "AXP",
         "name": "American Express",
         "sector": "Pagos / Fintech",
-        "price": 328.5299987792969,
+        "price": 328.1199951171875,
         "trend": "bajista",
         "support": 318.20001220703125,
         "resistance": 347.1099853515625,
@@ -4061,13 +4051,13 @@
         "ticker": "TMUS",
         "name": "T-Mobile US",
         "sector": "Telecomunicaciones",
-        "price": 182.80999755859375,
+        "price": 184.30999755859375,
         "trend": "lateral",
         "support": 177.30999755859375,
         "resistance": 185.4499969482422,
         "score": -1,
         "reasons": [
-          "Precio cerca de la resistencia (1.44%)",
+          "Precio cerca de la resistencia (0.62%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -4076,7 +4066,7 @@
         "ticker": "TU",
         "name": "Telus",
         "sector": "Telecomunicaciones",
-        "price": 9.654999732971191,
+        "price": 9.720000267028809,
         "trend": "bajista",
         "support": 9.199999809265137,
         "resistance": 10.039999961853027,
@@ -4088,10 +4078,25 @@
         ]
       },
       {
+        "ticker": "RBLX",
+        "name": "Roblox",
+        "sector": "Medios / Entretenimiento",
+        "price": 40.650001525878906,
+        "trend": "bajista",
+        "support": 37.310001373291016,
+        "resistance": 51.04999923706055,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
         "ticker": "TTWO",
         "name": "Take-Two Interactive",
         "sector": "Medios / Entretenimiento",
-        "price": 217.47999572753906,
+        "price": 218.0,
         "trend": "bajista",
         "support": 206.0,
         "resistance": 250.92999267578125,
@@ -4103,33 +4108,18 @@
         ]
       },
       {
-        "ticker": "FOXA",
-        "name": "Fox Corporation",
-        "sector": "Medios / Entretenimiento",
-        "price": 67.38999938964844,
-        "trend": "alcista",
-        "support": 61.36000061035156,
-        "resistance": 69.17500305175781,
-        "score": -1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (2.65%)",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "EBAY",
         "name": "eBay",
         "sector": "E-commerce / Internet",
-        "price": 105.4800033569336,
+        "price": 105.3499984741211,
         "trend": "bajista",
         "support": 104.87999725341797,
         "resistance": 107.37000274658203,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.57%)",
-          "Precio cerca de la resistencia (1.79%)",
+          "Precio cerca del soporte (0.45%)",
+          "Precio cerca de la resistencia (1.92%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -4138,14 +4128,14 @@
         "ticker": "JD",
         "name": "JD.com",
         "sector": "E-commerce / Internet",
-        "price": 28.014999389648438,
+        "price": 27.829999923706055,
         "trend": "bajista",
         "support": 27.475000381469727,
         "resistance": 28.950000762939453,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (1.93%)",
+          "Precio cerca del soporte (1.28%)",
           "Doble techo detectado"
         ]
       },
@@ -4153,14 +4143,14 @@
         "ticker": "BLDR",
         "name": "Builders FirstSource",
         "sector": "Construcción / Materiales",
-        "price": 65.0,
+        "price": 63.459999084472656,
         "trend": "bajista",
-        "support": 64.61000061035156,
+        "support": 62.310001373291016,
         "resistance": 75.72000122070312,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio cerca del soporte (0.6%)",
+          "Precio cerca del soporte (1.81%)",
           "Doble techo detectado"
         ]
       }
