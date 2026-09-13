@@ -1,34 +1,19 @@
 {
-  "generated_at": "2026-09-12T07:01:13.428853-06:00",
+  "generated_at": "2026-09-13T07:56:30.849085-06:00",
   "report": {
     "comprar": [
       {
         "ticker": "XRP-USD",
         "name": "XRP (Ripple)",
         "sector": "Criptomonedas",
-        "price": 1.368399977684021,
+        "price": 1.341599941253662,
         "trend": "alcista",
-        "support": 1.3631960153579712,
+        "support": 1.3135950565338135,
         "resistance": 1.4461109638214111,
         "score": 3,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.38%)",
-          "Doble piso detectado"
-        ]
-      },
-      {
-        "ticker": "HBAR-USD",
-        "name": "Hedera",
-        "sector": "Criptomonedas",
-        "price": 0.07458999752998352,
-        "trend": "alcista",
-        "support": 0.07289300113916397,
-        "resistance": 0.08307600021362305,
-        "score": 3,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca del soporte (2.28%)",
+          "Precio cerca del soporte (2.09%)",
           "Doble piso detectado"
         ]
       },
@@ -36,14 +21,44 @@
         "ticker": "BTC-USD",
         "name": "Bitcoin",
         "sector": "Criptomonedas",
-        "price": 77268.1484375,
+        "price": 76816.078125,
         "trend": "alcista",
-        "support": 76909.3515625,
+        "support": 76248.3046875,
         "resistance": 81346.953125,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca del soporte (0.46%)",
+          "Precio cerca del soporte (0.74%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "HBAR-USD",
+        "name": "Hedera",
+        "sector": "Criptomonedas",
+        "price": 0.07586000114679337,
+        "trend": "alcista",
+        "support": 0.07289300113916397,
+        "resistance": 0.08307600021362305,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "SOL-USD",
+        "name": "Solana",
+        "sector": "Criptomonedas",
+        "price": 100.06999969482422,
+        "trend": "alcista",
+        "support": 97.45088195800781,
+        "resistance": 107.116455078125,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.62%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -52,14 +67,48 @@
         "ticker": "BNB-USD",
         "name": "BNB (Binance)",
         "sector": "Criptomonedas",
-        "price": 735.6099853515625,
+        "price": 717.47998046875,
         "trend": "alcista",
-        "support": 675.1741943359375,
-        "resistance": 778.8104858398438,
+        "support": 704.9750366210938,
+        "resistance": 725.3282470703125,
         "score": 2,
         "reasons": [
           "Tendencia semanal alcista",
+          "Precio cerca del soporte (1.74%)",
+          "Precio cerca de la resistencia (1.09%)",
           "Doble piso detectado"
+        ]
+      },
+      {
+        "ticker": "DOGE-USD",
+        "name": "Dogecoin",
+        "sector": "Criptomonedas",
+        "price": 0.08340000361204147,
+        "trend": "alcista",
+        "support": 0.08285000175237656,
+        "resistance": 0.09420900046825409,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (0.66%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
+        ]
+      },
+      {
+        "ticker": "AVAX-USD",
+        "name": "Avalanche",
+        "sector": "Criptomonedas",
+        "price": 7.360000133514404,
+        "trend": "alcista",
+        "support": 7.170598030090332,
+        "resistance": 8.17965316772461,
+        "score": 2,
+        "reasons": [
+          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.57%)",
+          "Doble piso detectado",
+          "Doble techo detectado"
         ]
       },
       {
@@ -572,46 +621,18 @@
         ]
       },
       {
-        "ticker": "SOL-USD",
-        "name": "Solana",
+        "ticker": "ETH-USD",
+        "name": "Ethereum",
         "sector": "Criptomonedas",
-        "price": 101.97000122070312,
+        "price": 2479.889892578125,
         "trend": "alcista",
-        "support": 97.45088195800781,
-        "resistance": 107.116455078125,
+        "support": 2406.906494140625,
+        "resistance": 2545.62353515625,
         "score": 1,
         "reasons": [
           "Tendencia semanal alcista",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "DOGE-USD",
-        "name": "Dogecoin",
-        "sector": "Criptomonedas",
-        "price": 0.08500999957323074,
-        "trend": "alcista",
-        "support": 0.08028300106525421,
-        "resistance": 0.09420900046825409,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
-        "ticker": "AVAX-USD",
-        "name": "Avalanche",
-        "sector": "Criptomonedas",
-        "price": 7.434999942779541,
-        "trend": "alcista",
-        "support": 7.170598030090332,
-        "resistance": 8.17965316772461,
-        "score": 1,
-        "reasons": [
-          "Tendencia semanal alcista",
+          "Precio cerca del soporte (2.94%)",
+          "Precio cerca de la resistencia (2.65%)",
           "Doble piso detectado",
           "Doble techo detectado"
         ]
@@ -1662,33 +1683,17 @@
         ]
       },
       {
-        "ticker": "ETH-USD",
-        "name": "Ethereum",
-        "sector": "Criptomonedas",
-        "price": 2532.77001953125,
-        "trend": "alcista",
-        "support": 2356.188232421875,
-        "resistance": 2545.62353515625,
-        "score": 0,
-        "reasons": [
-          "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (0.51%)",
-          "Doble piso detectado",
-          "Doble techo detectado"
-        ]
-      },
-      {
         "ticker": "ADA-USD",
         "name": "Cardano",
         "sector": "Criptomonedas",
-        "price": 0.20847000181674957,
+        "price": 0.20627999305725098,
         "trend": "alcista",
         "support": 0.19075599312782288,
         "resistance": 0.2107349932193756,
         "score": 0,
         "reasons": [
           "Tendencia semanal alcista",
-          "Precio cerca de la resistencia (1.09%)"
+          "Precio cerca de la resistencia (2.16%)"
         ]
       },
       {
@@ -3440,7 +3445,7 @@
         "ticker": "XLM-USD",
         "name": "Stellar Lumens",
         "sector": "Criptomonedas",
-        "price": 0.18135899305343628,
+        "price": 0.1793680042028427,
         "trend": "lateral",
         "support": 0.1716500073671341,
         "resistance": 0.18782299757003784,
