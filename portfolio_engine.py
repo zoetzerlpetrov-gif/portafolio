@@ -4,7 +4,7 @@ Motor de análisis de portafolio de inversión.
 Para cada ticker (formato Yahoo Finance) calcula: máx/mín de 10/5/1 años y
 precio actual, serie diaria de 12 meses (sparkline), tendencia semanal,
 soporte/resistencia, dividendos y doble toque. `build_report()` lo clasifica
-en comprar/vender/esperar. TODO es decisión de apoyo, no asesoría.
+en comprar / rebote / esperar / precaución. TODO es decisión de apoyo, no asesoría.
 
 Moneda: cada instrumento trae su divisa (USD, MXN, EUR…). Los .MX cotizan en
 MXN; los de EE.UU. y la mayoría de los ADRs en USD.
@@ -688,6 +688,7 @@ DOUBLE_MAX_AGE = 30        # el segundo toque debe ser de los últimos 30 días 
 RSI_DAYS = 14              # RSI de Wilder; sobrecompra > 70, sobreventa < 30
 RVOL_DAYS = 20             # volumen relativo: volumen de hoy / promedio de los 20 días anteriores
 RVOL_MIN = 1.0             # confirmación por volumen: el día de la señal con volumen al menos igual al promedio
+REBOTE_RSI = 30            # «rebote»: RSI(14) menor a 30 con el precio arriba de su media de 200 días (sobreventa en tendencia larga alcista)
 SLEEP_BETWEEN   = 0.35         # pausa (seg) entre tickers para no saturar a Yahoo (~570 instrumentos)
 MAX_RETRIES     = 2            # reintentos por ticker si Yahoo falla/limita
 LIQ_HIGH_USD    = 10_000_000   # valor operado/día (USD) para liquidez "alta"
@@ -1222,21 +1223,27 @@ def classify(a: Analysis) -> dict:
         bloqueos_venta.append(f"volumen relativo bajo ({a.rvol:.2f}×)")
     elif a.rvol is not None:
         reasons.append(f"Volumen relativo {a.rvol:.2f}× su promedio de 20 días")
+    # «Rebote»: en el backtest de 10 años y en la prueba de los últimos 3, un RSI menor a 30 fue la señal con más acierto.
+    rebote = a.rsi_14 is not None and a.rsi_14 < REBOTE_RSI and a.above_sma200 is True
     if score >= 2 and not bloqueos_compra:
         category = "comprar"
+    elif rebote:
+        category = "rebote"
+        reasons.append(f"Rebote probable: RSI en sobreventa ({a.rsi_14:.0f}) con el precio arriba de su media de 200 días")
     elif score <= -2 and not bloqueos_venta:
-        category = "vender"
+        # Antes «vender». En el backtest el precio subió más veces de las que bajó tras esta señal: es una alerta, no una predicción.
+        category = "precaucion"
     else:
         category = "esperar"
         if score >= 2:
             reasons.append("No confirma «comprar»: " + "; ".join(bloqueos_compra))
         if score <= -2:
-            reasons.append("No confirma «vender»: " + "; ".join(bloqueos_venta))
+            reasons.append("No confirma «precaución»: " + "; ".join(bloqueos_venta))
     return {"category": category, "score": score, "reasons": reasons}
 
 
 def build_report(results: list[Analysis]) -> dict:
-    buckets = {"comprar": [], "vender": [], "esperar": [], "error": []}
+    buckets = {"comprar": [], "rebote": [], "esperar": [], "precaucion": [], "error": []}
     for a in results:
         if not a.ok:
             buckets["error"].append({"ticker": a.ticker, "name": a.name,
@@ -1249,8 +1256,8 @@ def build_report(results: list[Analysis]) -> dict:
             "support": a.support, "resistance": a.resistance,
             "score": c["score"], "reasons": c["reasons"],
         })
-    for k in ("comprar", "vender", "esperar"):
-        buckets[k].sort(key=lambda x: x["score"], reverse=(k != "vender"))
+    for k in ("comprar", "rebote", "esperar", "precaucion"):
+        buckets[k].sort(key=lambda x: x["score"], reverse=(k != "precaucion"))
     return {"generated_at": datetime.now(MX_TZ).isoformat(), "report": buckets}
 
 def main() -> None:
@@ -1290,7 +1297,7 @@ def main() -> None:
 
     ok = sum(1 for a in results if a.ok)
     print(f"\nReporte {report['generated_at']} — {ok}/{total} con datos\n")
-    for cat in ("comprar", "vender", "esperar"):
+    for cat in ("comprar", "rebote", "precaucion", "esperar"):
         print(f"== {cat.upper()} ({len(report['report'][cat])}) ==")
         for item in report["report"][cat]:
             print(f"  {item['ticker']:<16} {item['price']:<12} score={item['score']:+d}")

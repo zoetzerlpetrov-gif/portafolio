@@ -24,7 +24,9 @@ publica en un dashboard estático.
 - **Soporte/resistencia:** pivotes de 60 días. Si el precio ya rompió todos los niveles, ese lado queda vacío (no se inventa un nivel).
 - **«Cerca de»:** a menos de 1 ATR(14), así se adapta a la volatilidad de cada activo.
 - **Doble piso/techo:** dos toques a menos de 1.5 % entre sí, separados ≥ 10 días hábiles, con rebote (o caída) ≥ 3 ATR entre ellos y el precio ya por encima (o debajo) de la línea de cuello. El segundo toque debe ser de los últimos 30 días.
-- **Filtro de tendencia:** «comprar» solo si el precio está arriba de su media de 200 días.
+- **Filtro de tendencia:** «comprar» solo si el precio está arriba de su media de 200 días, con RSI < 70, momentum 12-1 positivo y volumen relativo ≥ 1.
+- **Rebote:** RSI(14) < 30 con el precio arriba de su media de 200 días (la señal con más acierto en el backtest, también en los últimos 3 años).
+- **Precaución** (antes «vender»): en el backtest el precio subió más veces de las que bajó tras esta señal; es una alerta, no una predicción.
 - **Dividendo:** rendimiento de 12 meses calculado con los dividendos pagados y el precio actual.
 - **Backtest** (`backtest.py` → `backtest.json`): cada regla evaluada cada 5 días hábiles durante 10 años, con el rendimiento a 21 días contra «comprar y mantener». Sin comisiones ni impuestos.
 
