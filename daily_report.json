@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T15:50:51.080312-06:00",
+  "generated_at": "2026-10-30T16:15:58.118751-06:00",
   "report": {
     "comprar": [
       {
@@ -163,245 +163,38 @@
         ]
       }
     ],
-    "vender": [
+    "rebote": [
       {
-        "ticker": "F",
-        "name": "Ford",
-        "sector": "Automotriz",
-        "price": 12.25,
-        "trend": "bajista",
-        "support": 11.90999984741211,
-        "resistance": 12.329999923706055,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (0.65%)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.08× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "NBIX",
-        "name": "Neurocrine",
-        "sector": "Biotecnología",
-        "price": 146.10000610351562,
-        "trend": "bajista",
-        "support": 136.30999755859375,
-        "resistance": 146.9199981689453,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (0.56%)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.07× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "NU",
-        "name": "Nu Holdings (Nubank)",
-        "sector": "Pagos / Fintech",
-        "price": 11.609999656677246,
+        "ticker": "ETH-USD",
+        "name": "Ethereum",
+        "sector": "Criptomonedas",
+        "price": 2235.06005859375,
         "trend": "bajista",
         "support": null,
-        "resistance": 14.25,
-        "score": -2,
+        "resistance": 2522.841796875,
+        "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.00× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "CMCSA",
-        "name": "Comcast",
-        "sector": "Telecomunicaciones",
-        "price": 23.219999313354492,
-        "trend": "bajista",
-        "support": 21.08229525461308,
-        "resistance": 23.290000915527344,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (0.3%)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.56× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "NFLX",
-        "name": "Netflix",
-        "sector": "Medios / Entretenimiento",
-        "price": 62.08000183105469,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 72.0999984741211,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.16× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "PH",
-        "name": "Parker Hannifin",
-        "sector": "Industrial / Maquinaria",
-        "price": 899.8200073242188,
-        "trend": "bajista",
-        "support": 868.489990234375,
-        "resistance": 976.4400024414062,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 2.25× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "SCCO",
-        "name": "Southern Copper",
-        "sector": "Minería / Metales",
-        "price": 177.52999877929688,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 195.16000366210938,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.97× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "O",
-        "name": "Realty Income Corporation",
-        "sector": "Bienes raíces (REIT)",
-        "price": 56.93000030517578,
-        "trend": "bajista",
-        "support": 55.279998779296875,
-        "resistance": 57.41999816894531,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (0.86%)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.27× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "EMN",
-        "name": "Eastman Chemical Company",
-        "sector": "Materiales básicos",
-        "price": 66.52999877929688,
-        "trend": "bajista",
-        "support": 64.41999816894531,
-        "resistance": 67.62000274658203,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (1.64%)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.20× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "GLW",
-        "name": "Corning Incorporated",
-        "sector": "Tecnología",
-        "price": 123.30999755859375,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 157.2738564927047,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.44× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "GEN",
-        "name": "Gen Digital Inc.",
-        "sector": "Tecnología",
-        "price": 29.1299991607666,
-        "trend": "bajista",
-        "support": 27.010000228881836,
-        "resistance": 29.569646122664203,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (1.51%)",
           "Precio arriba de su media de 200 días",
-          "Volumen relativo 1.10× su promedio de 20 días"
+          "Volumen relativo 2.12× su promedio de 20 días",
+          "Rebote probable: RSI en sobreventa (30) con el precio arriba de su media de 200 días"
         ]
       },
       {
-        "ticker": "HUBB",
-        "name": "Hubbell Inc",
-        "sector": "Industria",
-        "price": 422.44000244140625,
+        "ticker": "SOL-USD",
+        "name": "Solana",
+        "sector": "Criptomonedas",
+        "price": 95.30999755859375,
         "trend": "bajista",
         "support": null,
-        "resistance": 469.3599853515625,
+        "resistance": 105.48805236816406,
         "score": -2,
         "reasons": [
           "Tendencia semanal bajista",
           "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.24× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "XYL",
-        "name": "Xylem Inc.",
-        "sector": "Industria",
-        "price": 92.4000015258789,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 105.06999969482422,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.03× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "COF",
-        "name": "Capital One Financial Corporati",
-        "sector": "Servicios financieros",
-        "price": 204.85000610351562,
-        "trend": "bajista",
-        "support": 193.7100067138672,
-        "resistance": 207.0,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR de la resistencia (1.05%)",
           "Precio arriba de su media de 200 días",
-          "Volumen relativo 1.15× su promedio de 20 días"
-        ]
-      },
-      {
-        "ticker": "KLAC",
-        "name": "KLA Corporation",
-        "sector": "Tecnología",
-        "price": 157.91000366210938,
-        "trend": "bajista",
-        "support": 144.82000732421875,
-        "resistance": 186.77999877929688,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 2.04× su promedio de 20 días"
+          "Volumen relativo 2.11× su promedio de 20 días",
+          "Rebote probable: RSI en sobreventa (29) con el precio arriba de su media de 200 días"
         ]
       }
     ],
@@ -1219,30 +1012,30 @@
         "ticker": "BTC-USD",
         "name": "Bitcoin",
         "sector": "Criptomonedas",
-        "price": 76704.609375,
+        "price": 76543.71875,
         "trend": "lateral",
         "support": 76162.9140625,
         "resistance": 79818.3359375,
         "score": 1,
         "reasons": [
-          "Precio a menos de 1 ATR del soporte (0.71%)",
+          "Precio a menos de 1 ATR del soporte (0.5%)",
           "Precio arriba de su media de 200 días",
-          "Volumen relativo 2.03× su promedio de 20 días"
+          "Volumen relativo 2.01× su promedio de 20 días"
         ]
       },
       {
         "ticker": "HBAR-USD",
         "name": "Hedera",
         "sector": "Criptomonedas",
-        "price": 0.0720599964261055,
+        "price": 0.07199999690055847,
         "trend": "lateral",
         "support": 0.07197300344705582,
         "resistance": 0.08307600021362305,
         "score": 1,
         "reasons": [
-          "Precio a menos de 1 ATR del soporte (0.12%)",
+          "Precio a menos de 1 ATR del soporte (0.04%)",
           "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.22× su promedio de 20 días"
+          "Volumen relativo 1.19× su promedio de 20 días"
         ]
       },
       {
@@ -3441,53 +3234,53 @@
         "ticker": "ADA-USD",
         "name": "Cardano",
         "sector": "Criptomonedas",
-        "price": 0.194240003824234,
+        "price": 0.19352999329566956,
         "trend": "bajista",
         "support": 0.19061000645160675,
         "resistance": 0.2153870016336441,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (1.87%)",
+          "Precio a menos de 1 ATR del soporte (1.51%)",
           "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.31× su promedio de 20 días"
+          "Volumen relativo 1.28× su promedio de 20 días"
         ]
       },
       {
         "ticker": "BNB-USD",
         "name": "BNB (Binance)",
         "sector": "Criptomonedas",
-        "price": 697.9500122070312,
+        "price": 695.9400024414062,
         "trend": "lateral",
         "support": null,
         "resistance": 750.822998046875,
         "score": 0,
         "reasons": [
           "Precio arriba de su media de 200 días",
-          "Volumen relativo 2.17× su promedio de 20 días"
+          "Volumen relativo 2.13× su promedio de 20 días"
         ]
       },
       {
         "ticker": "DOGE-USD",
         "name": "Dogecoin",
         "sector": "Criptomonedas",
-        "price": 0.07541999965906143,
+        "price": 0.07528000324964523,
         "trend": "bajista",
         "support": 0.07498200237751007,
         "resistance": 0.08365000039339066,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (0.58%)",
+          "Precio a menos de 1 ATR del soporte (0.4%)",
           "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.82× su promedio de 20 días"
+          "Volumen relativo 1.80× su promedio de 20 días"
         ]
       },
       {
         "ticker": "AVAX-USD",
         "name": "Avalanche",
         "sector": "Criptomonedas",
-        "price": 8.402999877929688,
+        "price": 8.399999618530273,
         "trend": "alcista",
         "support": 7.181053161621094,
         "resistance": 10.037740707397461,
@@ -3496,7 +3289,7 @@
           "Tendencia semanal alcista",
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio arriba de su media de 200 días",
-          "Volumen relativo 1.14× su promedio de 20 días"
+          "Volumen relativo 1.13× su promedio de 20 días"
         ]
       },
       {
@@ -6093,25 +5886,10 @@
         ]
       },
       {
-        "ticker": "ETH-USD",
-        "name": "Ethereum",
-        "sector": "Criptomonedas",
-        "price": 2237.1298828125,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 2522.841796875,
-        "score": -1,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Precio arriba de su media de 200 días",
-          "Volumen relativo 2.17× su promedio de 20 días"
-        ]
-      },
-      {
         "ticker": "XRP-USD",
         "name": "XRP (Ripple)",
         "sector": "Criptomonedas",
-        "price": 1.2487000226974487,
+        "price": 1.249500036239624,
         "trend": "bajista",
         "support": null,
         "resistance": 1.396630048751831,
@@ -6119,14 +5897,14 @@
         "reasons": [
           "Tendencia semanal bajista",
           "Precio abajo de su media de 200 días",
-          "Volumen relativo 2.34× su promedio de 20 días"
+          "Volumen relativo 2.32× su promedio de 20 días"
         ]
       },
       {
         "ticker": "XLM-USD",
         "name": "Stellar Lumens",
         "sector": "Criptomonedas",
-        "price": 0.16862499713897705,
+        "price": 0.16784299910068512,
         "trend": "bajista",
         "support": null,
         "resistance": 0.18680499494075775,
@@ -8111,24 +7889,7 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
           "Volumen relativo 1.64× su promedio de 20 días",
-          "No confirma «vender»: RSI en sobreventa (26)"
-        ]
-      },
-      {
-        "ticker": "SOL-USD",
-        "name": "Solana",
-        "sector": "Criptomonedas",
-        "price": 95.38999938964844,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 105.48805236816406,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio arriba de su media de 200 días",
-          "Volumen relativo 2.14× su promedio de 20 días",
-          "No confirma «vender»: RSI en sobreventa (29); momentum de 12 meses positivo y arriba de su media de 200 días"
+          "No confirma «precaución»: RSI en sobreventa (26)"
         ]
       },
       {
@@ -8145,7 +7906,7 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio arriba de su media de 200 días",
           "Volumen relativo 1.67× su promedio de 20 días",
-          "No confirma «vender»: momentum de 12 meses positivo y arriba de su media de 200 días"
+          "No confirma «precaución»: momentum de 12 meses positivo y arriba de su media de 200 días"
         ]
       },
       {
@@ -8162,7 +7923,7 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
           "Volumen relativo 4.58× su promedio de 20 días",
-          "No confirma «vender»: RSI en sobreventa (25)"
+          "No confirma «precaución»: RSI en sobreventa (25)"
         ]
       },
       {
@@ -8179,7 +7940,7 @@
           "Precio a menos de 1 ATR de la resistencia (1.04%)",
           "Precio arriba de su media de 200 días",
           "Volumen relativo 1.07× su promedio de 20 días",
-          "No confirma «vender»: momentum de 12 meses positivo y arriba de su media de 200 días"
+          "No confirma «precaución»: momentum de 12 meses positivo y arriba de su media de 200 días"
         ]
       },
       {
@@ -8195,7 +7956,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.29%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.77×)"
+          "No confirma «precaución»: volumen relativo bajo (0.77×)"
         ]
       },
       {
@@ -8211,7 +7972,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.06%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.08×)"
+          "No confirma «precaución»: volumen relativo bajo (0.08×)"
         ]
       },
       {
@@ -8227,7 +7988,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (2.8%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.85×)"
+          "No confirma «precaución»: volumen relativo bajo (0.85×)"
         ]
       },
       {
@@ -8243,7 +8004,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.58%)",
           "Precio arriba de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.73×)"
+          "No confirma «precaución»: volumen relativo bajo (0.73×)"
         ]
       },
       {
@@ -8259,7 +8020,7 @@
           "Tendencia semanal bajista",
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.94×)"
+          "No confirma «precaución»: volumen relativo bajo (0.94×)"
         ]
       },
       {
@@ -8275,7 +8036,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.25%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.88×)"
+          "No confirma «precaución»: volumen relativo bajo (0.88×)"
         ]
       },
       {
@@ -8291,7 +8052,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.09%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.75×)"
+          "No confirma «precaución»: volumen relativo bajo (0.75×)"
         ]
       },
       {
@@ -8307,7 +8068,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (0.79%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.85×)"
+          "No confirma «precaución»: volumen relativo bajo (0.85×)"
         ]
       },
       {
@@ -8323,7 +8084,7 @@
           "Tendencia semanal bajista",
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: RSI en sobreventa (29); volumen relativo bajo (0.98×)"
+          "No confirma «precaución»: RSI en sobreventa (29); volumen relativo bajo (0.98×)"
         ]
       },
       {
@@ -8339,7 +8100,7 @@
           "Tendencia semanal bajista",
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.70×)"
+          "No confirma «precaución»: volumen relativo bajo (0.70×)"
         ]
       },
       {
@@ -8356,7 +8117,7 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
           "Volumen relativo 1.69× su promedio de 20 días",
-          "No confirma «vender»: RSI en sobreventa (24)"
+          "No confirma «precaución»: RSI en sobreventa (24)"
         ]
       },
       {
@@ -8373,7 +8134,7 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
           "Volumen relativo 1.15× su promedio de 20 días",
-          "No confirma «vender»: RSI en sobreventa (26)"
+          "No confirma «precaución»: RSI en sobreventa (26)"
         ]
       },
       {
@@ -8390,7 +8151,7 @@
           "Precio a menos de 1 ATR de la resistencia (0.19%)",
           "Precio arriba de su media de 200 días",
           "Volumen relativo 1.07× su promedio de 20 días",
-          "No confirma «vender»: momentum de 12 meses positivo y arriba de su media de 200 días"
+          "No confirma «precaución»: momentum de 12 meses positivo y arriba de su media de 200 días"
         ]
       },
       {
@@ -8406,7 +8167,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.24%)",
           "Precio arriba de su media de 200 días",
-          "No confirma «vender»: momentum de 12 meses positivo y arriba de su media de 200 días; volumen relativo bajo (0.93×)"
+          "No confirma «precaución»: momentum de 12 meses positivo y arriba de su media de 200 días; volumen relativo bajo (0.93×)"
         ]
       },
       {
@@ -8422,7 +8183,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (1.82%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.69×)"
+          "No confirma «precaución»: volumen relativo bajo (0.69×)"
         ]
       },
       {
@@ -8438,7 +8199,7 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (0.24%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.76×)"
+          "No confirma «precaución»: volumen relativo bajo (0.76×)"
         ]
       },
       {
@@ -8454,7 +8215,249 @@
           "Tendencia semanal bajista",
           "Precio a menos de 1 ATR de la resistencia (2.66%)",
           "Precio abajo de su media de 200 días",
-          "No confirma «vender»: volumen relativo bajo (0.84×)"
+          "No confirma «precaución»: volumen relativo bajo (0.84×)"
+        ]
+      }
+    ],
+    "precaucion": [
+      {
+        "ticker": "F",
+        "name": "Ford",
+        "sector": "Automotriz",
+        "price": 12.25,
+        "trend": "bajista",
+        "support": 11.90999984741211,
+        "resistance": 12.329999923706055,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (0.65%)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.08× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "NBIX",
+        "name": "Neurocrine",
+        "sector": "Biotecnología",
+        "price": 146.10000610351562,
+        "trend": "bajista",
+        "support": 136.30999755859375,
+        "resistance": 146.9199981689453,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (0.56%)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.07× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "NU",
+        "name": "Nu Holdings (Nubank)",
+        "sector": "Pagos / Fintech",
+        "price": 11.609999656677246,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 14.25,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.00× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "CMCSA",
+        "name": "Comcast",
+        "sector": "Telecomunicaciones",
+        "price": 23.219999313354492,
+        "trend": "bajista",
+        "support": 21.08229525461308,
+        "resistance": 23.290000915527344,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (0.3%)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.56× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "NFLX",
+        "name": "Netflix",
+        "sector": "Medios / Entretenimiento",
+        "price": 62.08000183105469,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 72.0999984741211,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.16× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "PH",
+        "name": "Parker Hannifin",
+        "sector": "Industrial / Maquinaria",
+        "price": 899.8200073242188,
+        "trend": "bajista",
+        "support": 868.489990234375,
+        "resistance": 976.4400024414062,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 2.25× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "SCCO",
+        "name": "Southern Copper",
+        "sector": "Minería / Metales",
+        "price": 177.52999877929688,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 195.16000366210938,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.97× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "O",
+        "name": "Realty Income Corporation",
+        "sector": "Bienes raíces (REIT)",
+        "price": 56.93000030517578,
+        "trend": "bajista",
+        "support": 55.279998779296875,
+        "resistance": 57.41999816894531,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (0.86%)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.27× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "EMN",
+        "name": "Eastman Chemical Company",
+        "sector": "Materiales básicos",
+        "price": 66.52999877929688,
+        "trend": "bajista",
+        "support": 64.41999816894531,
+        "resistance": 67.62000274658203,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (1.64%)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.20× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "GLW",
+        "name": "Corning Incorporated",
+        "sector": "Tecnología",
+        "price": 123.30999755859375,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 157.2738564927047,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.44× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "GEN",
+        "name": "Gen Digital Inc.",
+        "sector": "Tecnología",
+        "price": 29.1299991607666,
+        "trend": "bajista",
+        "support": 27.010000228881836,
+        "resistance": 29.569646122664203,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (1.51%)",
+          "Precio arriba de su media de 200 días",
+          "Volumen relativo 1.10× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "HUBB",
+        "name": "Hubbell Inc",
+        "sector": "Industria",
+        "price": 422.44000244140625,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 469.3599853515625,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.24× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "XYL",
+        "name": "Xylem Inc.",
+        "sector": "Industria",
+        "price": 92.4000015258789,
+        "trend": "bajista",
+        "support": null,
+        "resistance": 105.06999969482422,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 1.03× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "COF",
+        "name": "Capital One Financial Corporati",
+        "sector": "Servicios financieros",
+        "price": 204.85000610351562,
+        "trend": "bajista",
+        "support": 193.7100067138672,
+        "resistance": 207.0,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR de la resistencia (1.05%)",
+          "Precio arriba de su media de 200 días",
+          "Volumen relativo 1.15× su promedio de 20 días"
+        ]
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA Corporation",
+        "sector": "Tecnología",
+        "price": 157.91000366210938,
+        "trend": "bajista",
+        "support": 144.82000732421875,
+        "resistance": 186.77999877929688,
+        "score": -2,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio abajo de su media de 200 días",
+          "Volumen relativo 2.04× su promedio de 20 días"
         ]
       }
     ],
