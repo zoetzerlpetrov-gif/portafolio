@@ -22,9 +22,9 @@ PASO = 5
 INICIO = 260  # ~1 año de datos antes de la primera evaluación (media de 200 días + ventanas)
 
 ALCISTAS = ("tendencia_alcista", "cerca_soporte", "doble_piso", "arriba_sma200", "rsi_sobreventa", "macd_positivo", "momentum_positivo",
-            "volumen_alto_al_alza", "mfi_sobreventa", "comprar_anterior", "comprar")
+            "volumen_alto_al_alza", "mfi_sobreventa", "comprar_anterior", "comprar", "rebote")
 BAJISTAS = ("tendencia_bajista", "cerca_resistencia", "doble_techo", "abajo_sma200", "rsi_sobrecompra", "macd_negativo", "momentum_negativo",
-            "volumen_alto_a_la_baja", "mfi_sobrecompra", "vender_anterior", "vender")
+            "volumen_alto_a_la_baja", "mfi_sobrecompra", "precaucion_anterior", "precaucion")
 NOMBRES = {
     "tendencia_alcista": "Tendencia semanal alcista", "tendencia_bajista": "Tendencia semanal bajista",
     "cerca_soporte": "A menos de 1 ATR del soporte", "cerca_resistencia": "A menos de 1 ATR de la resistencia",
@@ -35,8 +35,9 @@ NOMBRES = {
     "momentum_positivo": "Momentum 12-1 meses positivo", "momentum_negativo": "Momentum 12-1 meses negativo",
     "volumen_alto_al_alza": "Volumen relativo ≥ 1.5× en día de alza", "volumen_alto_a_la_baja": "Volumen relativo ≥ 1.5× en día de baja",
     "mfi_sobreventa": "MFI(14) menor a 20", "mfi_sobrecompra": "MFI(14) mayor a 80",
-    "comprar_anterior": "«Comprar» sin confirmaciones (versión anterior)", "vender_anterior": "«Vender» sin confirmaciones (versión anterior)",
-    "comprar": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)", "vender": "«Vender» con confirmaciones",
+    "comprar_anterior": "«Comprar» sin confirmaciones (versión anterior)", "precaucion_anterior": "«Precaución» sin confirmaciones (antes «vender»)",
+    "comprar": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)", "precaucion": "«Precaución» con confirmaciones (antes «vender»)",
+    "rebote": "«Rebote»: RSI < 30 con el precio arriba de su media de 200 días",
 }
 TRAMO_PRUEBA_ANIOS = 3  # los últimos 3 años se reservan para comprobar fuera de muestra
 
@@ -73,8 +74,8 @@ def senales(daily: pd.DataFrame, i: int, weekly: pd.Series, ind: pd.DataFrame) -
             "volumen_alto_al_alza": rvol is not None and rvol >= 1.5 and cur > prev,
             "volumen_alto_a_la_baja": rvol is not None and rvol >= 1.5 and cur < prev,
             "mfi_sobreventa": mfi is not None and mfi < 20, "mfi_sobrecompra": mfi is not None and mfi > 80,
-            "comprar_anterior": anterior == "comprar", "vender_anterior": anterior == "vender",
-            "comprar": cat == "comprar", "vender": cat == "vender"}
+            "comprar_anterior": anterior == "comprar", "precaucion_anterior": anterior == "precaucion",
+            "comprar": cat == "comprar", "precaucion": cat == "precaucion", "rebote": cat == "rebote"}
 
 
 def backtest_ticker(daily: pd.DataFrame) -> dict[str, dict[str, list[float]]] | None:
@@ -128,7 +129,8 @@ def run(daily_por_ticker: dict[str, pd.DataFrame], clase=None) -> dict:
                 pc[k].extend(v)
         todos = r["ent"]["_todos"] + r["prueba"]["_todos"]
         por_ticker[t] = {"base": resumen(todos, False), "comprar": resumen(r["ent"]["comprar"] + r["prueba"]["comprar"], False),
-                         "vender": resumen(r["ent"]["vender"] + r["prueba"]["vender"], True)}
+                         "rebote": resumen(r["ent"]["rebote"] + r["prueba"]["rebote"], False),
+                         "precaucion": resumen(r["ent"]["precaucion"] + r["prueba"]["precaucion"], True)}
 
     def tabla(src):
         return {k: {"nombre": NOMBRES[k], "tipo": "bajista" if k in BAJISTAS else "alcista", **resumen(src[k], k in BAJISTAS)} for k in ALCISTAS + BAJISTAS}
