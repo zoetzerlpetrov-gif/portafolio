@@ -1,0 +1,4575 @@
+{
+ "generated_at": "2026-10-30T14:56:37.659160-06:00",
+ "horizonte_dias": 21,
+ "paso_dias": 5,
+ "anios": 10,
+ "tickers": 264,
+ "comprar_y_mantener": {
+  "senales": 116400,
+  "acierto_pct": 55.6,
+  "retorno_medio_pct": 2.77
+ },
+ "reglas": {
+  "tendencia_alcista": {
+   "nombre": "Tendencia semanal alcista",
+   "tipo": "alcista",
+   "senales": 48174,
+   "acierto_pct": 54.7,
+   "retorno_medio_pct": 1.33
+  },
+  "cerca_soporte": {
+   "nombre": "A menos de 1 ATR del soporte",
+   "tipo": "alcista",
+   "senales": 24414,
+   "acierto_pct": 55.7,
+   "retorno_medio_pct": 5.12
+  },
+  "doble_piso": {
+   "nombre": "Doble piso confirmado",
+   "tipo": "alcista",
+   "senales": 11619,
+   "acierto_pct": 54.7,
+   "retorno_medio_pct": 0.82
+  },
+  "arriba_sma200": {
+   "nombre": "Arriba de la media de 200 días",
+   "tipo": "alcista",
+   "senales": 71814,
+   "acierto_pct": 55.3,
+   "retorno_medio_pct": 1.35
+  },
+  "comprar": {
+   "nombre": "Clasificación «comprar»",
+   "tipo": "alcista",
+   "senales": 10028,
+   "acierto_pct": 55.1,
+   "retorno_medio_pct": 1.23
+  },
+  "tendencia_bajista": {
+   "nombre": "Tendencia semanal bajista",
+   "tipo": "bajista",
+   "senales": 34880,
+   "acierto_pct": 42.6,
+   "retorno_medio_pct": 6.26
+  },
+  "cerca_resistencia": {
+   "nombre": "A menos de 1 ATR de la resistencia",
+   "tipo": "bajista",
+   "senales": 29173,
+   "acierto_pct": 44.3,
+   "retorno_medio_pct": 1.39
+  },
+  "doble_techo": {
+   "nombre": "Doble techo confirmado",
+   "tipo": "bajista",
+   "senales": 8111,
+   "acierto_pct": 41.4,
+   "retorno_medio_pct": 2.0
+  },
+  "abajo_sma200": {
+   "nombre": "Abajo de la media de 200 días",
+   "tipo": "bajista",
+   "senales": 44586,
+   "acierto_pct": 43.4,
+   "retorno_medio_pct": 5.06
+  },
+  "vender": {
+   "nombre": "Clasificación «vender»",
+   "tipo": "bajista",
+   "senales": 8924,
+   "acierto_pct": 42.3,
+   "retorno_medio_pct": 2.22
+  }
+ },
+ "por_ticker": {
+  "VOO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 69.1,
+    "retorno_medio_pct": 1.4
+   },
+   "comprar": {
+    "senales": 50,
+    "acierto_pct": 76.0,
+    "retorno_medio_pct": 1.13
+   },
+   "vender": {
+    "senales": 13,
+    "acierto_pct": 23.1,
+    "retorno_medio_pct": 4.82
+   }
+  },
+  "QQQ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 66.9,
+    "retorno_medio_pct": 1.83
+   },
+   "comprar": {
+    "senales": 49,
+    "acierto_pct": 77.6,
+    "retorno_medio_pct": 2.9
+   },
+   "vender": {
+    "senales": 20,
+    "acierto_pct": 35.0,
+    "retorno_medio_pct": 4.05
+   }
+  },
+  "VTI": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 67.8,
+    "retorno_medio_pct": 1.37
+   },
+   "comprar": {
+    "senales": 53,
+    "acierto_pct": 73.6,
+    "retorno_medio_pct": 1.19
+   },
+   "vender": {
+    "senales": 18,
+    "acierto_pct": 27.8,
+    "retorno_medio_pct": 4.35
+   }
+  },
+  "DIA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 66.9,
+    "retorno_medio_pct": 1.11
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 60.5,
+    "retorno_medio_pct": 0.31
+   },
+   "vender": {
+    "senales": 17,
+    "acierto_pct": 23.5,
+    "retorno_medio_pct": 4.7
+   }
+  },
+  "IWM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 1.07
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 54.3,
+    "retorno_medio_pct": 0.88
+   },
+   "vender": {
+    "senales": 29,
+    "acierto_pct": 51.7,
+    "retorno_medio_pct": 1.42
+   }
+  },
+  "VEA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.3,
+    "retorno_medio_pct": 0.91
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 61.9,
+    "retorno_medio_pct": 0.92
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 12.0,
+    "retorno_medio_pct": 4.2
+   }
+  },
+  "VWO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 0.7
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 34.9,
+    "retorno_medio_pct": -1.49
+   },
+   "vender": {
+    "senales": 23,
+    "acierto_pct": 43.5,
+    "retorno_medio_pct": 1.15
+   }
+  },
+  "VT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 65.3,
+    "retorno_medio_pct": 1.14
+   },
+   "comprar": {
+    "senales": 55,
+    "acierto_pct": 67.3,
+    "retorno_medio_pct": 1.23
+   },
+   "vender": {
+    "senales": 19,
+    "acierto_pct": 21.1,
+    "retorno_medio_pct": 4.25
+   }
+  },
+  "SCHD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 65.1,
+    "retorno_medio_pct": 1.18
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 69.2,
+    "retorno_medio_pct": 0.59
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 18.5,
+    "retorno_medio_pct": 3.68
+   }
+  },
+  "NAFTRACISHRS.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 0.69
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 58.5,
+    "retorno_medio_pct": 1.13
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 45.2,
+    "retorno_medio_pct": 0.85
+   }
+  },
+  "FUNO11.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 1.21
+   },
+   "comprar": {
+    "senales": 23,
+    "acierto_pct": 52.2,
+    "retorno_medio_pct": -1.4
+   },
+   "vender": {
+    "senales": 17,
+    "acierto_pct": 52.9,
+    "retorno_medio_pct": -0.81
+   }
+  },
+  "FIBRAPL14.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.0,
+    "retorno_medio_pct": 1.65
+   },
+   "comprar": {
+    "senales": 24,
+    "acierto_pct": 54.2,
+    "retorno_medio_pct": 0.76
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 22.7,
+    "retorno_medio_pct": 6.01
+   }
+  },
+  "DANHOS13.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": 0.89
+   },
+   "comprar": {
+    "senales": 20,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 2.04
+   },
+   "vender": {
+    "senales": 13,
+    "acierto_pct": 30.8,
+    "retorno_medio_pct": 0.73
+   }
+  },
+  "FMTY14.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.9,
+    "retorno_medio_pct": 0.74
+   },
+   "comprar": {
+    "senales": 14,
+    "acierto_pct": 64.3,
+    "retorno_medio_pct": 1.78
+   },
+   "vender": {
+    "senales": 15,
+    "acierto_pct": 73.3,
+    "retorno_medio_pct": -1.41
+   }
+  },
+  "FIBRAMQ12.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.0,
+    "retorno_medio_pct": 1.48
+   },
+   "comprar": {
+    "senales": 23,
+    "acierto_pct": 52.2,
+    "retorno_medio_pct": 2.04
+   },
+   "vender": {
+    "senales": 16,
+    "acierto_pct": 31.2,
+    "retorno_medio_pct": 3.18
+   }
+  },
+  "FNOVA17.MX": {
+   "base": {
+    "senales": 356,
+    "acierto_pct": 45.5,
+    "retorno_medio_pct": 1.23
+   },
+   "comprar": {
+    "senales": 27,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 1.48
+   },
+   "vender": {
+    "senales": 10,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": -0.76
+   }
+  },
+  "FIHO12.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 45.6,
+    "retorno_medio_pct": 0.17
+   },
+   "comprar": {
+    "senales": 18,
+    "acierto_pct": 61.1,
+    "retorno_medio_pct": 3.05
+   },
+   "vender": {
+    "senales": 16,
+    "acierto_pct": 56.2,
+    "retorno_medio_pct": -3.39
+   }
+  },
+  "FSHOP13.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.5,
+    "retorno_medio_pct": 0.62
+   },
+   "comprar": {
+    "senales": 17,
+    "acierto_pct": 64.7,
+    "retorno_medio_pct": 1.37
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": -2.68
+   }
+  },
+  "FINN13.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 40.9,
+    "retorno_medio_pct": -0.23
+   },
+   "comprar": {
+    "senales": 20,
+    "acierto_pct": 35.0,
+    "retorno_medio_pct": 3.61
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 58.1,
+    "retorno_medio_pct": -0.63
+   }
+  },
+  "STORAGE18.MX": {
+   "base": {
+    "senales": 121,
+    "acierto_pct": 64.5,
+    "retorno_medio_pct": 1.74
+   },
+   "comprar": {
+    "senales": 12,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": 0.69
+   },
+   "vender": {
+    "senales": 8,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.67
+   }
+  },
+  "BTC-USD": {
+   "base": {
+    "senales": 675,
+    "acierto_pct": 52.3,
+    "retorno_medio_pct": 3.73
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 57.8,
+    "retorno_medio_pct": 4.65
+   },
+   "vender": {
+    "senales": 68,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 1.08
+   }
+  },
+  "ETH-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 49.3,
+    "retorno_medio_pct": 3.41
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 67.4,
+    "retorno_medio_pct": 8.47
+   },
+   "vender": {
+    "senales": 58,
+    "acierto_pct": 63.8,
+    "retorno_medio_pct": -2.37
+   }
+  },
+  "XRP-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 44.2,
+    "retorno_medio_pct": 4.24
+   },
+   "comprar": {
+    "senales": 62,
+    "acierto_pct": 37.1,
+    "retorno_medio_pct": -4.43
+   },
+   "vender": {
+    "senales": 65,
+    "acierto_pct": 47.7,
+    "retorno_medio_pct": 5.41
+   }
+  },
+  "XLM-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 42.8,
+    "retorno_medio_pct": 3.6
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 41.0,
+    "retorno_medio_pct": 7.98
+   },
+   "vender": {
+    "senales": 74,
+    "acierto_pct": 52.7,
+    "retorno_medio_pct": 4.36
+   }
+  },
+  "HBAR-USD": {
+   "base": {
+    "senales": 464,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": 4.75
+   },
+   "comprar": {
+    "senales": 29,
+    "acierto_pct": 48.3,
+    "retorno_medio_pct": -0.75
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": 1.12
+   }
+  },
+  "SOL-USD": {
+   "base": {
+    "senales": 423,
+    "acierto_pct": 51.1,
+    "retorno_medio_pct": 8.47
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 7.18
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 48.6,
+    "retorno_medio_pct": 5.57
+   }
+  },
+  "ADA-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 45.3,
+    "retorno_medio_pct": 3.66
+   },
+   "comprar": {
+    "senales": 28,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 9.67
+   },
+   "vender": {
+    "senales": 60,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": -0.12
+   }
+  },
+  "BNB-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 5.53
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 45.8,
+    "retorno_medio_pct": 1.43
+   },
+   "vender": {
+    "senales": 60,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 3.75
+   }
+  },
+  "DOGE-USD": {
+   "base": {
+    "senales": 600,
+    "acierto_pct": 44.7,
+    "retorno_medio_pct": 10.52
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 42.2,
+    "retorno_medio_pct": 23.71
+   },
+   "vender": {
+    "senales": 64,
+    "acierto_pct": 42.2,
+    "retorno_medio_pct": 5.78
+   }
+  },
+  "AVAX-USD": {
+   "base": {
+    "senales": 391,
+    "acierto_pct": 45.3,
+    "retorno_medio_pct": 3.59
+   },
+   "comprar": {
+    "senales": 23,
+    "acierto_pct": 43.5,
+    "retorno_medio_pct": 2.68
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 51.6,
+    "retorno_medio_pct": 4.54
+   }
+  },
+  "AAPL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.1,
+    "retorno_medio_pct": 2.42
+   },
+   "comprar": {
+    "senales": 54,
+    "acierto_pct": 64.8,
+    "retorno_medio_pct": 2.38
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 40.9,
+    "retorno_medio_pct": 2.24
+   }
+  },
+  "MSFT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.9,
+    "retorno_medio_pct": 2.29
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 62.2,
+    "retorno_medio_pct": 1.5
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": 2.32
+   }
+  },
+  "GOOGL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.2,
+    "retorno_medio_pct": 2.24
+   },
+   "comprar": {
+    "senales": 50,
+    "acierto_pct": 70.0,
+    "retorno_medio_pct": 3.37
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.67
+   }
+  },
+  "AMZN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.4,
+    "retorno_medio_pct": 1.91
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 62.7,
+    "retorno_medio_pct": 1.76
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 26.9,
+    "retorno_medio_pct": 4.04
+   }
+  },
+  "META": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 1.94
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 2.29
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 43.2,
+    "retorno_medio_pct": 0.97
+   }
+  },
+  "ORCL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 1.9
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 41.3,
+    "retorno_medio_pct": -0.77
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 38.2,
+    "retorno_medio_pct": 3.58
+   }
+  },
+  "CRM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.48
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 64.9,
+    "retorno_medio_pct": 2.91
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 57.6,
+    "retorno_medio_pct": -0.32
+   }
+  },
+  "ADBE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 0.94
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 56.2,
+    "retorno_medio_pct": 0.95
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 3.47
+   }
+  },
+  "SAP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 1.27
+   },
+   "comprar": {
+    "senales": 53,
+    "acierto_pct": 64.2,
+    "retorno_medio_pct": 1.51
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 36.8,
+    "retorno_medio_pct": 2.09
+   }
+  },
+  "IBM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 1.27
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": -1.28
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 32.5,
+    "retorno_medio_pct": 2.97
+   }
+  },
+  "NVDA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 65.1,
+    "retorno_medio_pct": 4.64
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 73.3,
+    "retorno_medio_pct": 4.27
+   },
+   "vender": {
+    "senales": 16,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": 9.43
+   }
+  },
+  "TSM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 2.97
+   },
+   "comprar": {
+    "senales": 52,
+    "acierto_pct": 69.2,
+    "retorno_medio_pct": 4.15
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": 0.8
+   }
+  },
+  "AVGO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 64.0,
+    "retorno_medio_pct": 3.31
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 71.4,
+    "retorno_medio_pct": 4.16
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 40.9,
+    "retorno_medio_pct": 7.39
+   }
+  },
+  "ASML": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.6,
+    "retorno_medio_pct": 2.78
+   },
+   "comprar": {
+    "senales": 69,
+    "acierto_pct": 73.9,
+    "retorno_medio_pct": 5.1
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 27.3,
+    "retorno_medio_pct": 6.2
+   }
+  },
+  "AMD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 5.49
+   },
+   "comprar": {
+    "senales": 47,
+    "acierto_pct": 63.8,
+    "retorno_medio_pct": 7.8
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 39.1,
+    "retorno_medio_pct": 5.7
+   }
+  },
+  "QCOM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.0,
+    "retorno_medio_pct": 1.96
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.94
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 32.3,
+    "retorno_medio_pct": 5.72
+   }
+  },
+  "INTC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.6,
+    "retorno_medio_pct": 2.06
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.47
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 46.5,
+    "retorno_medio_pct": 0.48
+   }
+  },
+  "TXN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 1.72
+   },
+   "comprar": {
+    "senales": 56,
+    "acierto_pct": 51.8,
+    "retorno_medio_pct": 0.01
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": 3.75
+   }
+  },
+  "MU": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.2,
+    "retorno_medio_pct": 4.23
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 65.9,
+    "retorno_medio_pct": 7.57
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 31.1,
+    "retorno_medio_pct": 7.98
+   }
+  },
+  "AMAT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 2.89
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 4.72
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 2.88
+   }
+  },
+  "XOM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 1.56
+   },
+   "comprar": {
+    "senales": 47,
+    "acierto_pct": 46.8,
+    "retorno_medio_pct": -0.19
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 0.03
+   }
+  },
+  "CVX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.2,
+    "retorno_medio_pct": 1.44
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 71.1,
+    "retorno_medio_pct": 1.67
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": 0.1
+   }
+  },
+  "SHEL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 1.29
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 41.9,
+    "retorno_medio_pct": -1.75
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 44.1,
+    "retorno_medio_pct": -1.47
+   }
+  },
+  "TTE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 1.37
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 47.5,
+    "retorno_medio_pct": 0.54
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 40.7,
+    "retorno_medio_pct": 4.08
+   }
+  },
+  "BP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.4,
+    "retorno_medio_pct": 1.11
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.72
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 46.5,
+    "retorno_medio_pct": -0.31
+   }
+  },
+  "COP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.2,
+    "retorno_medio_pct": 2.01
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 51.1,
+    "retorno_medio_pct": -0.08
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 36.4,
+    "retorno_medio_pct": 6.18
+   }
+  },
+  "PBR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 3.38
+   },
+   "comprar": {
+    "senales": 49,
+    "acierto_pct": 49.0,
+    "retorno_medio_pct": 2.75
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 26.5,
+    "retorno_medio_pct": 7.1
+   }
+  },
+  "ENB": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 1.1
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 61.0,
+    "retorno_medio_pct": 0.62
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 32.5,
+    "retorno_medio_pct": 3.98
+   }
+  },
+  "SLB": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.9,
+    "retorno_medio_pct": 0.93
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 45.7,
+    "retorno_medio_pct": -0.58
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 38.2,
+    "retorno_medio_pct": 2.6
+   }
+  },
+  "EOG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.0,
+    "retorno_medio_pct": 1.6
+   },
+   "comprar": {
+    "senales": 47,
+    "acierto_pct": 46.8,
+    "retorno_medio_pct": -1.72
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 35.0,
+    "retorno_medio_pct": 4.03
+   }
+  },
+  "NEE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 1.25
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 52.5,
+    "retorno_medio_pct": -1.25
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 37.0,
+    "retorno_medio_pct": 2.5
+   }
+  },
+  "FSLR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.9,
+    "retorno_medio_pct": 2.09
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 55.9,
+    "retorno_medio_pct": 3.38
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": -1.78
+   }
+  },
+  "ENPH": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.7,
+    "retorno_medio_pct": 5.24
+   },
+   "comprar": {
+    "senales": 27,
+    "acierto_pct": 37.0,
+    "retorno_medio_pct": -1.88
+   },
+   "vender": {
+    "senales": 60,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 7.0
+   }
+  },
+  "BEP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.45
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 30.3,
+    "retorno_medio_pct": -2.93
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 42.4,
+    "retorno_medio_pct": 4.27
+   }
+  },
+  "DUK": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 0.83
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 51.2,
+    "retorno_medio_pct": 0.36
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 12.5,
+    "retorno_medio_pct": 3.47
+   }
+  },
+  "SO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.06
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 47.5,
+    "retorno_medio_pct": -0.03
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 1.71
+   }
+  },
+  "AEP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 0.97
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 37.8,
+    "retorno_medio_pct": -1.34
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 16.1,
+    "retorno_medio_pct": 4.0
+   }
+  },
+  "D": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 0.37
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": -0.46
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": -0.63
+   }
+  },
+  "EXC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 0.91
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 55.8,
+    "retorno_medio_pct": -0.44
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 28.6,
+    "retorno_medio_pct": 2.69
+   }
+  },
+  "IBDRY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.0,
+    "retorno_medio_pct": 1.72
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 45.1,
+    "retorno_medio_pct": 0.09
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 35.5,
+    "retorno_medio_pct": 2.92
+   }
+  },
+  "TSLA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 4.9
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 54.1,
+    "retorno_medio_pct": 2.37
+   },
+   "vender": {
+    "senales": 49,
+    "acierto_pct": 38.8,
+    "retorno_medio_pct": 6.1
+   }
+  },
+  "TM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 0.89
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.41
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 51.4,
+    "retorno_medio_pct": -0.7
+   }
+  },
+  "VWAGY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.4,
+    "retorno_medio_pct": 0.1
+   },
+   "comprar": {
+    "senales": 50,
+    "acierto_pct": 48.0,
+    "retorno_medio_pct": 0.55
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 51.1,
+    "retorno_medio_pct": -2.39
+   }
+  },
+  "GM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 1.38
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 52.1,
+    "retorno_medio_pct": 2.23
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 39.5,
+    "retorno_medio_pct": 3.29
+   }
+  },
+  "F": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 1.23
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 41.9,
+    "retorno_medio_pct": -0.56
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 42.1,
+    "retorno_medio_pct": 1.14
+   }
+  },
+  "STLA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.0,
+    "retorno_medio_pct": 0.18
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.34
+   },
+   "vender": {
+    "senales": 47,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": -0.3
+   }
+  },
+  "HMC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.6,
+    "retorno_medio_pct": 0.48
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 0.48
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 0.56
+   }
+  },
+  "BYDDY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.7,
+    "retorno_medio_pct": 2.21
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 57.1,
+    "retorno_medio_pct": 4.51
+   },
+   "vender": {
+    "senales": 47,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 1.61
+   }
+  },
+  "MBGYY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 0.74
+   },
+   "comprar": {
+    "senales": 49,
+    "acierto_pct": 61.2,
+    "retorno_medio_pct": 1.05
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 0.11
+   }
+  },
+  "RACE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 1.65
+   },
+   "comprar": {
+    "senales": 54,
+    "acierto_pct": 63.0,
+    "retorno_medio_pct": 0.95
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 41.7,
+    "retorno_medio_pct": 3.58
+   }
+  },
+  "DAL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 1.67
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 1.4
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 35.1,
+    "retorno_medio_pct": 4.02
+   }
+  },
+  "UAL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 2.01
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 48.7,
+    "retorno_medio_pct": 1.8
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 29.4,
+    "retorno_medio_pct": 6.59
+   }
+  },
+  "AAL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 47.9,
+    "retorno_medio_pct": 0.19
+   },
+   "comprar": {
+    "senales": 17,
+    "acierto_pct": 29.4,
+    "retorno_medio_pct": -2.68
+   },
+   "vender": {
+    "senales": 48,
+    "acierto_pct": 41.7,
+    "retorno_medio_pct": 2.4
+   }
+  },
+  "LUV": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.1,
+    "retorno_medio_pct": 0.72
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 44.1,
+    "retorno_medio_pct": -2.29
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 28.2,
+    "retorno_medio_pct": 5.24
+   }
+  },
+  "RYAAY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.9,
+    "retorno_medio_pct": 0.93
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": -1.38
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 34.8,
+    "retorno_medio_pct": 5.76
+   }
+  },
+  "VLRS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 1.57
+   },
+   "comprar": {
+    "senales": 29,
+    "acierto_pct": 48.3,
+    "retorno_medio_pct": -0.86
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 34.9,
+    "retorno_medio_pct": 6.0
+   }
+  },
+  "CPA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.9,
+    "retorno_medio_pct": 1.33
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 48.6,
+    "retorno_medio_pct": -1.31
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 27.3,
+    "retorno_medio_pct": 2.85
+   }
+  },
+  "JBLU": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 46.3,
+    "retorno_medio_pct": -0.44
+   },
+   "comprar": {
+    "senales": 21,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": -3.55
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 42.5,
+    "retorno_medio_pct": 2.83
+   }
+  },
+  "ALK": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.9,
+    "retorno_medio_pct": 0.65
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 65.4,
+    "retorno_medio_pct": 0.45
+   },
+   "vender": {
+    "senales": 41,
+    "acierto_pct": 36.6,
+    "retorno_medio_pct": 3.5
+   }
+  },
+  "DLAKY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 45.6,
+    "retorno_medio_pct": -0.12
+   },
+   "comprar": {
+    "senales": 29,
+    "acierto_pct": 62.1,
+    "retorno_medio_pct": -0.2
+   },
+   "vender": {
+    "senales": 53,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": -0.4
+   }
+  },
+  "AERO.MX": {
+   "base": {
+    "senales": 446,
+    "acierto_pct": 18.8,
+    "retorno_medio_pct": 316.73
+   },
+   "comprar": {
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": -9.91
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": -6.8
+   }
+  },
+  "AC.TO": {
+   "base": {
+    "senales": 446,
+    "acierto_pct": 49.3,
+    "retorno_medio_pct": 0.78
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 36.7,
+    "retorno_medio_pct": -1.87
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.04
+   }
+  },
+  "BA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.4,
+    "retorno_medio_pct": 0.69
+   },
+   "comprar": {
+    "senales": 24,
+    "acierto_pct": 29.2,
+    "retorno_medio_pct": -3.35
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 35.3,
+    "retorno_medio_pct": 4.56
+   }
+  },
+  "LMT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.06
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 52.9,
+    "retorno_medio_pct": -0.41
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": 1.32
+   }
+  },
+  "RTX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 1.56
+   },
+   "comprar": {
+    "senales": 53,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 0.62
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 30.8,
+    "retorno_medio_pct": 2.63
+   }
+  },
+  "NOC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.9,
+    "retorno_medio_pct": 0.95
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 0.29
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 1.95
+   }
+  },
+  "GD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 0.97
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": -0.35
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 51.5,
+    "retorno_medio_pct": -0.73
+   }
+  },
+  "LHX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 0.99
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 53.8,
+    "retorno_medio_pct": 0.35
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": 1.81
+   }
+  },
+  "GE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 2.11
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 55.9,
+    "retorno_medio_pct": -0.2
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": 1.64
+   }
+  },
+  "EADSY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 1.59
+   },
+   "comprar": {
+    "senales": 55,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.58
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 37.0,
+    "retorno_medio_pct": 4.13
+   }
+  },
+  "HWM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 64.2,
+    "retorno_medio_pct": 2.83
+   },
+   "comprar": {
+    "senales": 50,
+    "acierto_pct": 62.0,
+    "retorno_medio_pct": 1.89
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 34.6,
+    "retorno_medio_pct": 5.7
+   }
+  },
+  "TDG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.5,
+    "retorno_medio_pct": 2.13
+   },
+   "comprar": {
+    "senales": 58,
+    "acierto_pct": 56.9,
+    "retorno_medio_pct": -0.02
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 25.9,
+    "retorno_medio_pct": 5.44
+   }
+  },
+  "MAR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.77
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 67.5,
+    "retorno_medio_pct": 2.58
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 29.5,
+    "retorno_medio_pct": 3.99
+   }
+  },
+  "HLT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.7,
+    "retorno_medio_pct": 1.89
+   },
+   "comprar": {
+    "senales": 56,
+    "acierto_pct": 64.3,
+    "retorno_medio_pct": 1.7
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 27.3,
+    "retorno_medio_pct": 4.73
+   }
+  },
+  "BKNG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 1.36
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 56.1,
+    "retorno_medio_pct": -0.06
+   },
+   "vender": {
+    "senales": 41,
+    "acierto_pct": 39.0,
+    "retorno_medio_pct": 0.57
+   }
+  },
+  "UNH": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 1.14
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 45.7,
+    "retorno_medio_pct": -0.67
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 34.2,
+    "retorno_medio_pct": 3.03
+   }
+  },
+  "ABT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 1.01
+   },
+   "comprar": {
+    "senales": 49,
+    "acierto_pct": 46.9,
+    "retorno_medio_pct": -0.8
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 40.7,
+    "retorno_medio_pct": 1.52
+   }
+  },
+  "MDT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 0.62
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.75
+   },
+   "vender": {
+    "senales": 41,
+    "acierto_pct": 31.7,
+    "retorno_medio_pct": 1.92
+   }
+  },
+  "TMO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.2,
+    "retorno_medio_pct": 1.63
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.01
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 52.0,
+    "retorno_medio_pct": 0.78
+   }
+  },
+  "DHR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 1.36
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 0.32
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.77
+   }
+  },
+  "ISRG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 1.74
+   },
+   "comprar": {
+    "senales": 27,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": 0.86
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 43.6,
+    "retorno_medio_pct": 2.04
+   }
+  },
+  "SYK": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 0.98
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 47.2,
+    "retorno_medio_pct": -1.55
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 30.3,
+    "retorno_medio_pct": 2.56
+   }
+  },
+  "BSX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.4,
+    "retorno_medio_pct": 0.8
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 68.3,
+    "retorno_medio_pct": 1.54
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 51.4,
+    "retorno_medio_pct": 0.27
+   }
+  },
+  "BDX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.5,
+    "retorno_medio_pct": 0.54
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 44.7,
+    "retorno_medio_pct": -1.65
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 44.0,
+    "retorno_medio_pct": 1.39
+   }
+  },
+  "EW": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.6,
+    "retorno_medio_pct": 1.33
+   },
+   "comprar": {
+    "senales": 27,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": 0.9
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": 2.42
+   }
+  },
+  "LLY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.5,
+    "retorno_medio_pct": 3.15
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 75.6,
+    "retorno_medio_pct": 4.79
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 32.4,
+    "retorno_medio_pct": 3.44
+   }
+  },
+  "NVO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.4,
+    "retorno_medio_pct": 1.06
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 71.8,
+    "retorno_medio_pct": 2.28
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 31.2,
+    "retorno_medio_pct": 4.61
+   }
+  },
+  "JNJ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 0.98
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 64.7,
+    "retorno_medio_pct": 1.72
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": 1.16
+   }
+  },
+  "MRK": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": 1.37
+   },
+   "comprar": {
+    "senales": 52,
+    "acierto_pct": 71.2,
+    "retorno_medio_pct": 3.79
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 3.44
+   }
+  },
+  "ABBV": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.1,
+    "retorno_medio_pct": 1.82
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 61.4,
+    "retorno_medio_pct": 2.16
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 34.2,
+    "retorno_medio_pct": 2.88
+   }
+  },
+  "PFE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.0,
+    "retorno_medio_pct": 0.57
+   },
+   "comprar": {
+    "senales": 20,
+    "acierto_pct": 45.0,
+    "retorno_medio_pct": -0.39
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 0.1
+   }
+  },
+  "RHHBY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 1.18
+   },
+   "comprar": {
+    "senales": 54,
+    "acierto_pct": 51.9,
+    "retorno_medio_pct": -0.09
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.86
+   }
+  },
+  "NVS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 1.28
+   },
+   "comprar": {
+    "senales": 56,
+    "acierto_pct": 55.4,
+    "retorno_medio_pct": 0.74
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 36.8,
+    "retorno_medio_pct": 1.97
+   }
+  },
+  "AZN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 1.41
+   },
+   "comprar": {
+    "senales": 56,
+    "acierto_pct": 46.4,
+    "retorno_medio_pct": -0.68
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 24.0,
+    "retorno_medio_pct": 4.1
+   }
+  },
+  "AMGN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 1.36
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": 1.86
+   },
+   "vender": {
+    "senales": 17,
+    "acierto_pct": 29.4,
+    "retorno_medio_pct": 4.85
+   }
+  },
+  "REGN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 1.11
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 70.6,
+    "retorno_medio_pct": 3.73
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 51.3,
+    "retorno_medio_pct": 0.34
+   }
+  },
+  "VRTX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 1.58
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 1.18
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 44.1,
+    "retorno_medio_pct": 2.42
+   }
+  },
+  "GILD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 1.26
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 31.6,
+    "retorno_medio_pct": -0.31
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 51.6,
+    "retorno_medio_pct": 0.99
+   }
+  },
+  "BIIB": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 46.8,
+    "retorno_medio_pct": 0.25
+   },
+   "comprar": {
+    "senales": 13,
+    "acierto_pct": 23.1,
+    "retorno_medio_pct": -2.85
+   },
+   "vender": {
+    "senales": 54,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": 1.65
+   }
+  },
+  "MRNA": {
+   "base": {
+    "senales": 341,
+    "acierto_pct": 51.3,
+    "retorno_medio_pct": 6.11
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 18.16
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 55.9,
+    "retorno_medio_pct": 5.14
+   }
+  },
+  "BNTX": {
+   "base": {
+    "senales": 299,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": 1.38
+   },
+   "comprar": {
+    "senales": 22,
+    "acierto_pct": 27.3,
+    "retorno_medio_pct": -5.5
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 21.4,
+    "retorno_medio_pct": 7.08
+   }
+  },
+  "ALNY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.3,
+    "retorno_medio_pct": 1.6
+   },
+   "comprar": {
+    "senales": 25,
+    "acierto_pct": 48.0,
+    "retorno_medio_pct": -0.92
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 37.8,
+    "retorno_medio_pct": 1.3
+   }
+  },
+  "INCY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.7,
+    "retorno_medio_pct": 0.7
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -1.2
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 51.1,
+    "retorno_medio_pct": 0.66
+   }
+  },
+  "NBIX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 1.36
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 42.2,
+    "retorno_medio_pct": -1.59
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 54.2,
+    "retorno_medio_pct": -0.13
+   }
+  },
+  "ILMN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.1,
+    "retorno_medio_pct": 1.3
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 55.8,
+    "retorno_medio_pct": 1.41
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 52.5,
+    "retorno_medio_pct": -1.45
+   }
+  },
+  "NSRGY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.2,
+    "retorno_medio_pct": 0.54
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.53
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 40.5,
+    "retorno_medio_pct": 1.54
+   }
+  },
+  "MDLZ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 0.76
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 65.0,
+    "retorno_medio_pct": 1.18
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 1.42
+   }
+  },
+  "GIS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.2,
+    "retorno_medio_pct": 0.09
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 45.9,
+    "retorno_medio_pct": -2.24
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 38.5,
+    "retorno_medio_pct": 1.61
+   }
+  },
+  "KHC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 46.8,
+    "retorno_medio_pct": -0.33
+   },
+   "comprar": {
+    "senales": 21,
+    "acierto_pct": 61.9,
+    "retorno_medio_pct": 1.22
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 41.3,
+    "retorno_medio_pct": 1.99
+   }
+  },
+  "HSY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.2,
+    "retorno_medio_pct": 0.75
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 65.1,
+    "retorno_medio_pct": 0.49
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 54.2,
+    "retorno_medio_pct": -0.41
+   }
+  },
+  "TSN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 0.29
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.88
+   },
+   "vender": {
+    "senales": 47,
+    "acierto_pct": 44.7,
+    "retorno_medio_pct": 1.44
+   }
+  },
+  "CAG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 48.8,
+    "retorno_medio_pct": -0.15
+   },
+   "comprar": {
+    "senales": 28,
+    "acierto_pct": 53.6,
+    "retorno_medio_pct": -0.34
+   },
+   "vender": {
+    "senales": 48,
+    "acierto_pct": 45.8,
+    "retorno_medio_pct": 0.51
+   }
+  },
+  "HRL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 0.02
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": -1.72
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 38.9,
+    "retorno_medio_pct": 0.38
+   }
+  },
+  "GRUMAB.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.9,
+    "retorno_medio_pct": 0.54
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 46.2,
+    "retorno_medio_pct": -0.79
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 1.85
+   }
+  },
+  "BIMBOA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.7,
+    "retorno_medio_pct": 0.82
+   },
+   "comprar": {
+    "senales": 23,
+    "acierto_pct": 47.8,
+    "retorno_medio_pct": 1.26
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 29.6,
+    "retorno_medio_pct": 2.87
+   }
+  },
+  "KO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.4,
+    "retorno_medio_pct": 1.05
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 45.2,
+    "retorno_medio_pct": 0.01
+   },
+   "vender": {
+    "senales": 23,
+    "acierto_pct": 26.1,
+    "retorno_medio_pct": 1.73
+   }
+  },
+  "PEP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 0.53
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": -1.03
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 43.3,
+    "retorno_medio_pct": 0.98
+   }
+  },
+  "KOF": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 1.05
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 78.8,
+    "retorno_medio_pct": 2.58
+   },
+   "vender": {
+    "senales": 19,
+    "acierto_pct": 36.8,
+    "retorno_medio_pct": 3.52
+   }
+  },
+  "FMX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.5,
+    "retorno_medio_pct": 0.85
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 53.1,
+    "retorno_medio_pct": 1.06
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 41.7,
+    "retorno_medio_pct": 0.57
+   }
+  },
+  "MNST": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.36
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 0.9
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 2.54
+   }
+  },
+  "KDP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 1.24
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 1.32
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 23.5,
+    "retorno_medio_pct": 2.18
+   }
+  },
+  "STZ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 50.1,
+    "retorno_medio_pct": 0.05
+   },
+   "comprar": {
+    "senales": 24,
+    "acierto_pct": 16.7,
+    "retorno_medio_pct": -6.44
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 35.3,
+    "retorno_medio_pct": 2.86
+   }
+  },
+  "BUD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.7,
+    "retorno_medio_pct": 0.28
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": -0.96
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 40.9,
+    "retorno_medio_pct": 1.71
+   }
+  },
+  "DEO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.2,
+    "retorno_medio_pct": 0.04
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 43.9,
+    "retorno_medio_pct": -2.04
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 46.2,
+    "retorno_medio_pct": -0.46
+   }
+  },
+  "TAP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.9,
+    "retorno_medio_pct": -0.04
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": -1.45
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 2.01
+   }
+  },
+  "MCD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 0.68
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 61.5,
+    "retorno_medio_pct": 0.83
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 46.2,
+    "retorno_medio_pct": 0.06
+   }
+  },
+  "SBUX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 1.03
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 0.4
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 31.1,
+    "retorno_medio_pct": 3.09
+   }
+  },
+  "CMG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 2.22
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 61.8,
+    "retorno_medio_pct": 0.79
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 45.2,
+    "retorno_medio_pct": 4.45
+   }
+  },
+  "YUM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 0.93
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 52.2,
+    "retorno_medio_pct": -0.27
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 2.92
+   }
+  },
+  "QSR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.9,
+    "retorno_medio_pct": 0.77
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 38.9,
+    "retorno_medio_pct": -1.78
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 30.4,
+    "retorno_medio_pct": 3.46
+   }
+  },
+  "DRI": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": 1.82
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 60.5,
+    "retorno_medio_pct": -0.33
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 21.6,
+    "retorno_medio_pct": 5.35
+   }
+  },
+  "DPZ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.4,
+    "retorno_medio_pct": 1.03
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 1.15
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 38.2,
+    "retorno_medio_pct": 1.95
+   }
+  },
+  "WEN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": 0.05
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 42.3,
+    "retorno_medio_pct": -0.09
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 36.7,
+    "retorno_medio_pct": 1.29
+   }
+  },
+  "TXRH": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 1.84
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 2.47
+   },
+   "vender": {
+    "senales": 20,
+    "acierto_pct": 35.0,
+    "retorno_medio_pct": 3.89
+   }
+  },
+  "ALSEA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 0.8
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.23
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.11
+   }
+  },
+  "PG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 0.88
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 0.56
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 17.9,
+    "retorno_medio_pct": 3.16
+   }
+  },
+  "UL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 0.49
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 51.3,
+    "retorno_medio_pct": 0.32
+   },
+   "vender": {
+    "senales": 50,
+    "acierto_pct": 34.0,
+    "retorno_medio_pct": 1.58
+   }
+  },
+  "CL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 0.6
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": -0.34
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 35.5,
+    "retorno_medio_pct": 1.18
+   }
+  },
+  "KMB": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.5,
+    "retorno_medio_pct": 0.33
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 56.2,
+    "retorno_medio_pct": -0.12
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 65.0,
+    "retorno_medio_pct": -1.5
+   }
+  },
+  "CHD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.9,
+    "retorno_medio_pct": 1.04
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 65.7,
+    "retorno_medio_pct": 2.86
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 42.1,
+    "retorno_medio_pct": 0.83
+   }
+  },
+  "CLX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 49.2,
+    "retorno_medio_pct": 0.02
+   },
+   "comprar": {
+    "senales": 27,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": -1.08
+   },
+   "vender": {
+    "senales": 51,
+    "acierto_pct": 47.1,
+    "retorno_medio_pct": 1.03
+   }
+  },
+  "EL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.1,
+    "retorno_medio_pct": 0.53
+   },
+   "comprar": {
+    "senales": 32,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.04
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 42.4,
+    "retorno_medio_pct": 2.08
+   }
+  },
+  "KVUE": {
+   "base": {
+    "senales": 120,
+    "acierto_pct": 53.3,
+    "retorno_medio_pct": 0.5
+   },
+   "comprar": {
+    "senales": 7,
+    "acierto_pct": 28.6,
+    "retorno_medio_pct": -3.56
+   },
+   "vender": {
+    "senales": 6,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 4.7
+   }
+  },
+  "KIMBERA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 0.76
+   },
+   "comprar": {
+    "senales": 15,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": -0.76
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 30.8,
+    "retorno_medio_pct": 3.86
+   }
+  },
+  "COTY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 43.0,
+    "retorno_medio_pct": 0.08
+   },
+   "comprar": {
+    "senales": 22,
+    "acierto_pct": 45.5,
+    "retorno_medio_pct": -0.43
+   },
+   "vender": {
+    "senales": 49,
+    "acierto_pct": 51.0,
+    "retorno_medio_pct": -0.36
+   }
+  },
+  "WMT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": 1.6
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 0.61
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 44.0,
+    "retorno_medio_pct": 1.44
+   }
+  },
+  "COST": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.8,
+    "retorno_medio_pct": 1.94
+   },
+   "comprar": {
+    "senales": 56,
+    "acierto_pct": 58.9,
+    "retorno_medio_pct": 0.55
+   },
+   "vender": {
+    "senales": 19,
+    "acierto_pct": 10.5,
+    "retorno_medio_pct": 4.92
+   }
+  },
+  "HD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 1.05
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 47.4,
+    "retorno_medio_pct": -1.59
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.39
+   }
+  },
+  "LOW": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 1.43
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 58.7,
+    "retorno_medio_pct": 2.15
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 45.2,
+    "retorno_medio_pct": 1.68
+   }
+  },
+  "TGT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.7,
+    "retorno_medio_pct": 1.67
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 64.6,
+    "retorno_medio_pct": 1.72
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": -0.76
+   }
+  },
+  "DG": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.04
+   },
+   "comprar": {
+    "senales": 31,
+    "acierto_pct": 67.7,
+    "retorno_medio_pct": 1.7
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 54.3,
+    "retorno_medio_pct": -1.62
+   }
+  },
+  "ORLY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.1,
+    "retorno_medio_pct": 1.97
+   },
+   "comprar": {
+    "senales": 59,
+    "acierto_pct": 69.5,
+    "retorno_medio_pct": 2.24
+   },
+   "vender": {
+    "senales": 17,
+    "acierto_pct": 23.5,
+    "retorno_medio_pct": 4.69
+   }
+  },
+  "WALMEX.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 0.45
+   },
+   "comprar": {
+    "senales": 20,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 0.46
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.17
+   }
+  },
+  "CHDRAUIB.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.6,
+    "retorno_medio_pct": 1.4
+   },
+   "comprar": {
+    "senales": 28,
+    "acierto_pct": 60.7,
+    "retorno_medio_pct": 3.95
+   },
+   "vender": {
+    "senales": 22,
+    "acierto_pct": 63.6,
+    "retorno_medio_pct": -0.86
+   }
+  },
+  "LIVEPOLC-1.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.7,
+    "retorno_medio_pct": 0.37
+   },
+   "comprar": {
+    "senales": 13,
+    "acierto_pct": 61.5,
+    "retorno_medio_pct": 2.97
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 41.9,
+    "retorno_medio_pct": 1.36
+   }
+  },
+  "JPM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.2,
+    "retorno_medio_pct": 1.79
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 60.8,
+    "retorno_medio_pct": 1.49
+   },
+   "vender": {
+    "senales": 16,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": 2.09
+   }
+  },
+  "BAC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.9,
+    "retorno_medio_pct": 1.38
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 61.9,
+    "retorno_medio_pct": 1.1
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 37.2,
+    "retorno_medio_pct": 2.82
+   }
+  },
+  "WFC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 1.24
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 47.9,
+    "retorno_medio_pct": -0.0
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 18.6,
+    "retorno_medio_pct": 6.43
+   }
+  },
+  "C": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.5,
+    "retorno_medio_pct": 1.47
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 2.67
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 48.7,
+    "retorno_medio_pct": 1.27
+   }
+  },
+  "GS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.93
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 54.9,
+    "retorno_medio_pct": 1.55
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 48.5,
+    "retorno_medio_pct": 2.77
+   }
+  },
+  "MS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": 2.04
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 64.4,
+    "retorno_medio_pct": 3.26
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 42.3,
+    "retorno_medio_pct": 2.64
+   }
+  },
+  "SAN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 1.65
+   },
+   "comprar": {
+    "senales": 50,
+    "acierto_pct": 54.0,
+    "retorno_medio_pct": 2.0
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 47.1,
+    "retorno_medio_pct": 2.32
+   }
+  },
+  "BBVA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 2.36
+   },
+   "comprar": {
+    "senales": 55,
+    "acierto_pct": 67.3,
+    "retorno_medio_pct": 3.41
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": 0.64
+   }
+  },
+  "GFNORTEO.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 1.63
+   },
+   "comprar": {
+    "senales": 45,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 1.9
+   },
+   "vender": {
+    "senales": 23,
+    "acierto_pct": 39.1,
+    "retorno_medio_pct": 2.24
+   }
+  },
+  "BBAJIOO.MX": {
+   "base": {
+    "senales": 417,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.69
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 2.72
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 57.1,
+    "retorno_medio_pct": 0.91
+   }
+  },
+  "GENTERA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 1.86
+   },
+   "comprar": {
+    "senales": 31,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": -2.53
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 51.5,
+    "retorno_medio_pct": 0.56
+   }
+  },
+  "BRK-B": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": 1.18
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 68.2,
+    "retorno_medio_pct": 2.01
+   },
+   "vender": {
+    "senales": 18,
+    "acierto_pct": 27.8,
+    "retorno_medio_pct": 2.24
+   }
+  },
+  "CB": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 1.27
+   },
+   "comprar": {
+    "senales": 49,
+    "acierto_pct": 40.8,
+    "retorno_medio_pct": -1.05
+   },
+   "vender": {
+    "senales": 23,
+    "acierto_pct": 21.7,
+    "retorno_medio_pct": 3.49
+   }
+  },
+  "V": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 62.9,
+    "retorno_medio_pct": 1.54
+   },
+   "comprar": {
+    "senales": 53,
+    "acierto_pct": 62.3,
+    "retorno_medio_pct": 1.47
+   },
+   "vender": {
+    "senales": 19,
+    "acierto_pct": 31.6,
+    "retorno_medio_pct": 5.21
+   }
+  },
+  "MA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.5,
+    "retorno_medio_pct": 1.74
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 65.2,
+    "retorno_medio_pct": 0.92
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 22.2,
+    "retorno_medio_pct": 5.88
+   }
+  },
+  "PYPL": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.9,
+    "retorno_medio_pct": 0.37
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 56.7,
+    "retorno_medio_pct": 2.26
+   },
+   "vender": {
+    "senales": 37,
+    "acierto_pct": 56.8,
+    "retorno_medio_pct": 0.96
+   }
+  },
+  "AXP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 1.67
+   },
+   "comprar": {
+    "senales": 59,
+    "acierto_pct": 55.9,
+    "retorno_medio_pct": -0.33
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 45.5,
+    "retorno_medio_pct": 1.34
+   }
+  },
+  "COIN": {
+   "base": {
+    "senales": 223,
+    "acierto_pct": 46.6,
+    "retorno_medio_pct": 4.73
+   },
+   "comprar": {
+    "senales": 19,
+    "acierto_pct": 42.1,
+    "retorno_medio_pct": 7.57
+   },
+   "vender": {
+    "senales": 17,
+    "acierto_pct": 52.9,
+    "retorno_medio_pct": 3.09
+   }
+  },
+  "GPN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 0.43
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 62.9,
+    "retorno_medio_pct": 2.51
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 38.2,
+    "retorno_medio_pct": 3.19
+   }
+  },
+  "SOFI": {
+   "base": {
+    "senales": 237,
+    "acierto_pct": 50.2,
+    "retorno_medio_pct": 2.39
+   },
+   "comprar": {
+    "senales": 6,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": 11.62
+   },
+   "vender": {
+    "senales": 29,
+    "acierto_pct": 72.4,
+    "retorno_medio_pct": -6.88
+   }
+  },
+  "NU": {
+   "base": {
+    "senales": 190,
+    "acierto_pct": 62.6,
+    "retorno_medio_pct": 3.42
+   },
+   "comprar": {
+    "senales": 15,
+    "acierto_pct": 26.7,
+    "retorno_medio_pct": -4.95
+   },
+   "vender": {
+    "senales": 13,
+    "acierto_pct": 23.1,
+    "retorno_medio_pct": 8.04
+   }
+  },
+  "XYZ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 2.24
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 57.6,
+    "retorno_medio_pct": 3.51
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 35.7,
+    "retorno_medio_pct": 4.21
+   }
+  },
+  "T": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.5,
+    "retorno_medio_pct": 0.73
+   },
+   "comprar": {
+    "senales": 29,
+    "acierto_pct": 55.2,
+    "retorno_medio_pct": 0.52
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 70.0,
+    "retorno_medio_pct": -1.27
+   }
+  },
+  "VZ": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 51.2,
+    "retorno_medio_pct": 0.62
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 54.5,
+    "retorno_medio_pct": 0.52
+   },
+   "vender": {
+    "senales": 29,
+    "acierto_pct": 55.2,
+    "retorno_medio_pct": 2.08
+   }
+  },
+  "TMUS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 1.21
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 61.5,
+    "retorno_medio_pct": 1.43
+   },
+   "vender": {
+    "senales": 23,
+    "acierto_pct": 34.8,
+    "retorno_medio_pct": 2.52
+   }
+  },
+  "CMCSA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.9,
+    "retorno_medio_pct": 0.12
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.37
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -1.34
+   }
+  },
+  "CHTR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": -0.48
+   },
+   "comprar": {
+    "senales": 28,
+    "acierto_pct": 60.7,
+    "retorno_medio_pct": 0.25
+   },
+   "vender": {
+    "senales": 54,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": -2.36
+   }
+  },
+  "AMXB.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 54.4,
+    "retorno_medio_pct": 0.67
+   },
+   "comprar": {
+    "senales": 42,
+    "acierto_pct": 31.0,
+    "retorno_medio_pct": -2.31
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 29.5,
+    "retorno_medio_pct": 2.35
+   }
+  },
+  "VOD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 50.3,
+    "retorno_medio_pct": 0.19
+   },
+   "comprar": {
+    "senales": 52,
+    "acierto_pct": 51.9,
+    "retorno_medio_pct": 0.86
+   },
+   "vender": {
+    "senales": 48,
+    "acierto_pct": 45.8,
+    "retorno_medio_pct": -0.16
+   }
+  },
+  "TU": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.6,
+    "retorno_medio_pct": -0.14
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 53.3,
+    "retorno_medio_pct": 0.16
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 35.3,
+    "retorno_medio_pct": 0.95
+   }
+  },
+  "NFLX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 2.08
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 68.8,
+    "retorno_medio_pct": 5.18
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 59.3,
+    "retorno_medio_pct": -2.47
+   }
+  },
+  "DIS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 48.3,
+    "retorno_medio_pct": 0.57
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 2.22
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 55.8,
+    "retorno_medio_pct": -0.08
+   }
+  },
+  "SPOT": {
+   "base": {
+    "senales": 376,
+    "acierto_pct": 57.2,
+    "retorno_medio_pct": 2.5
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 69.7,
+    "retorno_medio_pct": 5.67
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 52.9,
+    "retorno_medio_pct": 0.29
+   }
+  },
+  "RBLX": {
+   "base": {
+    "senales": 228,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 1.86
+   },
+   "comprar": {
+    "senales": 23,
+    "acierto_pct": 65.2,
+    "retorno_medio_pct": 6.2
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.84
+   }
+  },
+  "TTWO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.6,
+    "retorno_medio_pct": 0.94
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": -0.12
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 51.3,
+    "retorno_medio_pct": 0.84
+   }
+  },
+  "LYV": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 2.01
+   },
+   "comprar": {
+    "senales": 53,
+    "acierto_pct": 54.7,
+    "retorno_medio_pct": 1.28
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 24.0,
+    "retorno_medio_pct": 6.06
+   }
+  },
+  "FOXA": {
+   "base": {
+    "senales": 329,
+    "acierto_pct": 59.9,
+    "retorno_medio_pct": 1.85
+   },
+   "comprar": {
+    "senales": 19,
+    "acierto_pct": 63.2,
+    "retorno_medio_pct": 1.09
+   },
+   "vender": {
+    "senales": 15,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 5.35
+   }
+  },
+  "MELI": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 2.94
+   },
+   "comprar": {
+    "senales": 33,
+    "acierto_pct": 54.5,
+    "retorno_medio_pct": 1.32
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 37.1,
+    "retorno_medio_pct": 2.99
+   }
+  },
+  "BABA": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 47.9,
+    "retorno_medio_pct": 0.41
+   },
+   "comprar": {
+    "senales": 36,
+    "acierto_pct": 36.1,
+    "retorno_medio_pct": 0.61
+   },
+   "vender": {
+    "senales": 54,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 0.74
+   }
+  },
+  "PDD": {
+   "base": {
+    "senales": 360,
+    "acierto_pct": 49.2,
+    "retorno_medio_pct": 3.02
+   },
+   "comprar": {
+    "senales": 24,
+    "acierto_pct": 58.3,
+    "retorno_medio_pct": 3.7
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": 7.65
+   }
+  },
+  "SE": {
+   "base": {
+    "senales": 398,
+    "acierto_pct": 59.5,
+    "retorno_medio_pct": 3.93
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 69.2,
+    "retorno_medio_pct": 9.82
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 53.3,
+    "retorno_medio_pct": 0.6
+   }
+  },
+  "SHOP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.1,
+    "retorno_medio_pct": 4.3
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 68.8,
+    "retorno_medio_pct": 5.48
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": -1.57
+   }
+  },
+  "EBAY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 56.4,
+    "retorno_medio_pct": 1.72
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.2
+   },
+   "vender": {
+    "senales": 41,
+    "acierto_pct": 36.6,
+    "retorno_medio_pct": 3.52
+   }
+  },
+  "ETSY": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 2.98
+   },
+   "comprar": {
+    "senales": 38,
+    "acierto_pct": 68.4,
+    "retorno_medio_pct": 6.35
+   },
+   "vender": {
+    "senales": 43,
+    "acierto_pct": 46.5,
+    "retorno_medio_pct": 5.31
+   }
+  },
+  "JD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 47.7,
+    "retorno_medio_pct": 0.59
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 51.4,
+    "retorno_medio_pct": 0.71
+   },
+   "vender": {
+    "senales": 32,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": 3.19
+   }
+  },
+  "CPNG": {
+   "base": {
+    "senales": 228,
+    "acierto_pct": 47.8,
+    "retorno_medio_pct": 0.25
+   },
+   "comprar": {
+    "senales": 13,
+    "acierto_pct": 38.5,
+    "retorno_medio_pct": 1.65
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 36.0,
+    "retorno_medio_pct": 3.31
+   }
+  },
+  "ABNB": {
+   "base": {
+    "senales": 240,
+    "acierto_pct": 49.2,
+    "retorno_medio_pct": 0.88
+   },
+   "comprar": {
+    "senales": 8,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": -2.58
+   },
+   "vender": {
+    "senales": 16,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": 6.45
+   }
+  },
+  "CAT": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 61.7,
+    "retorno_medio_pct": 2.47
+   },
+   "comprar": {
+    "senales": 54,
+    "acierto_pct": 68.5,
+    "retorno_medio_pct": 3.32
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 30.6,
+    "retorno_medio_pct": 3.72
+   }
+  },
+  "DE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 2.03
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": 0.85
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 36.8,
+    "retorno_medio_pct": 2.9
+   }
+  },
+  "HON": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.7,
+    "retorno_medio_pct": 0.99
+   },
+   "comprar": {
+    "senales": 62,
+    "acierto_pct": 53.2,
+    "retorno_medio_pct": 0.97
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 31.4,
+    "retorno_medio_pct": 3.41
+   }
+  },
+  "MMM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 0.63
+   },
+   "comprar": {
+    "senales": 28,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -2.51
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": 0.52
+   }
+  },
+  "EMR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.7,
+    "retorno_medio_pct": 1.67
+   },
+   "comprar": {
+    "senales": 52,
+    "acierto_pct": 67.3,
+    "retorno_medio_pct": 2.04
+   },
+   "vender": {
+    "senales": 35,
+    "acierto_pct": 22.9,
+    "retorno_medio_pct": 6.97
+   }
+  },
+  "ETN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.9,
+    "retorno_medio_pct": 2.16
+   },
+   "comprar": {
+    "senales": 61,
+    "acierto_pct": 36.1,
+    "retorno_medio_pct": -1.32
+   },
+   "vender": {
+    "senales": 28,
+    "acierto_pct": 46.4,
+    "retorno_medio_pct": 1.37
+   }
+  },
+  "ITW": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 1.07
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 60.5,
+    "retorno_medio_pct": 1.25
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 26.5,
+    "retorno_medio_pct": 3.88
+   }
+  },
+  "PH": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 63.8,
+    "retorno_medio_pct": 2.32
+   },
+   "comprar": {
+    "senales": 55,
+    "acierto_pct": 70.9,
+    "retorno_medio_pct": 2.62
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": 5.76
+   }
+  },
+  "ROK": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 1.49
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 61.8,
+    "retorno_medio_pct": 2.14
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 28.9,
+    "retorno_medio_pct": 5.45
+   }
+  },
+  "CMI": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 1.82
+   },
+   "comprar": {
+    "senales": 47,
+    "acierto_pct": 70.2,
+    "retorno_medio_pct": 3.02
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 43.2,
+    "retorno_medio_pct": 1.43
+   }
+  },
+  "CEMEXCPO.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.1,
+    "retorno_medio_pct": 0.84
+   },
+   "comprar": {
+    "senales": 35,
+    "acierto_pct": 54.3,
+    "retorno_medio_pct": 0.9
+   },
+   "vender": {
+    "senales": 44,
+    "acierto_pct": 63.6,
+    "retorno_medio_pct": -2.56
+   }
+  },
+  "MLM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 1.29
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 69.8,
+    "retorno_medio_pct": 2.04
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 38.7,
+    "retorno_medio_pct": 0.71
+   }
+  },
+  "VMC": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.6,
+    "retorno_medio_pct": 1.13
+   },
+   "comprar": {
+    "senales": 47,
+    "acierto_pct": 51.1,
+    "retorno_medio_pct": -1.26
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 36.7,
+    "retorno_medio_pct": 2.42
+   }
+  },
+  "NUE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.7,
+    "retorno_medio_pct": 2.44
+   },
+   "comprar": {
+    "senales": 51,
+    "acierto_pct": 54.9,
+    "retorno_medio_pct": 1.86
+   },
+   "vender": {
+    "senales": 36,
+    "acierto_pct": 22.2,
+    "retorno_medio_pct": 9.51
+   }
+  },
+  "DHI": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 1.64
+   },
+   "comprar": {
+    "senales": 34,
+    "acierto_pct": 70.6,
+    "retorno_medio_pct": 3.16
+   },
+   "vender": {
+    "senales": 26,
+    "acierto_pct": 53.8,
+    "retorno_medio_pct": 2.11
+   }
+  },
+  "LEN": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.8,
+    "retorno_medio_pct": 0.93
+   },
+   "comprar": {
+    "senales": 25,
+    "acierto_pct": 56.0,
+    "retorno_medio_pct": 0.62
+   },
+   "vender": {
+    "senales": 45,
+    "acierto_pct": 57.8,
+    "retorno_medio_pct": 1.36
+   }
+  },
+  "ORBIA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 47.9,
+    "retorno_medio_pct": 0.05
+   },
+   "comprar": {
+    "senales": 16,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -3.23
+   },
+   "vender": {
+    "senales": 24,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.26
+   }
+  },
+  "GCARSOA1.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.7,
+    "retorno_medio_pct": 1.77
+   },
+   "comprar": {
+    "senales": 26,
+    "acierto_pct": 46.2,
+    "retorno_medio_pct": -1.83
+   },
+   "vender": {
+    "senales": 25,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 2.1
+   }
+  },
+  "MAS": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 1.1
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 0.58
+   },
+   "vender": {
+    "senales": 40,
+    "acierto_pct": 37.5,
+    "retorno_medio_pct": 2.92
+   }
+  },
+  "BLDR": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.8,
+    "retorno_medio_pct": 2.09
+   },
+   "comprar": {
+    "senales": 22,
+    "acierto_pct": 59.1,
+    "retorno_medio_pct": 5.21
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": 0.85
+   }
+  },
+  "VINTE.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 48.1,
+    "retorno_medio_pct": 0.6
+   },
+   "comprar": {
+    "senales": 39,
+    "acierto_pct": 43.6,
+    "retorno_medio_pct": 0.03
+   },
+   "vender": {
+    "senales": 14,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 0.76
+   }
+  },
+  "CADUA.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 40.7,
+    "retorno_medio_pct": 0.16
+   },
+   "comprar": {
+    "senales": 19,
+    "acierto_pct": 47.4,
+    "retorno_medio_pct": 4.84
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 61.3,
+    "retorno_medio_pct": -2.38
+   }
+  },
+  "NEM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.3,
+    "retorno_medio_pct": 1.91
+   },
+   "comprar": {
+    "senales": 31,
+    "acierto_pct": 54.8,
+    "retorno_medio_pct": -0.22
+   },
+   "vender": {
+    "senales": 30,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": 2.38
+   }
+  },
+  "GOLD": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 53.0,
+    "retorno_medio_pct": 3.0
+   },
+   "comprar": {
+    "senales": 40,
+    "acierto_pct": 42.5,
+    "retorno_medio_pct": -0.06
+   },
+   "vender": {
+    "senales": 34,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -0.32
+   }
+  },
+  "FCX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 52.6,
+    "retorno_medio_pct": 2.67
+   },
+   "comprar": {
+    "senales": 44,
+    "acierto_pct": 34.1,
+    "retorno_medio_pct": -1.28
+   },
+   "vender": {
+    "senales": 46,
+    "acierto_pct": 45.7,
+    "retorno_medio_pct": 2.23
+   }
+  },
+  "SCCO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.0,
+    "retorno_medio_pct": 2.53
+   },
+   "comprar": {
+    "senales": 59,
+    "acierto_pct": 49.2,
+    "retorno_medio_pct": 0.77
+   },
+   "vender": {
+    "senales": 42,
+    "acierto_pct": 40.5,
+    "retorno_medio_pct": 3.04
+   }
+  },
+  "AEM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.3,
+    "retorno_medio_pct": 2.24
+   },
+   "comprar": {
+    "senales": 41,
+    "acierto_pct": 68.3,
+    "retorno_medio_pct": 2.87
+   },
+   "vender": {
+    "senales": 38,
+    "acierto_pct": 36.8,
+    "retorno_medio_pct": 8.19
+   }
+  },
+  "RIO": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 58.2,
+    "retorno_medio_pct": 1.69
+   },
+   "comprar": {
+    "senales": 46,
+    "acierto_pct": 56.5,
+    "retorno_medio_pct": 0.17
+   },
+   "vender": {
+    "senales": 49,
+    "acierto_pct": 24.5,
+    "retorno_medio_pct": 3.79
+   }
+  },
+  "BHP": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 1.73
+   },
+   "comprar": {
+    "senales": 48,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 0.11
+   },
+   "vender": {
+    "senales": 27,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": -0.2
+   }
+  },
+  "VALE": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 55.0,
+    "retorno_medio_pct": 1.55
+   },
+   "comprar": {
+    "senales": 37,
+    "acierto_pct": 62.2,
+    "retorno_medio_pct": 3.47
+   },
+   "vender": {
+    "senales": 39,
+    "acierto_pct": 61.5,
+    "retorno_medio_pct": 0.56
+   }
+  },
+  "GMEXICOB.MX": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 60.4,
+    "retorno_medio_pct": 2.32
+   },
+   "comprar": {
+    "senales": 30,
+    "acierto_pct": 63.3,
+    "retorno_medio_pct": 3.68
+   },
+   "vender": {
+    "senales": 31,
+    "acierto_pct": 41.9,
+    "retorno_medio_pct": 1.15
+   }
+  },
+  "WPM": {
+   "base": {
+    "senales": 447,
+    "acierto_pct": 57.5,
+    "retorno_medio_pct": 2.46
+   },
+   "comprar": {
+    "senales": 43,
+    "acierto_pct": 46.5,
+    "retorno_medio_pct": -1.22
+   },
+   "vender": {
+    "senales": 33,
+    "acierto_pct": 39.4,
+    "retorno_medio_pct": 5.0
+   }
+  }
+ },
+ "nota": "Sin comisiones, impuestos ni deslizamiento. Acierto alcista = subió en 21 días hábiles; bajista = bajó. Comparar contra «comprar y mantener» (todos los días evaluados). Rendimientos pasados no garantizan resultados futuros. No es asesoría financiera."
+}
