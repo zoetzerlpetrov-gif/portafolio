@@ -18,6 +18,16 @@ publica en un dashboard estático.
 3. `index.html` lee esos JSON y los muestra como panel.
 4. Un workflow de GitHub Actions ejecuta el motor a diario y publica vía GitHub Pages.
 
+## Reglas de las señales (revisadas el 30-oct-2026)
+
+- Precios **ajustados** por splits y dividendos (`auto_adjust=True`).
+- **Soporte/resistencia:** pivotes de 60 días. Si el precio ya rompió todos los niveles, ese lado queda vacío (no se inventa un nivel).
+- **«Cerca de»:** a menos de 1 ATR(14), así se adapta a la volatilidad de cada activo.
+- **Doble piso/techo:** dos toques a menos de 1.5 % entre sí, separados ≥ 10 días hábiles, con rebote (o caída) ≥ 3 ATR entre ellos y el precio ya por encima (o debajo) de la línea de cuello. El segundo toque debe ser de los últimos 30 días.
+- **Filtro de tendencia:** «comprar» solo si el precio está arriba de su media de 200 días.
+- **Dividendo:** rendimiento de 12 meses calculado con los dividendos pagados y el precio actual.
+- **Backtest** (`backtest.py` → `backtest.json`): cada regla evaluada cada 5 días hábiles durante 10 años, con el rendimiento a 21 días contra «comprar y mantener». Sin comisiones ni impuestos.
+
 ## Estructura
 
 | Archivo | Descripción |
@@ -26,6 +36,7 @@ publica en un dashboard estático.
 | `index.html` | Dashboard estático que consume los JSON. |
 | `portfolio_data.json` | Datos crudos por instrumento (generado). |
 | `daily_report.json` | Reporte diario clasificado (generado). |
+| `backtest.py` / `backtest.json` | Backtest de las reglas a 10 años (generado). |
 | `requirements.txt` | Dependencias de Python. |
 | `.github/workflows/dailymain.yml` | Automatización diaria (cron + commit). |
 

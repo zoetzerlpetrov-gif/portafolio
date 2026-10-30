@@ -665,9 +665,16 @@ META = {
 
 # Umbrales (ajústalos a tu gusto).
 TREND_PCT_PER_WEEK = 0.5   # % por semana para considerar tendencia, no lateral
-NEAR_LEVEL_PCT = 3.0       # qué tan cerca (%) de soporte/resistencia cuenta
+NEAR_ATR = 1.0             # «cerca» de soporte/resistencia = a menos de 1 ATR(14) (se adapta a la volatilidad de cada activo)
+ATR_DAYS = 14              # días del ATR (Wilder, 1978)
+SMA_LONG = 200             # media móvil larga: «comprar» solo si el precio está arriba (filtro de tendencia)
 PIVOT_ORDER = 3            # velas a cada lado para confirmar un pivote
+SR_LOOKBACK = 60           # días para soportes y resistencias
+DOUBLE_LOOKBACK = 120      # días para buscar doble piso/techo
 DOUBLE_TOUCH_TOL = 1.5     # tolerancia (%) para considerar dos toques "iguales"
+DOUBLE_MIN_GAP = 10        # días hábiles mínimos entre los dos toques
+DOUBLE_MIN_SWING_ATR = 3.0 # rebote (o caída) entre los dos toques: al menos 3 ATR
+DOUBLE_MAX_AGE = 30        # el segundo toque debe ser de los últimos 30 días hábiles
 SLEEP_BETWEEN   = 0.2          # pausa (seg) entre tickers para no saturar a Yahoo
 MAX_RETRIES     = 2            # reintentos por ticker si Yahoo falla/limita
 LIQ_HIGH_USD    = 10_000_000   # valor operado/día (USD) para liquidez "alta"
@@ -696,8 +703,11 @@ class Analysis:
     resistance: float | None = None
     dist_to_support_pct: float | None = None
     dist_to_resistance_pct: float | None = None
-    double_bottom: bool = False
+    double_bottom: bool = False      # confirmado: el precio ya rompió la línea de cuello
     double_top: bool = False
+    atr_14: float | None = None
+    sma_200: float | None = None
+    above_sma200: bool | None = None
     pays_dividend: bool = False
     last_dividend: float | None = None
     last_dividend_date: str | None = None
@@ -736,19 +746,26 @@ def weekly_trend(weekly_close: pd.Series,
 
 def find_pivots(values: np.ndarray, order: int = PIVOT_ORDER
                 ) -> tuple[list[int], list[int]]:
-    highs, lows = [], []
+    """Índices donde el valor es el máximo (o mínimo) de su ventana de ±order velas (vectorizado)."""
+    values = np.asarray(values, dtype=float)
     n = len(values)
-    for i in range(order, n - order):
-        window = values[i - order: i + order + 1]
-        if values[i] == window.max():
-            highs.append(i)
-        if values[i] == window.min():
-            lows.append(i)
+    if n < 2 * order + 1:
+        return [], []
+    win = np.lib.stride_tricks.sliding_window_view(values, 2 * order + 1)
+    mid = values[order:n - order]
+    highs = (np.nonzero(mid == win.max(axis=1))[0] + order).tolist()
+    lows = (np.nonzero(mid == win.min(axis=1))[0] + order).tolist()
     return highs, lows
 
 
 def support_resistance(daily: pd.DataFrame, current: float,
-                       lookback: int = 60) -> tuple[float, float]:
+                       lookback: int = SR_LOOKBACK) -> tuple[float | None, float | None]:
+    """Soporte = pivote bajo más alto por debajo del precio; resistencia = pivote alto más bajo por encima.
+
+    Si el precio ya está arriba de todos los pivotes altos (rompimiento) o abajo de todos los bajos (desplome),
+    ese nivel no existe y se devuelve None: antes se usaba el máximo o mínimo del periodo, que quedaba pegado al
+    precio y daba señales al revés (p. ej. «cerca del soporte» en plena caída).
+    """
     recent = daily.tail(lookback)
     high_pivots, _ = find_pivots(recent["High"].values)
     _, low_pivots = find_pivots(recent["Low"].values)
@@ -756,26 +773,79 @@ def support_resistance(daily: pd.DataFrame, current: float,
                   if recent["High"].values[i] > current]
     sup_levels = [recent["Low"].values[i] for i in low_pivots
                   if recent["Low"].values[i] < current]
-    resistance = float(min(res_levels)) if res_levels else float(recent["High"].max())
-    support = float(max(sup_levels)) if sup_levels else float(recent["Low"].min())
+    resistance = float(min(res_levels)) if res_levels else None
+    support = float(max(sup_levels)) if sup_levels else None
     return support, resistance
 
 
-def detect_double_touch(daily: pd.DataFrame, lookback: int = 60,
-                        tol: float = DOUBLE_TOUCH_TOL) -> tuple[bool, bool]:
-    recent = daily.tail(lookback)
-    high_pivots, _ = find_pivots(recent["High"].values)
-    _, low_pivots = find_pivots(recent["Low"].values)
+def atr(daily: pd.DataFrame, days: int = ATR_DAYS) -> float | None:
+    """Average True Range de Wilder: rango diario promedio, contando huecos de apertura."""
+    if len(daily) < days + 1:
+        return None
+    h, l, c = daily["High"], daily["Low"], daily["Close"]
+    tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
+    return float(tr.ewm(alpha=1 / days, adjust=False).mean().iloc[-1])
 
-    def has_pair(idxs: list[int], series: np.ndarray) -> bool:
-        levels = sorted(series[i] for i in idxs)
-        for a, b in zip(levels, levels[1:]):
-            if a > 0 and abs(b - a) / a * 100 <= tol:
-                return True
+
+def sma(close: pd.Series, days: int = SMA_LONG) -> float | None:
+    close = close.dropna()
+    return float(close.tail(days).mean()) if len(close) >= days else None
+
+
+def trailing_dividend_yield(divs: pd.Series | None, price: float | None, ref=None) -> float | None:
+    """Rendimiento por dividendo de 12 meses calculado aquí: dividendos pagados en el último año / precio actual."""
+    if divs is None or len(divs) == 0 or not price:
+        return None
+    ref = ref if ref is not None else divs.index[-1]
+    last = divs[divs.index > ref - pd.DateOffset(years=1)]
+    return round(float(last.sum()) / price * 100, 2) if len(last) else None
+
+
+def _double(levels: np.ndarray, opposite: np.ndarray, closes: np.ndarray, pivots: list[int],
+            atr_value: float | None, bottom: bool, tol: float, min_gap: int, max_age: int) -> bool:
+    """Doble piso (bottom=True) o doble techo confirmado.
+
+    Dos pivotes a menos de `tol` % entre sí, separados al menos `min_gap` días, con un rebote (o caída) entre ellos
+    de al menos DOUBLE_MIN_SWING_ATR × ATR, el segundo dentro de los últimos `max_age` días, y el cierre actual ya
+    rompió la «línea de cuello» (el extremo opuesto entre los dos toques). Criterios de Bulkowski adaptados al ATR.
+    """
+    if not atr_value or len(pivots) < 2:
         return False
+    n = len(closes)
+    for j in range(len(pivots) - 1, 0, -1):
+        b = pivots[j]
+        if n - 1 - b > max_age:
+            break
+        for i in range(j - 1, -1, -1):
+            a = pivots[i]
+            if b - a < min_gap:
+                continue
+            la, lb = levels[a], levels[b]
+            if la <= 0 or abs(lb - la) / la * 100 > tol:
+                continue
+            between = opposite[a:b + 1]
+            neck = between.max() if bottom else between.min()
+            swing = (neck - max(la, lb)) if bottom else (min(la, lb) - neck)
+            if swing < DOUBLE_MIN_SWING_ATR * atr_value:
+                continue
+            if (closes[-1] > neck) if bottom else (closes[-1] < neck):
+                return True
+    return False
 
-    return (has_pair(low_pivots, recent["Low"].values),
-            has_pair(high_pivots, recent["High"].values))
+
+def detect_double_touch(daily: pd.DataFrame, lookback: int = DOUBLE_LOOKBACK,
+                        tol: float = DOUBLE_TOUCH_TOL, atr_value: float | None = None,
+                        min_gap: int = DOUBLE_MIN_GAP, max_age: int = DOUBLE_MAX_AGE) -> tuple[bool, bool]:
+    recent = daily.tail(lookback)
+    atr_value = atr_value if atr_value is not None else atr(daily)
+    highs, lows, closes = recent["High"].values, recent["Low"].values, recent["Close"].values
+    high_pivots, _ = find_pivots(highs)
+    _, low_pivots = find_pivots(lows)
+    # Una meseta (mismo extremo varios días) cuenta como un solo pivote.
+    high_pivots = [i for k, i in enumerate(high_pivots) if k == 0 or i - high_pivots[k - 1] > 1]
+    low_pivots = [i for k, i in enumerate(low_pivots) if k == 0 or i - low_pivots[k - 1] > 1]
+    return (_double(lows, highs, closes, low_pivots, atr_value, True, tol, min_gap, max_age),
+            _double(highs, lows, closes, high_pivots, atr_value, False, tol, min_gap, max_age))
 
 
 # --------------------------------------------------------------------------- #
@@ -806,6 +876,9 @@ def _currency(tk: yf.Ticker) -> str | None:
     return _safe_info(tk, "currency")
 
 
+# Precios diarios ya descargados (los usa backtest.py en la misma corrida).
+_DAILY: dict[str, pd.DataFrame] = {}
+
 # Tipos de cambio a USD (se llenan una vez en main para normalizar la liquidez).
 _FX = {"USD": 1.0}
 
@@ -825,10 +898,11 @@ def get_fx_rates() -> dict:
             rates["EUR"] = float(e.iloc[-1])         # USD por EUR
     except Exception:
         pass
+    for cur in ("CAD", "GBP", "CHF", "JPY"):
         try:
-            cad = yf.Ticker("CADUSD=X").history(period="5d")["Close"].dropna()
-            if len(cad):
-                rates["CAD"] = float(cad.iloc[-1])       # USD por CAD
+            x = yf.Ticker(f"{cur}USD=X").history(period="5d")["Close"].dropna()
+            if len(x):
+                rates[cur] = float(x.iloc[-1])           # USD por unidad
         except Exception:
             pass
     return rates
@@ -850,12 +924,14 @@ def analyze_ticker(ticker: str) -> Analysis:
     res.name, res.sector = META.get(ticker, (None, None))
     try:
         tk = yf.Ticker(ticker)
-        daily = _history(tk, period="10y", interval="1d", auto_adjust=False)
+        # Precios ajustados por splits y dividendos: sin esto, un split (p. ej. 10 a 1) deja máximos históricos falsos.
+        daily = _history(tk, period="10y", interval="1d", auto_adjust=True)
         if daily.empty:
             res.ok = False
             res.error = "Sin datos (ticker inválido o Yahoo lo limitó)"
             return res
         daily = daily.dropna(subset=["High", "Low", "Close"])
+        _DAILY[ticker] = daily
 
         current = float(daily["Close"].iloc[-1])
         res.current_price = current
@@ -867,23 +943,25 @@ def analyze_ticker(ticker: str) -> Analysis:
         res.sparkline_12m = [round(v, 4) for v in
                              daily[daily.index >= cutoff]["Close"].tolist()]
 
-        weekly = _history(tk, period="6mo", interval="1wk", auto_adjust=False)
-        if not weekly.empty:
-            res.trend, res.trend_pct_per_week = weekly_trend(weekly["Close"])
+        weekly_close = daily["Close"].resample("W-FRI").last().dropna()
+        res.trend, res.trend_pct_per_week = weekly_trend(weekly_close)
 
+        res.atr_14 = atr(daily)
+        res.sma_200 = sma(daily["Close"])
+        res.above_sma200 = (current > res.sma_200) if res.sma_200 else None
         res.support, res.resistance = support_resistance(daily, current)
-        res.dist_to_support_pct = round((current - res.support) / current * 100, 2)
-        res.dist_to_resistance_pct = round((res.resistance - current) / current * 100, 2)
-        res.double_bottom, res.double_top = detect_double_touch(daily)
+        res.dist_to_support_pct = round((current - res.support) / current * 100, 2) if res.support else None
+        res.dist_to_resistance_pct = round((res.resistance - current) / current * 100, 2) if res.resistance else None
+        res.double_bottom, res.double_top = detect_double_touch(daily, atr_value=res.atr_14)
 
         _fill_dividends(tk, res)
         _fill_news(tk, res)
         res.currency = _currency(tk)
         # Precio actual convertido a MXN (para el filtro de precio).
         try:
-            usd_rate = _FX.get(res.currency or "USD", 1.0)
+            usd_rate = _FX.get(res.currency or "USD")
             mxn_rate = _FX.get("MXN")
-            if res.current_price is not None and mxn_rate:
+            if res.current_price is not None and mxn_rate and usd_rate:
                 res.price_mxn = round(res.current_price * usd_rate / mxn_rate, 2)
         except Exception:
             pass
@@ -892,8 +970,8 @@ def analyze_ticker(ticker: str) -> Analysis:
         try:
             res.avg_volume_30d = float(daily["Volume"].tail(30).mean())
             val_local = float((daily["Close"] * daily["Volume"]).tail(30).mean())
-            rate = _FX.get(res.currency or "USD", 1.0)
-            res.avg_value_30d_usd = round(val_local * rate, 2)
+            rate = _FX.get(res.currency or "USD")
+            res.avg_value_30d_usd = round(val_local * rate, 2) if rate else None
             res.liquidity = classify_liquidity(res.avg_value_30d_usd)
         except Exception:
             res.liquidity = "sin dato"
@@ -913,9 +991,12 @@ def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
             res.last_dividend_date = divs.index[-1].date().isoformat()
     except Exception:
         pass
-    y = _safe_info(tk, "dividendYield")
-    if y is not None:
-        res.dividend_yield_pct = round(y * 100, 2) if y < 1 else round(y, 2)
+    # Rendimiento de 12 meses calculado con los dividendos pagados y el precio actual. Antes se tomaba
+    # «dividendYield» de Yahoo, que ya viene en % y se multiplicaba otra vez por 100 (MSFT salía con 74 %).
+    try:
+        res.dividend_yield_pct = trailing_dividend_yield(tk.dividends, res.current_price, pd.Timestamp.now(tz=tk.dividends.index.tz))
+    except Exception:
+        res.dividend_yield_pct = None
     ex = _safe_info(tk, "exDividendDate")
     if ex:
         try:
@@ -982,33 +1063,49 @@ def _safe_info(tk: yf.Ticker, key: str):
 # --------------------------------------------------------------------------- #
 # Reporte.
 # --------------------------------------------------------------------------- #
+def near_levels(a: Analysis) -> tuple[bool, bool]:
+    """Cerca = a menos de NEAR_ATR veces el ATR(14). Sin ATR, se usa 3 % como antes."""
+    cur = a.current_price
+    if not cur:
+        return False, False
+    lim = NEAR_ATR * a.atr_14 if a.atr_14 else cur * 0.03
+    ns = a.support is not None and (cur - a.support) <= lim
+    nr = a.resistance is not None and (a.resistance - cur) <= lim
+    if ns and nr:   # rango tan estrecho que el precio está cerca de los dos: no cuenta ninguno
+        return False, False
+    return ns, nr
+
+
 def classify(a: Analysis) -> dict:
     reasons: list[str] = []
-    near_support = (a.dist_to_support_pct is not None
-                    and a.dist_to_support_pct <= NEAR_LEVEL_PCT)
-    near_resistance = (a.dist_to_resistance_pct is not None
-                       and a.dist_to_resistance_pct <= NEAR_LEVEL_PCT)
+    near_support, near_resistance = near_levels(a)
     score = 0
     if a.trend == "alcista":
         score += 1; reasons.append("Tendencia semanal alcista")
     elif a.trend == "bajista":
         score -= 1; reasons.append("Tendencia semanal bajista")
     if near_support:
-        score += 1; reasons.append(f"Precio cerca del soporte ({a.dist_to_support_pct}%)")
+        score += 1; reasons.append(f"Precio a menos de 1 ATR del soporte ({a.dist_to_support_pct}%)")
     if near_resistance:
-        score -= 1; reasons.append(f"Precio cerca de la resistencia ({a.dist_to_resistance_pct}%)")
+        score -= 1; reasons.append(f"Precio a menos de 1 ATR de la resistencia ({a.dist_to_resistance_pct}%)")
     if a.double_bottom:
-        score += 1; reasons.append("Doble piso detectado")
+        score += 1; reasons.append("Doble piso confirmado (rompió la línea de cuello)")
     if a.double_top:
-        score -= 1; reasons.append("Doble techo detectado")
+        score -= 1; reasons.append("Doble techo confirmado (rompió la línea de cuello)")
+    if a.above_sma200 is True:
+        reasons.append("Precio arriba de su media de 200 días")
+    elif a.above_sma200 is False:
+        reasons.append("Precio abajo de su media de 200 días")
     if a.liquidity == "baja":
         reasons.append("Liquidez baja — puede ser difícil comprar/vender")
-    if score >= 2:
+    if score >= 2 and a.above_sma200 is not False:
         category = "comprar"
     elif score <= -2:
         category = "vender"
     else:
         category = "esperar"
+        if score >= 2:
+            reasons.append("Filtro de 200 días: no se marca «comprar» con el precio abajo de su media larga")
     return {"category": category, "score": score, "reasons": reasons}
 
 
@@ -1046,6 +1143,15 @@ def main() -> None:
     report = build_report(results)
     with open("daily_report.json", "w", encoding="utf-8") as fh:
         json.dump(report, fh, ensure_ascii=False, indent=2)
+
+    try:
+        import backtest
+        bt = backtest.run(_DAILY)
+        with open("backtest.json", "w", encoding="utf-8") as fh:
+            json.dump(bt, fh, ensure_ascii=False, indent=1)
+        print(f"Backtest: {bt['tickers']} instrumentos, {bt['reglas']['comprar']['senales']} señales «comprar»", flush=True)
+    except Exception as exc:  # noqa: BLE001  el reporte diario no depende del backtest
+        print(f"Backtest no disponible: {type(exc).__name__}: {exc}", flush=True)
 
     ok = sum(1 for a in results if a.ok)
     print(f"\nReporte {report['generated_at']} — {ok}/{total} con datos\n")
