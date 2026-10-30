@@ -28,6 +28,10 @@
   .stamp b{color:var(--ink);font-weight:600}
 
   .board{margin:26px 0 34px}
+  .bt-wrap{overflow-x:auto} table.bt{border-collapse:collapse;width:100%;font-size:13px}
+  table.bt th,table.bt td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:right}
+  table.bt th:first-child,table.bt td:first-child{text-align:left}
+  table.bt .mejor{color:var(--up);font-weight:600} table.bt .peor{color:var(--down)}
   .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
             color:var(--faint);margin:0 0 12px}
   .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
@@ -183,6 +187,11 @@
     <div class="stamp" id="stamp">Cargando…</div>
   </header>
   <main id="app"></main>
+  <section class="board" id="backtest" hidden>
+    <h2>Backtest de las reglas (10 años)</h2>
+    <p class="note" id="btNota"></p>
+    <div class="bt-wrap"><table class="bt" id="btTabla"></table></div>
+  </section>
 </div>
 <button id="toTop" aria-label="Subir al inicio" title="Subir">↑</button>
   <div class="modal-overlay" id="newsModal">
@@ -490,7 +499,8 @@ const board = `<section class="board"><h2>Veredicto de hoy</h2>
   const app = document.getElementById('app');
 app.innerHTML = filters + board +
   '<div id="cards"></div>' +
-  '<p class="note">Soporte/resistencia: pivotes de 60 días · Tendencia: 9 velas semanales · ' +
+  '<p class="note">Soporte/resistencia: pivotes de 60 días · «Cerca» = a menos de 1 ATR(14) · Doble piso/techo: dos toques separados ≥10 días, rebote ≥3 ATR y rompimiento del cuello · ' +
+  '«Comprar» solo con el precio arriba de su media de 200 días · Tendencia: 9 velas semanales · Precios ajustados por splits y dividendos · ' +
   'Liquidez: valor operado/día en USD · Las señales son orientativas y pueden dar falsos positivos.</p>';
 
   refreshContent();
@@ -583,7 +593,26 @@ _toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}
   if(_newsModal) _newsModal.addEventListener('click', e=>{ if(e.target===_newsModal) closeNewsModal(); });
   document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeNewsModal(); });
 
+async function loadBacktest(){
+  try{
+    const r = await fetch('./backtest.json?t='+Date.now()); if(!r.ok) return;
+    const bt = await r.json(), base = bt.comprar_y_mantener || {};
+    const pct = v => v==null ? '—' : `${v}%`;
+    const fila = (n, x, b) => {
+      const cls = x.retorno_medio_pct==null ? '' : (x.tipo==='bajista' ? (x.retorno_medio_pct < base.retorno_medio_pct ? 'mejor':'peor') : (x.retorno_medio_pct > base.retorno_medio_pct ? 'mejor':'peor'));
+      return `<tr><td>${n}</td><td>${x.tipo||''}</td><td>${(x.senales||0).toLocaleString('es-MX')}</td><td>${pct(x.acierto_pct)}</td><td class="${cls}">${pct(x.retorno_medio_pct)}</td></tr>`;
+    };
+    document.getElementById('btTabla').innerHTML = '<tr><th>Regla</th><th>Tipo</th><th>Señales</th><th>Acierto</th><th>Rendimiento medio a 1 mes</th></tr>' +
+      `<tr><td><b>Comprar y mantener (referencia)</b></td><td>—</td><td>${(base.senales||0).toLocaleString('es-MX')}</td><td>${pct(base.acierto_pct)}</td><td>${pct(base.retorno_medio_pct)}</td></tr>` +
+      Object.values(bt.reglas||{}).map(x => fila(x.nombre, x)).join('');
+    document.getElementById('btNota').textContent = `${bt.tickers} instrumentos · evaluación cada ${bt.paso_dias} días hábiles · resultado a ${bt.horizonte_dias} días hábiles. ` +
+      'Verde = la regla le ganó a «comprar y mantener» (en bajistas: el precio cayó más que el promedio). ' + (bt.nota||'');
+    document.getElementById('backtest').hidden = false;
+  }catch(e){ /* sin backtest todavía */ }
+}
+
 load();
+loadBacktest();
 </script>
 </body>
 </html>
