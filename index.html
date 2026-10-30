@@ -32,6 +32,10 @@
   table.bt th,table.bt td{border-bottom:1px solid var(--border);padding:6px 8px;text-align:right}
   table.bt th:first-child,table.bt td:first-child{text-align:left}
   table.bt .mejor{color:var(--up);font-weight:600} table.bt .peor{color:var(--down)}
+  table.dv th{cursor:pointer;white-space:nowrap} table.dv td .spark{width:110px;height:28px} table.dv td.tk{font-family:var(--mono);font-weight:600}
+  table.dv tr.comprar td.sen{color:var(--up);font-weight:600} table.dv tr.vender td.sen{color:var(--down);font-weight:600}
+  .dv-filtros{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px} .dv-filtros button{font:inherit;font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer}
+  .dv-filtros button.on{background:var(--ink);color:var(--surface)}
   .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
             color:var(--faint);margin:0 0 12px}
   .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
@@ -187,6 +191,17 @@
     <div class="stamp" id="stamp">Cargando…</div>
   </header>
   <main id="app"></main>
+  <section class="board" id="dividendos" hidden>
+    <h2>Acciones con dividendo</h2>
+    <p class="note">Dividendo de 12 meses, rendimiento y crecimiento calculados cada día con los dividendos realmente pagados (no con cifras copiadas).
+      Crecimiento a 5 años = dividendos del último año completo contra 5 años antes. La liquidez dice si es fácil comprar o vender sin mover el precio;
+      no dice si conviene. Señal = la misma del panel (con confirmaciones). No es asesoría financiera.</p>
+    <div class="dv-filtros" id="dvFiltros">
+      <button data-g="todas" class="on">Todas</button><button data-g="sp500">S&amp;P 500</button><button data-g="mx">México (BMV)</button>
+      <button data-g="slim">Carlos Slim</button><button data-g="pagan">Solo las que pagaron en 12 meses</button>
+    </div>
+    <div class="bt-wrap"><table class="bt dv" id="dvTabla"></table></div>
+  </section>
   <section class="board" id="backtest" hidden>
     <h2>Backtest de las reglas (10 años)</h2>
     <p class="note" id="btNota"></p>
@@ -581,6 +596,7 @@ async function load(){
     fPriceMin = PRICE_BOUNDS.min; fPriceMax = PRICE_BOUNDS.max;
 
     render();
+    try{ renderDividendos(); }catch(e){ /* la tabla de dividendos no impide el resto */ }
   }catch(e){ emptyState(); }
 }
 const _toTop = document.getElementById('toTop');
@@ -593,20 +609,58 @@ _toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}
   if(_newsModal) _newsModal.addEventListener('click', e=>{ if(e.target===_newsModal) closeNewsModal(); });
   document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeNewsModal(); });
 
+const escH = (t) => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let DV_FILTRO = 'todas', DV_ORDEN = ['dividend_yield_pct', -1];
+function renderDividendos(){
+  const tabla = document.getElementById('dvTabla'); if(!tabla) return;
+  let rows = PORTFOLIO.filter(a => a.dividend_group || (a.ticker||'').endsWith('.MX') && a.pays_dividend);
+  if(DV_FILTRO==='sp500') rows = rows.filter(a=>a.dividend_group==='sp500');
+  if(DV_FILTRO==='mx') rows = rows.filter(a=>(a.ticker||'').endsWith('.MX'));
+  if(DV_FILTRO==='slim') rows = rows.filter(a=>/Slim/.test(a.name||'') || a.dividend_group==='slim_eua');
+  if(DV_FILTRO==='pagan') rows = rows.filter(a=>(a.dividend_12m||0)>0);
+  const [k, dir] = DV_ORDEN;
+  rows.sort((a,b)=>{ const x=a[k], y=b[k]; if(x==null) return 1; if(y==null) return -1; return (typeof x==='string'? x.localeCompare(y,'es') : x-y)*dir; });
+  const pct = v => v==null ? '—' : `${v}%`;
+  const cols = [['ticker','Símbolo'],['name','Nombre'],['sector','Sector'],['current_price','Precio'],['dividend_12m','Dividendo 12 m'],
+    ['dividend_yield_pct','Rendimiento'],['dividend_growth_5y_pct','Crec. 5 años'],['dividend_cagr_5y_pct','Crec. anual'],['dividend_years','Años pagando'],
+    ['liquidity','Liquidez'],['_cat','Señal'],[null,'Último año']];
+  tabla.innerHTML = '<tr>' + cols.map(([c,t])=>`<th data-k="${c||''}">${t}${c===k?(dir>0?' ▲':' ▼'):''}</th>`).join('') + '</tr>' +
+    rows.map(a=>`<tr class="${CATOF[a.ticker]||''}"><td class="tk"><a href="#" data-tk="${escH(a.ticker)}">${escH(a.ticker)}</a></td><td>${escH(a.name||'')}</td><td>${escH(a.sector||'')}</td>
+      <td>${fmtPrice(a.current_price, a.currency)}</td><td>${a.dividend_12m!=null?a.dividend_12m.toFixed(2):'—'}</td><td>${pct(a.dividend_yield_pct)}</td>
+      <td>${pct(a.dividend_growth_5y_pct)}</td><td>${pct(a.dividend_cagr_5y_pct)}</td><td>${a.dividend_years??'—'}</td>
+      <td><span class="liq ${escH(a.liquidity||'')}">${escH(a.liquidity||'—')}</span></td><td class="sen">${escH(CATOF[a.ticker]||'—')}</td><td>${sparkline(a.sparkline_12m||[])}</td></tr>`).join('');
+  document.getElementById('dividendos').hidden = false;
+}
+document.addEventListener('click', e=>{
+  const f = e.target.closest('#dvFiltros button');
+  if(f){ DV_FILTRO=f.dataset.g; document.querySelectorAll('#dvFiltros button').forEach(b=>b.classList.toggle('on', b===f)); renderDividendos(); return; }
+  const th = e.target.closest('#dvTabla th[data-k]');
+  if(th && th.dataset.k){ const k=th.dataset.k; DV_ORDEN = [k, DV_ORDEN[0]===k ? -DV_ORDEN[1] : -1]; renderDividendos(); return; }
+  const a = e.target.closest('#dvTabla a[data-tk]');
+  if(a){ e.preventDefault(); goToCard(a.dataset.tk); }
+});
+
 async function loadBacktest(){
   try{
     const r = await fetch('./backtest.json?t='+Date.now()); if(!r.ok) return;
     const bt = await r.json(), base = bt.comprar_y_mantener || {};
     const pct = v => v==null ? '—' : `${v}%`;
-    const fila = (n, x, b) => {
-      const cls = x.retorno_medio_pct==null ? '' : (x.tipo==='bajista' ? (x.retorno_medio_pct < base.retorno_medio_pct ? 'mejor':'peor') : (x.retorno_medio_pct > base.retorno_medio_pct ? 'mejor':'peor'));
-      return `<tr><td>${n}</td><td>${x.tipo||''}</td><td>${(x.senales||0).toLocaleString('es-MX')}</td><td>${pct(x.acierto_pct)}</td><td class="${cls}">${pct(x.retorno_medio_pct)}</td></tr>`;
+    const pr = bt.prueba || {}, pbase = pr.comprar_y_mantener || {};
+    const gana = (x, b) => x==null||b==null ? '' : (x > b ? 'mejor' : 'peor');
+    const fila = (k, x) => {
+      const p = (pr.reglas||{})[k] || {};
+      const bajista = x.tipo==='bajista';
+      // Para bajistas, «mejor» = el precio bajó más (mediana menor) que comprar y mantener.
+      const cm = bajista ? gana(-x.retorno_mediano_pct, -base.retorno_mediano_pct) : gana(x.retorno_mediano_pct, base.retorno_mediano_pct);
+      const cp = bajista ? gana(-p.retorno_mediano_pct, -pbase.retorno_mediano_pct) : gana(p.retorno_mediano_pct, pbase.retorno_mediano_pct);
+      return `<tr><td>${escH(x.nombre)}</td><td>${x.tipo||''}</td><td>${(x.senales||0).toLocaleString('es-MX')}</td><td>${pct(x.acierto_pct)}</td>
+        <td>${pct(x.retorno_medio_pct)}</td><td class="${cm}">${pct(x.retorno_mediano_pct)}</td><td>${pct(p.acierto_pct)}</td><td class="${cp}">${pct(p.retorno_mediano_pct)}</td></tr>`;
     };
-    document.getElementById('btTabla').innerHTML = '<tr><th>Regla</th><th>Tipo</th><th>Señales</th><th>Acierto</th><th>Rendimiento medio a 1 mes</th></tr>' +
-      `<tr><td><b>Comprar y mantener (referencia)</b></td><td>—</td><td>${(base.senales||0).toLocaleString('es-MX')}</td><td>${pct(base.acierto_pct)}</td><td>${pct(base.retorno_medio_pct)}</td></tr>` +
-      Object.values(bt.reglas||{}).map(x => fila(x.nombre, x)).join('');
+    document.getElementById('btTabla').innerHTML = '<tr><th>Regla</th><th>Tipo</th><th>Señales</th><th>Acierto</th><th>Media 1 mes</th><th>Mediana 1 mes</th><th>Acierto (últimos 3 años)</th><th>Mediana (últimos 3 años)</th></tr>' +
+      `<tr><td><b>Comprar y mantener (referencia)</b></td><td>—</td><td>${(base.senales||0).toLocaleString('es-MX')}</td><td>${pct(base.acierto_pct)}</td><td>${pct(base.retorno_medio_pct)}</td><td>${pct(base.retorno_mediano_pct)}</td><td>${pct(pbase.acierto_pct)}</td><td>${pct(pbase.retorno_mediano_pct)}</td></tr>` +
+      Object.entries(bt.reglas||{}).map(([k,x]) => fila(k, x)).join('');
     document.getElementById('btNota').textContent = `${bt.tickers} instrumentos · evaluación cada ${bt.paso_dias} días hábiles · resultado a ${bt.horizonte_dias} días hábiles. ` +
-      'Verde = la regla le ganó a «comprar y mantener» (en bajistas: el precio cayó más que el promedio). ' + (bt.nota||'');
+      'Verde = la mediana de la regla le ganó a «comprar y mantener» (en bajistas: el precio cayó más). ' + (bt.nota||'');
     document.getElementById('backtest').hidden = false;
   }catch(e){ /* sin backtest todavía */ }
 }

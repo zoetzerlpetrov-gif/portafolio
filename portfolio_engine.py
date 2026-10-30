@@ -360,6 +360,8 @@ WATCHLIST = [
     "WPM",            # Wheaton Precious Metals — USD
 ]
 
+import dividendos as DIV  # noqa: E402  listas de acciones con dividendo (EUA y México)
+
 # Tabla de nombre y sector por ticker (para mostrarlos en el dashboard).
 META = {
     # ETFs / Índices
@@ -663,6 +665,14 @@ META = {
     "WPM": ("Wheaton Precious Metals", "Minería / Metales"),
 }
 
+for _t, _n, _s in DIV.DIV_MX + DIV.DIV_SLIM_EUA:
+    META.setdefault(_t, (_n, _s))
+
+# Grupo de dividendos de cada ticker (pestaña «Dividendos»).
+DIV_GROUP = {**{t: "sp500" for t in DIV.DIV_SP500}, **{t: "mx" for t, _, _ in DIV.DIV_MX}, **{t: "slim_eua" for t, _, _ in DIV.DIV_SLIM_EUA}}
+# Lista total sin repetidos, en orden: primero la WATCHLIST original.
+ALL_TICKERS = list(dict.fromkeys(WATCHLIST + DIV.DIV_SP500 + [t for t, _, _ in DIV.DIV_MX + DIV.DIV_SLIM_EUA]))
+
 # Umbrales (ajústalos a tu gusto).
 TREND_PCT_PER_WEEK = 0.5   # % por semana para considerar tendencia, no lateral
 NEAR_ATR = 1.0             # «cerca» de soporte/resistencia = a menos de 1 ATR(14) (se adapta a la volatilidad de cada activo)
@@ -675,7 +685,10 @@ DOUBLE_TOUCH_TOL = 1.5     # tolerancia (%) para considerar dos toques "iguales"
 DOUBLE_MIN_GAP = 10        # días hábiles mínimos entre los dos toques
 DOUBLE_MIN_SWING_ATR = 3.0 # rebote (o caída) entre los dos toques: al menos 3 ATR
 DOUBLE_MAX_AGE = 30        # el segundo toque debe ser de los últimos 30 días hábiles
-SLEEP_BETWEEN   = 0.2          # pausa (seg) entre tickers para no saturar a Yahoo
+RSI_DAYS = 14              # RSI de Wilder; sobrecompra > 70, sobreventa < 30
+RVOL_DAYS = 20             # volumen relativo: volumen de hoy / promedio de los 20 días anteriores
+RVOL_MIN = 1.0             # confirmación por volumen: el día de la señal con volumen al menos igual al promedio
+SLEEP_BETWEEN   = 0.35         # pausa (seg) entre tickers para no saturar a Yahoo (~570 instrumentos)
 MAX_RETRIES     = 2            # reintentos por ticker si Yahoo falla/limita
 LIQ_HIGH_USD    = 10_000_000   # valor operado/día (USD) para liquidez "alta"
 LIQ_MED_USD     = 1_000_000    # umbral para liquidez "media" (abajo = "baja")
@@ -706,6 +719,23 @@ class Analysis:
     double_bottom: bool = False      # confirmado: el precio ya rompió la línea de cuello
     double_top: bool = False
     atr_14: float | None = None
+    # Indicadores internos (no se dibujan; se usan para confirmar señales y en el backtest)
+    rsi_14: float | None = None
+    macd_hist: float | None = None
+    adx_14: float | None = None
+    bb_pctb: float | None = None
+    rvol: float | None = None
+    obv_slope_pct: float | None = None
+    mfi_14: float | None = None
+    mom_12_1_pct: float | None = None
+    dist_52w_high_pct: float | None = None
+    # Dividendos calculados con lo realmente pagado
+    dividend_group: str | None = None
+    dividend_12m: float | None = None
+    dividend_growth_5y_pct: float | None = None
+    dividend_cagr_5y_pct: float | None = None
+    dividend_years: int | None = None
+    dividend_payments_last_year: int | None = None
     sma_200: float | None = None
     above_sma200: bool | None = None
     pays_dividend: bool = False
@@ -790,6 +820,70 @@ def atr(daily: pd.DataFrame, days: int = ATR_DAYS) -> float | None:
 def sma(close: pd.Series, days: int = SMA_LONG) -> float | None:
     close = close.dropna()
     return float(close.tail(days).mean()) if len(close) >= days else None
+
+
+def indicator_series(daily: pd.DataFrame) -> pd.DataFrame:
+    """Series diarias de todos los indicadores internos (vectorizado; el backtest las reutiliza día por día)."""
+    h, l, c = daily["High"], daily["Low"], daily["Close"]
+    v = daily["Volume"] if "Volume" in daily else pd.Series(np.nan, index=daily.index)
+    out = pd.DataFrame(index=daily.index)
+    d = c.diff()
+    gain = d.clip(lower=0).ewm(alpha=1 / RSI_DAYS, adjust=False).mean()
+    loss = (-d.clip(upper=0)).ewm(alpha=1 / RSI_DAYS, adjust=False).mean()
+    out["rsi"] = 100 - 100 / (1 + gain / loss.replace(0, np.nan))
+    macd = c.ewm(span=12, adjust=False).mean() - c.ewm(span=26, adjust=False).mean()
+    out["macd_hist"] = macd - macd.ewm(span=9, adjust=False).mean()
+    tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
+    atr_s = tr.ewm(alpha=1 / ATR_DAYS, adjust=False).mean()
+    out["atr"] = atr_s
+    up, dn = h.diff(), -l.diff()
+    pdm = pd.Series(np.where((up > dn) & (up > 0), up, 0.0), index=daily.index)
+    ndm = pd.Series(np.where((dn > up) & (dn > 0), dn, 0.0), index=daily.index)
+    pdi = 100 * pdm.ewm(alpha=1 / 14, adjust=False).mean() / atr_s
+    ndi = 100 * ndm.ewm(alpha=1 / 14, adjust=False).mean() / atr_s
+    out["adx"] = (100 * (pdi - ndi).abs() / (pdi + ndi).replace(0, np.nan)).ewm(alpha=1 / 14, adjust=False).mean()
+    mid, sd = c.rolling(20).mean(), c.rolling(20).std()
+    out["bb_pctb"] = (c - (mid - 2 * sd)) / (4 * sd).replace(0, np.nan)
+    out["rvol"] = v / v.shift(1).rolling(RVOL_DAYS).mean().replace(0, np.nan)
+    obv = (np.sign(d).fillna(0) * v.fillna(0)).cumsum()
+    out["obv_slope_pct"] = (obv - obv.shift(20)) / (v.rolling(20).mean() * 20).replace(0, np.nan) * 100
+    tp = (h + l + c) / 3
+    flow = tp * v
+    pos = flow.where(tp > tp.shift(), 0.0).rolling(14).sum()
+    neg = flow.where(tp < tp.shift(), 0.0).rolling(14).sum()
+    out["mfi"] = 100 - 100 / (1 + pos / neg.replace(0, np.nan))
+    out["mom_12_1"] = (c.shift(21) / c.shift(252) - 1) * 100   # momentum de 12 meses sin el último (Moskowitz et al., 2012)
+    out["dist_52w_high"] = (c / h.rolling(252).max() - 1) * 100
+    out["sma200"] = c.rolling(SMA_LONG).mean()
+    return out
+
+
+def _ultimo(serie: pd.Series) -> float | None:
+    v = serie.iloc[-1] if len(serie) else np.nan
+    return None if pd.isna(v) else round(float(v), 4)
+
+
+def dividend_stats(divs: pd.Series | None, ref: pd.Timestamp) -> dict:
+    """Dividendo de 12 meses, crecimiento y CAGR a 5 años (año calendario completo más reciente contra 5 años antes),
+    años seguidos pagando y pagos en el último año completo."""
+    out = {"dividend_12m": None, "dividend_growth_5y_pct": None, "dividend_cagr_5y_pct": None, "dividend_years": None, "dividend_payments_last_year": None}
+    if divs is None or len(divs) == 0:
+        return out
+    last = divs[divs.index > ref - pd.DateOffset(years=1)]
+    out["dividend_12m"] = round(float(last.sum()), 4) if len(last) else 0.0
+    por_anio = divs.groupby(divs.index.year).sum()
+    y = ref.year - 1
+    if y in por_anio.index:
+        out["dividend_payments_last_year"] = int((divs.index.year == y).sum())
+        if (y - 5) in por_anio.index and por_anio[y - 5] > 0:
+            a, b = float(por_anio[y - 5]), float(por_anio[y])
+            out["dividend_growth_5y_pct"] = round((b / a - 1) * 100, 2)
+            out["dividend_cagr_5y_pct"] = round(((b / a) ** (1 / 5) - 1) * 100, 2) if b > 0 else None
+        n, k = 0, y
+        while k in por_anio.index and por_anio[k] > 0:
+            n += 1; k -= 1
+        out["dividend_years"] = n
+    return out
 
 
 def trailing_dividend_yield(divs: pd.Series | None, price: float | None, ref=None) -> float | None:
@@ -922,6 +1016,7 @@ def classify_liquidity(value_usd: float | None) -> str:
 def analyze_ticker(ticker: str) -> Analysis:
     res = Analysis(ticker=ticker)
     res.name, res.sector = META.get(ticker, (None, None))
+    res.dividend_group = DIV_GROUP.get(ticker)
     try:
         tk = yf.Ticker(ticker)
         # Precios ajustados por splits y dividendos: sin esto, un split (p. ej. 10 a 1) deja máximos históricos falsos.
@@ -946,6 +1041,10 @@ def analyze_ticker(ticker: str) -> Analysis:
         weekly_close = daily["Close"].resample("W-FRI").last().dropna()
         res.trend, res.trend_pct_per_week = weekly_trend(weekly_close)
 
+        ind = indicator_series(daily)
+        res.rsi_14 = _ultimo(ind["rsi"]); res.macd_hist = _ultimo(ind["macd_hist"]); res.adx_14 = _ultimo(ind["adx"])
+        res.bb_pctb = _ultimo(ind["bb_pctb"]); res.rvol = _ultimo(ind["rvol"]); res.obv_slope_pct = _ultimo(ind["obv_slope_pct"])
+        res.mfi_14 = _ultimo(ind["mfi"]); res.mom_12_1_pct = _ultimo(ind["mom_12_1"]); res.dist_52w_high_pct = _ultimo(ind["dist_52w_high"])
         res.atr_14 = atr(daily)
         res.sma_200 = sma(daily["Close"])
         res.above_sma200 = (current > res.sma_200) if res.sma_200 else None
@@ -955,6 +1054,11 @@ def analyze_ticker(ticker: str) -> Analysis:
         res.double_bottom, res.double_top = detect_double_touch(daily, atr_value=res.atr_14)
 
         _fill_dividends(tk, res)
+        if not res.name:
+            res.name = _safe_info(tk, "shortName") or _safe_info(tk, "longName")
+        if not res.sector:
+            sec = _safe_info(tk, "sector")
+            res.sector = DIV.SECTOR_ES.get(sec, sec) if sec else ("Dividendos S&P 500" if res.dividend_group == "sp500" else None)
         _fill_news(tk, res)
         res.currency = _currency(tk)
         # Precio actual convertido a MXN (para el filtro de precio).
@@ -994,7 +1098,10 @@ def _fill_dividends(tk: yf.Ticker, res: Analysis) -> None:
     # Rendimiento de 12 meses calculado con los dividendos pagados y el precio actual. Antes se tomaba
     # «dividendYield» de Yahoo, que ya viene en % y se multiplicaba otra vez por 100 (MSFT salía con 74 %).
     try:
-        res.dividend_yield_pct = trailing_dividend_yield(tk.dividends, res.current_price, pd.Timestamp.now(tz=tk.dividends.index.tz))
+        ref = pd.Timestamp.now(tz=tk.dividends.index.tz)
+        res.dividend_yield_pct = trailing_dividend_yield(tk.dividends, res.current_price, ref)
+        for k, v in dividend_stats(tk.dividends, ref).items():
+            setattr(res, k, v)
     except Exception:
         res.dividend_yield_pct = None
     ex = _safe_info(tk, "exDividendDate")
@@ -1098,14 +1205,33 @@ def classify(a: Analysis) -> dict:
         reasons.append("Precio abajo de su media de 200 días")
     if a.liquidity == "baja":
         reasons.append("Liquidez baja — puede ser difícil comprar/vender")
-    if score >= 2 and a.above_sma200 is not False:
+    # Confirmaciones (indicadores internos). Una señal solo se emite si no la contradicen.
+    bloqueos_compra, bloqueos_venta = [], []
+    if a.above_sma200 is False:
+        bloqueos_compra.append("precio abajo de su media de 200 días")
+    if a.rsi_14 is not None and a.rsi_14 >= 70:
+        bloqueos_compra.append(f"RSI en sobrecompra ({a.rsi_14:.0f})")
+    if a.rsi_14 is not None and a.rsi_14 <= 30:
+        bloqueos_venta.append(f"RSI en sobreventa ({a.rsi_14:.0f})")
+    if a.mom_12_1_pct is not None and a.mom_12_1_pct < 0:
+        bloqueos_compra.append(f"momentum de 12 meses negativo ({a.mom_12_1_pct:.1f} %)")
+    if a.mom_12_1_pct is not None and a.mom_12_1_pct > 0 and a.above_sma200:
+        bloqueos_venta.append("momentum de 12 meses positivo y arriba de su media de 200 días")
+    if a.rvol is not None and a.rvol < RVOL_MIN:
+        bloqueos_compra.append(f"volumen relativo bajo ({a.rvol:.2f}×)")
+        bloqueos_venta.append(f"volumen relativo bajo ({a.rvol:.2f}×)")
+    elif a.rvol is not None:
+        reasons.append(f"Volumen relativo {a.rvol:.2f}× su promedio de 20 días")
+    if score >= 2 and not bloqueos_compra:
         category = "comprar"
-    elif score <= -2:
+    elif score <= -2 and not bloqueos_venta:
         category = "vender"
     else:
         category = "esperar"
         if score >= 2:
-            reasons.append("Filtro de 200 días: no se marca «comprar» con el precio abajo de su media larga")
+            reasons.append("No confirma «comprar»: " + "; ".join(bloqueos_compra))
+        if score <= -2:
+            reasons.append("No confirma «vender»: " + "; ".join(bloqueos_venta))
     return {"category": category, "score": score, "reasons": reasons}
 
 
@@ -1132,8 +1258,8 @@ def main() -> None:
     _FX = get_fx_rates()
     print(f"FX a USD: {_FX}", flush=True)
     results = []
-    total = len(WATCHLIST)
-    for i, t in enumerate(WATCHLIST, 1):
+    total = len(ALL_TICKERS)
+    for i, t in enumerate(ALL_TICKERS, 1):
         print(f"[{i}/{total}] {t}", flush=True)
         results.append(analyze_ticker(t))
         time.sleep(SLEEP_BETWEEN)
@@ -1146,10 +1272,19 @@ def main() -> None:
 
     try:
         import backtest
-        bt = backtest.run(_DAILY)
+        def clase(t):
+            if t.endswith("-USD"):
+                return "cripto"
+            return "etf" if (META.get(t, (None, ""))[1] or "").lower().startswith(("etf", "fibra")) else "accion"
+        bt = backtest.run(_DAILY, clase)
         with open("backtest.json", "w", encoding="utf-8") as fh:
             json.dump(bt, fh, ensure_ascii=False, indent=1)
-        print(f"Backtest: {bt['tickers']} instrumentos, {bt['reglas']['comprar']['senales']} señales «comprar»", flush=True)
+        print(f"Backtest: {bt['tickers']} instrumentos", flush=True)
+        for tramo, d in (("10 años", bt), ("últimos 3 años", bt["prueba"])):
+            b = d["comprar_y_mantener"]
+            print(f"  [{tramo}] comprar y mantener: acierto {b['acierto_pct']}% mediana {b['retorno_mediano_pct']}%", flush=True)
+            for k, r in d["reglas"].items():
+                print(f"  [{tramo}] {r['nombre']:<62} n={r['senales']:<6} acierto={r['acierto_pct']}% mediana={r['retorno_mediano_pct']}% media={r['retorno_medio_pct']}%", flush=True)
     except Exception as exc:  # noqa: BLE001  el reporte diario no depende del backtest
         print(f"Backtest no disponible: {type(exc).__name__}: {exc}", flush=True)
 
