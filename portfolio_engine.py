@@ -737,6 +737,8 @@ class Analysis:
     dividend_cagr_5y_pct: float | None = None
     dividend_years: int | None = None
     dividend_payments_last_year: int | None = None
+    dividend_months: list[int] | None = None        # meses (1-12) con fecha ex-dividendo en el último año
+    dividend_frequency: str | None = None           # Mensual, Bimestral, Trimestral, Cuatrimestral, Semestral, Anual, Irregular
     sma_200: float | None = None
     above_sma200: bool | None = None
     pays_dividend: bool = False
@@ -867,9 +869,11 @@ def _ultimo(serie: pd.Series) -> float | None:
 def dividend_stats(divs: pd.Series | None, ref: pd.Timestamp) -> dict:
     """Dividendo de 12 meses, crecimiento y CAGR a 5 años (año calendario completo más reciente contra 5 años antes),
     años seguidos pagando y pagos en el último año completo."""
-    out = {"dividend_12m": None, "dividend_growth_5y_pct": None, "dividend_cagr_5y_pct": None, "dividend_years": None, "dividend_payments_last_year": None}
+    out = {"dividend_12m": None, "dividend_growth_5y_pct": None, "dividend_cagr_5y_pct": None, "dividend_years": None, "dividend_payments_last_year": None,
+           "dividend_months": None, "dividend_frequency": None}
     if divs is None or len(divs) == 0:
         return out
+    out["dividend_months"], out["dividend_frequency"] = dividend_calendar(divs, ref)
     last = divs[divs.index > ref - pd.DateOffset(years=1)]
     out["dividend_12m"] = round(float(last.sum()), 4) if len(last) else 0.0
     por_anio = divs.groupby(divs.index.year).sum()
@@ -885,6 +889,34 @@ def dividend_stats(divs: pd.Series | None, ref: pd.Timestamp) -> dict:
             n += 1; k -= 1
         out["dividend_years"] = n
     return out
+
+
+# Separación típica (mediana de días) entre pagos → frecuencia. La mediana ignora un dividendo extraordinario suelto.
+_FRECUENCIAS = [(45, "Mensual"), (80, "Bimestral"), (120, "Trimestral"), (150, "Cuatrimestral"), (240, "Semestral"), (420, "Anual")]
+
+
+def dividend_calendar(divs: pd.Series | None, ref: pd.Timestamp) -> tuple[list[int] | None, str | None]:
+    """Meses con fecha ex-dividendo en el último año y la frecuencia según la separación entre pagos
+    de los últimos 3 años. (None, None) si no pagó en los últimos 24 meses."""
+    if divs is None or len(divs) == 0:
+        return None, None
+    # Meses del último año (+20 días de margen, porque la fecha ex-dividendo se recorre unos días entre años: con
+    # 24 meses Coca-Cola salía con nov y dic). Si no pagó en ese lapso, los últimos 24 meses (anuales atrasados).
+    reciente = divs[divs.index > ref - pd.Timedelta(days=385)]
+    if len(reciente) == 0:
+        reciente = divs[divs.index > ref - pd.DateOffset(months=24)]
+    if len(reciente) == 0:
+        return None, None
+    meses = sorted({int(m) for m in reciente.index.month})
+    fechas = divs[divs.index > ref - pd.DateOffset(years=3)].index.sort_values()
+    if len(fechas) < 2:
+        return meses, "Anual"   # un solo pago en 3 años: sin patrón más fino que «una vez al año»
+    gaps = [(b - a).days for a, b in zip(fechas[:-1], fechas[1:]) if (b - a).days > 7]   # <7 días: mismo pago repetido
+    if not gaps:
+        return meses, "Irregular"
+    med = float(np.median(gaps))
+    freq = next((n for lim, n in _FRECUENCIAS if med <= lim), "Irregular")
+    return meses, freq
 
 
 def trailing_dividend_yield(divs: pd.Series | None, price: float | None, ref=None) -> float | None:
