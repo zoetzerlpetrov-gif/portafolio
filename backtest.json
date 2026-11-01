@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T09:41:31.996753-06:00",
+ "generated_at": "2026-10-31T18:22:51.076272-06:00",
  "horizonte_dias": 21,
  "paso_dias": 5,
  "anios": 10,
@@ -23,7 +23,7 @@
   "cerca_soporte": {
    "nombre": "A menos de 1 ATR del soporte",
    "tipo": "alcista",
-   "senales": 50344,
+   "senales": 50365,
    "acierto_pct": 57.0,
    "retorno_medio_pct": 3.38,
    "retorno_mediano_pct": 1.34
@@ -31,7 +31,7 @@
   "doble_piso": {
    "nombre": "Doble piso confirmado",
    "tipo": "alcista",
-   "senales": 25075,
+   "senales": 25077,
    "acierto_pct": 54.9,
    "retorno_medio_pct": 0.63,
    "retorno_mediano_pct": 0.76
@@ -39,7 +39,7 @@
   "arriba_sma200": {
    "nombre": "Arriba de la media de 200 días",
    "tipo": "alcista",
-   "senales": 152572,
+   "senales": 152570,
    "acierto_pct": 55.6,
    "retorno_medio_pct": 1.08,
    "retorno_mediano_pct": 0.94
@@ -47,15 +47,15 @@
   "rsi_sobreventa": {
    "nombre": "RSI(14) menor a 30",
    "tipo": "alcista",
-   "senales": 9044,
+   "senales": 9042,
    "acierto_pct": 63.1,
-   "retorno_medio_pct": 9.38,
+   "retorno_medio_pct": 9.37,
    "retorno_mediano_pct": 2.86
   },
   "macd_positivo": {
    "nombre": "Histograma MACD positivo",
    "tipo": "alcista",
-   "senales": 123341,
+   "senales": 123340,
    "acierto_pct": 55.8,
    "retorno_medio_pct": 1.75,
    "retorno_mediano_pct": 1.06
@@ -63,7 +63,7 @@
   "momentum_positivo": {
    "nombre": "Momentum 12-1 meses positivo",
    "tipo": "alcista",
-   "senales": 160173,
+   "senales": 160174,
    "acierto_pct": 56.1,
    "retorno_medio_pct": 1.24,
    "retorno_mediano_pct": 1.06
@@ -71,7 +71,7 @@
   "volumen_alto_al_alza": {
    "nombre": "Volumen relativo ≥ 1.5× en día de alza",
    "tipo": "alcista",
-   "senales": 12731,
+   "senales": 12722,
    "acierto_pct": 56.3,
    "retorno_medio_pct": 1.61,
    "retorno_mediano_pct": 1.16
@@ -79,47 +79,47 @@
   "mfi_sobreventa": {
    "nombre": "MFI(14) menor a 20",
    "tipo": "alcista",
-   "senales": 6081,
+   "senales": 6089,
    "acierto_pct": 57.9,
-   "retorno_medio_pct": 11.46,
-   "retorno_mediano_pct": 1.44
+   "retorno_medio_pct": 11.44,
+   "retorno_mediano_pct": 1.43
   },
   "comprar_anterior": {
    "nombre": "«Comprar» sin confirmaciones (versión anterior)",
    "tipo": "alcista",
-   "senales": 21396,
+   "senales": 21412,
    "acierto_pct": 55.3,
-   "retorno_medio_pct": 0.98,
-   "retorno_mediano_pct": 0.86
+   "retorno_medio_pct": 0.99,
+   "retorno_mediano_pct": 0.85
   },
   "comprar": {
    "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
    "tipo": "alcista",
-   "senales": 4946,
-   "acierto_pct": 56.7,
-   "retorno_medio_pct": 1.21,
+   "senales": 4951,
+   "acierto_pct": 56.8,
+   "retorno_medio_pct": 1.22,
    "retorno_mediano_pct": 1.12
   },
   "rebote": {
    "nombre": "«Rebote»: RSI < 30 con el precio arriba de su media de 200 días",
    "tipo": "alcista",
    "senales": 928,
-   "acierto_pct": 56.8,
-   "retorno_medio_pct": 1.06,
-   "retorno_mediano_pct": 1.56
+   "acierto_pct": 56.7,
+   "retorno_medio_pct": 1.08,
+   "retorno_mediano_pct": 1.54
   },
   "tendencia_bajista": {
    "nombre": "Tendencia semanal bajista",
    "tipo": "bajista",
-   "senales": 70443,
-   "acierto_pct": 41.3,
-   "retorno_medio_pct": 4.23,
+   "senales": 70444,
+   "acierto_pct": 41.4,
+   "retorno_medio_pct": 4.22,
    "retorno_mediano_pct": 1.8
   },
   "cerca_resistencia": {
    "nombre": "A menos de 1 ATR de la resistencia",
    "tipo": "bajista",
-   "senales": 62269,
+   "senales": 62237,
    "acierto_pct": 44.0,
    "retorno_medio_pct": 1.21,
    "retorno_mediano_pct": 1.04
@@ -127,23 +127,23 @@
   "doble_techo": {
    "nombre": "Doble techo confirmado",
    "tipo": "bajista",
-   "senales": 16789,
+   "senales": 16760,
    "acierto_pct": 40.3,
    "retorno_medio_pct": 2.04,
-   "retorno_mediano_pct": 1.81
+   "retorno_mediano_pct": 1.82
   },
   "abajo_sma200": {
    "nombre": "Abajo de la media de 200 días",
    "tipo": "bajista",
-   "senales": 91147,
+   "senales": 91149,
    "acierto_pct": 42.0,
-   "retorno_medio_pct": 3.54,
+   "retorno_medio_pct": 3.53,
    "retorno_mediano_pct": 1.61
   },
   "rsi_sobrecompra": {
    "nombre": "RSI(14) mayor a 70",
    "tipo": "bajista",
-   "senales": 17224,
+   "senales": 17232,
    "acierto_pct": 45.2,
    "retorno_medio_pct": 0.76,
    "retorno_mediano_pct": 0.51
@@ -151,7 +151,7 @@
   "macd_negativo": {
    "nombre": "Histograma MACD negativo",
    "tipo": "bajista",
-   "senales": 120378,
+   "senales": 120379,
    "acierto_pct": 42.8,
    "retorno_medio_pct": 2.25,
    "retorno_mediano_pct": 1.27
@@ -159,7 +159,7 @@
   "momentum_negativo": {
    "nombre": "Momentum 12-1 meses negativo",
    "tipo": "bajista",
-   "senales": 83390,
+   "senales": 83389,
    "acierto_pct": 43.0,
    "retorno_medio_pct": 3.46,
    "retorno_mediano_pct": 1.4
@@ -167,31 +167,31 @@
   "volumen_alto_a_la_baja": {
    "nombre": "Volumen relativo ≥ 1.5× en día de baja",
    "tipo": "bajista",
-   "senales": 13505,
+   "senales": 13511,
    "acierto_pct": 41.2,
-   "retorno_medio_pct": 6.13,
-   "retorno_mediano_pct": 1.69
+   "retorno_medio_pct": 6.14,
+   "retorno_mediano_pct": 1.68
   },
   "mfi_sobrecompra": {
    "nombre": "MFI(14) mayor a 80",
    "tipo": "bajista",
-   "senales": 9623,
+   "senales": 9614,
    "acierto_pct": 43.9,
-   "retorno_medio_pct": 1.24,
+   "retorno_medio_pct": 1.22,
    "retorno_mediano_pct": 0.91
   },
   "precaucion_anterior": {
    "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
    "tipo": "bajista",
-   "senales": 18326,
+   "senales": 18311,
    "acierto_pct": 41.1,
    "retorno_medio_pct": 2.18,
-   "retorno_mediano_pct": 1.81
+   "retorno_mediano_pct": 1.82
   },
   "precaucion": {
    "nombre": "«Precaución» con confirmaciones (antes «vender»)",
    "tipo": "bajista",
-   "senales": 4274,
+   "senales": 4268,
    "acierto_pct": 40.8,
    "retorno_medio_pct": 2.25,
    "retorno_mediano_pct": 1.81
@@ -199,7 +199,7 @@
  },
  "aprendizaje": {
   "comprar_y_mantener": {
-   "senales": 161927,
+   "senales": 161928,
    "acierto_pct": 56.5,
    "retorno_medio_pct": 2.25,
    "retorno_mediano_pct": 1.21
@@ -210,29 +210,29 @@
     "tipo": "alcista",
     "senales": 67552,
     "acierto_pct": 54.8,
-    "retorno_medio_pct": 0.98,
+    "retorno_medio_pct": 0.97,
     "retorno_mediano_pct": 0.84
    },
    "cerca_soporte": {
     "nombre": "A menos de 1 ATR del soporte",
     "tipo": "alcista",
-    "senales": 33431,
+    "senales": 33440,
     "acierto_pct": 57.8,
-    "retorno_medio_pct": 4.35,
-    "retorno_mediano_pct": 1.55
+    "retorno_medio_pct": 4.36,
+    "retorno_mediano_pct": 1.56
    },
    "doble_piso": {
     "nombre": "Doble piso confirmado",
     "tipo": "alcista",
-    "senales": 16875,
+    "senales": 16882,
     "acierto_pct": 53.9,
-    "retorno_medio_pct": 0.26,
+    "retorno_medio_pct": 0.27,
     "retorno_mediano_pct": 0.59
    },
    "arriba_sma200": {
     "nombre": "Arriba de la media de 200 días",
     "tipo": "alcista",
-    "senales": 100025,
+    "senales": 100026,
     "acierto_pct": 55.6,
     "retorno_medio_pct": 0.96,
     "retorno_mediano_pct": 0.95
@@ -240,7 +240,7 @@
    "rsi_sobreventa": {
     "nombre": "RSI(14) menor a 30",
     "tipo": "alcista",
-    "senales": 6432,
+    "senales": 6428,
     "acierto_pct": 63.8,
     "retorno_medio_pct": 11.84,
     "retorno_mediano_pct": 3.13
@@ -248,7 +248,7 @@
    "macd_positivo": {
     "nombre": "Histograma MACD positivo",
     "tipo": "alcista",
-    "senales": 81611,
+    "senales": 81614,
     "acierto_pct": 55.8,
     "retorno_medio_pct": 1.91,
     "retorno_mediano_pct": 1.07
@@ -256,7 +256,7 @@
    "momentum_positivo": {
     "nombre": "Momentum 12-1 meses positivo",
     "tipo": "alcista",
-    "senales": 105515,
+    "senales": 105514,
     "acierto_pct": 56.3,
     "retorno_medio_pct": 1.12,
     "retorno_mediano_pct": 1.08
@@ -264,33 +264,33 @@
    "volumen_alto_al_alza": {
     "nombre": "Volumen relativo ≥ 1.5× en día de alza",
     "tipo": "alcista",
-    "senales": 8525,
-    "acierto_pct": 55.7,
-    "retorno_medio_pct": 1.3,
-    "retorno_mediano_pct": 1.06
+    "senales": 8520,
+    "acierto_pct": 55.8,
+    "retorno_medio_pct": 1.31,
+    "retorno_mediano_pct": 1.07
    },
    "mfi_sobreventa": {
     "nombre": "MFI(14) menor a 20",
     "tipo": "alcista",
-    "senales": 4256,
+    "senales": 4264,
     "acierto_pct": 57.8,
-    "retorno_medio_pct": 15.32,
-    "retorno_mediano_pct": 1.45
+    "retorno_medio_pct": 15.29,
+    "retorno_mediano_pct": 1.44
    },
    "comprar_anterior": {
     "nombre": "«Comprar» sin confirmaciones (versión anterior)",
     "tipo": "alcista",
-    "senales": 13861,
+    "senales": 13872,
     "acierto_pct": 54.9,
     "retorno_medio_pct": 0.76,
-    "retorno_mediano_pct": 0.78
+    "retorno_mediano_pct": 0.77
    },
    "comprar": {
     "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
     "tipo": "alcista",
-    "senales": 3281,
+    "senales": 3282,
     "acierto_pct": 56.2,
-    "retorno_medio_pct": 0.86,
+    "retorno_medio_pct": 0.85,
     "retorno_mediano_pct": 0.95
    },
    "rebote": {
@@ -298,13 +298,13 @@
     "tipo": "alcista",
     "senales": 635,
     "acierto_pct": 61.6,
-    "retorno_medio_pct": 1.16,
+    "retorno_medio_pct": 1.2,
     "retorno_mediano_pct": 2.26
    },
    "tendencia_bajista": {
     "nombre": "Tendencia semanal bajista",
     "tipo": "bajista",
-    "senales": 47099,
+    "senales": 47100,
     "acierto_pct": 40.4,
     "retorno_medio_pct": 5.35,
     "retorno_mediano_pct": 2.06
@@ -312,18 +312,18 @@
    "cerca_resistencia": {
     "nombre": "A menos de 1 ATR de la resistencia",
     "tipo": "bajista",
-    "senales": 41588,
+    "senales": 41561,
     "acierto_pct": 44.1,
     "retorno_medio_pct": 1.12,
-    "retorno_mediano_pct": 1.04
+    "retorno_mediano_pct": 1.05
    },
    "doble_techo": {
     "nombre": "Doble techo confirmado",
     "tipo": "bajista",
-    "senales": 11053,
+    "senales": 11036,
     "acierto_pct": 38.9,
-    "retorno_medio_pct": 2.19,
-    "retorno_mediano_pct": 2.16
+    "retorno_medio_pct": 2.2,
+    "retorno_mediano_pct": 2.19
    },
    "abajo_sma200": {
     "nombre": "Abajo de la media de 200 días",
@@ -336,15 +336,15 @@
    "rsi_sobrecompra": {
     "nombre": "RSI(14) mayor a 70",
     "tipo": "bajista",
-    "senales": 10814,
-    "acierto_pct": 47.3,
-    "retorno_medio_pct": 0.27,
-    "retorno_mediano_pct": 0.26
+    "senales": 10817,
+    "acierto_pct": 47.2,
+    "retorno_medio_pct": 0.28,
+    "retorno_mediano_pct": 0.28
    },
    "macd_negativo": {
     "nombre": "Histograma MACD negativo",
     "tipo": "bajista",
-    "senales": 80316,
+    "senales": 80314,
     "acierto_pct": 42.5,
     "retorno_medio_pct": 2.6,
     "retorno_mediano_pct": 1.36
@@ -352,7 +352,7 @@
    "momentum_negativo": {
     "nombre": "Momentum 12-1 meses negativo",
     "tipo": "bajista",
-    "senales": 56399,
+    "senales": 56401,
     "acierto_pct": 42.7,
     "retorno_medio_pct": 4.36,
     "retorno_mediano_pct": 1.51
@@ -360,40 +360,40 @@
    "volumen_alto_a_la_baja": {
     "nombre": "Volumen relativo ≥ 1.5× en día de baja",
     "tipo": "bajista",
-    "senales": 9431,
+    "senales": 9434,
     "acierto_pct": 40.9,
     "retorno_medio_pct": 7.85,
-    "retorno_mediano_pct": 1.78
+    "retorno_mediano_pct": 1.77
    },
    "mfi_sobrecompra": {
     "nombre": "MFI(14) mayor a 80",
     "tipo": "bajista",
-    "senales": 6338,
+    "senales": 6331,
     "acierto_pct": 44.8,
-    "retorno_medio_pct": 0.96,
-    "retorno_mediano_pct": 0.77
+    "retorno_medio_pct": 0.95,
+    "retorno_mediano_pct": 0.78
    },
    "precaucion_anterior": {
     "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
     "tipo": "bajista",
-    "senales": 12174,
+    "senales": 12162,
     "acierto_pct": 40.3,
-    "retorno_medio_pct": 2.23,
-    "retorno_mediano_pct": 2.03
+    "retorno_medio_pct": 2.24,
+    "retorno_mediano_pct": 2.04
    },
    "precaucion": {
     "nombre": "«Precaución» con confirmaciones (antes «vender»)",
     "tipo": "bajista",
-    "senales": 2827,
+    "senales": 2825,
     "acierto_pct": 39.0,
-    "retorno_medio_pct": 2.61,
-    "retorno_mediano_pct": 2.28
+    "retorno_medio_pct": 2.64,
+    "retorno_mediano_pct": 2.31
    }
   }
  },
  "prueba": {
   "comprar_y_mantener": {
-   "senales": 81792,
+   "senales": 81791,
    "acierto_pct": 55.9,
    "retorno_medio_pct": 1.49,
    "retorno_mediano_pct": 1.06
@@ -410,15 +410,15 @@
    "cerca_soporte": {
     "nombre": "A menos de 1 ATR del soporte",
     "tipo": "alcista",
-    "senales": 16913,
+    "senales": 16925,
     "acierto_pct": 55.3,
     "retorno_medio_pct": 1.45,
-    "retorno_mediano_pct": 0.99
+    "retorno_mediano_pct": 1.0
    },
    "doble_piso": {
     "nombre": "Doble piso confirmado",
     "tipo": "alcista",
-    "senales": 8200,
+    "senales": 8195,
     "acierto_pct": 57.0,
     "retorno_medio_pct": 1.38,
     "retorno_mediano_pct": 1.07
@@ -426,31 +426,31 @@
    "arriba_sma200": {
     "nombre": "Arriba de la media de 200 días",
     "tipo": "alcista",
-    "senales": 52547,
+    "senales": 52544,
     "acierto_pct": 55.4,
-    "retorno_medio_pct": 1.3,
+    "retorno_medio_pct": 1.31,
     "retorno_mediano_pct": 0.93
    },
    "rsi_sobreventa": {
     "nombre": "RSI(14) menor a 30",
     "tipo": "alcista",
-    "senales": 2612,
-    "acierto_pct": 61.3,
-    "retorno_medio_pct": 3.31,
-    "retorno_mediano_pct": 2.19
+    "senales": 2614,
+    "acierto_pct": 61.2,
+    "retorno_medio_pct": 3.3,
+    "retorno_mediano_pct": 2.17
    },
    "macd_positivo": {
     "nombre": "Histograma MACD positivo",
     "tipo": "alcista",
-    "senales": 41730,
+    "senales": 41726,
     "acierto_pct": 55.6,
     "retorno_medio_pct": 1.43,
-    "retorno_mediano_pct": 1.02
+    "retorno_mediano_pct": 1.03
    },
    "momentum_positivo": {
     "nombre": "Momentum 12-1 meses positivo",
     "tipo": "alcista",
-    "senales": 54658,
+    "senales": 54660,
     "acierto_pct": 55.9,
     "retorno_medio_pct": 1.46,
     "retorno_mediano_pct": 1.01
@@ -458,41 +458,41 @@
    "volumen_alto_al_alza": {
     "nombre": "Volumen relativo ≥ 1.5× en día de alza",
     "tipo": "alcista",
-    "senales": 4206,
-    "acierto_pct": 57.5,
-    "retorno_medio_pct": 2.22,
-    "retorno_mediano_pct": 1.41
+    "senales": 4202,
+    "acierto_pct": 57.4,
+    "retorno_medio_pct": 2.2,
+    "retorno_mediano_pct": 1.39
    },
    "mfi_sobreventa": {
     "nombre": "MFI(14) menor a 20",
     "tipo": "alcista",
     "senales": 1825,
-    "acierto_pct": 58.3,
-    "retorno_medio_pct": 2.47,
-    "retorno_mediano_pct": 1.44
+    "acierto_pct": 58.1,
+    "retorno_medio_pct": 2.44,
+    "retorno_mediano_pct": 1.41
    },
    "comprar_anterior": {
     "nombre": "«Comprar» sin confirmaciones (versión anterior)",
     "tipo": "alcista",
-    "senales": 7535,
+    "senales": 7540,
     "acierto_pct": 55.9,
     "retorno_medio_pct": 1.41,
-    "retorno_mediano_pct": 1.01
+    "retorno_mediano_pct": 1.02
    },
    "comprar": {
     "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
     "tipo": "alcista",
-    "senales": 1665,
-    "acierto_pct": 57.7,
-    "retorno_medio_pct": 1.91,
-    "retorno_mediano_pct": 1.38
+    "senales": 1669,
+    "acierto_pct": 57.8,
+    "retorno_medio_pct": 1.95,
+    "retorno_mediano_pct": 1.39
    },
    "rebote": {
     "nombre": "«Rebote»: RSI < 30 con el precio arriba de su media de 200 días",
     "tipo": "alcista",
     "senales": 293,
-    "acierto_pct": 46.4,
-    "retorno_medio_pct": 0.84,
+    "acierto_pct": 46.1,
+    "retorno_medio_pct": 0.83,
     "retorno_mediano_pct": 0.0
    },
    "tendencia_bajista": {
@@ -506,23 +506,23 @@
    "cerca_resistencia": {
     "nombre": "A menos de 1 ATR de la resistencia",
     "tipo": "bajista",
-    "senales": 20681,
+    "senales": 20676,
     "acierto_pct": 43.8,
-    "retorno_medio_pct": 1.4,
-    "retorno_mediano_pct": 1.04
+    "retorno_medio_pct": 1.39,
+    "retorno_mediano_pct": 1.03
    },
    "doble_techo": {
     "nombre": "Doble techo confirmado",
     "tipo": "bajista",
-    "senales": 5736,
-    "acierto_pct": 42.9,
-    "retorno_medio_pct": 1.73,
-    "retorno_mediano_pct": 1.22
+    "senales": 5724,
+    "acierto_pct": 43.0,
+    "retorno_medio_pct": 1.72,
+    "retorno_mediano_pct": 1.21
    },
    "abajo_sma200": {
     "nombre": "Abajo de la media de 200 días",
     "tipo": "bajista",
-    "senales": 29245,
+    "senales": 29247,
     "acierto_pct": 42.6,
     "retorno_medio_pct": 1.83,
     "retorno_mediano_pct": 1.33
@@ -530,15 +530,15 @@
    "rsi_sobrecompra": {
     "nombre": "RSI(14) mayor a 70",
     "tipo": "bajista",
-    "senales": 6410,
+    "senales": 6415,
     "acierto_pct": 41.7,
-    "retorno_medio_pct": 1.58,
-    "retorno_mediano_pct": 0.94
+    "retorno_medio_pct": 1.57,
+    "retorno_mediano_pct": 0.93
    },
    "macd_negativo": {
     "nombre": "Histograma MACD negativo",
     "tipo": "bajista",
-    "senales": 40062,
+    "senales": 40065,
     "acierto_pct": 43.4,
     "retorno_medio_pct": 1.56,
     "retorno_mediano_pct": 1.09
@@ -546,7 +546,7 @@
    "momentum_negativo": {
     "nombre": "Momentum 12-1 meses negativo",
     "tipo": "bajista",
-    "senales": 26991,
+    "senales": 26988,
     "acierto_pct": 43.7,
     "retorno_medio_pct": 1.57,
     "retorno_mediano_pct": 1.21
@@ -554,34 +554,34 @@
    "volumen_alto_a_la_baja": {
     "nombre": "Volumen relativo ≥ 1.5× en día de baja",
     "tipo": "bajista",
-    "senales": 4074,
-    "acierto_pct": 41.9,
-    "retorno_medio_pct": 2.17,
-    "retorno_mediano_pct": 1.49
+    "senales": 4077,
+    "acierto_pct": 42.0,
+    "retorno_medio_pct": 2.16,
+    "retorno_mediano_pct": 1.46
    },
    "mfi_sobrecompra": {
     "nombre": "MFI(14) mayor a 80",
     "tipo": "bajista",
-    "senales": 3285,
-    "acierto_pct": 42.0,
-    "retorno_medio_pct": 1.77,
-    "retorno_mediano_pct": 1.2
+    "senales": 3283,
+    "acierto_pct": 42.2,
+    "retorno_medio_pct": 1.74,
+    "retorno_mediano_pct": 1.18
    },
    "precaucion_anterior": {
     "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
     "tipo": "bajista",
-    "senales": 6152,
-    "acierto_pct": 42.8,
-    "retorno_medio_pct": 2.09,
+    "senales": 6149,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 2.07,
     "retorno_mediano_pct": 1.41
    },
    "precaucion": {
     "nombre": "«Precaución» con confirmaciones (antes «vender»)",
     "tipo": "bajista",
-    "senales": 1447,
-    "acierto_pct": 44.2,
-    "retorno_medio_pct": 1.53,
-    "retorno_mediano_pct": 1.21
+    "senales": 1443,
+    "acierto_pct": 44.3,
+    "retorno_medio_pct": 1.5,
+    "retorno_mediano_pct": 1.2
    }
   }
  },
@@ -605,17 +605,17 @@
     "cerca_soporte": {
      "nombre": "A menos de 1 ATR del soporte",
      "tipo": "alcista",
-     "senales": 1516,
-     "acierto_pct": 60.5,
-     "retorno_medio_pct": 1.27,
-     "retorno_mediano_pct": 1.31
+     "senales": 1524,
+     "acierto_pct": 60.4,
+     "retorno_medio_pct": 1.26,
+     "retorno_mediano_pct": 1.33
     },
     "doble_piso": {
      "nombre": "Doble piso confirmado",
      "tipo": "alcista",
-     "senales": 1091,
-     "acierto_pct": 57.1,
-     "retorno_medio_pct": 0.47,
+     "senales": 1095,
+     "acierto_pct": 57.3,
+     "retorno_medio_pct": 0.49,
      "retorno_mediano_pct": 0.78
     },
     "arriba_sma200": {
@@ -661,25 +661,25 @@
     "mfi_sobreventa": {
      "nombre": "MFI(14) menor a 20",
      "tipo": "alcista",
-     "senales": 520,
-     "acierto_pct": 55.6,
-     "retorno_medio_pct": 1.24,
-     "retorno_mediano_pct": 0.75
+     "senales": 518,
+     "acierto_pct": 55.4,
+     "retorno_medio_pct": 1.22,
+     "retorno_mediano_pct": 0.69
     },
     "comprar_anterior": {
      "nombre": "«Comprar» sin confirmaciones (versión anterior)",
      "tipo": "alcista",
-     "senales": 644,
+     "senales": 649,
      "acierto_pct": 60.9,
-     "retorno_medio_pct": 1.08,
+     "retorno_medio_pct": 1.05,
      "retorno_mediano_pct": 1.15
     },
     "comprar": {
      "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
      "tipo": "alcista",
-     "senales": 152,
-     "acierto_pct": 68.4,
-     "retorno_medio_pct": 2.08,
+     "senales": 154,
+     "acierto_pct": 68.2,
+     "retorno_medio_pct": 2.0,
      "retorno_mediano_pct": 1.69
     },
     "rebote": {
@@ -701,18 +701,18 @@
     "cerca_resistencia": {
      "nombre": "A menos de 1 ATR de la resistencia",
      "tipo": "bajista",
-     "senales": 2303,
-     "acierto_pct": 40.7,
-     "retorno_medio_pct": 0.88,
-     "retorno_mediano_pct": 0.97
+     "senales": 2290,
+     "acierto_pct": 40.5,
+     "retorno_medio_pct": 0.89,
+     "retorno_mediano_pct": 1.0
     },
     "doble_techo": {
      "nombre": "Doble techo confirmado",
      "tipo": "bajista",
-     "senales": 475,
-     "acierto_pct": 40.8,
-     "retorno_medio_pct": 1.34,
-     "retorno_mediano_pct": 1.41
+     "senales": 468,
+     "acierto_pct": 41.5,
+     "retorno_medio_pct": 1.32,
+     "retorno_mediano_pct": 1.42
     },
     "abajo_sma200": {
      "nombre": "Abajo de la media de 200 días",
@@ -757,220 +757,220 @@
     "mfi_sobrecompra": {
      "nombre": "MFI(14) mayor a 80",
      "tipo": "bajista",
-     "senales": 528,
-     "acierto_pct": 45.5,
-     "retorno_medio_pct": 0.78,
-     "retorno_mediano_pct": 0.25
+     "senales": 529,
+     "acierto_pct": 44.8,
+     "retorno_medio_pct": 0.88,
+     "retorno_mediano_pct": 0.32
     },
     "precaucion_anterior": {
      "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
      "tipo": "bajista",
-     "senales": 410,
-     "acierto_pct": 39.8,
-     "retorno_medio_pct": 1.72,
-     "retorno_mediano_pct": 1.66
+     "senales": 405,
+     "acierto_pct": 39.5,
+     "retorno_medio_pct": 1.81,
+     "retorno_mediano_pct": 1.83
     },
     "precaucion": {
      "nombre": "«Precaución» con confirmaciones (antes «vender»)",
      "tipo": "bajista",
      "senales": 73,
      "acierto_pct": 34.2,
-     "retorno_medio_pct": 2.17,
-     "retorno_mediano_pct": 3.39
+     "retorno_medio_pct": 2.3,
+     "retorno_mediano_pct": 3.46
     }
    }
   },
   "cripto": {
    "comprar_y_mantener": {
     "senales": 5554,
-    "acierto_pct": 47.7,
-    "retorno_medio_pct": 5.1,
-    "retorno_mediano_pct": -0.87
+    "acierto_pct": 47.6,
+    "retorno_medio_pct": 5.07,
+    "retorno_mediano_pct": -0.9
    },
    "reglas": {
     "tendencia_alcista": {
      "nombre": "Tendencia semanal alcista",
      "tipo": "alcista",
      "senales": 2358,
-     "acierto_pct": 45.5,
-     "retorno_medio_pct": 6.49,
-     "retorno_mediano_pct": -1.89
+     "acierto_pct": 45.6,
+     "retorno_medio_pct": 6.47,
+     "retorno_mediano_pct": -1.91
     },
     "cerca_soporte": {
      "nombre": "A menos de 1 ATR del soporte",
      "tipo": "alcista",
-     "senales": 1446,
-     "acierto_pct": 45.8,
-     "retorno_medio_pct": 2.24,
-     "retorno_mediano_pct": -1.71
+     "senales": 1450,
+     "acierto_pct": 46.2,
+     "retorno_medio_pct": 2.33,
+     "retorno_mediano_pct": -1.68
     },
     "doble_piso": {
      "nombre": "Doble piso confirmado",
      "tipo": "alcista",
-     "senales": 184,
-     "acierto_pct": 50.0,
-     "retorno_medio_pct": 10.11,
-     "retorno_mediano_pct": 0.12
+     "senales": 186,
+     "acierto_pct": 51.6,
+     "retorno_medio_pct": 10.22,
+     "retorno_mediano_pct": 0.99
     },
     "arriba_sma200": {
      "nombre": "Arriba de la media de 200 días",
      "tipo": "alcista",
-     "senales": 2533,
-     "acierto_pct": 47.0,
-     "retorno_medio_pct": 7.73,
-     "retorno_mediano_pct": -1.1
+     "senales": 2531,
+     "acierto_pct": 46.9,
+     "retorno_medio_pct": 7.72,
+     "retorno_mediano_pct": -1.12
     },
     "rsi_sobreventa": {
      "nombre": "RSI(14) menor a 30",
      "tipo": "alcista",
-     "senales": 222,
-     "acierto_pct": 57.7,
-     "retorno_medio_pct": 5.87,
-     "retorno_mediano_pct": 2.9
+     "senales": 220,
+     "acierto_pct": 55.9,
+     "retorno_medio_pct": 5.64,
+     "retorno_mediano_pct": 2.32
     },
     "macd_positivo": {
      "nombre": "Histograma MACD positivo",
      "tipo": "alcista",
-     "senales": 2927,
+     "senales": 2926,
      "acierto_pct": 49.1,
-     "retorno_medio_pct": 6.39,
-     "retorno_mediano_pct": -0.3
+     "retorno_medio_pct": 6.33,
+     "retorno_mediano_pct": -0.29
     },
     "momentum_positivo": {
      "nombre": "Momentum 12-1 meses positivo",
      "tipo": "alcista",
-     "senales": 2852,
-     "acierto_pct": 47.8,
-     "retorno_medio_pct": 7.2,
-     "retorno_mediano_pct": -0.8
+     "senales": 2853,
+     "acierto_pct": 47.6,
+     "retorno_medio_pct": 7.15,
+     "retorno_mediano_pct": -0.83
     },
     "volumen_alto_al_alza": {
      "nombre": "Volumen relativo ≥ 1.5× en día de alza",
      "tipo": "alcista",
-     "senales": 422,
-     "acierto_pct": 50.5,
-     "retorno_medio_pct": 12.42,
-     "retorno_mediano_pct": 0.28
+     "senales": 413,
+     "acierto_pct": 50.8,
+     "retorno_medio_pct": 12.6,
+     "retorno_mediano_pct": 0.29
     },
     "mfi_sobreventa": {
      "nombre": "MFI(14) menor a 20",
      "tipo": "alcista",
-     "senales": 114,
-     "acierto_pct": 45.6,
-     "retorno_medio_pct": 1.37,
-     "retorno_mediano_pct": -1.27
+     "senales": 111,
+     "acierto_pct": 43.2,
+     "retorno_medio_pct": 1.19,
+     "retorno_mediano_pct": -2.05
     },
     "comprar_anterior": {
      "nombre": "«Comprar» sin confirmaciones (versión anterior)",
      "tipo": "alcista",
-     "senales": 399,
-     "acierto_pct": 46.1,
-     "retorno_medio_pct": 5.27,
-     "retorno_mediano_pct": -1.7
+     "senales": 407,
+     "acierto_pct": 47.9,
+     "retorno_medio_pct": 5.46,
+     "retorno_mediano_pct": -1.05
     },
     "comprar": {
      "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
      "tipo": "alcista",
      "senales": 60,
-     "acierto_pct": 45.0,
-     "retorno_medio_pct": 5.06,
-     "retorno_mediano_pct": -2.99
+     "acierto_pct": 46.7,
+     "retorno_medio_pct": 5.56,
+     "retorno_mediano_pct": -2.92
     },
     "rebote": {
      "nombre": "«Rebote»: RSI < 30 con el precio arriba de su media de 200 días",
      "tipo": "alcista",
      "senales": 6,
-     "acierto_pct": 66.7,
-     "retorno_medio_pct": 6.62,
-     "retorno_mediano_pct": 9.7
+     "acierto_pct": 50.0,
+     "retorno_medio_pct": 9.92,
+     "retorno_mediano_pct": 7.9
     },
     "tendencia_bajista": {
      "nombre": "Tendencia semanal bajista",
      "tipo": "bajista",
-     "senales": 2593,
-     "acierto_pct": 51.3,
-     "retorno_medio_pct": 2.77,
-     "retorno_mediano_pct": -0.42
+     "senales": 2594,
+     "acierto_pct": 51.6,
+     "retorno_medio_pct": 2.72,
+     "retorno_mediano_pct": -0.53
     },
     "cerca_resistencia": {
      "nombre": "A menos de 1 ATR de la resistencia",
      "tipo": "bajista",
-     "senales": 1109,
-     "acierto_pct": 53.0,
-     "retorno_medio_pct": 6.47,
-     "retorno_mediano_pct": -1.08
+     "senales": 1088,
+     "acierto_pct": 52.9,
+     "retorno_medio_pct": 6.61,
+     "retorno_mediano_pct": -1.0
     },
     "doble_techo": {
      "nombre": "Doble techo confirmado",
      "tipo": "bajista",
      "senales": 284,
-     "acierto_pct": 54.9,
-     "retorno_medio_pct": 0.55,
-     "retorno_mediano_pct": -2.46
+     "acierto_pct": 54.2,
+     "retorno_medio_pct": 0.79,
+     "retorno_mediano_pct": -2.17
     },
     "abajo_sma200": {
      "nombre": "Abajo de la media de 200 días",
      "tipo": "bajista",
-     "senales": 3021,
-     "acierto_pct": 51.7,
-     "retorno_medio_pct": 2.89,
-     "retorno_mediano_pct": -0.55
+     "senales": 3023,
+     "acierto_pct": 51.8,
+     "retorno_medio_pct": 2.85,
+     "retorno_mediano_pct": -0.62
     },
     "rsi_sobrecompra": {
      "nombre": "RSI(14) mayor a 70",
      "tipo": "bajista",
-     "senales": 436,
-     "acierto_pct": 44.5,
-     "retorno_medio_pct": 15.04,
-     "retorno_mediano_pct": 3.0
+     "senales": 444,
+     "acierto_pct": 43.2,
+     "retorno_medio_pct": 14.94,
+     "retorno_mediano_pct": 3.41
     },
     "macd_negativo": {
      "nombre": "Histograma MACD negativo",
      "tipo": "bajista",
-     "senales": 2627,
-     "acierto_pct": 53.9,
-     "retorno_medio_pct": 3.66,
+     "senales": 2628,
+     "acierto_pct": 54.0,
+     "retorno_medio_pct": 3.67,
      "retorno_mediano_pct": -1.47
     },
     "momentum_negativo": {
      "nombre": "Momentum 12-1 meses negativo",
      "tipo": "bajista",
-     "senales": 2702,
-     "acierto_pct": 52.4,
-     "retorno_medio_pct": 2.88,
-     "retorno_mediano_pct": -1.0
+     "senales": 2701,
+     "acierto_pct": 52.3,
+     "retorno_medio_pct": 2.87,
+     "retorno_mediano_pct": -0.95
     },
     "volumen_alto_a_la_baja": {
      "nombre": "Volumen relativo ≥ 1.5× en día de baja",
      "tipo": "bajista",
-     "senales": 283,
-     "acierto_pct": 50.2,
-     "retorno_medio_pct": 13.22,
-     "retorno_mediano_pct": -0.15
+     "senales": 289,
+     "acierto_pct": 51.2,
+     "retorno_medio_pct": 13.21,
+     "retorno_mediano_pct": -0.34
     },
     "mfi_sobrecompra": {
      "nombre": "MFI(14) mayor a 80",
      "tipo": "bajista",
-     "senales": 273,
-     "acierto_pct": 45.1,
-     "retorno_medio_pct": 14.23,
-     "retorno_mediano_pct": 3.68
+     "senales": 262,
+     "acierto_pct": 43.9,
+     "retorno_medio_pct": 14.3,
+     "retorno_mediano_pct": 3.39
     },
     "precaucion_anterior": {
      "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
      "tipo": "bajista",
-     "senales": 546,
+     "senales": 544,
      "acierto_pct": 52.0,
-     "retorno_medio_pct": 2.85,
-     "retorno_mediano_pct": -1.01
+     "retorno_medio_pct": 2.93,
+     "retorno_mediano_pct": -0.82
     },
     "precaucion": {
      "nombre": "«Precaución» con confirmaciones (antes «vender»)",
      "tipo": "bajista",
-     "senales": 184,
-     "acierto_pct": 50.0,
-     "retorno_medio_pct": 3.19,
-     "retorno_mediano_pct": -0.01
+     "senales": 177,
+     "acierto_pct": 50.3,
+     "retorno_medio_pct": 3.44,
+     "retorno_mediano_pct": -0.06
     }
    }
   },
@@ -993,7 +993,7 @@
     "cerca_soporte": {
      "nombre": "A menos de 1 ATR del soporte",
      "tipo": "alcista",
-     "senales": 47382,
+     "senales": 47391,
      "acierto_pct": 57.2,
      "retorno_medio_pct": 3.48,
      "retorno_mediano_pct": 1.39
@@ -1001,7 +1001,7 @@
     "doble_piso": {
      "nombre": "Doble piso confirmado",
      "tipo": "alcista",
-     "senales": 23800,
+     "senales": 23796,
      "acierto_pct": 54.8,
      "retorno_medio_pct": 0.56,
      "retorno_mediano_pct": 0.76
@@ -1049,23 +1049,23 @@
     "mfi_sobreventa": {
      "nombre": "MFI(14) menor a 20",
      "tipo": "alcista",
-     "senales": 5447,
+     "senales": 5460,
      "acierto_pct": 58.4,
-     "retorno_medio_pct": 12.65,
+     "retorno_medio_pct": 12.61,
      "retorno_mediano_pct": 1.58
     },
     "comprar_anterior": {
      "nombre": "«Comprar» sin confirmaciones (versión anterior)",
      "tipo": "alcista",
-     "senales": 20353,
-     "acierto_pct": 55.3,
+     "senales": 20356,
+     "acierto_pct": 55.2,
      "retorno_medio_pct": 0.9,
-     "retorno_mediano_pct": 0.87
+     "retorno_mediano_pct": 0.85
     },
     "comprar": {
      "nombre": "«Comprar» con confirmaciones (RSI, momentum, volumen, 200 días)",
      "tipo": "alcista",
-     "senales": 4734,
+     "senales": 4737,
      "acierto_pct": 56.5,
      "retorno_medio_pct": 1.14,
      "retorno_mediano_pct": 1.09
@@ -1089,15 +1089,15 @@
     "cerca_resistencia": {
      "nombre": "A menos de 1 ATR de la resistencia",
      "tipo": "bajista",
-     "senales": 58857,
+     "senales": 58859,
      "acierto_pct": 43.9,
-     "retorno_medio_pct": 1.13,
+     "retorno_medio_pct": 1.12,
      "retorno_mediano_pct": 1.07
     },
     "doble_techo": {
      "nombre": "Doble techo confirmado",
      "tipo": "bajista",
-     "senales": 16030,
+     "senales": 16008,
      "acierto_pct": 40.0,
      "retorno_medio_pct": 2.08,
      "retorno_mediano_pct": 1.85
@@ -1145,15 +1145,15 @@
     "mfi_sobrecompra": {
      "nombre": "MFI(14) mayor a 80",
      "tipo": "bajista",
-     "senales": 8822,
-     "acierto_pct": 43.7,
+     "senales": 8823,
+     "acierto_pct": 43.8,
      "retorno_medio_pct": 0.86,
-     "retorno_mediano_pct": 0.94
+     "retorno_mediano_pct": 0.93
     },
     "precaucion_anterior": {
      "nombre": "«Precaución» sin confirmaciones (antes «vender»)",
      "tipo": "bajista",
-     "senales": 17370,
+     "senales": 17362,
      "acierto_pct": 40.8,
      "retorno_medio_pct": 2.17,
      "retorno_mediano_pct": 1.86
@@ -1161,7 +1161,7 @@
     "precaucion": {
      "nombre": "«Precaución» con confirmaciones (antes «vender»)",
      "tipo": "bajista",
-     "senales": 4017,
+     "senales": 4018,
      "acierto_pct": 40.5,
      "retorno_medio_pct": 2.2,
      "retorno_mediano_pct": 1.84
@@ -1193,7 +1193,7 @@
     "senales": 5,
     "acierto_pct": 0.0,
     "retorno_medio_pct": 5.2,
-    "retorno_mediano_pct": 5.5
+    "retorno_mediano_pct": 5.51
    }
   },
   "QQQ": {
@@ -1334,10 +1334,10 @@
     "retorno_mediano_pct": 0.9
    },
    "comprar": {
-    "senales": 9,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": 0.15,
-    "retorno_mediano_pct": -1.08
+    "senales": 10,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 0.36,
+    "retorno_mediano_pct": -0.66
    },
    "rebote": {
     "senales": 0,
@@ -1450,10 +1450,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 4,
-    "acierto_pct": 75.0,
-    "retorno_medio_pct": -6.83,
-    "retorno_mediano_pct": -1.59
+    "senales": 3,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": -8.12,
+    "retorno_mediano_pct": -0.2
    }
   },
   "FIBRAPL14.MX": {
@@ -1490,10 +1490,10 @@
     "retorno_mediano_pct": 0.86
    },
    "comprar": {
-    "senales": 4,
-    "acierto_pct": 75.0,
-    "retorno_medio_pct": 7.59,
-    "retorno_mediano_pct": 8.79
+    "senales": 5,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 4.79,
+    "retorno_mediano_pct": 3.71
    },
    "rebote": {
     "senales": 1,
@@ -1544,7 +1544,7 @@
    "comprar": {
     "senales": 9,
     "acierto_pct": 66.7,
-    "retorno_medio_pct": 4.02,
+    "retorno_medio_pct": 3.63,
     "retorno_mediano_pct": 2.77
    },
    "rebote": {
@@ -1554,10 +1554,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 3,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": -0.31,
-    "retorno_mediano_pct": -1.25
+    "senales": 4,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 1.88,
+    "retorno_mediano_pct": 3.6
    }
   },
   "FNOVA17.MX": {
@@ -1594,10 +1594,10 @@
     "retorno_mediano_pct": -0.39
    },
    "comprar": {
-    "senales": 3,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 5.7,
-    "retorno_mediano_pct": 0.74
+    "senales": 2,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 8.18,
+    "retorno_mediano_pct": 8.18
    },
    "rebote": {
     "senales": 0,
@@ -1606,10 +1606,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 3,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": -10.35,
-    "retorno_mediano_pct": -7.31
+    "senales": 4,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -5.67,
+    "retorno_mediano_pct": 0.52
    }
   },
   "FSHOP13.MX": {
@@ -1620,10 +1620,10 @@
     "retorno_mediano_pct": 0.36
    },
    "comprar": {
-    "senales": 0,
-    "acierto_pct": null,
-    "retorno_medio_pct": null,
-    "retorno_mediano_pct": null
+    "senales": 1,
+    "acierto_pct": 100.0,
+    "retorno_medio_pct": 0.33,
+    "retorno_mediano_pct": 0.33
    },
    "rebote": {
     "senales": 0,
@@ -1659,9 +1659,9 @@
    },
    "precaucion": {
     "senales": 5,
-    "acierto_pct": 80.0,
-    "retorno_medio_pct": -2.32,
-    "retorno_mediano_pct": -2.2
+    "acierto_pct": 100.0,
+    "retorno_medio_pct": -3.56,
+    "retorno_mediano_pct": -2.8
    }
   },
   "STORAGE18.MX": {
@@ -1684,36 +1684,36 @@
     "retorno_mediano_pct": 5.85
    },
    "precaucion": {
-    "senales": 1,
-    "acierto_pct": 0.0,
-    "retorno_medio_pct": 4.13,
-    "retorno_mediano_pct": 4.13
+    "senales": 0,
+    "acierto_pct": null,
+    "retorno_medio_pct": null,
+    "retorno_mediano_pct": null
    }
   },
   "BTC-USD": {
    "base": {
     "senales": 675,
-    "acierto_pct": 54.1,
-    "retorno_medio_pct": 3.8,
-    "retorno_mediano_pct": 1.29
+    "acierto_pct": 53.6,
+    "retorno_medio_pct": 3.59,
+    "retorno_mediano_pct": 0.93
    },
    "comprar": {
     "senales": 10,
-    "acierto_pct": 30.0,
-    "retorno_medio_pct": -1.33,
-    "retorno_mediano_pct": -2.24
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 1.63,
+    "retorno_mediano_pct": -2.26
    },
    "rebote": {
     "senales": 3,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 6.22,
-    "retorno_mediano_pct": 2.97
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 12.82,
+    "retorno_mediano_pct": -0.63
    },
    "precaucion": {
-    "senales": 26,
-    "acierto_pct": 57.7,
-    "retorno_medio_pct": -0.91,
-    "retorno_mediano_pct": -0.88
+    "senales": 19,
+    "acierto_pct": 63.2,
+    "retorno_medio_pct": -0.1,
+    "retorno_mediano_pct": -2.65
    }
   },
   "ETH-USD": {
@@ -2100,10 +2100,10 @@
     "retorno_mediano_pct": 1.78
    },
    "precaucion": {
-    "senales": 3,
-    "acierto_pct": 0.0,
-    "retorno_medio_pct": 7.57,
-    "retorno_mediano_pct": 4.17
+    "senales": 4,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": 5.58,
+    "retorno_mediano_pct": 3.75
    }
   },
   "CRM": {
@@ -2556,10 +2556,10 @@
     "retorno_mediano_pct": 1.29
    },
    "comprar": {
-    "senales": 10,
-    "acierto_pct": 80.0,
-    "retorno_medio_pct": 1.96,
-    "retorno_mediano_pct": 5.03
+    "senales": 9,
+    "acierto_pct": 88.9,
+    "retorno_medio_pct": 3.3,
+    "retorno_mediano_pct": 5.04
    },
    "rebote": {
     "senales": 3,
@@ -3062,10 +3062,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 10,
-    "acierto_pct": 60.0,
-    "retorno_medio_pct": -3.6,
-    "retorno_mediano_pct": -4.51
+    "senales": 8,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": -3.37,
+    "retorno_mediano_pct": -3.85
    }
   },
   "GM": {
@@ -3218,10 +3218,10 @@
     "retorno_mediano_pct": -2.03
    },
    "precaucion": {
-    "senales": 10,
-    "acierto_pct": 60.0,
-    "retorno_medio_pct": -1.97,
-    "retorno_mediano_pct": -2.59
+    "senales": 13,
+    "acierto_pct": 69.2,
+    "retorno_medio_pct": -3.74,
+    "retorno_mediano_pct": -3.67
    }
   },
   "RACE": {
@@ -3738,10 +3738,10 @@
     "retorno_mediano_pct": -10.37
    },
    "precaucion": {
-    "senales": 6,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": -3.11,
-    "retorno_mediano_pct": -0.67
+    "senales": 7,
+    "acierto_pct": 57.1,
+    "retorno_medio_pct": -2.95,
+    "retorno_mediano_pct": -1.99
    }
   },
   "EADSY": {
@@ -4168,10 +4168,10 @@
     "retorno_mediano_pct": 2.36
    },
    "comprar": {
-    "senales": 15,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 2.37,
-    "retorno_mediano_pct": 3.76
+    "senales": 14,
+    "acierto_pct": 64.3,
+    "retorno_medio_pct": 2.07,
+    "retorno_mediano_pct": 2.96
    },
    "rebote": {
     "senales": 5,
@@ -4246,10 +4246,10 @@
     "retorno_mediano_pct": 1.38
    },
    "comprar": {
-    "senales": 12,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 2.66,
-    "retorno_mediano_pct": 0.64
+    "senales": 11,
+    "acierto_pct": 45.5,
+    "retorno_medio_pct": 2.71,
+    "retorno_mediano_pct": -0.57
    },
    "rebote": {
     "senales": 1,
@@ -4272,10 +4272,10 @@
     "retorno_mediano_pct": 1.89
    },
    "comprar": {
-    "senales": 11,
-    "acierto_pct": 54.5,
-    "retorno_medio_pct": 2.42,
-    "retorno_mediano_pct": 2.65
+    "senales": 10,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 2.76,
+    "retorno_mediano_pct": 4.27
    },
    "rebote": {
     "senales": 4,
@@ -4298,10 +4298,10 @@
     "retorno_mediano_pct": 0.21
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 3.44,
-    "retorno_mediano_pct": 1.59
+    "senales": 5,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": 3.75,
+    "retorno_mediano_pct": 1.26
    },
    "rebote": {
     "senales": 1,
@@ -4934,10 +4934,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 5,
-    "acierto_pct": 60.0,
-    "retorno_medio_pct": 1.0,
-    "retorno_mediano_pct": -0.4
+    "senales": 4,
+    "acierto_pct": 75.0,
+    "retorno_medio_pct": 0.84,
+    "retorno_mediano_pct": -2.4
    }
   },
   "KO": {
@@ -5168,9 +5168,9 @@
     "retorno_mediano_pct": 2.47
    },
    "precaucion": {
-    "senales": 17,
-    "acierto_pct": 47.1,
-    "retorno_medio_pct": -1.47,
+    "senales": 15,
+    "acierto_pct": 46.7,
+    "retorno_medio_pct": -1.89,
     "retorno_mediano_pct": 0.44
    }
   },
@@ -5194,10 +5194,10 @@
     "retorno_mediano_pct": -1.39
    },
    "precaucion": {
-    "senales": 10,
-    "acierto_pct": 40.0,
-    "retorno_medio_pct": 0.43,
-    "retorno_mediano_pct": 2.04
+    "senales": 9,
+    "acierto_pct": 44.4,
+    "retorno_medio_pct": -0.12,
+    "retorno_mediano_pct": 0.83
    }
   },
   "MCD": {
@@ -5390,10 +5390,10 @@
     "retorno_mediano_pct": -0.24
    },
    "comprar": {
-    "senales": 8,
-    "acierto_pct": 25.0,
-    "retorno_medio_pct": -0.23,
-    "retorno_mediano_pct": -0.81
+    "senales": 7,
+    "acierto_pct": 28.6,
+    "retorno_medio_pct": -0.22,
+    "retorno_mediano_pct": -1.35
    },
    "rebote": {
     "senales": 1,
@@ -5403,9 +5403,9 @@
    },
    "precaucion": {
     "senales": 4,
-    "acierto_pct": 75.0,
-    "retorno_medio_pct": -5.2,
-    "retorno_mediano_pct": -6.24
+    "acierto_pct": 100.0,
+    "retorno_medio_pct": -6.92,
+    "retorno_mediano_pct": -6.72
    }
   },
   "TXRH": {
@@ -5480,10 +5480,10 @@
     "retorno_mediano_pct": 6.48
    },
    "precaucion": {
-    "senales": 6,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": 2.8,
-    "retorno_mediano_pct": 3.24
+    "senales": 7,
+    "acierto_pct": 28.6,
+    "retorno_medio_pct": 2.43,
+    "retorno_mediano_pct": 1.55
    }
   },
   "UL": {
@@ -5520,10 +5520,10 @@
     "retorno_mediano_pct": 0.83
    },
    "comprar": {
-    "senales": 8,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": -0.26,
-    "retorno_mediano_pct": 0.13
+    "senales": 9,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": -0.17,
+    "retorno_mediano_pct": 0.59
    },
    "rebote": {
     "senales": 2,
@@ -5728,10 +5728,10 @@
     "retorno_mediano_pct": 1.47
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": -3.14,
-    "retorno_mediano_pct": -1.16
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": -4.06,
+    "retorno_mediano_pct": -2.02
    },
    "rebote": {
     "senales": 1,
@@ -5757,7 +5757,7 @@
     "senales": 14,
     "acierto_pct": 71.4,
     "retorno_medio_pct": 0.83,
-    "retorno_mediano_pct": 2.23
+    "retorno_mediano_pct": 2.24
    },
    "rebote": {
     "senales": 1,
@@ -5910,10 +5910,10 @@
     "retorno_mediano_pct": 0.35
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 2.01,
-    "retorno_mediano_pct": 1.5
+    "senales": 7,
+    "acierto_pct": 57.1,
+    "retorno_medio_pct": 1.04,
+    "retorno_mediano_pct": 0.6
    },
    "rebote": {
     "senales": 0,
@@ -6156,10 +6156,10 @@
     "retorno_mediano_pct": 6.94
    },
    "precaucion": {
-    "senales": 2,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": -6.17,
-    "retorno_mediano_pct": -6.17
+    "senales": 3,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": -7.82,
+    "retorno_mediano_pct": -11.11
    }
   },
   "BBVA": {
@@ -6170,10 +6170,10 @@
     "retorno_mediano_pct": 1.43
    },
    "comprar": {
-    "senales": 9,
-    "acierto_pct": 77.8,
-    "retorno_medio_pct": 5.69,
-    "retorno_mediano_pct": 3.38
+    "senales": 8,
+    "acierto_pct": 87.5,
+    "retorno_medio_pct": 6.78,
+    "retorno_mediano_pct": 3.91
    },
    "rebote": {
     "senales": 2,
@@ -6560,10 +6560,10 @@
     "retorno_mediano_pct": 0.58
    },
    "comprar": {
-    "senales": 4,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 0.11,
-    "retorno_mediano_pct": 0.26
+    "senales": 6,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": -1.05,
+    "retorno_mediano_pct": -1.74
    },
    "rebote": {
     "senales": 2,
@@ -6728,10 +6728,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 12,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": -2.15,
-    "retorno_mediano_pct": -0.38
+    "senales": 13,
+    "acierto_pct": 46.2,
+    "retorno_medio_pct": -1.87,
+    "retorno_mediano_pct": 1.19
    }
   },
   "TU": {
@@ -7340,10 +7340,10 @@
     "retorno_mediano_pct": 2.41
    },
    "comprar": {
-    "senales": 17,
-    "acierto_pct": 47.1,
-    "retorno_medio_pct": 0.43,
-    "retorno_mediano_pct": -0.25
+    "senales": 16,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": -0.13,
+    "retorno_mediano_pct": -0.73
    },
    "rebote": {
     "senales": 0,
@@ -7638,10 +7638,10 @@
     "retorno_mediano_pct": -16.45
    },
    "precaucion": {
-    "senales": 4,
-    "acierto_pct": 25.0,
-    "retorno_medio_pct": 5.65,
-    "retorno_mediano_pct": 3.95
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": 5.81,
+    "retorno_mediano_pct": 5.54
    }
   },
   "GCARSOA1.MX": {
@@ -7730,10 +7730,10 @@
     "retorno_mediano_pct": 0.0
    },
    "comprar": {
-    "senales": 4,
-    "acierto_pct": 75.0,
-    "retorno_medio_pct": -0.58,
-    "retorno_mediano_pct": 0.9
+    "senales": 5,
+    "acierto_pct": 60.0,
+    "retorno_medio_pct": -1.13,
+    "retorno_mediano_pct": 0.72
    },
    "rebote": {
     "senales": 25,
@@ -7808,10 +7808,10 @@
     "retorno_mediano_pct": 0.65
    },
    "comprar": {
-    "senales": 13,
-    "acierto_pct": 61.5,
-    "retorno_medio_pct": 6.36,
-    "retorno_mediano_pct": 0.58
+    "senales": 12,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": 7.41,
+    "retorno_mediano_pct": 4.75
    },
    "rebote": {
     "senales": 1,
@@ -7820,10 +7820,10 @@
     "retorno_mediano_pct": -6.04
    },
    "precaucion": {
-    "senales": 1,
-    "acierto_pct": 100.0,
-    "retorno_medio_pct": -5.83,
-    "retorno_mediano_pct": -5.83
+    "senales": 2,
+    "acierto_pct": 50.0,
+    "retorno_medio_pct": 7.99,
+    "retorno_mediano_pct": 7.99
    }
   },
   "FCX": {
@@ -7886,10 +7886,10 @@
     "retorno_mediano_pct": 1.76
    },
    "comprar": {
-    "senales": 7,
-    "acierto_pct": 85.7,
-    "retorno_medio_pct": 8.43,
-    "retorno_mediano_pct": 10.29
+    "senales": 8,
+    "acierto_pct": 87.5,
+    "retorno_medio_pct": 7.57,
+    "retorno_mediano_pct": 9.45
    },
    "rebote": {
     "senales": 0,
@@ -7964,10 +7964,10 @@
     "retorno_mediano_pct": 1.55
    },
    "comprar": {
-    "senales": 8,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 0.07,
-    "retorno_mediano_pct": -0.34
+    "senales": 9,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 0.32,
+    "retorno_mediano_pct": 0.5
    },
    "rebote": {
     "senales": 1,
@@ -8016,10 +8016,10 @@
     "retorno_mediano_pct": 2.19
    },
    "comprar": {
-    "senales": 11,
-    "acierto_pct": 72.7,
-    "retorno_medio_pct": 3.54,
-    "retorno_mediano_pct": 4.79
+    "senales": 10,
+    "acierto_pct": 70.0,
+    "retorno_medio_pct": 3.43,
+    "retorno_mediano_pct": 5.86
    },
    "rebote": {
     "senales": 0,
@@ -8146,10 +8146,10 @@
     "retorno_mediano_pct": 0.83
    },
    "comprar": {
-    "senales": 14,
-    "acierto_pct": 71.4,
-    "retorno_medio_pct": 0.18,
-    "retorno_mediano_pct": 1.72
+    "senales": 15,
+    "acierto_pct": 73.3,
+    "retorno_medio_pct": 0.31,
+    "retorno_mediano_pct": 1.81
    },
    "rebote": {
     "senales": 1,
@@ -8406,10 +8406,10 @@
     "retorno_mediano_pct": 0.23
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": -0.18,
-    "retorno_mediano_pct": -0.28
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": -0.81,
+    "retorno_mediano_pct": -0.37
    },
    "rebote": {
     "senales": 4,
@@ -8548,10 +8548,10 @@
     "retorno_mediano_pct": -11.4
    },
    "precaucion": {
-    "senales": 7,
-    "acierto_pct": 57.1,
-    "retorno_medio_pct": -1.0,
-    "retorno_mediano_pct": -0.76
+    "senales": 6,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": -1.22,
+    "retorno_mediano_pct": -1.19
    }
   },
   "PRU": {
@@ -8758,7 +8758,7 @@
    "precaucion": {
     "senales": 12,
     "acierto_pct": 16.7,
-    "retorno_medio_pct": 13.17,
+    "retorno_medio_pct": 11.89,
     "retorno_mediano_pct": 10.02
    }
   },
@@ -8912,10 +8912,10 @@
     "retorno_mediano_pct": -16.5
    },
    "precaucion": {
-    "senales": 4,
+    "senales": 3,
     "acierto_pct": 0.0,
-    "retorno_medio_pct": 2.69,
-    "retorno_mediano_pct": 2.06
+    "retorno_medio_pct": 3.23,
+    "retorno_mediano_pct": 3.02
    }
   },
   "USB": {
@@ -9498,10 +9498,10 @@
     "retorno_mediano_pct": 1.02
    },
    "comprar": {
-    "senales": 4,
+    "senales": 5,
     "acierto_pct": 100.0,
-    "retorno_medio_pct": 3.38,
-    "retorno_mediano_pct": 3.28
+    "retorno_medio_pct": 2.74,
+    "retorno_mediano_pct": 2.31
    },
    "rebote": {
     "senales": 2,
@@ -9524,10 +9524,10 @@
     "retorno_mediano_pct": 1.34
    },
    "comprar": {
-    "senales": 7,
-    "acierto_pct": 57.1,
-    "retorno_medio_pct": 0.27,
-    "retorno_mediano_pct": 3.82
+    "senales": 8,
+    "acierto_pct": 62.5,
+    "retorno_medio_pct": 1.04,
+    "retorno_mediano_pct": 3.84
    },
    "rebote": {
     "senales": 0,
@@ -9602,10 +9602,10 @@
     "retorno_mediano_pct": 0.65
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 16.7,
-    "retorno_medio_pct": -3.93,
-    "retorno_mediano_pct": -4.1
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": -4.07,
+    "retorno_mediano_pct": -4.19
    },
    "rebote": {
     "senales": 2,
@@ -9706,10 +9706,10 @@
     "retorno_mediano_pct": 1.76
    },
    "comprar": {
-    "senales": 9,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": -1.15,
-    "retorno_mediano_pct": -0.78
+    "senales": 10,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": -0.02,
+    "retorno_mediano_pct": -0.61
    },
    "rebote": {
     "senales": 0,
@@ -9784,10 +9784,10 @@
     "retorno_mediano_pct": 1.66
    },
    "comprar": {
-    "senales": 11,
-    "acierto_pct": 45.5,
-    "retorno_medio_pct": 0.62,
-    "retorno_mediano_pct": -0.61
+    "senales": 10,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": -0.04,
+    "retorno_mediano_pct": -0.91
    },
    "rebote": {
     "senales": 3,
@@ -9848,10 +9848,10 @@
     "retorno_mediano_pct": 3.83
    },
    "precaucion": {
-    "senales": 4,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 2.43,
-    "retorno_mediano_pct": 2.97
+    "senales": 5,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 3.2,
+    "retorno_mediano_pct": 6.29
    }
   },
   "WMB": {
@@ -10472,10 +10472,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 12,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": -1.38,
-    "retorno_mediano_pct": -3.18
+    "senales": 11,
+    "acierto_pct": 63.6,
+    "retorno_medio_pct": -1.33,
+    "retorno_mediano_pct": -3.35
    }
   },
   "PAYX": {
@@ -10824,10 +10824,10 @@
     "retorno_mediano_pct": 1.15
    },
    "comprar": {
-    "senales": 11,
-    "acierto_pct": 72.7,
-    "retorno_medio_pct": 1.32,
-    "retorno_mediano_pct": 0.97
+    "senales": 10,
+    "acierto_pct": 70.0,
+    "retorno_medio_pct": 0.73,
+    "retorno_mediano_pct": 0.79
    },
    "rebote": {
     "senales": 0,
@@ -11500,10 +11500,10 @@
     "retorno_mediano_pct": 1.15
    },
    "comprar": {
-    "senales": 8,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 4.29,
-    "retorno_mediano_pct": 2.71
+    "senales": 9,
+    "acierto_pct": 55.6,
+    "retorno_medio_pct": 4.33,
+    "retorno_mediano_pct": 4.65
    },
    "rebote": {
     "senales": 1,
@@ -11968,10 +11968,10 @@
     "retorno_mediano_pct": -0.11
    },
    "comprar": {
-    "senales": 6,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 0.28,
-    "retorno_mediano_pct": -0.9
+    "senales": 7,
+    "acierto_pct": 57.1,
+    "retorno_medio_pct": 1.2,
+    "retorno_mediano_pct": 3.65
    },
    "rebote": {
     "senales": 2,
@@ -12124,10 +12124,10 @@
     "retorno_mediano_pct": 1.61
    },
    "comprar": {
-    "senales": 7,
-    "acierto_pct": 14.3,
-    "retorno_medio_pct": -1.46,
-    "retorno_mediano_pct": -1.17
+    "senales": 8,
+    "acierto_pct": 12.5,
+    "retorno_medio_pct": -1.58,
+    "retorno_mediano_pct": -1.77
    },
    "rebote": {
     "senales": 1,
@@ -12268,7 +12268,7 @@
    "precaucion": {
     "senales": 15,
     "acierto_pct": 40.0,
-    "retorno_medio_pct": 0.63,
+    "retorno_medio_pct": 0.62,
     "retorno_mediano_pct": 0.8
    }
   },
@@ -12708,10 +12708,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 6,
-    "acierto_pct": 16.7,
-    "retorno_medio_pct": 2.51,
-    "retorno_mediano_pct": 2.45
+    "senales": 5,
+    "acierto_pct": 20.0,
+    "retorno_medio_pct": 2.8,
+    "retorno_mediano_pct": 3.83
    }
   },
   "ZTS": {
@@ -13202,10 +13202,10 @@
     "retorno_mediano_pct": null
    },
    "precaucion": {
-    "senales": 6,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 1.64,
-    "retorno_mediano_pct": -0.07
+    "senales": 7,
+    "acierto_pct": 42.9,
+    "retorno_medio_pct": 1.6,
+    "retorno_mediano_pct": 0.3
    }
   },
   "AMP": {
@@ -13580,10 +13580,10 @@
     "retorno_mediano_pct": 1.47
    },
    "comprar": {
-    "senales": 15,
-    "acierto_pct": 46.7,
-    "retorno_medio_pct": 0.66,
-    "retorno_mediano_pct": -0.51
+    "senales": 16,
+    "acierto_pct": 43.8,
+    "retorno_medio_pct": -0.19,
+    "retorno_mediano_pct": -0.74
    },
    "rebote": {
     "senales": 1,
@@ -13606,10 +13606,10 @@
     "retorno_mediano_pct": 1.43
    },
    "comprar": {
-    "senales": 12,
-    "acierto_pct": 75.0,
-    "retorno_medio_pct": 4.3,
-    "retorno_mediano_pct": 3.64
+    "senales": 11,
+    "acierto_pct": 72.7,
+    "retorno_medio_pct": 4.44,
+    "retorno_mediano_pct": 3.67
    },
    "rebote": {
     "senales": 1,
@@ -14282,10 +14282,10 @@
     "retorno_mediano_pct": 0.72
    },
    "comprar": {
-    "senales": 3,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": -0.75,
-    "retorno_mediano_pct": -5.11
+    "senales": 4,
+    "acierto_pct": 25.0,
+    "retorno_medio_pct": -1.36,
+    "retorno_mediano_pct": -4.16
    },
    "rebote": {
     "senales": 2,
@@ -14490,10 +14490,10 @@
     "retorno_mediano_pct": 0.96
    },
    "comprar": {
-    "senales": 9,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": -0.98,
-    "retorno_mediano_pct": -1.53
+    "senales": 10,
+    "acierto_pct": 40.0,
+    "retorno_medio_pct": 0.0,
+    "retorno_mediano_pct": -0.88
    },
    "rebote": {
     "senales": 2,
@@ -14594,10 +14594,10 @@
     "retorno_mediano_pct": 1.16
    },
    "comprar": {
-    "senales": 4,
-    "acierto_pct": 50.0,
-    "retorno_medio_pct": 3.58,
-    "retorno_mediano_pct": 7.49
+    "senales": 6,
+    "acierto_pct": 66.7,
+    "retorno_medio_pct": 4.11,
+    "retorno_mediano_pct": 5.17
    },
    "rebote": {
     "senales": 0,
@@ -14698,10 +14698,10 @@
     "retorno_mediano_pct": 2.22
    },
    "comprar": {
-    "senales": 12,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": 6.34,
-    "retorno_mediano_pct": -2.51
+    "senales": 13,
+    "acierto_pct": 38.5,
+    "retorno_medio_pct": 9.19,
+    "retorno_mediano_pct": -2.12
    },
    "rebote": {
     "senales": 1,
@@ -14970,10 +14970,10 @@
     "retorno_mediano_pct": 3.73
    },
    "precaucion": {
-    "senales": 7,
-    "acierto_pct": 14.3,
-    "retorno_medio_pct": 10.11,
-    "retorno_mediano_pct": 13.84
+    "senales": 6,
+    "acierto_pct": 16.7,
+    "retorno_medio_pct": 11.07,
+    "retorno_mediano_pct": 13.88
    }
   },
   "PWR": {
@@ -15036,10 +15036,10 @@
     "retorno_mediano_pct": 1.93
    },
    "comprar": {
-    "senales": 9,
-    "acierto_pct": 66.7,
-    "retorno_medio_pct": 0.93,
-    "retorno_mediano_pct": 2.29
+    "senales": 8,
+    "acierto_pct": 62.5,
+    "retorno_medio_pct": 0.53,
+    "retorno_mediano_pct": 1.24
    },
    "rebote": {
     "senales": 1,
@@ -15204,10 +15204,10 @@
     "retorno_mediano_pct": 2.72
    },
    "precaucion": {
-    "senales": 5,
-    "acierto_pct": 40.0,
-    "retorno_medio_pct": 2.3,
-    "retorno_mediano_pct": 2.02
+    "senales": 6,
+    "acierto_pct": 33.3,
+    "retorno_medio_pct": 4.0,
+    "retorno_mediano_pct": 5.76
    }
   },
   "CUERVO.MX": {
@@ -15308,10 +15308,10 @@
     "retorno_mediano_pct": 0.0
    },
    "precaucion": {
-    "senales": 3,
-    "acierto_pct": 33.3,
-    "retorno_medio_pct": 2.49,
-    "retorno_mediano_pct": 3.22
+    "senales": 2,
+    "acierto_pct": 0.0,
+    "retorno_medio_pct": 4.63,
+    "retorno_mediano_pct": 4.63
    }
   },
   "BOLSAA.MX": {
