@@ -1060,7 +1060,8 @@ def analyze_ticker(ticker: str) -> Analysis:
         if not res.sector:
             sec = _safe_info(tk, "sector")
             res.sector = DIV.SECTOR_ES.get(sec, sec) if sec else ("Dividendos S&P 500" if res.dividend_group == "sp500" else None)
-        _fill_news(tk, res)
+        # Noticias: ya no se piden a Yahoo (su API de noticias responde 404 desde oct-2026 y daba listas
+        # vacías). Se llenan después para todos juntos con noticias.py (RSS de medios financieros).
         res.currency = _currency(tk)
         # Precio actual convertido a MXN (para el filtro de precio).
         try:
@@ -1271,9 +1272,17 @@ def main() -> None:
         results.append(analyze_ticker(t))
         time.sleep(SLEEP_BETWEEN)
 
+    try:
+        import noticias
+        resumen_noticias = noticias.actualizar(results, ruido=_is_price_noise)
+    except Exception as exc:  # noqa: BLE001  el reporte no depende de las noticias
+        resumen_noticias = {"error": f"{type(exc).__name__}: {exc}", "instrumentos_con_noticias": 0}
+    print(f"Noticias: {resumen_noticias}", flush=True)
+
     with open("portfolio_data.json", "w", encoding="utf-8") as fh:
         json.dump([asdict(a) for a in results], fh, ensure_ascii=False, indent=2)
     report = build_report(results)
+    report["noticias"] = resumen_noticias  # lo revisa la auditoría diaria de servicios
     with open("daily_report.json", "w", encoding="utf-8") as fh:
         json.dump(report, fh, ensure_ascii=False, indent=2)
 
