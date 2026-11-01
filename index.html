@@ -47,6 +47,15 @@
      y el encabezado y la columna «Símbolo» se quedan fijos al desplazarse. */
   .dv-wrap{max-height:calc(100vh - 120px);overflow:auto;border:1px solid var(--border);border-radius:8px;overscroll-behavior:contain}
   .dv-wrap::-webkit-scrollbar{height:12px;width:10px} .dv-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+  /* Barra de arriba (deslizador siempre visible, también en Mac y celular, donde las barras de scroll se ocultan):
+     mueve la tabla a los lados y se queda pegada arriba de la pantalla al bajar por la página. */
+  .dv-barra-sup{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--surface);
+    border:1px solid var(--border);border-bottom:0;border-radius:8px 8px 0 0}
+  .dv-barra-sup input[type=range]{flex:1;min-width:80px;accent-color:var(--ink);cursor:ew-resize}
+  .dv-barra-sup button{font:inherit;font-size:12px;line-height:1;padding:5px 9px;border-radius:6px;border:1px solid var(--border);background:var(--bg);color:var(--ink);cursor:pointer}
+  .dv-barra-txt{font-size:11px;color:var(--muted);white-space:nowrap}
+  @media (max-width:600px){ .dv-barra-txt{display:none} }
+  .dv-barra-sup + .dv-wrap{border-top-left-radius:0;border-top-right-radius:0}
   table.dv th{position:sticky;top:0;z-index:2;background:var(--surface)}
   table.dv td.tk,table.dv th:first-child{position:sticky;left:0;z-index:1;background:var(--surface)}
   table.dv th:first-child{z-index:3}
@@ -222,6 +231,12 @@
       (más de 8 % suele indicar que el precio cayó por un problema) <i>y</i> liquidez que no sea baja.
       «Meses de pago» son los meses con fecha ex-dividendo del último año (para cobrar hay que tener la acción antes de esa fecha);
       el pago llega días o semanas después.</p>
+    <div class="dv-barra-sup" id="dvBarraSup">
+      <button type="button" id="dvIzq" aria-label="Mover la tabla a la izquierda">◀</button>
+      <input type="range" id="dvDesliza" min="0" max="0" value="0" step="1" aria-label="Mover la tabla a los lados">
+      <button type="button" id="dvDer" aria-label="Mover la tabla a la derecha">▶</button>
+      <span class="dv-barra-txt">desliza para ver las columnas de la derecha</span>
+    </div>
     <div class="bt-wrap dv-wrap" id="dvWrap"><table class="bt dv" id="dvTabla"></table></div>
   </section>
   <section class="board" id="backtest" hidden>
@@ -684,6 +699,24 @@ document.addEventListener('click', e=>{
 document.addEventListener('change', e=>{
   if(e.target && e.target.id==='dvSector'){ DV_SECTOR = e.target.value; renderDividendos(); }
 });
+// Barra de arriba: deslizador y botones ◀ ▶ sincronizados con el scroll horizontal de la tabla.
+(function(){
+  const barra = document.getElementById('dvBarraSup'), rango = document.getElementById('dvDesliza'),
+        wrap = document.getElementById('dvWrap'), tabla = document.getElementById('dvTabla');
+  if(!barra || !rango || !wrap || !tabla) return;
+  const medir = () => {
+    const max = Math.max(0, tabla.scrollWidth - wrap.clientWidth);
+    rango.max = String(max); rango.value = String(wrap.scrollLeft);
+    barra.style.display = max > 1 ? '' : 'none';
+  };
+  rango.addEventListener('input', () => { wrap.scrollLeft = Number(rango.value); });
+  wrap.addEventListener('scroll', () => { rango.value = String(wrap.scrollLeft); }, { passive: true });
+  const paso = () => Math.max(200, wrap.clientWidth * 0.6);
+  document.getElementById('dvIzq').addEventListener('click', () => wrap.scrollBy({ left: -paso(), behavior: 'smooth' }));
+  document.getElementById('dvDer').addEventListener('click', () => wrap.scrollBy({ left: paso(), behavior: 'smooth' }));
+  if(window.ResizeObserver){ const ro = new ResizeObserver(medir); ro.observe(tabla); ro.observe(wrap); }
+  window.addEventListener('resize', medir); medir();
+})();
 
 async function loadBacktest(){
   try{
