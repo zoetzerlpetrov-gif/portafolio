@@ -43,6 +43,14 @@
   .frq.Mensual{background:rgba(22,163,74,.15)} .frq.Bimestral{background:rgba(47,125,225,.12)} .frq.Trimestral{background:rgba(47,125,225,.22)}
   .frq.Cuatrimestral,.frq.Semestral{background:rgba(224,161,0,.18)} .frq.Anual{background:rgba(226,113,29,.18)} .frq.Irregular{background:rgba(140,140,140,.18)}
   table.dv td.meses{white-space:nowrap;font-size:12px}
+  /* La tabla vive en su propia ventana con scroll: la barra horizontal queda siempre a la vista (abajo de la ventana)
+     y el encabezado y la columna «Símbolo» se quedan fijos al desplazarse. */
+  .dv-wrap{max-height:calc(100vh - 120px);overflow:auto;border:1px solid var(--border);border-radius:8px;overscroll-behavior:contain}
+  .dv-wrap::-webkit-scrollbar{height:12px;width:10px} .dv-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+  table.dv th{position:sticky;top:0;z-index:2;background:var(--surface)}
+  table.dv td.tk,table.dv th:first-child{position:sticky;left:0;z-index:1;background:var(--surface)}
+  table.dv th:first-child{z-index:3}
+  table.dv tr.destacada td.tk{background:linear-gradient(rgba(22,163,74,.13),rgba(22,163,74,.13)),var(--surface)}
   .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
             color:var(--faint);margin:0 0 12px}
   .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
@@ -214,7 +222,7 @@
       (más de 8 % suele indicar que el precio cayó por un problema) <i>y</i> liquidez que no sea baja.
       «Meses de pago» son los meses con fecha ex-dividendo del último año (para cobrar hay que tener la acción antes de esa fecha);
       el pago llega días o semanas después.</p>
-    <div class="bt-wrap"><table class="bt dv" id="dvTabla"></table></div>
+    <div class="bt-wrap dv-wrap" id="dvWrap"><table class="bt dv" id="dvTabla"></table></div>
   </section>
   <section class="board" id="backtest" hidden>
     <h2>Backtest de las reglas (10 años)</h2>
