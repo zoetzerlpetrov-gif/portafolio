@@ -36,6 +36,13 @@
   table.dv tr.comprar td.sen{color:var(--up);font-weight:600} table.dv tr.precaucion td.sen{color:var(--down);font-weight:600} table.dv tr.rebote td.sen{color:#2F7DE1;font-weight:600}
   .dv-filtros{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px} .dv-filtros button{font:inherit;font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer}
   .dv-filtros button.on{background:var(--ink);color:var(--surface)}
+  .dv-filtros select{font:inherit;font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink)}
+  table.dv tr.destacada td{background:rgba(22,163,74,.13)} table.dv tr.destacada td.tk::before{content:"★ ";color:#16A34A}
+  .dv-leyenda{font-size:12px;margin:0 0 8px} .dv-leyenda .muestra{display:inline-block;width:12px;height:12px;border-radius:3px;background:rgba(22,163,74,.35);vertical-align:-1px;margin-right:4px}
+  .frq{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--border);white-space:nowrap}
+  .frq.Mensual{background:rgba(22,163,74,.15)} .frq.Bimestral{background:rgba(47,125,225,.12)} .frq.Trimestral{background:rgba(47,125,225,.22)}
+  .frq.Cuatrimestral,.frq.Semestral{background:rgba(224,161,0,.18)} .frq.Anual{background:rgba(226,113,29,.18)} .frq.Irregular{background:rgba(140,140,140,.18)}
+  table.dv td.meses{white-space:nowrap;font-size:12px}
   .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
             color:var(--faint);margin:0 0 12px}
   .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
@@ -199,7 +206,14 @@
     <div class="dv-filtros" id="dvFiltros">
       <button data-g="todas" class="on">Todas</button><button data-g="sp500">S&amp;P 500</button><button data-g="mx">México (BMV)</button>
       <button data-g="slim">Carlos Slim</button><button data-g="pagan">Solo las que pagaron en 12 meses</button>
+      <button data-g="destacadas">★ Solo destacadas</button>
+      <select id="dvSector" aria-label="Filtrar por sector"><option value="">Todos los sectores</option></select>
     </div>
+    <p class="dv-leyenda"><span class="muestra"></span><b>Verde = destacada para largo plazo</b> (filtro automático, no asesoría): señal «Comprar» hoy
+      <i>y</i> 10 años o más pagando dividendo sin falta <i>y</i> dividendo que creció en 5 años <i>y</i> rendimiento entre 2 % y 8 %
+      (más de 8 % suele indicar que el precio cayó por un problema) <i>y</i> liquidez que no sea baja.
+      «Meses de pago» son los meses con fecha ex-dividendo del último año (para cobrar hay que tener la acción antes de esa fecha);
+      el pago llega días o semanas después.</p>
     <div class="bt-wrap"><table class="bt dv" id="dvTabla"></table></div>
   </section>
   <section class="board" id="backtest" hidden>
@@ -610,10 +624,27 @@ _toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}
   document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeNewsModal(); });
 
 const escH = (t) => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let DV_FILTRO = 'todas', DV_ORDEN = ['dividend_yield_pct', -1];
+let DV_FILTRO = 'todas', DV_ORDEN = ['dividend_yield_pct', -1], DV_SECTOR = '';
+const MESES_C = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const FREQ_ORD = {Mensual:1, Bimestral:2, Trimestral:3, Cuatrimestral:4, Semestral:5, Anual:6, Irregular:7};
+// Destacada para largo plazo: reglas fijas y visibles en la leyenda (filtro, no asesoría financiera).
+function destacada(a){
+  return CATOF[a.ticker]==='comprar' && (a.dividend_years||0) >= 10 && (a.dividend_cagr_5y_pct ?? -1) > 0
+    && a.dividend_yield_pct!=null && a.dividend_yield_pct >= 2 && a.dividend_yield_pct <= 8 && a.liquidity !== 'baja';
+}
+const fmtMeses = m => !m || !m.length ? '—' : m.length === 12 ? 'Todos los meses' : m.map(x=>MESES_C[x-1]).join(', ');
 function renderDividendos(){
   const tabla = document.getElementById('dvTabla'); if(!tabla) return;
   let rows = PORTFOLIO.filter(a => a.dividend_group || (a.ticker||'').endsWith('.MX') && a.pays_dividend);
+  rows.forEach(a => { a._dest = destacada(a) ? 1 : 0; a._freq = FREQ_ORD[a.dividend_frequency] ?? null; a._mes1 = (a.dividend_months||[])[0] ?? null;
+    a._cat = ({comprar:1, rebote:2, esperar:3, precaucion:4})[CATOF[a.ticker]] ?? null; });
+  const sel = document.getElementById('dvSector');
+  if(sel && sel.options.length <= 1){
+    [...new Set(rows.map(a=>a.sector).filter(Boolean))].sort((x,y)=>x.localeCompare(y,'es'))
+      .forEach(sc => sel.add(new Option(sc, sc)));
+  }
+  if(DV_SECTOR) rows = rows.filter(a=>a.sector===DV_SECTOR);
+  if(DV_FILTRO==='destacadas') rows = rows.filter(a=>a._dest);
   if(DV_FILTRO==='sp500') rows = rows.filter(a=>a.dividend_group==='sp500');
   if(DV_FILTRO==='mx') rows = rows.filter(a=>(a.ticker||'').endsWith('.MX'));
   if(DV_FILTRO==='slim') rows = rows.filter(a=>/Slim/.test(a.name||'') || a.dividend_group==='slim_eua');
@@ -623,11 +654,13 @@ function renderDividendos(){
   const pct = v => v==null ? '—' : `${v}%`;
   const cols = [['ticker','Símbolo'],['name','Nombre'],['sector','Sector'],['current_price','Precio'],['dividend_12m','Dividendo 12 m'],
     ['dividend_yield_pct','Rendimiento'],['dividend_growth_5y_pct','Crec. 5 años'],['dividend_cagr_5y_pct','Crec. anual'],['dividend_years','Años pagando'],
-    ['liquidity','Liquidez'],['_cat','Señal'],[null,'Último año']];
+    ['_mes1','Meses de pago'],['_freq','Frecuencia'],['liquidity','Liquidez'],['_cat','Señal'],[null,'Último año']];
   tabla.innerHTML = '<tr>' + cols.map(([c,t])=>`<th data-k="${c||''}">${t}${c===k?(dir>0?' ▲':' ▼'):''}</th>`).join('') + '</tr>' +
-    rows.map(a=>`<tr class="${CATOF[a.ticker]||''}"><td class="tk"><a href="#" data-tk="${escH(a.ticker)}">${escH(a.ticker)}</a></td><td>${escH(a.name||'')}</td><td>${escH(a.sector||'')}</td>
+    (rows.length ? '' : `<tr><td colspan="${cols.length}" class="empty">Ninguna acción cumple este filtro hoy.</td></tr>`) +
+    rows.map(a=>`<tr class="${CATOF[a.ticker]||''}${a._dest?' destacada':''}" ${a._dest?'title="Destacada para largo plazo (ver leyenda)"':''}><td class="tk"><a href="#" data-tk="${escH(a.ticker)}">${escH(a.ticker)}</a></td><td>${escH(a.name||'')}</td><td>${escH(a.sector||'')}</td>
       <td>${fmtPrice(a.current_price, a.currency)}</td><td>${a.dividend_12m!=null?a.dividend_12m.toFixed(2):'—'}</td><td>${pct(a.dividend_yield_pct)}</td>
       <td>${pct(a.dividend_growth_5y_pct)}</td><td>${pct(a.dividend_cagr_5y_pct)}</td><td>${a.dividend_years??'—'}</td>
+      <td class="meses">${fmtMeses(a.dividend_months)}</td><td>${a.dividend_frequency?`<span class="frq ${escH(a.dividend_frequency)}">${escH(a.dividend_frequency)}</span>`:'—'}</td>
       <td><span class="liq ${escH(a.liquidity||'')}">${escH(a.liquidity||'—')}</span></td><td class="sen">${escH(({comprar:'Comprar',rebote:'Rebote',esperar:'Esperar',precaucion:'Precaución'})[CATOF[a.ticker]]||'—')}</td><td>${sparkline(a.sparkline_12m||[])}</td></tr>`).join('');
   document.getElementById('dividendos').hidden = false;
 }
@@ -638,6 +671,10 @@ document.addEventListener('click', e=>{
   if(th && th.dataset.k){ const k=th.dataset.k; DV_ORDEN = [k, DV_ORDEN[0]===k ? -DV_ORDEN[1] : -1]; renderDividendos(); return; }
   const a = e.target.closest('#dvTabla a[data-tk]');
   if(a){ e.preventDefault(); goToCard(a.dataset.tk); }
+});
+
+document.addEventListener('change', e=>{
+  if(e.target && e.target.id==='dvSector'){ DV_SECTOR = e.target.value; renderDividendos(); }
 });
 
 async function loadBacktest(){
