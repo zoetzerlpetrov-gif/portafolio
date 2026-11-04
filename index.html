@@ -261,7 +261,9 @@
       <i>y</i> 10 años o más pagando dividendo sin falta <i>y</i> dividendo que creció en 5 años <i>y</i> rendimiento entre 2 % y 8 %
       (más de 8 % suele indicar que el precio cayó por un problema) <i>y</i> liquidez que no sea baja.
       «Meses de pago» son los meses con fecha ex-dividendo del último año (para cobrar hay que tener la acción antes de esa fecha);
-      el pago llega días o semanas después.</p>
+      el pago llega días o semanas después.
+      «Años para recuperar» = precio ÷ dividendo de 12 meses: cuántos años de dividendos pagan lo que cuesta la acción hoy, si el dividendo
+      se mantuviera igual (no incluye impuestos, comisiones, reinversión ni cambios de precio). Menos años = más dividendo por cada peso invertido.</p>
     <div class="dv-barra-sup" id="dvBarraSup">
       <button type="button" id="dvIzq" aria-label="Mover la tabla a la izquierda">◀</button>
       <input type="range" id="dvDesliza" min="0" max="0" value="0" step="1" aria-label="Mover la tabla a los lados">
@@ -707,7 +709,9 @@ function renderDividendos(){
   const tabla = document.getElementById('dvTabla'); if(!tabla) return;
   let rows = PORTFOLIO.filter(a => a.dividend_group || (a.ticker||'').endsWith('.MX') && a.pays_dividend);
   rows.forEach(a => { a._dest = destacada(a) ? 1 : 0; a._freq = FREQ_ORD[a.dividend_frequency] ?? null; a._mes1 = (a.dividend_months||[])[0] ?? null;
-    a._cat = ({comprar:1, rebote:2, esperar:3, precaucion:4})[CATOF[a.ticker]] ?? null; });
+    a._cat = ({comprar:1, rebote:2, esperar:3, precaucion:4})[CATOF[a.ticker]] ?? null;
+    // Años para recuperar la inversión solo con dividendos = precio / dividendo de 12 meses (si el dividendo no cambia).
+    a._recupera = (a.current_price > 0 && a.dividend_12m > 0) ? Math.round(a.current_price / a.dividend_12m * 10) / 10 : null; });
   const sel = document.getElementById('dvSector');
   if(sel && sel.options.length <= 1){
     [...new Set(rows.map(a=>a.sector).filter(Boolean))].sort((x,y)=>x.localeCompare(y,'es'))
@@ -724,12 +728,13 @@ function renderDividendos(){
   rows.sort((a,b)=>{ const x=a[k], y=b[k]; if(x==null) return 1; if(y==null) return -1; return (typeof x==='string'? x.localeCompare(y,'es') : x-y)*dir; });
   const pct = v => v==null ? '—' : `${v}%`;
   const cols = [['ticker','Símbolo'],['name','Nombre'],['sector','Sector'],['current_price','Precio'],['dividend_12m','Dividendo 12 m'],
-    ['dividend_yield_pct','Rendimiento'],['dividend_growth_5y_pct','Crec. 5 años'],['dividend_cagr_5y_pct','Crec. anual'],['dividend_years','Años pagando'],
+    ['dividend_yield_pct','Rendimiento'],['_recupera','Años para recuperar'],['dividend_growth_5y_pct','Crec. 5 años'],['dividend_cagr_5y_pct','Crec. anual'],['dividend_years','Años pagando'],
     ['_mes1','Meses de pago'],['_freq','Frecuencia'],['liquidity','Liquidez'],['_cat','Señal'],[null,'Último año']];
   tabla.innerHTML = '<tr>' + cols.map(([c,t])=>`<th data-k="${c||''}">${t}${c===k?(dir>0?' ▲':' ▼'):''}</th>`).join('') + '</tr>' +
     (rows.length ? '' : `<tr><td colspan="${cols.length}" class="empty">Ninguna acción cumple este filtro hoy.</td></tr>`) +
     rows.map(a=>`<tr class="${CATOF[a.ticker]||''}${a._dest?' destacada':''}" ${a._dest?'title="Destacada para largo plazo (ver leyenda)"':''}><td class="tk"><a href="#" data-tk="${escH(a.ticker)}">${escH(a.ticker)}</a></td><td>${escH(a.name||'')}</td><td>${escH(a.sector||'')}</td>
       <td>${fmtPrice(a.current_price, a.currency)}</td><td>${a.dividend_12m!=null?a.dividend_12m.toFixed(2):'—'}</td><td>${pct(a.dividend_yield_pct)}</td>
+      <td title="Precio ÷ dividendo de 12 meses">${a._recupera!=null?a._recupera.toFixed(1):'—'}</td>
       <td>${pct(a.dividend_growth_5y_pct)}</td><td>${pct(a.dividend_cagr_5y_pct)}</td><td>${a.dividend_years??'—'}</td>
       <td class="meses">${fmtMeses(a.dividend_months)}</td><td>${a.dividend_frequency?`<span class="frq ${escH(a.dividend_frequency)}">${escH(a.dividend_frequency)}</span>`:'—'}</td>
       <td><span class="liq ${escH(a.liquidity||'')}">${escH(a.liquidity||'—')}</span></td><td class="sen">${escH(({comprar:'Comprar',rebote:'Rebote',esperar:'Esperar',precaucion:'Precaución'})[CATOF[a.ticker]]||'—')}</td><td>${sparkline(a.sparkline_12m||[])}</td></tr>`).join('');
