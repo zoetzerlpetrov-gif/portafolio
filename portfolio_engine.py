@@ -861,6 +861,24 @@ def indicator_series(daily: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def sesion_incompleta(daily: pd.DataFrame, ticker: str = "", ahora: pd.Timestamp | None = None) -> bool:
+    """True si la última barra diaria es de HOY y la bolsa aún no cierra (o es cripto, que opera 24 h).
+
+    Por qué: el reporte a veces corre a media sesión (GitHub retrasa el cron). El volumen de un día a medias,
+    comparado con días completos, sale bajísimo (mediana 0.52× el 04-nov-2026) y bloqueaba casi todas las compras.
+    """
+    if daily is None or not len(daily):
+        return False
+    ultimo = daily.index[-1]
+    tz = getattr(ultimo, "tz", None) or "America/New_York"
+    ahora = (ahora or pd.Timestamp.now(tz="UTC")).tz_convert(tz)
+    if ultimo.date() != ahora.date():
+        return False
+    if ticker.endswith("-USD"):
+        return True
+    return (ahora.hour, ahora.minute) < (16, 30)  # cierre + margen para que Yahoo publique el volumen final
+
+
 def _ultimo(serie: pd.Series) -> float | None:
     v = serie.iloc[-1] if len(serie) else np.nan
     return None if pd.isna(v) else round(float(v), 4)
@@ -1076,7 +1094,7 @@ def analyze_ticker(ticker: str) -> Analysis:
 
         ind = indicator_series(daily)
         res.rsi_14 = _ultimo(ind["rsi"]); res.macd_hist = _ultimo(ind["macd_hist"]); res.adx_14 = _ultimo(ind["adx"])
-        res.bb_pctb = _ultimo(ind["bb_pctb"]); res.rvol = _ultimo(ind["rvol"]); res.obv_slope_pct = _ultimo(ind["obv_slope_pct"])
+        res.bb_pctb = _ultimo(ind["bb_pctb"]); res.rvol = _ultimo(ind["rvol"].iloc[:-1] if sesion_incompleta(daily, ticker) else ind["rvol"]); res.obv_slope_pct = _ultimo(ind["obv_slope_pct"])
         res.mfi_14 = _ultimo(ind["mfi"]); res.mom_12_1_pct = _ultimo(ind["mom_12_1"]); res.dist_52w_high_pct = _ultimo(ind["dist_52w_high"])
         res.atr_14 = atr(daily)
         res.sma_200 = sma(daily["Close"])
