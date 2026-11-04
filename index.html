@@ -3,26 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portafolio · Panel diario</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>DOMINUS · Portafolio</title>
+<meta name="robots" content="noindex">
 <style>
+  /* Misma paleta que DOMINUS OSINT (css/tema.css del mapa): claro por defecto, oscuro si el sistema lo pide. */
   :root{
-    --bg:#FAFAF7; --surface:#FFFFFF; --border:#E8E4DA; --border-strong:#D8D3C6;
-    --ink:#1C1B19; --muted:#6E6B63; --faint:#9A968C;
+    --bg:#f5f6f7; --surface:#ffffff; --surface-2:#eef1f3; --border:#d5dbe0; --border-strong:#c3ccd3;
+    --ink:#1c2329; --muted:#4f5b66; --faint:#6b7782;
     --up:#157A4E; --up-bg:#E7F2EB; --down:#BF362D; --down-bg:#FBEAE7;
-    --wait:#9A6B12; --wait-bg:#F7EFDD; --accent:#0E5560;
-    --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'Space Grotesk',system-ui,sans-serif;
+    --wait:#9A6B12; --wait-bg:#F7EFDD; --accent:#2E6F8E;
+    --mono:ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --brand-name:linear-gradient(180deg,#F3D57A 0%,#D4AF37 38%,#A67C1B 62%,#E2C25C 100%);
+    --marca:linear-gradient(120deg,#2E6F8E 0%,#5B4A9E 55%,#C0392B 100%);
+    --shadow:0 4px 18px rgba(0,0,0,.12); color-scheme:light;
   }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1418; --surface:#161d22; --surface-2:#1e272e; --border:#2d3943; --border-strong:#3a4752;
+      --ink:#e4e9ed; --muted:#a3b0ba; --faint:#8593a0; --accent:#6fb0cf;
+      --up:#4cc38a; --up-bg:#12301f; --down:#f0776c; --down-bg:#3a1714; --wait:#e3b553; --wait-bg:#33280f;
+      --shadow:0 4px 18px rgba(0,0,0,.5); color-scheme:dark; }
+  }
+  html{overflow-x:hidden}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
        font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px}
 
-  header.top{display:flex;justify-content:space-between;align-items:flex-end;
-             gap:16px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:14px}
-  .brand h1{font-size:25px;font-weight:700;letter-spacing:-.02em;margin:0}
+  header.top{position:relative;display:flex;justify-content:space-between;align-items:flex-end;
+             gap:16px;flex-wrap:wrap;padding-bottom:14px}
+  header.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--marca);opacity:.85}
+  .brand h1{font-size:25px;font-weight:800;letter-spacing:.02em;margin:0;display:flex;align-items:center;gap:8px}
+  .brand h1 .cruz{width:24px;height:24px;flex:none}
+  .brand h1 .oro{background:var(--brand-name);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(60,40,0,.45))}
+  .brand h1 .sub{color:var(--ink);font-weight:600}
+  .volver{font-size:13px;color:var(--accent);text-decoration:none;font-weight:600}
+  .volver:hover{text-decoration:underline}
+  /* Barra de navegación fija: saltos a cada sección y buscador por símbolo o empresa. */
+  nav.secciones{position:sticky;top:0;z-index:40;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:12px -22px 0;padding:8px 22px;
+    background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+  nav.secciones a{font-size:12.5px;font-weight:600;color:var(--ink);text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid var(--border);background:var(--surface)}
+  nav.secciones a:hover{border-color:var(--accent);color:var(--accent)}
+  nav.secciones input{margin-left:auto;font:inherit;font-size:13px;padding:6px 10px;border-radius:999px;border:1px solid var(--border-strong);
+    background:var(--surface);color:var(--ink);min-width:0;width:240px;max-width:100%}
+  @media (max-width:600px){ nav.secciones input{margin-left:0;width:100%} }
   .brand p{margin:3px 0 0;color:var(--muted);font-size:13px}
   .stamp{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
   .stamp b{color:var(--ink);font-weight:600}
@@ -62,8 +86,9 @@
   table.dv tr.destacada td.tk{background:linear-gradient(rgba(22,163,74,.13),rgba(22,163,74,.13)),var(--surface)}
   .board h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
             color:var(--faint);margin:0 0 12px}
-  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-  .lane{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:14px}
+  .lane{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;max-height:520px;overflow-y:auto;overscroll-behavior:contain}
+  .lane h3{position:sticky;top:-14px;background:var(--surface);padding-top:2px;z-index:1}
   .lane h3{margin:0 0 10px;font-size:13px;font-weight:600;display:flex;
            align-items:center;gap:8px;letter-spacing:.01em}
   .lane h3 .dot{width:9px;height:9px;border-radius:50%}
@@ -84,12 +109,12 @@
   .filters{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:flex-end;margin:24px 0 8px}
   .fgroup label{display:block;font-size:11px;font-weight:600;letter-spacing:.06em;
                 text-transform:uppercase;color:var(--faint);margin-bottom:6px}
-  .seg{display:inline-flex;border:1px solid var(--border-strong);border-radius:9px;overflow:hidden}
+  .seg{display:inline-flex;flex-wrap:wrap;max-width:100%;border:1px solid var(--border-strong);border-radius:9px;overflow:hidden}
   .seg button{appearance:none;border:0;background:var(--surface);color:var(--muted);
               font-family:var(--sans);font-size:13px;font-weight:500;padding:7px 14px;cursor:pointer;
               border-right:1px solid var(--border)}
   .seg button:last-child{border-right:0}
-  .seg button.on{background:var(--ink);color:#fff}
+  .seg button.on{background:var(--ink);color:var(--surface)}
   select.sel{font-family:var(--sans);font-size:13px;padding:7px 30px 7px 12px;border-radius:9px;
              border:1px solid var(--border-strong);background:var(--surface);color:var(--ink);cursor:pointer}
   .secthead{display:flex;align-items:baseline;gap:10px;margin:26px 0 12px;
@@ -97,7 +122,7 @@
   .secthead h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
   .secthead .cnt{font-family:var(--mono);font-size:12px;color:var(--faint)}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr));gap:16px}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
         padding:16px 16px 14px;display:flex;flex-direction:column;gap:12px}
   .card .head{display:flex;justify-content:space-between;align-items:flex-start}
@@ -140,7 +165,7 @@
   .state{max-width:560px;margin:80px auto;text-align:center}
   .state h2{font-size:20px;margin:0 0 10px}
   .state p{color:var(--muted);margin:0 0 16px}
-  .state pre{text-align:left;background:#1C1B19;color:#EDEAE2;font-family:var(--mono);
+  .state pre{text-align:left;background:#0f1418;color:#e4e9ed;font-family:var(--mono);
              font-size:12.5px;padding:14px 16px;border-radius:10px;overflow:auto}
 
   @media (max-width:680px){ .lanes{grid-template-columns:1fr} }
@@ -153,7 +178,7 @@
   @keyframes flash{0%,30%{box-shadow:0 0 0 2px var(--accent)}100%{box-shadow:0 0 0 2px transparent}}
 
   #toTop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
-         border:1px solid var(--border-strong);background:var(--ink);color:#fff;font-size:20px;
+         border:1px solid var(--border-strong);background:var(--accent);color:#fff;font-size:20px;
          cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;
          display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,.18)}
   #toTop.show{opacity:1;pointer-events:auto}
@@ -174,7 +199,9 @@
   .ni-title:hover{text-decoration:underline}
   .newscol .empty{color:var(--faint);font-size:13px}
 
-  .pricebar{min-width:230px}
+  .pricebar{min-width:min(230px,100%)}
+  .pricebar .ends{display:flex;justify-content:space-between;gap:10px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .fgroup{min-width:0;max-width:100%}
   .pr-wrap{position:relative;height:24px;margin-top:2px}
   .pr-track{position:absolute;top:9px;left:0;right:0;height:5px;border-radius:3px;background:var(--border)}
   .pr-fill{position:absolute;top:9px;height:5px;border-radius:3px;background:var(--accent)}
@@ -209,11 +236,15 @@
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <h1>Panel del portafolio</h1>
-      <p>Señales de apoyo a la decisión · no es asesoría financiera</p>
+      <h1><svg class="cruz" viewBox="0 0 100 100" aria-hidden="true"><path fill="#C8102E" d="M44 44 30 4h40L56 44 96 30v40L56 56l14 40H30l14-40L4 70V30z"/></svg><span class="oro">DOMINUS</span> <span class="sub">· Portafolio</span></h1>
+      <p>Señales de apoyo a la decisión · no es asesoría financiera · <a class="volver" href="https://zoetzerlpetrov-gif.github.io/Geopolitica/">← Volver al mapa</a></p>
     </div>
     <div class="stamp" id="stamp">Cargando…</div>
   </header>
+  <nav class="secciones" aria-label="Secciones del panel">
+    <a href="#veredicto">Veredicto de hoy</a><a href="#cards">Instrumentos</a><a href="#dividendos">Dividendos</a><a href="#backtest">Backtest</a>
+    <input type="search" id="busca" placeholder="Buscar símbolo o empresa…" aria-label="Buscar símbolo o empresa">
+  </nav>
   <main id="app"></main>
   <section class="board" id="dividendos" hidden>
     <h2>Acciones con dividendo</h2>
@@ -392,8 +423,14 @@ const STATUSES = [['comprar','buy','Comprar'],['rebote','rebound','Rebote'],['es
   function sectorNews(){
     let pool = PORTFOLIO;
     if(fSector!=='todos') pool = pool.filter(a=>a.sector===fSector);
-    let items = [];
-    pool.forEach(a=>(a.news||[]).forEach(n=>items.push({...n, ticker:a.ticker, name:a.name})));
+    // Una nota que menciona a varios instrumentos (p. ej. UNP y NSC) sale una sola vez, con todos sus símbolos.
+    const porLink = new Map();
+    pool.forEach(a=>(a.news||[]).forEach(n=>{
+      const k = n.link || n.title;
+      if(porLink.has(k)){ const x = porLink.get(k); if(!x.ticker.split(', ').includes(a.ticker)) x.ticker += ', ' + a.ticker; }
+      else porLink.set(k, {...n, ticker:a.ticker, name:a.name});
+    }));
+    const items = [...porLink.values()];
     items.sort((x,y)=> new Date(y.date||0) - new Date(x.date||0));
     return items;
   }
@@ -480,10 +517,15 @@ function chip(a){
 }
 
 // Una columna de estatus, con sus chips agrupados por sector.
+// Texto del buscador de la barra de navegación (símbolo o nombre, sin acentos).
+let fQuery = '';
+const sinAcentos = (t)=> String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const coincide = (a)=> !fQuery || sinAcentos(a.ticker).includes(fQuery) || sinAcentos(a.name).includes(fQuery);
+
 function lane(statusKey, cls, title){
   let items = PORTFOLIO.filter(a=>CATOF[a.ticker]===statusKey);
   if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
-  items = items.filter(inPriceRange);
+  items = items.filter(inPriceRange).filter(coincide);
   let inner = '';
   if(!items.length){
     inner = '<div class="empty">Nada por ahora</div>';
@@ -505,7 +547,7 @@ function renderCards(){
   let items = PORTFOLIO.slice();
   if(fStatus!=='todos') items = items.filter(a=>CATOF[a.ticker]===fStatus);
   if(fSector!=='todos') items = items.filter(a=>a.sector===fSector);
-  items = items.filter(inPriceRange);
+  items = items.filter(inPriceRange).filter(coincide);
 
   const wrap = document.createElement('div');
   if(!items.length){
@@ -544,7 +586,7 @@ function render(){
   </div>
   </div>`;
 
-const board = `<section class="board"><h2>Veredicto de hoy</h2>
+const board = `<section class="board" id="veredicto"><h2>Veredicto de hoy</h2>
 <div class="layout"><div class="main"><div class="lanes" id="lanesWrap"></div></div>
 <aside class="newscol" id="newsCol"></aside></div></section>`;
 
@@ -571,6 +613,11 @@ app.addEventListener('click', e=>{
   });
   app.querySelector('#selSector').addEventListener('change', e=>{
     fSector=e.target.value; focusedTicker=null; refreshContent();
+  });
+  let tBusca = null;
+  document.getElementById('busca')?.addEventListener('input', e=>{
+    clearTimeout(tBusca);
+    tBusca = setTimeout(()=>{ fQuery = sinAcentos(e.target.value.trim()); refreshContent(); renderDividendos(); }, 200);
   });
 }
 
@@ -667,6 +714,7 @@ function renderDividendos(){
       .forEach(sc => sel.add(new Option(sc, sc)));
   }
   if(DV_SECTOR) rows = rows.filter(a=>a.sector===DV_SECTOR);
+  rows = rows.filter(coincide);  // el buscador de arriba también filtra esta tabla
   if(DV_FILTRO==='destacadas') rows = rows.filter(a=>a._dest);
   if(DV_FILTRO==='sp500') rows = rows.filter(a=>a.dividend_group==='sp500');
   if(DV_FILTRO==='mx') rows = rows.filter(a=>(a.ticker||'').endsWith('.MX'));
