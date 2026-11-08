@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T09:59:23.125975-06:00",
+  "generated_at": "2026-11-08T10:15:16.490805-06:00",
   "report": {
     "comprar": [
       {
@@ -1018,7 +1018,7 @@
         "sector": "ETFs / Índices",
         "price": 512.219970703125,
         "trend": "lateral",
-        "support": 511.00011406779964,
+        "support": 511.00005337974284,
         "resistance": 522.4356499363571,
         "score": 1,
         "reasons": [
@@ -3872,61 +3872,74 @@
         "ticker": "BTC-USD",
         "name": "Bitcoin",
         "sector": "Criptomonedas",
-        "price": 75626.140625,
+        "price": 75983.2890625,
         "trend": "bajista",
         "support": 74944.59375,
         "resistance": 81079.7890625,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (0.9%)",
-          "Precio arriba de su media de 200 días",
-          "Volumen relativo 1.12× su promedio de 20 días"
+          "Precio a menos de 1 ATR del soporte (1.37%)",
+          "Precio arriba de su media de 200 días"
         ]
       },
       {
         "ticker": "ETH-USD",
         "name": "Ethereum",
         "sector": "Criptomonedas",
-        "price": 2232.320068359375,
+        "price": 2238.25,
         "trend": "bajista",
-        "support": 2173.300537109375,
+        "support": 2203.808349609375,
         "resistance": 2388.033203125,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (2.64%)",
-          "Precio arriba de su media de 200 días",
-          "Volumen relativo 1.01× su promedio de 20 días"
+          "Precio a menos de 1 ATR del soporte (1.54%)",
+          "Precio arriba de su media de 200 días"
         ]
       },
       {
         "ticker": "BNB-USD",
         "name": "BNB (Binance)",
         "sector": "Criptomonedas",
-        "price": 692.8400268554688,
+        "price": 698.1300048828125,
         "trend": "bajista",
         "support": 682.7110595703125,
         "resistance": 722.6199951171875,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (1.46%)",
+          "Precio a menos de 1 ATR del soporte (2.21%)",
           "Precio arriba de su media de 200 días"
+        ]
+      },
+      {
+        "ticker": "DOGE-USD",
+        "name": "Dogecoin",
+        "sector": "Criptomonedas",
+        "price": 0.07134000211954117,
+        "trend": "bajista",
+        "support": 0.07031399756669998,
+        "resistance": 0.07804399728775024,
+        "score": 0,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR del soporte (1.44%)",
+          "Precio abajo de su media de 200 días"
         ]
       },
       {
         "ticker": "AVAX-USD",
         "name": "Avalanche",
         "sector": "Criptomonedas",
-        "price": 8.187000274658203,
+        "price": 8.251999855041504,
         "trend": "bajista",
-        "support": 8.03816032409668,
+        "support": 8.096392631530762,
         "resistance": 9.093008041381836,
         "score": 0,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio a menos de 1 ATR del soporte (1.82%)",
+          "Precio a menos de 1 ATR del soporte (1.89%)",
           "Precio arriba de su media de 200 días"
         ]
       },
@@ -6292,22 +6305,21 @@
         "ticker": "XRP-USD",
         "name": "XRP (Ripple)",
         "sector": "Criptomonedas",
-        "price": 1.15339994430542,
+        "price": 1.1539000272750854,
         "trend": "bajista",
         "support": null,
         "resistance": 1.335260033607483,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
-          "Precio abajo de su media de 200 días",
-          "Volumen relativo 1.31× su promedio de 20 días"
+          "Precio abajo de su media de 200 días"
         ]
       },
       {
         "ticker": "XLM-USD",
         "name": "Stellar Lumens",
         "sector": "Criptomonedas",
-        "price": 0.15131999552249908,
+        "price": 0.15115100145339966,
         "trend": "bajista",
         "support": null,
         "resistance": 0.17039699852466583,
@@ -6321,7 +6333,7 @@
         "ticker": "HBAR-USD",
         "name": "Hedera",
         "sector": "Criptomonedas",
-        "price": 0.06713999807834625,
+        "price": 0.06669999659061432,
         "trend": "bajista",
         "support": null,
         "resistance": 0.0738309994339943,
@@ -6332,16 +6344,34 @@
         ]
       },
       {
-        "ticker": "DOGE-USD",
-        "name": "Dogecoin",
+        "ticker": "SOL-USD",
+        "name": "Solana",
         "sector": "Criptomonedas",
-        "price": 0.07146000117063522,
+        "price": 89.66000366210938,
         "trend": "bajista",
-        "support": null,
-        "resistance": 0.07804399728775024,
+        "support": 88.48380279541016,
+        "resistance": 97.69539642333984,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR del soporte (1.31%)",
+          "Doble techo confirmado (rompió la línea de cuello)",
+          "Precio arriba de su media de 200 días"
+        ]
+      },
+      {
+        "ticker": "ADA-USD",
+        "name": "Cardano",
+        "sector": "Criptomonedas",
+        "price": 0.18080000579357147,
+        "trend": "bajista",
+        "support": 0.17827099561691284,
+        "resistance": 0.20075899362564087,
+        "score": -1,
+        "reasons": [
+          "Tendencia semanal bajista",
+          "Precio a menos de 1 ATR del soporte (1.4%)",
+          "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días"
         ]
       },
@@ -7724,7 +7754,7 @@
         "price": 540.9000244140625,
         "trend": "bajista",
         "support": 527.0700073242188,
-        "resistance": 653.8699951171875,
+        "resistance": 653.7580426629248,
         "score": -1,
         "reasons": [
           "Tendencia semanal bajista",
@@ -7762,38 +7792,6 @@
           "Doble techo confirmado (rompió la línea de cuello)",
           "Precio abajo de su media de 200 días",
           "No confirma «precaución»: volumen relativo bajo (0.93×)"
-        ]
-      },
-      {
-        "ticker": "SOL-USD",
-        "name": "Solana",
-        "sector": "Criptomonedas",
-        "price": 89.20999908447266,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 97.69539642333984,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio arriba de su media de 200 días",
-          "No confirma «precaución»: momentum de 12 meses positivo y arriba de su media de 200 días; volumen relativo bajo (0.95×)"
-        ]
-      },
-      {
-        "ticker": "ADA-USD",
-        "name": "Cardano",
-        "sector": "Criptomonedas",
-        "price": 0.18140000104904175,
-        "trend": "bajista",
-        "support": null,
-        "resistance": 0.20075899362564087,
-        "score": -2,
-        "reasons": [
-          "Tendencia semanal bajista",
-          "Doble techo confirmado (rompió la línea de cuello)",
-          "Precio abajo de su media de 200 días",
-          "No confirma «precaución»: volumen relativo bajo (0.89×)"
         ]
       },
       {
@@ -8398,8 +8396,8 @@
   },
   "noticias": {
     "titulares_nuevos": 300,
-    "titulares_14_dias": 1960,
-    "instrumentos_con_noticias": 71,
+    "titulares_14_dias": 2101,
+    "instrumentos_con_noticias": 76,
     "fuentes": {
       "https://www.eleconomista.com.mx/rss/ultimas-noticias": "100 titulares",
       "https://www.elfinanciero.com.mx/arc/outboundfeeds/rss/?outputType=xml": "100 titulares",
